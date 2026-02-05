@@ -74,11 +74,11 @@ export default function ServicesPreview() {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-nowrap gap-8 overflow-x-auto pb-4 -mx-4 px-4">
           {servicesData.map((service, index) => (
             <Card
               key={service.slug}
-              className="group flex w-full max-w-sm transform flex-col justify-between overflow-hidden rounded-lg border-border bg-card text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12 duration-500 lg:w-[calc(33.33%-2rem)]"
+              className="group flex w-80 flex-shrink-0 transform flex-col justify-between overflow-hidden rounded-lg border-border bg-card text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12 duration-500"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader>
