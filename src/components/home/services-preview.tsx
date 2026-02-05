@@ -72,10 +72,10 @@ export default function ServicesPreview() {
               className="block h-full"
             >
               <Card
-                className="group flex h-full flex-col justify-start overflow-hidden rounded-lg border-border bg-card text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12 duration-500"
+                className="group flex h-full flex-col justify-start overflow-hidden rounded-lg border-border bg-card text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12 duration-500"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardHeader>
+                <CardHeader className="items-center">
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                     <service.icon className="h-6 w-6" />
                   </div>
