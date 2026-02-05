@@ -1,7 +1,7 @@
-import { whyChooseUs } from '@/lib/data';
-import { CheckCircle2 } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Link from 'next/link';
+import { ArrowDown } from 'lucide-react';
 
 export default function WhyChooseUs() {
   const aboutImage = PlaceHolderImages.find(
@@ -9,43 +9,35 @@ export default function WhyChooseUs() {
   );
 
   return (
-    <section className="py-20">
+    <section className="bg-gray-950 py-20 md:py-28 text-gray-100">
       <div className="container">
-        <div className="grid items-center gap-12 md:grid-cols-2">
-          <div className="space-y-8">
-            <div className="text-left">
-              <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
-                Why Choose Aveda
-              </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
-                We are more than just a service provider; we are your technology partner.
-              </p>
-            </div>
-            <ul className="space-y-6">
-              {whyChooseUs.map((item) => (
-                <li key={item.title} className="flex items-start">
-                  <div className="mt-1 flex-shrink-0">
-                    <CheckCircle2 className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="font-headline text-lg font-semibold">{item.title}</h4>
-                    <p className="mt-1 text-muted-foreground">{item.description}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
+        <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
+          <div className="space-y-6">
+            <h2 className="font-headline text-sm font-bold uppercase tracking-wider text-primary">
+              About Aveda Technologies
+            </h2>
+            <h3 className="font-headline text-4xl font-bold text-white md:text-5xl">
+              Pioneering AI-powered digital growth and political intelligence.
+            </h3>
+            <p className="text-lg text-gray-300">
+              We specialize in solving complex growth and influence challenges through a powerful fusion of AI, data-driven digital transformation, performance marketing, and strategic political campaigning.
+            </p>
+            <Link href="/about" className="group inline-flex items-center font-semibold text-primary transition-all duration-300 hover:text-white">
+              Explore More <ArrowDown className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-y-1" />
+            </Link>
           </div>
-          <div className="relative h-96 w-full overflow-hidden rounded-lg">
+          <div className="group relative h-96 w-full overflow-hidden rounded-lg md:h-[450px]">
             {aboutImage && (
               <Image
                 src={aboutImage.imageUrl}
                 alt={aboutImage.description}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 data-ai-hint={aboutImage.imageHint}
               />
             )}
+             <div className="absolute inset-0 rounded-lg ring-2 ring-transparent transition-all duration-500 group-hover:ring-primary/50 group-hover:shadow-[0_0_30px_5px] group-hover:shadow-primary/20"></div>
           </div>
         </div>
       </div>
