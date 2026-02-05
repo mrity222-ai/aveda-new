@@ -53,14 +53,6 @@ export default function DigitalMarketingPage() {
         },
     ];
 
-    const whatYouGet = [
-        'High-quality social media creatives',
-        'Full campaign setup & management',
-        'Advanced audience targeting & segmentation',
-        'Brand awareness & lead generation ads',
-        'Detailed monthly performance report',
-    ];
-
     const includedServices = [
         'Social Media Marketing (Meta, Instagram)',
         'Performance Ads (Meta & Google)',
@@ -155,48 +147,6 @@ export default function DigitalMarketingPage() {
                       </Button>
                   </div>
               </div>
-            </section>
-
-             {/* What You Get Section */}
-             <section className="py-20 md:py-28">
-                <div className="container">
-                    <div className="mx-auto max-w-2xl text-center">
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl">What You Get in Our ₹5,000 Plan</h2>
-                    </div>
-                    <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                        <div className="rounded-lg border border-primary/50 bg-card p-8 shadow-xl shadow-primary/10">
-                            <h3 className="font-headline text-2xl font-bold">Starter Plan</h3>
-                            <p className="text-muted-foreground">Perfect for getting started.</p>
-                            <div className="my-6 text-4xl font-bold">₹5,000 <span className="text-base font-normal text-muted-foreground">/ month</span></div>
-                            <ul className="space-y-4">
-                                {whatYouGet.map((item) => (
-                                    <li key={item} className="flex items-center gap-3">
-                                        <CheckCircle className="h-5 w-5 text-primary" />
-                                        <span>{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="rounded-lg border border-border bg-card p-8 opacity-70">
-                            <h3 className="font-headline text-2xl font-bold flex items-center justify-between">
-                                Growth Plan
-                                <Badge variant="outline">Upgrade</Badge>
-                            </h3>
-                            <p className="text-muted-foreground">For growing businesses.</p>
-                            <div className="my-6 text-4xl font-bold">₹15,000 <span className="text-base font-normal text-muted-foreground">/ month</span></div>
-                            <p className="text-center text-muted-foreground">Includes everything in Starter, plus advanced analytics and more ad spend.</p>
-                        </div>
-                        <div className="rounded-lg border border-border bg-card p-8 opacity-70">
-                            <h3 className="font-headline text-2xl font-bold flex items-center justify-between">
-                                Scale Plan
-                                <Badge variant="outline">Upgrade</Badge>
-                            </h3>
-                            <p className="text-muted-foreground">For market leaders.</p>
-                             <div className="my-6 text-4xl font-bold">₹30,000+ <span className="text-base font-normal text-muted-foreground">/ month</span></div>
-                             <p className="text-center text-muted-foreground">Fully customized strategy, dedicated account manager, and multi-platform campaigns.</p>
-                        </div>
-                    </div>
-                </div>
             </section>
 
              {/* Final CTA */}
