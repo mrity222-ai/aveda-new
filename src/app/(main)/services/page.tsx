@@ -27,7 +27,7 @@ export default function ServicesPage() {
             const isReversed = index % 2 !== 0;
 
             return (
-              <section key={service.slug} className="items-center gap-8 md:grid md:grid-cols-2 md:gap-16">
+              <section key={service.slug} id={service.slug} className="items-center gap-8 md:grid md:grid-cols-2 md:gap-16">
                 <div className={cn('relative h-80 w-full md:h-[450px]', isReversed && 'md:order-last')}>
                   {image && (
                     <Image

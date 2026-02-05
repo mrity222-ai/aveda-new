@@ -29,8 +29,12 @@ const findImage = (id: string): ImagePlaceholder => {
 
 export const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
-  { href: '/services', label: 'Services' },
+  { href: '/about', label: 'About' },
+  {
+    href: '/services',
+    label: 'Services',
+    isMegaMenu: true,
+  },
   { href: '/works', label: 'Works' },
   { href: '/insides', label: 'Insides' },
   { href: '/industries', label: 'Industries' },

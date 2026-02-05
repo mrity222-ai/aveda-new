@@ -3,17 +3,29 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { navLinks } from '@/lib/data';
+import { navLinks, services } from '@/lib/data';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import { Menu, ChevronDown, ArrowRight } from 'lucide-react';
 import { Logo } from './logo';
 
 export default function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,19 +48,84 @@ export default function Header() {
         <Link href="/" className="flex items-center space-x-2">
           <Logo />
         </Link>
-        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center space-x-6 text-sm font-medium md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                'transition-colors hover:text-primary',
-                pathname === link.href ? 'text-primary' : 'text-foreground/60'
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 text-sm font-medium md:flex">
+          {navLinks.map((link) =>
+            link.isMegaMenu ? (
+              <DropdownMenu
+                key={link.href}
+                open={servicesMenuOpen}
+                onOpenChange={setServicesMenuOpen}
+              >
+                <DropdownMenuTrigger asChild>
+                  <button className="flex items-center gap-1 outline-none">
+                    <span
+                      className={cn(
+                        'transition-colors hover:text-primary',
+                        pathname.startsWith(link.href) || servicesMenuOpen
+                          ? 'text-primary'
+                          : 'text-foreground/60'
+                      )}
+                    >
+                      {link.label}
+                    </span>
+                    <ChevronDown
+                      className={cn(
+                        'h-4 w-4 transition-transform duration-200',
+                        pathname.startsWith(link.href) || servicesMenuOpen
+                          ? 'text-primary'
+                          : 'text-foreground/60',
+                        servicesMenuOpen && 'rotate-180'
+                      )}
+                    />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="center" className="w-[600px] p-0">
+                  <div className="p-6">
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-headline text-lg font-semibold tracking-tight">
+                        Our Services
+                      </h3>
+                      <Link
+                        href="/services"
+                        onClick={() => setServicesMenuOpen(false)}
+                        className="text-sm text-primary hover:underline"
+                      >
+                        View All
+                      </Link>
+                    </div>
+                    <div className="my-2 border-b" />
+                    <ul className="grid grid-cols-2 gap-x-8 gap-y-3 pt-2">
+                      {services.map((service) => (
+                        <li key={service.slug}>
+                          <Link
+                            href={`/services#${service.slug}`}
+                            onClick={() => setServicesMenuOpen(false)}
+                            className="group flex items-center justify-between py-1 text-muted-foreground transition-colors hover:text-primary"
+                          >
+                            <span>{service.title}</span>
+                            <ArrowRight className="h-4 w-4 text-primary opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100" />
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  'transition-colors hover:text-primary',
+                  pathname === link.href
+                    ? 'text-primary'
+                    : 'text-foreground/60'
+                )}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
         </nav>
         <div className="flex items-center justify-end space-x-4">
           <Button asChild>
@@ -63,22 +140,52 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                <nav className="flex flex-col space-y-4 pt-8">
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.label}
-                      href={link.href}
-                      onClick={() => setOpen(false)}
-                      className={cn(
-                        'text-lg font-medium transition-colors hover:text-primary',
-                        pathname === link.href
-                          ? 'text-primary'
-                          : 'text-foreground/80'
-                      )}
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
+                <nav className="flex flex-col space-y-2 pt-8">
+                  {navLinks.map((link) =>
+                    link.isMegaMenu ? (
+                      <Accordion
+                        type="single"
+                        collapsible
+                        className="w-full"
+                        key={link.label}
+                      >
+                        <AccordionItem value="services" className="border-b-0">
+                          <AccordionTrigger className="py-3 text-lg font-medium transition-colors hover:text-primary hover:no-underline [&[data-state=open]]:text-primary">
+                            {link.label}
+                          </AccordionTrigger>
+                          <AccordionContent className="pb-0">
+                            <ul className="space-y-3 border-l pl-6 pt-2">
+                              {services.map((service) => (
+                                <li key={service.slug}>
+                                  <Link
+                                    href={`/services#${service.slug}`}
+                                    onClick={() => setOpen(false)}
+                                    className="text-base text-muted-foreground transition-colors hover:text-primary"
+                                  >
+                                    {service.title}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+                    ) : (
+                      <Link
+                        key={link.label}
+                        href={link.href}
+                        onClick={() => setOpen(false)}
+                        className={cn(
+                          'py-3 text-lg font-medium transition-colors hover:text-primary',
+                          pathname === link.href
+                            ? 'text-primary'
+                            : 'text-foreground/80'
+                        )}
+                      >
+                        {link.label}
+                      </Link>
+                    )
+                  )}
                 </nav>
               </SheetContent>
             </Sheet>
