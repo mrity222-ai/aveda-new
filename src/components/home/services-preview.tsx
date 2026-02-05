@@ -50,14 +50,6 @@ const servicesData = [
     icon: Search,
     href: '/services/seo-optimization',
   },
-  {
-    slug: 'ai-automation',
-    title: 'AI & Automation',
-    description:
-      'Custom AI solutions and automation to give you a competitive edge.',
-    icon: Cpu,
-    href: '/services#ai-automation',
-  },
 ];
 
 export default function ServicesPreview() {
@@ -69,16 +61,15 @@ export default function ServicesPreview() {
             Our Core Services
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            A complete suite of digital solutions to transform your business and
-            drive growth.
+            Smart, scalable, and result-driven digital solutions powered by AI.
           </p>
         </div>
 
-        <div className="flex flex-nowrap gap-8 overflow-x-auto pb-4 -mx-4 px-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {servicesData.map((service, index) => (
             <Card
               key={service.slug}
-              className="group flex w-80 flex-shrink-0 transform flex-col justify-between overflow-hidden rounded-lg border-border bg-card text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12 duration-500"
+              className="group flex flex-col justify-between overflow-hidden rounded-lg border-border bg-card text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12 duration-500"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader>
@@ -101,8 +92,8 @@ export default function ServicesPreview() {
           style={{ animationDelay: '500ms' }}
         >
           <Button asChild size="lg">
-            <Link href="/contact">
-              Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
+            <Link href="/services">
+              View All Services <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>
