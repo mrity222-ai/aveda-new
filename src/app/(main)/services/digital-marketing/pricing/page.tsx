@@ -146,20 +146,6 @@ export default function PricingPage() {
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
             AI-powered marketing plans designed for growth, visibility, and influence.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="h-5 w-5 text-primary" />
-              <span>30-day satisfaction assurance</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock className="h-5 w-5 text-primary" />
-              <span>24/7 support</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <XCircle className="h-5 w-5 text-primary" />
-              <span>Cancel anytime</span>
-            </div>
-          </div>
         </div>
       </section>
 
