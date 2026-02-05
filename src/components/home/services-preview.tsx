@@ -1,34 +1,77 @@
 import Link from 'next/link';
-import { services } from '@/lib/data';
+import {
+  Code2,
+  Smartphone,
+  LineChart,
+  Search,
+  ArrowRight,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight } from 'lucide-react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+
+const previewServices = [
+  {
+    slug: 'web-development',
+    title: 'Web Development',
+    description:
+      'High-performance and scalable websites built to grow your business.',
+    icon: Code2,
+  },
+  {
+    slug: 'app-development',
+    title: 'App Development',
+    description:
+      'Powerful Android & iOS apps designed for performance and usability.',
+    icon: Smartphone,
+  },
+  {
+    slug: 'digital-marketing',
+    title: 'Digital & Performance Marketing',
+    description:
+      'AI-driven campaigns that generate leads, sales, and visibility.',
+    icon: LineChart,
+  },
+  {
+    slug: 'seo-optimization',
+    title: 'SEO & Optimization',
+    description: 'Rank higher, load faster, and convert better with smart SEO.',
+    icon: Search,
+  },
+];
 
 export default function ServicesPreview() {
   return (
-    <section className="bg-secondary py-20">
+    <section className="bg-secondary py-20 md:py-28">
       <div className="container">
-        <div className="mb-12 text-center animate-in fade-in slide-in-from-bottom-8 duration-500">
+        <div className="mb-12 text-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-500">
           <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
             Our Core Services
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            We offer a comprehensive suite of services to build your digital presence.
+            Smart, scalable, and result-driven digital solutions powered by AI.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
+        <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-2">
+          {previewServices.map((service, index) => (
             <Card
               key={service.slug}
-              className="flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20 animate-in fade-in slide-in-from-bottom-12 duration-500"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="flex flex-col rounded-xl border-transparent bg-card transition-all duration-300 hover:-translate-y-2 hover:border-primary/20 hover:shadow-2xl hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12 duration-700"
+              style={{ animationDelay: `${index * 150 + 600}ms` }}
             >
               <CardHeader>
                 <div className="flex items-center gap-4">
                   <div className="rounded-full bg-primary/10 p-3 text-primary">
                     <service.icon className="h-6 w-6" />
                   </div>
-                  <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
+                  <CardTitle className="font-headline text-xl">
+                    {service.title}
+                  </CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="flex-grow">
