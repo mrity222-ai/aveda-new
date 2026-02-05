@@ -10,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
 import {
   Accordion,
   AccordionContent,
@@ -19,6 +19,7 @@ import {
 } from '@/components/ui/accordion';
 import { Loader2, Sparkles, Calendar, User } from 'lucide-react';
 import { summarizeBlogPost } from '@/ai/flows/summarize-blog-posts';
+import { cn } from '@/lib/utils';
 
 type BlogPost = {
   slug: string;
@@ -96,13 +97,15 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
       <CardFooter className="p-6 pt-0">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger asChild>
-              <Button
-                variant="outline"
-                onClick={() => !summary && !isLoading && handleSummarize()}
-                disabled={isLoading}
-                className="w-full"
-              >
+            <AccordionTrigger
+              onClick={() => !summary && !isLoading && handleSummarize()}
+              disabled={isLoading}
+              className={cn(
+                buttonVariants({ variant: 'outline' }),
+                'w-full no-underline hover:no-underline'
+              )}
+            >
+              <div className="flex items-center gap-2">
                 {isLoading ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -114,7 +117,7 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
                     AI Summary
                   </>
                 )}
-              </Button>
+              </div>
             </AccordionTrigger>
             <AccordionContent className="pt-4 text-sm text-muted-foreground">
               {error && <p className="text-destructive">{error}</p>}
