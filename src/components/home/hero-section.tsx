@@ -9,24 +9,13 @@ export default function HeroSection() {
   );
 
   return (
-    <section className="relative h-[600px] w-full">
-      {heroImage && (
-        <Image
-          src={heroImage.imageUrl}
-          alt={heroImage.description}
-          fill
-          className="object-cover"
-          priority
-          data-ai-hint={heroImage.imageHint}
-        />
-      )}
-      <div className="absolute inset-0 bg-black/60" />
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-primary-foreground">
+    <section className="relative h-[600px] w-full bg-background">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-foreground">
         <div className="container">
           <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl animate-in fade-in slide-in-from-bottom-10 duration-700">
             Transforming Ideas Into Powerful Digital Experiences
           </h1>
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-primary-foreground/80 animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">
             At Aveda Technologies, we design and build high-performance digital
             products that help businesses grow, scale, and lead in the digital
             era.

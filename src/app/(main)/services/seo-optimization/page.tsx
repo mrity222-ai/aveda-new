@@ -243,13 +243,13 @@ export default function SeoOptimizationPage() {
                     data-ai-hint={heroImage.imageHint}
                     />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-black/80 to-transparent" />
-                <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-primary-foreground">
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
+                <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-foreground">
                     <div className="container">
                         <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
                             Get Found First in Your City
                         </h1>
-                        <p className="mx-auto mt-6 max-w-3xl text-lg text-primary-foreground/80">
+                        <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
                             Rank higher on Google Maps & local search using AI-powered Local SEO and GEO tagging strategies.
                         </p>
                         <div className="mt-8 flex flex-wrap justify-center gap-4">

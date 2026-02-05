@@ -119,7 +119,7 @@ export default function WebDevelopmentPage() {
                             data-ai-hint={heroImage.imageHint}
                         />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-black/80 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
                 </div>
                 <div className="container relative z-10 text-center">
                     <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">

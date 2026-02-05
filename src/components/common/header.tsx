@@ -54,7 +54,7 @@ export default function Header() {
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300 animate-in fade-in slide-in-from-top-4',
         showSolidHeader
-          ? 'border-b bg-background/80 backdrop-blur-sm'
+          ? 'border-b bg-background/80 backdrop-blur-sm shadow-sm'
           : 'bg-transparent'
       )}
       onMouseLeave={() => setServicesMenuOpen(false)}

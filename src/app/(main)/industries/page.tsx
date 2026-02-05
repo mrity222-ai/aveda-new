@@ -67,7 +67,7 @@ export default function IndustriesPage() {
       <section className="py-20 md:py-28">
         <div className="container">
           <div className="mx-auto mb-16 max-w-3xl text-center">
-            <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-5xl">
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground md:text-5xl">
               Industries We Empower With AI
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
@@ -89,7 +89,7 @@ export default function IndustriesPage() {
                   <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
                     <item.icon className="h-8 w-8" />
                   </div>
-                  <h3 className="font-headline text-xl font-semibold text-white">
+                  <h3 className="font-headline text-xl font-semibold text-foreground">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-muted-foreground">
