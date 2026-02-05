@@ -6,10 +6,8 @@ import {
   ArrowRight,
   Code2,
   Smartphone,
-  PenTool,
   LineChart,
   Search,
-  Cpu,
 } from 'lucide-react';
 import {
   Card,
@@ -61,29 +59,35 @@ export default function ServicesPreview() {
             Our Core Services
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Smart, scalable, and result-driven digital solutions powered by AI.
+            A complete suite of digital solutions to transform your business and
+            drive growth.
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {servicesData.map((service, index) => (
-            <Card
+            <Link
+              href={service.href}
               key={service.slug}
-              className="group flex flex-col justify-between overflow-hidden rounded-lg border-border bg-card text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12 duration-500"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="block h-full"
             >
-              <CardHeader>
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
-                  <service.icon className="h-6 w-6" />
-                </div>
-                <CardTitle className="font-headline text-xl">
-                  {service.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{service.description}</p>
-              </CardContent>
-            </Card>
+              <Card
+                className="group flex h-full flex-col justify-start overflow-hidden rounded-lg border-border bg-card text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12 duration-500"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CardHeader>
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+                    <service.icon className="h-6 w-6" />
+                  </div>
+                  <CardTitle className="font-headline text-xl">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{service.description}</p>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
 
