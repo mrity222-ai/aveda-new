@@ -10,6 +10,7 @@ import {
   Search,
   Smartphone,
   Users,
+  Vote,
 } from 'lucide-react';
 
 const findImage = (id: string): ImagePlaceholder => {
@@ -48,54 +49,69 @@ export const services = [
   {
     slug: 'web-development',
     title: 'Web Development',
-    description: 'High-performance, secure, and scalable websites.',
+    description: 'We build high-performance, secure, and scalable websites that drive business growth. Our solutions are tailored to your specific needs, from corporate sites to complex SaaS platforms.',
     icon: Code2,
     details: [
-      'Corporate websites',
+      'Corporate websites & Portals',
       'E-commerce platforms',
-      'SaaS products',
-      'Custom dashboards',
+      'SaaS products & Dashboards',
+      'CMS & API Development',
     ],
+    imageId: 'service-web-dev',
   },
   {
     slug: 'app-development',
     title: 'App Development',
-    description: 'Mobile solutions built for performance.',
+    description: 'From concept to launch, we create engaging and intuitive mobile applications for iOS and Android. Our apps are built for performance, scalability, and an exceptional user experience.',
     icon: Smartphone,
-    details: ['Android apps', 'iOS apps', 'Cross-platform apps'],
+    details: ['Native iOS & Android Apps', 'Cross-platform Development', 'App Maintenance & Support'],
+    imageId: 'service-app-dev',
   },
   {
     slug: 'ui-ux-design',
     title: 'UI/UX Design',
-    description: 'Designs that users love and businesses trust.',
+    description: 'Our design process is centered around your users. We craft beautiful, functional, and user-friendly interfaces that not only look great but also drive engagement and conversions.',
     icon: PenTool,
-    details: ['Wireframing', 'UI design', 'UX research', 'Prototyping'],
+    details: ['User Research & Personas', 'Wireframing & Prototyping', 'Intuitive UI Design', 'Usability Testing'],
+    imageId: 'service-ui-ux',
   },
   {
     slug: 'digital-marketing',
-    title: 'Digital Marketing',
-    description: 'Data-driven strategies that convert and retain.',
+    title: 'Digital & Performance Marketing',
+    description: 'We run data-driven marketing campaigns that deliver measurable results. Our strategies are designed to increase your visibility, attract qualified leads, and maximize your ROI.',
     icon: LineChart,
     details: [
-      'Social media marketing',
-      'Paid ads (Google / Meta)',
-      'Content marketing',
+      'Social Media Marketing',
+      'Paid Advertising (PPC)',
+      'Content Marketing & Strategy',
+      'Conversion Rate Optimization',
     ],
+    imageId: 'service-digital-marketing',
   },
   {
     slug: 'seo-optimization',
     title: 'SEO & Optimization',
-    description: 'Rank higher, load faster, and convert better.',
+    description: 'Climb the search rankings and connect with your audience. We use proven SEO techniques to increase your organic traffic, enhance your online presence, and boost your credibility.',
     icon: Search,
-    details: ['On-page SEO', 'Technical SEO', 'Speed optimization'],
+    details: ['On-Page & Technical SEO', 'Keyword Research & Strategy', 'Link Building', 'Performance Audits'],
+    imageId: 'service-seo',
   },
   {
     slug: 'ai-automation',
     title: 'AI & Automation',
-    description: 'Smart tools and solutions for modern businesses.',
+    description: 'Leverage the power of Artificial Intelligence to automate processes, gain insights, and create smarter products. We build custom AI solutions that give you a competitive edge.',
     icon: Cpu,
-    details: ['AI chatbots', 'Workflow automation', 'Custom AI solutions'],
+    details: ['Custom AI/ML Models', 'AI-powered Chatbots', 'Business Process Automation', 'Data Analytics'],
+    imageId: 'service-ai',
   },
+  {
+    slug: 'political-campaigning',
+    title: 'Political Campaigning with AI',
+    description: 'Winning elections in the digital age requires data-driven precision. We use AI to analyze voter sentiment, predict trends, and optimize campaign outreach for maximum impact.',
+    icon: Vote,
+    details: ['Voter Sentiment Analysis', 'AI-driven Ad Targeting', 'Narrative Monitoring', 'Digital Outreach Strategy'],
+    imageId: 'service-political'
+  }
 ];
 
 export const whyChooseUs = [

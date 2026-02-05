@@ -71,6 +71,48 @@
       "description": "A modern office building.",
       "imageUrl": "https://images.unsplash.com/photo-1600531529272-023c4b821f14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvZmZpY2UlMjBidWlsZGluZ3xlbnwwfHx8fDE3NzAyMjk1MzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "office building"
+    },
+    {
+      "id": "service-web-dev",
+      "description": "A dark-themed image of a developer coding.",
+      "imageUrl": "https://images.unsplash.com/photo-1550439062-609e1531270e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkZXZlbG9wZXIlMjBjb2RlJTIwZGFya3xlbnwwfHx8fDE3NzAyNzYwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "developer code"
+    },
+    {
+      "id": "service-app-dev",
+      "description": "A dark-themed image showing a mobile app interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkYXJrJTIwdGhlbWV8ZW58MHx8fHwxNzcwMjc2MDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile app"
+    },
+    {
+      "id": "service-ui-ux",
+      "description": "A dark-themed image of UI/UX wireframes.",
+      "imageUrl": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx1aSUyMHdpcmVmcmFtZSUyMGRhcmt8ZW58MHx8fHwxNzcwMjc2MDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ui wireframe"
+    },
+    {
+      "id": "service-digital-marketing",
+      "description": "A dark-themed image of marketing analytics graphs.",
+      "imageUrl": "https://images.unsplash.com/photo-1543286386-713bdd548da4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYXJrZXRpbmclMjBhbmFseXRpY3MlMjBkYXJrfGVufDB8fHx8MTc3MDI3NjAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "marketing analytics"
+    },
+    {
+      "id": "service-seo",
+      "description": "A dark-themed image of a data graph.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e28f81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXRhJTIwZ3JhcGglMjBkYXJrfGVufDB8fHx8MTc3MDI3NjAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data graph"
+    },
+    {
+      "id": "service-ai",
+      "description": "A dark abstract image representing AI.",
+      "imageUrl": "https://images.unsplash.com/photo-1696253914523-488f5f97b090?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhaSUyMGFic3RyYWN0JTIwZGFya3xlbnwwfHx8fDE3NzAyNzYwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ai abstract"
+    },
+    {
+      "id": "service-political",
+      "description": "A dark-themed image of a political data map.",
+      "imageUrl": "https://images.unsplash.com/photo-1639737496154-7729f2c0df3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb2xpdGljYWwlMjBkYXRhJTIwbWFwJTIwZGFya3xlbnwwfHx8fDE3NzAyNzYwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "political data"
     }
   ]
 }
