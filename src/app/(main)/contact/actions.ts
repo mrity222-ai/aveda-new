@@ -6,6 +6,7 @@ const formSchema = z.object({
   name: z.string(),
   email: z.string().email(),
   phone: z.string().optional(),
+  company: z.string().optional(),
   service: z.string(),
   message: z.string(),
 });

@@ -28,6 +28,7 @@ import { Loader2 } from 'lucide-react';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters.'),
+  company: z.string().optional(),
   email: z.string().email('Please enter a valid email address.'),
   phone: z.string().optional(),
   service: z.string().min(1, 'Please select a service.'),
@@ -40,6 +41,7 @@ export function ContactForm() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
+      company: '',
       email: '',
       phone: '',
       service: '',
@@ -68,26 +70,41 @@ export function ContactForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Name</FormLabel>
-              <FormControl>
-                <Input placeholder="Your Name" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+                <FormItem>
+                <FormLabel>Full Name</FormLabel>
+                <FormControl>
+                    <Input placeholder="Your Name" {...field} />
+                </FormControl>
+                <FormMessage />
+                </FormItem>
+            )}
+            />
+            <FormField
+            control={form.control}
+            name="company"
+            render={({ field }) => (
+                <FormItem>
+                <FormLabel>Company / Organization (Optional)</FormLabel>
+                <FormControl>
+                    <Input placeholder="Your Company" {...field} />
+                </FormControl>
+                <FormMessage />
+                </FormItem>
+            )}
+            />
+        </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <FormField
             control={form.control}
             name="email"
             render={({ field }) => (
                 <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>Email Address</FormLabel>
                 <FormControl>
                     <Input placeholder="your.email@example.com" {...field} />
                 </FormControl>
@@ -100,7 +117,7 @@ export function ContactForm() {
             name="phone"
             render={({ field }) => (
                 <FormItem>
-                <FormLabel>Phone (Optional)</FormLabel>
+                <FormLabel>Phone Number (Optional)</FormLabel>
                 <FormControl>
                     <Input placeholder="+91 12345 67890" {...field} />
                 </FormControl>
@@ -114,7 +131,7 @@ export function ContactForm() {
           name="service"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Service Required</FormLabel>
+              <FormLabel>Service Interested In</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
@@ -148,7 +165,7 @@ export function ContactForm() {
         />
         <Button type="submit" disabled={form.formState.isSubmitting} className="w-full" size="lg">
           {form.formState.isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          Submit Request
+          Send Request
         </Button>
       </form>
     </Form>
