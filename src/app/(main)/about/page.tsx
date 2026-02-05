@@ -62,9 +62,6 @@ export default function AboutPage() {
       {/* Our Technology Partners Section */}
       <section className="py-20 md:py-28">
         <div className="container text-center">
-          <h2 className="font-headline text-3xl font-bold text-white md:text-4xl">
-            Our Technology Partners
-          </h2>
           <p className="mx-auto mt-4 max-w-3xl text-lg text-gray-400">
             We collaborate with trusted technology leaders to deliver secure and scalable digital solutions.
           </p>
