@@ -8,11 +8,6 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import {
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -43,6 +38,7 @@ export default function Header() {
           ? 'border-b bg-background/80 backdrop-blur-sm'
           : 'bg-transparent'
       )}
+      onMouseLeave={() => setServicesMenuOpen(false)}
     >
       <div className="container relative flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
@@ -51,66 +47,29 @@ export default function Header() {
         <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 text-sm font-medium md:flex">
           {navLinks.map((link) =>
             link.isMegaMenu ? (
-              <DropdownMenu
-                key={link.href}
-                open={servicesMenuOpen}
-                onOpenChange={setServicesMenuOpen}
-              >
-                <DropdownMenuTrigger asChild>
-                  <button className="flex items-center gap-1 outline-none">
-                    <span
-                      className={cn(
-                        'transition-colors hover:text-primary',
-                        pathname.startsWith(link.href) || servicesMenuOpen
-                          ? 'text-primary'
-                          : 'text-foreground/60'
-                      )}
-                    >
-                      {link.label}
-                    </span>
-                    <ChevronDown
-                      className={cn(
-                        'h-4 w-4 transition-transform duration-200',
-                        pathname.startsWith(link.href) || servicesMenuOpen
-                          ? 'text-primary'
-                          : 'text-foreground/60',
-                        servicesMenuOpen && 'rotate-180'
-                      )}
-                    />
-                  </button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="center" className="w-[600px] p-0">
-                  <div className="p-6">
-                    <div className="flex items-center justify-between">
-                      <h3 className="font-headline text-lg font-semibold tracking-tight">
-                        Our Services
-                      </h3>
-                      <Link
-                        href="/services"
-                        onClick={() => setServicesMenuOpen(false)}
-                        className="text-sm text-primary hover:underline"
-                      >
-                        View All
-                      </Link>
-                    </div>
-                    <div className="my-2 border-b" />
-                    <ul className="grid grid-cols-2 gap-x-8 gap-y-3 pt-2">
-                      {services.map((service) => (
-                        <li key={service.slug}>
-                          <Link
-                            href={`/services#${service.slug}`}
-                            onClick={() => setServicesMenuOpen(false)}
-                            className="group flex items-center justify-between py-1 text-muted-foreground transition-colors hover:text-primary"
-                          >
-                            <span>{service.title}</span>
-                            <ArrowRight className="h-4 w-4 text-primary opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100" />
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <div key={link.href} onMouseEnter={() => setServicesMenuOpen(true)}>
+                <button className="flex items-center gap-1 outline-none">
+                  <span
+                    className={cn(
+                      'transition-colors hover:text-primary',
+                      pathname.startsWith(link.href) || servicesMenuOpen
+                        ? 'text-primary'
+                        : 'text-foreground/60'
+                    )}
+                  >
+                    {link.label}
+                  </span>
+                  <ChevronDown
+                    className={cn(
+                      'h-4 w-4 transition-transform duration-200',
+                      pathname.startsWith(link.href) || servicesMenuOpen
+                        ? 'text-primary'
+                        : 'text-foreground/60',
+                      servicesMenuOpen && 'rotate-180'
+                    )}
+                  />
+                </button>
+              </div>
             ) : (
               <Link
                 key={link.href}
@@ -141,6 +100,16 @@ export default function Header() {
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <nav className="flex flex-col space-y-2 pt-8">
+                  <Link
+                    href="/"
+                    onClick={() => setOpen(false)}
+                    className={cn(
+                      'py-3 text-lg font-medium transition-colors hover:text-primary',
+                      pathname === '/' ? 'text-primary' : 'text-foreground/80'
+                    )}
+                  >
+                    Home
+                  </Link>
                   {navLinks.map((link) =>
                     link.isMegaMenu ? (
                       <Accordion
@@ -190,6 +159,47 @@ export default function Header() {
               </SheetContent>
             </Sheet>
           </div>
+        </div>
+      </div>
+      <div
+        onMouseEnter={() => setServicesMenuOpen(true)}
+        className={cn(
+          'absolute left-0 top-full w-full bg-background shadow-lg transition-all duration-300 ease-in-out',
+          'data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=closed]:slide-out-to-top-2',
+          'data-[state=open]:animate-in data-[state=open]:fade-in data-[state=open]:slide-in-from-top-2',
+          servicesMenuOpen
+            ? 'data-[state=open]'
+            : 'data-[state=closed] invisible'
+        )}
+      >
+        <div className="container p-6">
+          <div className="flex items-center justify-between">
+            <h3 className="font-headline text-lg font-semibold tracking-tight">
+              Our Services
+            </h3>
+            <Link
+              href="/services"
+              onClick={() => setServicesMenuOpen(false)}
+              className="text-sm text-primary hover:underline"
+            >
+              View All
+            </Link>
+          </div>
+          <div className="my-2 border-b" />
+          <ul className="grid grid-cols-1 gap-x-8 gap-y-3 pt-2 md:grid-cols-2">
+            {services.map((service) => (
+              <li key={service.slug}>
+                <Link
+                  href={`/services#${service.slug}`}
+                  onClick={() => setServicesMenuOpen(false)}
+                  className="group flex items-center justify-between py-1 text-muted-foreground transition-colors hover:text-primary"
+                >
+                  <span>{service.title}</span>
+                  <ArrowRight className="h-4 w-4 text-primary opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100" />
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </header>
