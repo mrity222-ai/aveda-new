@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import { Playwrite_NZ } from 'next/font/google';
+import { Domine } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/common/header';
 import Footer from '@/components/common/footer';
 
-const playwrite = Playwrite_NZ({
+const domine = Domine({
   subsets: ['latin'],
   variable: '--font-body',
 });
@@ -26,7 +26,7 @@ export default function RootLayout({
       <body
         className={cn(
           'min-h-screen bg-background font-body antialiased',
-          playwrite.variable
+          domine.variable
         )}
       >
         <div className="relative flex min-h-dvh flex-col">
