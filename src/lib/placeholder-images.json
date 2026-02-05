@@ -1,3 +1,76 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Abstract digital network background",
+      "imageUrl": "https://images.unsplash.com/photo-1617228679684-890412dc57a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGlnaXRhbCUyMG5ldHdvcmt8ZW58MHx8fHwxNzcwMjczNDQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital network"
+    },
+    {
+      "id": "about-us-image",
+      "description": "A modern office environment with a team collaborating.",
+      "imageUrl": "https://images.unsplash.com/photo-1566140967404-b8b3932483f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NzAyNjU5NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team collaboration"
+    },
+    {
+      "id": "portfolio-fintech",
+      "description": "A screenshot of a fintech dashboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1748439146117-31978164865d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmaW50ZWNoJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc3MDI3NTM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fintech dashboard"
+    },
+    {
+      "id": "portfolio-corporate-website",
+      "description": "A screenshot of a modern corporate website.",
+      "imageUrl": "https://images.unsplash.com/photo-1723002312141-027f132f62de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb3Jwb3JhdGUlMjB3ZWJzaXRlfGVufDB8fHx8MTc3MDI3NTM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "corporate website"
+    },
+    {
+      "id": "portfolio-marketing-campaign",
+      "description": "Visuals representing a digital marketing campaign.",
+      "imageUrl": "https://images.unsplash.com/photo-1599413955192-1d5eb8099a9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFya2V0aW5nJTIwYW5hbHl0aWNzfGVufDB8fHx8MTc3MDI3NTM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "marketing analytics"
+    },
+    {
+      "id": "portfolio-saas",
+      "description": "A screenshot of a SaaS platform interface.",
+      "imageUrl": "https://picsum.photos/seed/104/600/400",
+      "imageHint": "saas interface"
+    },
+    {
+      "id": "portfolio-ecommerce",
+      "description": "A screenshot of an e-commerce store.",
+      "imageUrl": "https://images.unsplash.com/photo-1483985988355-763728e1935b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxvbmxpbmUlMjBzdG9yZXxlbnwwfHx8fDE3NzAxNTc4NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "online store"
+    },
+    {
+      "id": "blog-tech-trends",
+      "description": "An abstract image representing technology trends.",
+      "imageUrl": "https://images.unsplash.com/photo-1759576981262-95fd51a994a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0ZWNoJTIwdHJlbmRzfGVufDB8fHx8MTc3MDI3NTM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech trends"
+    },
+    {
+      "id": "blog-ai-business",
+      "description": "An image of a robot and a human shaking hands.",
+      "imageUrl": "https://images.unsplash.com/photo-1694903110330-cc64b7e1d21d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhaSUyMGJ1c2luZXNzfGVufDB8fHx8MTc3MDI3NTM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ai business"
+    },
+    {
+      "id": "blog-marketing-strategies",
+      "description": "A chessboard with pieces, symbolizing strategy.",
+      "imageUrl": "https://images.unsplash.com/photo-1590102425728-aa39769512ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYXJrZXRpbmclMjBzdHJhdGVneXxlbnwwfHx8fDE3NzAyNzUzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "marketing strategy"
+    },
+    {
+      "id": "blog-case-studies",
+      "description": "A magnifying glass over a document.",
+      "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjYXNlJTIwc3R1ZHl8ZW58MHx8fHwxNzcwMjc1MzUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "case study"
+    },
+    {
+      "id": "blog-company-updates",
+      "description": "A modern office building.",
+      "imageUrl": "https://images.unsplash.com/photo-1600531529272-023c4b821f14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvZmZpY2UlMjBidWlsZGluZ3xlbnwwfHx8fDE3NzAyMjk1MzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office building"
+    }
+  ]
 }
