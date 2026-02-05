@@ -57,7 +57,7 @@ export default function ServicesPage() {
                   </ul>
                   <div className="mt-8">
                     <Link
-                      href="#"
+                      href={service.slug === 'digital-marketing' ? '/services/digital-marketing' : '#'}
                       className="group inline-flex items-center font-semibold text-primary transition-all duration-300 hover:text-foreground"
                     >
                       Explore More

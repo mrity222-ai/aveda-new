@@ -143,6 +143,12 @@
       "description": "Microsoft Partner Badge",
       "imageUrl": "https://images.unsplash.com/photo-1633113215792-b50572729907?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8TWljcm9zb2Z0JTIwcGFydG5lcnxlbnwwfHx8fDE3NzAyNzk4MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Microsoft partner"
+    },
+    {
+      "id": "service-digital-marketing-detail",
+      "description": "A dark-themed image of marketing analytics dashboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e28f81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXJrZXRpbmclMjBhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzcyMjgyMjA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "marketing dashboard"
     }
   ]
 }
