@@ -29,6 +29,16 @@ export default function AboutPage() {
     },
   ];
 
+  const partners = [
+    { name: 'Google Cloud' },
+    { name: 'Microsoft Azure' },
+    { name: 'Amazon Web Services' },
+    { name: 'Next.js' },
+    { name: 'Vercel' },
+    { name: 'Figma' },
+    { name: 'Genkit' },
+  ];
+
   return (
     <div className="bg-gray-950 text-white">
       {/* Hero Section */}
@@ -94,6 +104,23 @@ export default function AboutPage() {
                 <h3 className="mt-6 font-headline text-xl font-semibold">{value.title}</h3>
                 <p className="mt-2 text-gray-400">{value.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Technology Partners Section */}
+      <section className="py-20 md:py-28">
+        <div className="container text-center">
+          <h2 className="font-headline text-3xl font-bold text-white md:text-4xl">
+            Our Technology Partners
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-gray-400">
+            We collaborate with trusted technology leaders to deliver secure and scalable digital solutions.
+          </p>
+          <div className="mt-16 flex flex-wrap items-center justify-center gap-x-12 gap-y-8 opacity-75">
+            {partners.map((partner) => (
+               <span key={partner.name} className="text-xl font-semibold text-gray-400">{partner.name}</span>
             ))}
           </div>
         </div>
