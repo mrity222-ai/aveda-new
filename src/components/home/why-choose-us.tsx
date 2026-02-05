@@ -12,7 +12,7 @@ export default function WhyChooseUs() {
     <section className="bg-secondary py-20 md:py-28 text-foreground">
       <div className="container">
         <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
-          <div className="space-y-6">
+          <div className="space-y-6 animate-in fade-in slide-in-from-left duration-700">
             <h2 className="font-headline text-sm font-bold uppercase tracking-wider text-primary">
               About Aveda Technologies
             </h2>
@@ -26,7 +26,7 @@ export default function WhyChooseUs() {
               Explore More <ArrowDown className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-y-1" />
             </Link>
           </div>
-          <div className="group relative h-96 w-full overflow-hidden rounded-lg md:h-[450px]">
+          <div className="group relative h-96 w-full overflow-hidden rounded-lg md:h-[450px] animate-in fade-in slide-in-from-right duration-700">
             {aboutImage && (
               <Image
                 src={aboutImage.imageUrl}

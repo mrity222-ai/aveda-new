@@ -13,7 +13,7 @@ import { Logo } from './logo';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-primary/20 bg-background">
+    <footer className="border-t border-primary/20 bg-background animate-in slide-in-from-bottom-16 duration-700 delay-500">
       <div className="container py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Column 1: Brand */}

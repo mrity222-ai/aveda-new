@@ -23,16 +23,16 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-primary-foreground">
         <div className="container">
-          <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
+          <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl animate-in fade-in slide-in-from-bottom-10 duration-700">
             Transforming Ideas Into Powerful Digital Experiences
           </h1>
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-primary-foreground/80">
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-primary-foreground/80 animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">
             At Aveda Technologies, we design and build high-performance digital
             products that help businesses grow, scale, and lead in the digital
             era.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg">
+          <div className="mt-8 flex flex-wrap justify-center gap-4 animate-in fade-in slide-in-from-bottom-16 duration-700 delay-400">
+            <Button asChild size="lg" className="animate-pulse-red">
               <Link href="/contact">Get Started</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
