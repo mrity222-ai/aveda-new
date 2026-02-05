@@ -33,6 +33,9 @@ export default function ServicesPage() {
               if (slug === 'seo-optimization') {
                 return '/services/seo-optimization';
               }
+              if (slug === 'web-development') {
+                return '/services/web-development';
+              }
               return `/services#${slug}`;
             }
 

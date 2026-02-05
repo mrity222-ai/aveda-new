@@ -79,6 +79,12 @@
       "imageHint": "developer code"
     },
     {
+      "id": "service-web-dev-detail",
+      "description": "A dark-themed image showing a web development dashboard or code.",
+      "imageUrl": "https://images.unsplash.com/photo-1587620962725-abab7fe55159?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3ZWIlMjBkZXZlbG9wbWVudCUyMGRhc2hib2FyZCUyMGRhcmt8ZW58MHx8fHwxNzc0MDIwMzM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "web dashboard"
+    },
+    {
       "id": "service-app-dev",
       "description": "A dark-themed image showing a mobile app interface.",
       "imageUrl": "https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkYXJrJTIwdGhlbWV8ZW58MHx8fHwxNzcwMjc2MDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
