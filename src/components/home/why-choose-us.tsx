@@ -16,9 +16,9 @@ export default function WhyChooseUs() {
             <h2 className="font-headline text-sm font-bold uppercase tracking-wider text-primary">
               About Aveda Technologies
             </h2>
-            <h3 className="font-headline text-4xl font-bold text-foreground md:text-5xl">
+            <h2 className="font-headline text-4xl font-bold md:text-5xl">
               Pioneering AI-powered digital growth and political intelligence.
-            </h3>
+            </h2>
             <p className="text-lg text-muted-foreground">
               We specialize in solving complex growth and influence challenges through a powerful fusion of AI, data-driven digital transformation, performance marketing, and strategic political campaigning.
             </p>

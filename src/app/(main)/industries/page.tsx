@@ -67,22 +67,23 @@ export default function IndustriesPage() {
       <section className="py-20 md:py-28">
         <div className="container">
           <div className="mx-auto mb-16 max-w-3xl text-center">
-            <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+            <h1 className="font-headline text-4xl font-bold tracking-tight md:text-5xl animate-in fade-in slide-in-from-bottom-8 duration-700">
               Industries We Empower With AI
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-10 duration-700 delay-100">
               Tailored AI-driven solutions for diverse sectors.
             </p>
-            <div className="relative mx-auto mt-6 h-1 w-24 overflow-hidden rounded-full">
+            <div className="relative mx-auto mt-6 h-1 w-24 overflow-hidden rounded-full animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">
               <div className="absolute inset-0 bg-primary"></div>
             </div>
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {industries.map((item) => (
+            {industries.map((item, index) => (
               <div
                 key={item.title}
-                className="group relative overflow-hidden rounded-lg border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10"
+                className="group relative overflow-hidden rounded-lg border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-16 duration-500"
+                style={{ animationDelay: `${index * 100 + 400}ms` }}
               >
                 <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/5 opacity-0 transition-all duration-500 group-hover:scale-[8] group-hover:opacity-100"></div>
                 <div className="relative z-10">
@@ -102,7 +103,7 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-card py-20">
+      <section className="border-t border-border bg-card py-20 animate-in fade-in duration-700">
         <div className="container text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
             Your Industry. Our AI Expertise.
@@ -111,7 +112,7 @@ export default function IndustriesPage() {
             Let's discuss how we can tailor our solutions for your specific
             needs.
           </p>
-          <Button asChild size="lg" className="mt-8">
+          <Button asChild size="lg" className="mt-8 animate-pulse-red">
             <Link href="/contact">
               Talk to an Expert <MoveRight className="ml-2 h-5 w-5" />
             </Link>
