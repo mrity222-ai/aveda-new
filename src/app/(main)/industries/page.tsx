@@ -1,129 +1,123 @@
+
+import {
+  Vote,
+  Rocket,
+  ShoppingCart,
+  Building,
+  HeartPulse,
+  School,
+  Landmark,
+  Factory,
+  MoveRight,
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
-const industryColumns = [
-  [
-    {
-      title: 'Overview',
-      description: 'End-to-end AI, digital, and performance solutions customized by industry.',
-      href: '#',
-    },
-    {
-      title: 'Political & Public Sector',
-      description: 'AI-driven voter analysis, sentiment tracking, and digital campaigning.',
-      href: '#',
-    },
-    {
-      title: 'Startups & MSMEs',
-      description: 'Growth-focused AI marketing and automation for rapid scaling.',
-      href: '#',
-    },
-    {
-      title: 'Cybersecurity',
-      description: 'AI-based threat detection, secure platforms, and data protection.',
-      href: '#',
-    },
-  ],
-  [
-    {
-      title: 'Financial Services',
-      description: 'AI marketing, lead intelligence, and compliance-ready digital systems.',
-      href: '#',
-    },
-    {
-      title: 'Healthcare & Life Sciences',
-      description: 'Patient engagement, AI analytics, and digital outreach solutions.',
-      href: '#',
-    },
-    {
-      title: 'Education & EdTech',
-      description: 'AI-powered admissions marketing, LMS platforms, and automation.',
-      href: '#',
-    },
-    {
-      title: 'Real Estate',
-      description: 'AI lead scoring, performance ads, and CRM automation.',
-      href: '#',
-    },
-  ],
-  [
-    {
-      title: 'Media & Entertainment',
-      description: 'Audience analytics, viral content strategy, and AI performance marketing.',
-      href: '#',
-    },
-    {
-      title: 'E-commerce & D2C',
-      description: 'Conversion optimization, AI retargeting, and growth automation.',
-      href: '#',
-    },
-    {
-      title: 'Hospitality & Restaurants',
-      description: 'Local SEO, AI ads, and reputation management.',
-      href: '#',
-    },
-    {
-      title: 'Public Awareness Campaigns',
-      description: 'Narrative control, trend prediction, and digital influence with AI.',
-      href: '#',
-    },
-  ],
-  [
-    {
-      title: 'Smart Cities',
-      description: 'AI dashboards, citizen engagement, and digital governance tools.',
-      href: '#',
-    },
-    {
-      title: 'Telecommunications',
-      description: 'Data-driven growth, AI customer insights, and automation.',
-      href: '#',
-    },
-    {
-      title: 'Manufacturing',
-      description: 'B2B lead systems, AI analytics, and digital branding.',
-      href: '#',
-    },
-    {
-      title: 'Technology & SaaS',
-      description: 'Product-led growth, AI onboarding, and performance funnels.',
-      href: '#',
-    },
-  ],
+const industries = [
+  {
+    icon: Vote,
+    title: 'Political Campaigns & Public Affairs',
+    description:
+      'AI voter analytics, sentiment tracking, and narrative optimization.',
+  },
+  {
+    icon: Rocket,
+    title: 'Startups & SaaS',
+    description: 'Growth marketing, AI automation, and scalable tech solutions.',
+  },
+  {
+    icon: ShoppingCart,
+    title: 'E-Commerce & Retail',
+    description:
+      'Conversion optimization, AI recommendations, and performance ads.',
+  },
+  {
+    icon: Building,
+    title: 'Real Estate & Infrastructure',
+    description:
+      'Lead intelligence, geo-targeted campaigns, and CRM automation.',
+  },
+  {
+    icon: HeartPulse,
+    title: 'Healthcare & Wellness',
+    description: 'Secure platforms, SEO growth, and patient engagement tools.',
+  },
+  {
+    icon: School,
+    title: 'Education & EdTech',
+    description:
+      'AI-powered platforms, enrollment growth, and digital branding.',
+  },
+  {
+    icon: Landmark,
+    title: 'Finance & FinTech',
+    description:
+      'Secure dashboards, AI fraud insights, and lead performance tracking.',
+  },
+  {
+    icon: Factory,
+    title: 'Manufacturing & MSMEs',
+    description: 'Automation, analytics dashboards, and demand forecasting.',
+  },
 ];
 
 export default function IndustriesPage() {
   return (
-    <div className="py-20 md:py-28 bg-background">
-      <div className="container">
-        <div className="mx-auto max-w-5xl text-center">
-          <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground md:text-5xl uppercase">
-            INDUSTRIES WE SERVE
-          </h1>
-          <p className="mt-4 text-lg text-muted-foreground">
-            AI-powered solutions across high-impact industries
-          </p>
-        </div>
+    <div className="bg-background text-foreground">
+      <section className="py-20 md:py-28">
+        <div className="container">
+          <div className="mx-auto mb-16 max-w-3xl text-center">
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-5xl">
+              Industries We Empower With AI
+            </h1>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Tailored AI-driven solutions for diverse sectors.
+            </p>
+            <div className="relative mx-auto mt-6 h-1 w-24 overflow-hidden rounded-full">
+              <div className="absolute inset-0 bg-primary"></div>
+            </div>
+          </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-4">
-          {industryColumns.map((column, colIndex) => (
-            <div key={colIndex} className="flex flex-col gap-8">
-              {column.map((item) => (
-                <Link key={item.title} href={item.href} className="group block">
-                  <div className="flex items-center">
-                    <h3 className="font-semibold text-lg text-foreground">{item.title}</h3>
-                    <span className="ml-2 text-primary opacity-0 transition-all duration-300 group-hover:opacity-100">
-                      →
-                    </span>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {industries.map((item) => (
+              <div
+                key={item.title}
+                className="group relative overflow-hidden rounded-lg border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10"
+              >
+                <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/5 opacity-0 transition-all duration-500 group-hover:scale-[8] group-hover:opacity-100"></div>
+                <div className="relative z-10">
+                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
+                    <item.icon className="h-8 w-8" />
                   </div>
-                  <p className="mt-1 text-sm text-muted-foreground">
+                  <h3 className="font-headline text-xl font-semibold text-white">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-muted-foreground">
                     {item.description}
                   </p>
-                </Link>
-              ))}
-            </div>
-          ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section className="border-t border-border bg-card py-20">
+        <div className="container text-center">
+          <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
+            Your Industry. Our AI Expertise.
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Let's discuss how we can tailor our solutions for your specific
+            needs.
+          </p>
+          <Button asChild size="lg" className="mt-8">
+            <Link href="/contact">
+              Talk to an Expert <MoveRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+      </section>
     </div>
   );
 }
