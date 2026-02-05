@@ -32,11 +32,11 @@ export default function Header() {
           : 'bg-transparent'
       )}
     >
-      <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
+      <div className="container relative flex h-16 items-center justify-between">
+        <Link href="/" className="flex items-center space-x-2">
           <Logo />
         </Link>
-        <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
+        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center space-x-6 text-sm font-medium md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -50,7 +50,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-4">
+        <div className="flex items-center justify-end space-x-4">
           <Button asChild>
             <Link href="/contact">Get Started</Link>
           </Button>
@@ -66,7 +66,7 @@ export default function Header() {
                 <nav className="flex flex-col space-y-4 pt-8">
                   {navLinks.map((link) => (
                     <Link
-                      key={link.href}
+                      key={link.label}
                       href={link.href}
                       onClick={() => setOpen(false)}
                       className={cn(
