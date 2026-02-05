@@ -82,7 +82,7 @@ export default function DigitalMarketingPage() {
                     </p>
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
                         <Button asChild size="lg" variant="default">
-                            <Link href="/contact">Get Free Strategy Call</Link>
+                            <Link href="/services/digital-marketing/pricing">View Pricing Plans</Link>
                         </Button>
                         <Button asChild size="lg" variant="outline">
                             <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
@@ -143,7 +143,7 @@ export default function DigitalMarketingPage() {
                           ))}
                       </ul>
                       <Button asChild size="lg" className="mt-8">
-                          <Link href="/contact">Launch Campaign @ ₹5,000</Link>
+                          <Link href="/services/digital-marketing/pricing">View Pricing & Plans</Link>
                       </Button>
                   </div>
               </div>
