@@ -26,6 +26,16 @@ export default function ServicesPage() {
             );
             const isReversed = index % 2 !== 0;
 
+            const getServiceLink = (slug: string) => {
+              if (slug === 'digital-marketing') {
+                return '/services/digital-marketing';
+              }
+              if (slug === 'seo-optimization') {
+                return '/services/seo-optimization';
+              }
+              return `/services#${slug}`;
+            }
+
             return (
               <section key={service.slug} id={service.slug} className="items-center gap-8 md:grid md:grid-cols-2 md:gap-16">
                 <div className={cn('relative h-80 w-full md:h-[450px]', isReversed && 'md:order-last')}>
@@ -57,7 +67,7 @@ export default function ServicesPage() {
                   </ul>
                   <div className="mt-8">
                     <Link
-                      href={service.slug === 'digital-marketing' ? '/services/digital-marketing' : '#'}
+                      href={getServiceLink(service.slug)}
                       className="group inline-flex items-center font-semibold text-primary transition-all duration-300 hover:text-foreground"
                     >
                       Explore More
