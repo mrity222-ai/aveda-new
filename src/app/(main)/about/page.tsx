@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { BrainCircuit, Target, TrendingUp, Users } from 'lucide-react';
+import { BrainCircuit, Target, TrendingUp, Users, ShieldCheck, Award, Cloud, Server, Lock } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 
@@ -37,6 +37,14 @@ export default function AboutPage() {
     { name: 'Vercel' },
     { name: 'Figma' },
     { name: 'Genkit' },
+  ];
+
+  const certifications = [
+    { name: 'ISO 27001 Certified', icon: Lock },
+    { name: 'SOC 2 Compliant', icon: ShieldCheck },
+    { name: 'Google Cloud Partner', icon: Cloud },
+    { name: 'AWS Certified', icon: Server },
+    { name: 'Microsoft Partner', icon: Award },
   ];
 
   return (
@@ -117,6 +125,26 @@ export default function AboutPage() {
                 </div>
                 <h3 className="mt-6 font-headline text-xl font-semibold">{value.title}</h3>
                 <p className="mt-2 text-gray-400">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications & Compliance Section */}
+      <section className="py-20 md:py-28">
+        <div className="container text-center">
+          <h2 className="font-headline text-3xl font-bold md:text-4xl">Certifications & Compliance</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">
+            Officially recognized. Fully compliant. Enterprise ready.
+          </p>
+          <div className="mt-16 grid grid-cols-2 gap-y-10 gap-x-8 sm:grid-cols-3 lg:grid-cols-5">
+            {certifications.map((cert) => (
+              <div key={cert.name} className="group flex flex-col items-center justify-center gap-4 text-center">
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-800 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-white">
+                  <cert.icon className="h-10 w-10" />
+                </div>
+                <p className="font-semibold">{cert.name}</p>
               </div>
             ))}
           </div>
