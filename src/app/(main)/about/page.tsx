@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { BrainCircuit, Target, TrendingUp, Users, ShieldCheck, Award, Cloud, Server, Lock } from 'lucide-react';
+import { BrainCircuit, Target, TrendingUp, Users } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 
@@ -40,11 +40,11 @@ export default function AboutPage() {
   ];
 
   const certifications = [
-    { name: 'ISO 27001 Certified', icon: Lock },
-    { name: 'SOC 2 Compliant', icon: ShieldCheck },
-    { name: 'Google Cloud Partner', icon: Cloud },
-    { name: 'AWS Certified', icon: Server },
-    { name: 'Microsoft Partner', icon: Award },
+    { name: 'ISO 27001 Certified', imageId: 'cert-iso' },
+    { name: 'SOC 2 Compliant', imageId: 'cert-soc2' },
+    { name: 'Google Cloud Partner', imageId: 'cert-gcp' },
+    { name: 'AWS Certified', imageId: 'cert-aws' },
+    { name: 'Microsoft Partner', imageId: 'cert-msft' },
   ];
 
   return (
@@ -139,14 +139,26 @@ export default function AboutPage() {
             Officially recognized. Fully compliant. Enterprise ready.
           </p>
           <div className="mt-16 grid grid-cols-2 gap-y-10 gap-x-8 sm:grid-cols-3 lg:grid-cols-5">
-            {certifications.map((cert) => (
-              <div key={cert.name} className="group flex flex-col items-center justify-center gap-4 text-center">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-800 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-white">
-                  <cert.icon className="h-10 w-10" />
+            {certifications.map((cert) => {
+              const image = PlaceHolderImages.find((img) => img.id === cert.imageId);
+              return (
+                <div key={cert.name} className="group flex flex-col items-center justify-center gap-4 text-center">
+                  <div className="relative h-20 w-20 overflow-hidden rounded-full bg-gray-800 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
+                    {image && (
+                      <Image
+                        src={image.imageUrl}
+                        alt={cert.name}
+                        fill
+                        className="object-contain p-2"
+                        sizes="80px"
+                        data-ai-hint={image.imageHint}
+                      />
+                    )}
+                  </div>
+                  <p className="font-semibold">{cert.name}</p>
                 </div>
-                <p className="font-semibold">{cert.name}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

@@ -113,6 +113,36 @@
       "description": "A dark-themed image of a political data map.",
       "imageUrl": "https://images.unsplash.com/photo-1639737496154-7729f2c0df3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb2xpdGljYWwlMjBkYXRhJTIwbWFwJTIwZGFya3xlbnwwfHx8fDE3NzAyNzYwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "political data"
+    },
+    {
+      "id": "cert-iso",
+      "description": "ISO 27001 Certified Badge",
+      "imageUrl": "https://images.unsplash.com/photo-1561408564-99cd1624ccac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxJU08lMjBiYWRnZXxlbnwwfHx8fDE3NzAyNzk4MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ISO badge"
+    },
+    {
+      "id": "cert-soc2",
+      "description": "SOC 2 Compliant Badge",
+      "imageUrl": "https://picsum.photos/seed/soc2/200/200",
+      "imageHint": "SOC2 badge"
+    },
+    {
+      "id": "cert-gcp",
+      "description": "Google Cloud Partner Badge",
+      "imageUrl": "https://images.unsplash.com/photo-1612873346068-1d4b76372235?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxHb29nbGUlMjBDbG91ZHxlbnwwfHx8fDE3NzAyNzk4MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Google Cloud"
+    },
+    {
+      "id": "cert-aws",
+      "description": "AWS Certified Badge",
+      "imageUrl": "https://picsum.photos/seed/aws/200/200",
+      "imageHint": "AWS badge"
+    },
+    {
+      "id": "cert-msft",
+      "description": "Microsoft Partner Badge",
+      "imageUrl": "https://images.unsplash.com/photo-1633113215792-b50572729907?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8TWljcm9zb2Z0JTIwcGFydG5lcnxlbnwwfHx8fDE3NzAyNzk4MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Microsoft partner"
     }
   ]
 }
