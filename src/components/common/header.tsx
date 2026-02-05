@@ -27,25 +27,33 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
-  const [isClient, setIsClient] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
+    setHasMounted(true);
   }, []);
 
   useEffect(() => {
+    if (!hasMounted) return;
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
+
+    handleScroll(); // Check on mount
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [hasMounted]);
+
+  const showSolidHeader = !hasMounted
+    ? pathname !== '/'
+    : pathname !== '/' || isScrolled;
 
   return (
     <header
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300 animate-in fade-in slide-in-from-top-4',
-        (isClient && isScrolled) || pathname !== '/'
+        showSolidHeader
           ? 'border-b bg-background/80 backdrop-blur-sm'
           : 'bg-transparent'
       )}
