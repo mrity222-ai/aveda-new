@@ -40,7 +40,7 @@ export default function Footer() {
             <h3 className="font-headline text-lg font-semibold">Quick Links</h3>
             <ul className="mt-4 space-y-2">
               {footerLinks.quick.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
                     className="text-sm text-muted-foreground hover:text-primary"
@@ -55,7 +55,7 @@ export default function Footer() {
             <h3 className="font-headline text-lg font-semibold">Company</h3>
             <ul className="mt-4 space-y-2">
               {footerLinks.company.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
                     className="text-sm text-muted-foreground hover:text-primary"
