@@ -9,20 +9,20 @@ export default function WhyChooseUs() {
   );
 
   return (
-    <section className="bg-gray-950 py-20 md:py-28 text-gray-100">
+    <section className="bg-secondary py-20 md:py-28 text-foreground">
       <div className="container">
         <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
           <div className="space-y-6">
             <h2 className="font-headline text-sm font-bold uppercase tracking-wider text-primary">
               About Aveda Technologies
             </h2>
-            <h3 className="font-headline text-4xl font-bold text-white md:text-5xl">
+            <h3 className="font-headline text-4xl font-bold text-foreground md:text-5xl">
               Pioneering AI-powered digital growth and political intelligence.
             </h3>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-muted-foreground">
               We specialize in solving complex growth and influence challenges through a powerful fusion of AI, data-driven digital transformation, performance marketing, and strategic political campaigning.
             </p>
-            <Link href="/about" className="group inline-flex items-center font-semibold text-primary transition-all duration-300 hover:text-white">
+            <Link href="/about" className="group inline-flex items-center font-semibold text-primary transition-all duration-300 hover:text-foreground">
               Explore More <ArrowDown className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-y-1" />
             </Link>
           </div>

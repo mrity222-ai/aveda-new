@@ -7,13 +7,13 @@ import { cn } from '@/lib/utils';
 
 export default function ServicesPage() {
   return (
-    <div className="bg-gray-950 text-gray-100">
+    <div className="bg-background text-foreground">
       <div className="container py-20 md:py-28">
         <div className="mx-auto mb-16 max-w-4xl text-center">
-          <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl">
+          <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground md:text-6xl">
             Our Services
           </h1>
-          <p className="mt-6 text-lg text-gray-300">
+          <p className="mt-6 text-lg text-muted-foreground">
             From concept to launch, we provide end-to-end digital solutions
             tailored to your business needs. Discover how we can help you grow.
           </p>
@@ -43,22 +43,22 @@ export default function ServicesPage() {
                 </div>
 
                 <div className={cn('mt-8 md:mt-0', isReversed && 'md:order-first')}>
-                  <h2 className="group font-headline text-3xl font-bold text-white transition-colors duration-300 hover:text-primary">
+                  <h2 className="group font-headline text-3xl font-bold text-foreground transition-colors duration-300 hover:text-primary">
                     {service.title}
                   </h2>
-                  <p className="mt-4 text-gray-300">{service.description}</p>
+                  <p className="mt-4 text-muted-foreground">{service.description}</p>
                   <ul className="mt-6 space-y-3">
                     {service.details.map((detail) => (
                       <li key={detail} className="flex items-center gap-3">
                         <Check className="h-5 w-5 flex-shrink-0 text-primary" />
-                        <span className="text-gray-300">{detail}</span>
+                        <span className="text-muted-foreground">{detail}</span>
                       </li>
                     ))}
                   </ul>
                   <div className="mt-8">
                     <Link
                       href="#"
-                      className="group inline-flex items-center font-semibold text-primary transition-all duration-300 hover:text-white"
+                      className="group inline-flex items-center font-semibold text-primary transition-all duration-300 hover:text-foreground"
                     >
                       Explore More
                       <MoveRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

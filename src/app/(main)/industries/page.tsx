@@ -93,10 +93,10 @@ const industryColumns = [
 
 export default function IndustriesPage() {
   return (
-    <div className="py-20 md:py-28 bg-background text-gray-900">
+    <div className="py-20 md:py-28 bg-background">
       <div className="container">
         <div className="mx-auto max-w-5xl text-center">
-          <h1 className="font-headline text-4xl font-bold tracking-tight text-black md:text-5xl uppercase">
+          <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground md:text-5xl uppercase">
             INDUSTRIES WE SERVE
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -110,7 +110,7 @@ export default function IndustriesPage() {
               {column.map((item) => (
                 <Link key={item.title} href={item.href} className="group block">
                   <div className="flex items-center">
-                    <h3 className="font-semibold text-lg text-black">{item.title}</h3>
+                    <h3 className="font-semibold text-lg text-foreground">{item.title}</h3>
                     <span className="ml-2 text-primary opacity-0 transition-all duration-300 group-hover:opacity-100">
                       →
                     </span>

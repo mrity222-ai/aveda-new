@@ -48,9 +48,9 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="bg-gray-950 text-white">
+    <div className="bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-black py-20 md:py-32">
+      <section className="relative overflow-hidden bg-secondary py-20 md:py-32">
         <div className="absolute inset-0 z-0 opacity-10">
           {/* Subtle animated background */}
         </div>
@@ -61,7 +61,7 @@ export default function AboutPage() {
           <h1 className="mt-4 font-headline text-4xl font-bold tracking-tight md:text-6xl">
             Building Intelligent Digital & Political Systems with AI
           </h1>
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-300">
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
             Aveda Technologies helps businesses, leaders, and organizations grow through AI-driven technology, marketing, and political intelligence.
           </p>
         </div>
@@ -70,12 +70,12 @@ export default function AboutPage() {
       {/* Our Technology Partners Section */}
       <section className="py-20 md:py-28">
         <div className="container text-center">
-          <p className="mx-auto mt-4 max-w-3xl text-lg text-gray-400">
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
             We collaborate with trusted technology leaders to deliver secure and scalable digital solutions.
           </p>
           <div className="mt-16 flex flex-wrap items-center justify-center gap-x-12 gap-y-8 opacity-75">
             {partners.map((partner) => (
-               <span key={partner.name} className="text-xl font-semibold text-gray-400">{partner.name}</span>
+               <span key={partner.name} className="text-xl font-semibold text-muted-foreground">{partner.name}</span>
             ))}
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function AboutPage() {
           <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
             <div className="space-y-6">
               <h2 className="font-headline text-3xl font-bold">Who We Are</h2>
-              <p className="text-lg text-gray-300">
+              <p className="text-lg text-muted-foreground">
                 Aveda Technologies is an AI-first digital company delivering advanced web, mobile, marketing, automation, and political campaigning solutions. We combine technology, data, and strategy to create measurable digital impact.
               </p>
             </div>
@@ -109,22 +109,22 @@ export default function AboutPage() {
       </section>
       
       {/* What Makes Us Different Section */}
-      <section className="bg-black py-20 md:py-28">
+      <section className="bg-secondary py-20 md:py-28">
         <div className="container text-center">
           <h2 className="font-headline text-3xl font-bold md:text-4xl">What Makes Us Different</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
             Our core principles ensure we deliver unparalleled value and innovation.
           </p>
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((value) => (
-              <div key={value.title} className="group rounded-lg p-6 transition-all duration-300 hover:bg-gray-900/50">
+              <div key={value.title} className="group rounded-lg p-6 transition-all duration-300 hover:bg-muted/50">
                 <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gray-900 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-white">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-muted text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
                     <value.icon className="h-8 w-8" />
                   </div>
                 </div>
                 <h3 className="mt-6 font-headline text-xl font-semibold">{value.title}</h3>
-                <p className="mt-2 text-gray-400">{value.description}</p>
+                <p className="mt-2 text-muted-foreground">{value.description}</p>
               </div>
             ))}
           </div>
@@ -135,7 +135,7 @@ export default function AboutPage() {
       <section className="py-20 md:py-28">
         <div className="container text-center">
           <h2 className="font-headline text-3xl font-bold md:text-4xl">Certifications & Compliance</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
             Officially recognized. Fully compliant. Enterprise ready.
           </p>
           <div className="mt-16 grid grid-cols-2 gap-y-10 gap-x-8 sm:grid-cols-3 lg:grid-cols-5">
@@ -143,7 +143,7 @@ export default function AboutPage() {
               const image = PlaceHolderImages.find((img) => img.id === cert.imageId);
               return (
                 <div key={cert.name} className="group flex flex-col items-center justify-center gap-4 text-center">
-                  <div className="relative h-20 w-20 overflow-hidden rounded-full bg-gray-800 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
+                  <div className="relative h-20 w-20 overflow-hidden rounded-full bg-muted transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
                     {image && (
                       <Image
                         src={image.imageUrl}

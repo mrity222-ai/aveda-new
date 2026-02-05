@@ -21,12 +21,12 @@ export default function HeroSection() {
         />
       )}
       <div className="absolute inset-0 bg-black/60" />
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-primary-foreground">
         <div className="container">
           <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
             Transforming Ideas Into Powerful Digital Experiences
           </h1>
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-white/80">
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-primary-foreground/80">
             At Aveda Technologies, we design and build high-performance digital
             products that help businesses grow, scale, and lead in the digital
             era.
