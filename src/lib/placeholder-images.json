@@ -51,7 +51,7 @@
     {
       "id": "blog-ai-business",
       "description": "An image of a robot and a human shaking hands.",
-      "imageUrl": "https://images.unsplash.com/photo-1694903110330-cc64b7e1d21d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhaSUyMGJ1c2luZXNzfGVufDB8fHx8MTc3MDI3NTM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1696253914523-488f5f97b090?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhaSUyMGFic3RyYWN0JTIwZGFya3xlbnwwfHx8fDE3NzAyNzYwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ai business"
     },
     {
@@ -185,6 +185,18 @@
       "description": "Abstract background of floating mobile app UI mockups",
       "imageUrl": "https://images.unsplash.com/photo-1581287053822-fd7bf4f4bf3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2JpbGUlMjBhcHAlMjBtb2NrdXBzfGVufDB8fHx8MTc3NDAzMjU3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mobile app mockups"
+    },
+    {
+      "id": "service-political-hero",
+      "description": "A dark, strategic map of a country with glowing data points, representing election data.",
+      "imageUrl": "https://images.unsplash.com/photo-1639737496154-7729f2c0df3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb2xpdGljYWwlMjBkYXRhJTIwbWFwJTIwZGFya3xlbnwwfHx8fDE3NzAyNzYwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "political map data"
+    },
+    {
+      "id": "service-political-dashboard",
+      "description": "A sophisticated AI dashboard showing voter analytics, sentiment graphs, and heatmaps.",
+      "imageUrl": "https://images.unsplash.com/photo-1642427749670-f20e2e76f8c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzc0NDk0MDU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "analytics dashboard"
     }
   ]
 }

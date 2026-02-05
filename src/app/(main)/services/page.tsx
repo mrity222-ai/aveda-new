@@ -241,7 +241,7 @@ export default function ServicesPage() {
                             <li key={detail} className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary" /><span>{detail}</span></li>
                         ))}
                     </ul>
-                    <Button asChild className="mt-8"><Link href="/contact?service=Political+Campaigning+with+AI">Start Political Campaign <MoveRight className="ml-2 h-4 w-4" /></Link></Button>
+                    <Button asChild className="mt-8"><Link href="/services/political-campaigning">Start Political Campaign <MoveRight className="ml-2 h-4 w-4" /></Link></Button>
                 </div>
                 <div className="relative h-96 w-full">
                     {politicalImage && <Image src={politicalImage.imageUrl} alt={politicalImage.description} fill className="rounded-lg object-cover" sizes="(max-width: 768px) 100vw, 50vw" data-ai-hint={politicalImage.imageHint} />}
@@ -297,5 +297,7 @@ export default function ServicesPage() {
     </div>
   );
 }
+
+    
 
     
