@@ -1,4 +1,5 @@
 
+
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -152,7 +153,7 @@ export default function ServicesPage() {
                             <li key={detail} className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary" /><span>{detail}</span></li>
                         ))}
                     </ul>
-                    <Button asChild className="mt-8"><Link href="/contact">Build Your App <MoveRight className="ml-2 h-4 w-4" /></Link></Button>
+                    <Button asChild className="mt-8"><Link href="/services/app-development">Build Your App <MoveRight className="ml-2 h-4 w-4" /></Link></Button>
                 </div>
             </div>
         </section>

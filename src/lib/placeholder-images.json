@@ -179,6 +179,12 @@
       "description": "A visualization of a map with data points",
       "imageUrl": "https://images.unsplash.com/photo-1604357209793-f5d628658f3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYXAlMjB2aXN1YWxpemF0aW9ufGVufDB8fHx8MTc3MjI4MjIwNXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "map visualization"
+    },
+    {
+      "id": "service-app-dev-hero",
+      "description": "Abstract background of floating mobile app UI mockups",
+      "imageUrl": "https://images.unsplash.com/photo-1581287053822-fd7bf4f4bf3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2JpbGUlMjBhcHAlMjBtb2NrdXBzfGVufDB8fHx8MTc3NDAzMjU3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile app mockups"
     }
   ]
 }
