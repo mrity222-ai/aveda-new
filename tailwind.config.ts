@@ -16,8 +16,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['var(--font-body)', 'sans-serif'],
-        headline: ['var(--font-headline)', 'sans-serif'],
+        body: ['var(--font-body)', 'cursive'],
+        headline: ['var(--font-body)', 'cursive'],
       },
       colors: {
         background: 'hsl(var(--background))',
