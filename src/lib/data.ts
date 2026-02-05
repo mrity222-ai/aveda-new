@@ -35,7 +35,7 @@ export const navLinks = [
   },
   { href: '/about', label: 'About' },
   { href: '/works', label: 'Works' },
-  { href: '/insides', label: 'Insides' },
+  { href: '/insides', label: 'Insights' },
   { href: '/industries', label: 'Industries' },
 ];
 
@@ -173,7 +173,7 @@ export const portfolioProjects = [
   {
     slug: 'connect-digital-marketing',
     title: 'Digital Marketing Campaign',
-    category: 'Digital Marketing',
+    category: 'Digital & Performance Marketing',
     industry: 'Education',
     clientGoal: 'To increase student enrollment for online courses through digital channels.',
     solution: 'Executed a multi-channel digital marketing campaign including paid ads and content marketing.',
@@ -225,7 +225,7 @@ export const blogPosts = [
   {
     slug: 'top-5-tech-trends-2026',
     title: 'Top 5 Tech Trends to Watch in 2026',
-    category: 'Tech Trends',
+    category: 'Web & App Trends',
     date: '2026-07-15',
     author: 'John Doe',
     image: findImage('blog-tech-trends'),
@@ -234,7 +234,7 @@ export const blogPosts = [
   {
     slug: 'ai-in-business-a-game-changer',
     title: 'AI in Business: More Than Just a Buzzword',
-    category: 'AI in Business',
+    category: 'AI & Automation',
     date: '2026-06-28',
     author: 'Jane Smith',
     image: findImage('blog-ai-business'),
@@ -243,11 +243,20 @@ export const blogPosts = [
   {
     slug: 'crafting-effective-marketing-strategies',
     title: 'The Art of Crafting Marketing Strategies That Convert',
-    category: 'Marketing Strategies',
+    category: 'Digital & Performance Marketing',
     date: '2026-05-10',
     author: 'Alex Johnson',
     image: findImage('blog-marketing-strategies'),
     content: `In a crowded digital marketplace, a well-crafted marketing strategy is what separates successful brands from the rest. The foundation of any effective strategy is a deep understanding of the target audience. This involves creating detailed buyer personas based on demographics, psychographics, and behavior. Once you know who you're talking to, the next step is to define your unique value proposition (UVP). What makes your product or service different and better than the competition? This UVP should be at the core of all your messaging. A multi-channel approach is also essential. Relying on a single channel is risky; a mix of SEO, content marketing, social media, and paid advertising creates a more resilient and far-reaching strategy. Finally, every strategy must be measurable. Set clear Key Performance Indicators (KPIs) and use analytics tools to track your progress, allowing you to iterate and optimize your campaigns for better results over time.`,
+  },
+  {
+    slug: 'ai-in-political-campaigns',
+    title: 'The New Frontier: AI in Political Campaigning',
+    category: 'Political Campaign Intelligence',
+    date: '2026-07-20',
+    author: 'Elena Petrov',
+    image: findImage('service-political'),
+    content: `Artificial intelligence is revolutionizing political campaigns by enabling unprecedented levels of voter targeting, sentiment analysis, and message personalization. Campaigns can now analyze vast datasets to understand voter behavior and predict election outcomes with greater accuracy. AI-driven tools monitor social media for real-time sentiment, allowing campaigns to respond instantly to emerging narratives and counter misinformation. Furthermore, automated systems can optimize ad spend across digital platforms, ensuring that every dollar is used to its maximum potential. This data-driven approach allows for hyper-targeted outreach, delivering specific messages to key demographics. While the ethical implications are still being debated, there is no denying that AI is a powerful tool that is here to stay in the world of politics.`,
   },
 ];
 
@@ -271,7 +280,7 @@ export const footerLinks = {
     { href: '/contact', label: 'Contact' },
   ],
   company: [
-    { href: '/insides', label: 'INSIDES' },
+    { href: '/insides', label: 'Insights' },
     { href: '#', label: 'Careers' },
     { href: '#', label: 'Privacy Policy' },
     { href: '#', label: 'Terms & Conditions' },

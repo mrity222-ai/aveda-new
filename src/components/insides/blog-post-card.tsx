@@ -10,7 +10,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { buttonVariants } from '@/components/ui/button';
 import {
   Accordion,
   AccordionContent,
@@ -20,6 +19,8 @@ import {
 import { Loader2, Sparkles, Calendar, User } from 'lucide-react';
 import { summarizeBlogPost } from '@/ai/flows/summarize-blog-posts';
 import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import { buttonVariants } from '../ui/button';
 
 type BlogPost = {
   slug: string;
@@ -66,20 +67,23 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
   });
 
   return (
-    <Card className="flex flex-col overflow-hidden">
+    <Card className="group flex flex-col overflow-hidden rounded-lg border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10">
       <CardHeader className="p-0">
-        <Image
-          src={post.image.imageUrl}
-          alt={post.title}
-          width={600}
-          height={400}
-          className="h-56 w-full object-cover"
-          data-ai-hint={post.image.imageHint}
-        />
+        <div className="relative h-56 w-full overflow-hidden">
+          <Image
+            src={post.image.imageUrl}
+            alt={post.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            data-ai-hint={post.image.imageHint}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        </div>
       </CardHeader>
       <CardContent className="flex-grow p-6">
-        <p className="text-sm font-medium text-primary">{post.category}</p>
-        <CardTitle className="mt-2 font-headline text-xl">{post.title}</CardTitle>
+        <Badge variant="default" className="mb-2 bg-primary/10 text-primary hover:bg-primary/20">{post.category}</Badge>
+        <CardTitle className="mt-2 font-headline text-xl transition-colors group-hover:text-primary">{post.title}</CardTitle>
         <div className="mt-3 flex items-center space-x-4 text-xs text-muted-foreground">
             <div className="flex items-center gap-1">
                 <Calendar className="h-3 w-3" />
@@ -96,7 +100,7 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
       </CardContent>
       <CardFooter className="p-6 pt-0">
         <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="item-1">
+          <AccordionItem value="item-1" className="border-b-0">
             <AccordionTrigger
               onClick={() => !summary && !isLoading && handleSummarize()}
               disabled={isLoading}
