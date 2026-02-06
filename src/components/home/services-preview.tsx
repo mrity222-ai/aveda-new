@@ -1,14 +1,6 @@
 'use client';
 
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import {
-  ArrowRight,
-  Code2,
-  Smartphone,
-  LineChart,
-  Search,
-} from 'lucide-react';
+import { BarChart, Rocket, Sparkles, Users } from 'lucide-react';
 import {
   Card,
   CardContent,
@@ -16,90 +8,70 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 
-const servicesData = [
+const featuresData = [
   {
-    slug: 'web-development',
-    title: 'Web Development',
+    title: 'AI-Powered Code Generation',
     description:
-      'High-performance and scalable websites built to grow your business.',
-    icon: Code2,
-    href: '/services/web-development',
+      'Accelerate development with intelligent code suggestions and completions.',
+    icon: Sparkles,
   },
   {
-    slug: 'app-development',
-    title: 'App Development',
+    title: 'Automated Deployments',
     description:
-      'Powerful Android & iOS apps designed for performance and usability.',
-    icon: Smartphone,
-    href: '/services/app-development',
+      'Push code to production in seconds with our seamless CI/CD pipeline.',
+    icon: Rocket,
   },
   {
-    slug: 'digital-marketing',
-    title: 'Digital & Performance Marketing',
+    title: 'Real-time Analytics',
     description:
-      'AI-driven campaigns that generate leads, sales, and visibility.',
-    icon: LineChart,
-    href: '/services/digital-marketing',
+      'Monitor performance and user behavior with our integrated analytics dashboard.',
+    icon: BarChart,
   },
   {
-    slug: 'seo-optimization',
-    title: 'SEO & Optimization',
-    description: 'Rank higher, load faster, and convert better with smart SEO.',
-    icon: Search,
-    href: '/services/seo-optimization',
+    title: 'Collaborative Environments',
+    description:
+      'Work together in shared development environments that just work.',
+    icon: Users,
   },
 ];
 
 export default function ServicesPreview() {
   return (
-    <section className="bg-secondary py-20 md:py-28">
+    <section className="bg-background py-20 md:py-28">
       <div className="container">
         <div className="mb-16 text-center animate-in fade-in slide-in-from-bottom-8 duration-700">
           <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
-            Our Core Services
+            <span className="bg-gradient-to-br from-red-600 to-blue-600 bg-clip-text text-transparent">
+              A Better Workflow.
+            </span>{' '}
+            A Better Bottom Line.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            A complete suite of digital solutions to transform your business and
-            drive growth.
+            Our platform provides all the tools you need to build, test, and
+            deploy applications with unprecedented speed and efficiency.
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {servicesData.map((service, index) => (
-            <Link
-              href={service.href}
-              key={service.slug}
-              className="block h-full"
+          {featuresData.map((feature, index) => (
+            <Card
+              key={feature.title}
+              className="group flex h-full flex-col justify-start overflow-hidden rounded-lg border-border bg-card text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12 duration-500"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <Card
-                className="group flex h-full flex-col justify-start overflow-hidden rounded-lg border-border bg-card text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12 duration-500"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardHeader className="items-center">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
-                    <service.icon className="h-6 w-6" />
-                  </div>
-                  <CardTitle className="font-headline text-xl">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{service.description}</p>
-                </CardContent>
-              </Card>
-            </Link>
+              <CardHeader className="items-center">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-gradient-to-br from-red-600 to-blue-600 group-hover:text-primary-foreground">
+                  <feature.icon className="h-6 w-6" />
+                </div>
+                <CardTitle className="font-headline text-xl">
+                  {feature.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">{feature.description}</p>
+              </CardContent>
+            </Card>
           ))}
-        </div>
-
-        <div
-          className="mt-16 text-center animate-in fade-in slide-in-from-bottom-16 duration-700"
-          style={{ animationDelay: '500ms' }}
-        >
-          <Button asChild size="lg">
-            <Link href="/services">
-              View All Services <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
         </div>
       </div>
     </section>

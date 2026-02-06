@@ -7,14 +7,15 @@ export default function FinalCta() {
     <section className="bg-secondary">
       <div className="container py-20 text-center animate-in fade-in duration-700">
         <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
-          Ready to build something powerful?
+          Start Shipping Faster Today
         </h2>
-        <p className="mt-4 text-lg text-muted-foreground">
-          Let’s turn your vision into reality.
+        <p className="mt-4 max-w-xl mx-auto text-lg text-muted-foreground">
+          Join thousands of developers building better software. No credit card
+          required.
         </p>
-        <Button asChild size="lg" className="mt-8 animate-pulse-red" variant="accent">
-          <Link href="/contact">
-            Get a Free Quote <MoveRight className="ml-2 h-5 w-5" />
+        <Button asChild size="lg" className="mt-8" variant="gradient">
+          <Link href="/contact?trial=true">
+            Start Your Free Trial <MoveRight className="ml-2 h-5 w-5" />
           </Link>
         </Button>
       </div>
