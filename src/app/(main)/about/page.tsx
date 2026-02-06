@@ -118,13 +118,13 @@ export default function AboutPage() {
                 Aveda Technologies is an AI-first digital company delivering advanced web, mobile, marketing, automation, and political campaigning solutions. We combine technology, data, and strategy to create measurable digital impact.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="rounded-xl border border-border/20 bg-card/50 p-6 backdrop-blur-sm">
+                  <div className="rounded-xl border border-border/20 bg-card/50 p-6 backdrop-blur-md">
                       <h3 className="font-headline text-3xl font-bold text-primary">100+</h3>
                       <p className="mt-1 text-muted-foreground">Projects Delivered</p>
                   </div>
-                  <div className="rounded-xl border border-border/20 bg-card/50 p-6 backdrop-blur-sm">
+                  <div className="rounded-xl border border-border/20 bg-card/50 p-6 backdrop-blur-md">
                       <h3 className="font-headline text-3xl font-bold text-primary">AI-Driven</h3>
-                      <p className="mt-1 text-muted-foreground">Solutions at Core</p>
+                      <p className="mt-1 text-muted-foreground">Solutions</p>
                   </div>
               </div>
             </div>
