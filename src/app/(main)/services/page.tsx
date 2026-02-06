@@ -122,52 +122,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
-      {/* Services Hub */}
-      <section className="relative overflow-hidden bg-black py-20 md:py-28">
-        <div className="absolute inset-0 z-0 opacity-40">
-            <div className="absolute -top-1/4 left-1/4 h-1/2 w-1/2 animate-pulse rounded-full bg-destructive/20 opacity-50 mix-blend-screen filter blur-3xl" />
-            <div className="absolute -bottom-1/4 right-1/4 h-1/2 w-1/2 animate-pulse rounded-full bg-destructive/10 opacity-50 mix-blend-screen filter blur-3xl" style={{ animationDelay: '2s' }} />
-        </div>
-        
-        <div className="container relative z-10">
-          <div className="mx-auto mb-16 max-w-3xl text-center">
-            <Badge variant="destructive" className="mb-4">Our Service Hub</Badge>
-            <h2 className="font-headline text-4xl font-bold md:text-5xl">
-                AI-Powered Solutions for Every Need
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-                Explore our core services, each enhanced with AI to deliver maximum impact and efficiency.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, index) => (
-              <Link
-                href={`/services#${service.slug}`}
-                key={service.slug}
-                className="group relative block animate-in fade-in slide-in-from-bottom-12"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                 <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-destructive via-transparent to-destructive/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                <div className="relative h-full overflow-hidden rounded-[15px] border border-destructive/30 bg-black/50 p-6 backdrop-blur-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.3)]">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-destructive/10 text-destructive drop-shadow-[0_0_8px_hsl(var(--destructive)/0.7)] transition-all group-hover:bg-destructive group-hover:text-black">
-                        <service.icon className="h-6 w-6" />
-                    </div>
-                    <h3 className="mt-6 font-headline text-xl font-bold">{service.title}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{service.description}</p>
-                    <div className="mt-6">
-                        <span className="text-xs font-mono uppercase text-destructive/70">AI Capability</span>
-                        <div className="mt-2 h-1 w-full rounded-full bg-destructive/20">
-                            <div className="h-1 rounded-full bg-gradient-to-r from-destructive/50 to-destructive" style={{ width: `${Math.floor(Math.random() * 31) + 70}%` }}></div>
-                        </div>
-                    </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
       
       <div className="relative bg-black py-20 md:py-28">
         <div className="absolute inset-0 z-0 opacity-20">
