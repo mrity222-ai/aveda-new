@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, BrainCircuit, Globe } from 'lucide-react';
 import Link from 'next/link';
 
-export default function PortfolioPreview() {
+export default function AboutUs() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-background to-secondary/50 py-20 md:py-28">
       {/* Glow effects */}

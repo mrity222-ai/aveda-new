@@ -1,8 +1,8 @@
 import HeroSection from '@/components/home/hero-section';
 import StatsSection from '@/components/home/stats-section';
 import ServicesPreview from '@/components/home/services-preview';
-import WhyChooseUs from '@/components/home/why-choose-us';
-import PortfolioPreview from '@/components/home/portfolio-preview';
+import AboutUs from '@/components/home/portfolio-preview';
+import PortfolioPreview from '@/components/home/why-choose-us';
 import FinalCta from '@/components/home/final-cta';
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <HeroSection />
       <ServicesPreview />
-      <WhyChooseUs />
+      <AboutUs />
       <PortfolioPreview />
       <StatsSection />
       <FinalCta />

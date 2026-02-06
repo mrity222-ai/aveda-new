@@ -1,120 +1,68 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Star, CheckCircle, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { MoveRight } from 'lucide-react';
+import { portfolioProjects } from '@/lib/data';
 
-const testimonials = [
-  {
-    name: 'Jane Doe',
-    role: 'CTO, Acme Inc.',
-    quote: "Aveda Technologies transformed our digital presence. Their expertise and dedication are second to none.",
-    avatarId: 'testimonial-1',
-  },
-  {
-    name: 'John Smith',
-    role: 'CEO, Stellar Solutions',
-    quote: "The team's AI-driven approach gave us a competitive edge we didn't think was possible. Highly recommended.",
-    avatarId: 'testimonial-2',
-  },
-  {
-    name: 'Priya Singh',
-    role: 'Head of Marketing, InnovateX',
-    quote: "Working with them was a breeze. They delivered on time and the results exceeded our expectations.",
-    avatarId: 'testimonial-3',
-  }
-];
+const projectsToShow = portfolioProjects.slice(0, 4);
 
-export default function WhyChooseUs() {
-    const testimonialAvatars = {
-        'testimonial-1': PlaceHolderImages.find((img) => img.id === 'testimonial-1'),
-        'testimonial-2': PlaceHolderImages.find((img) => img.id === 'testimonial-2'),
-        'testimonial-3': PlaceHolderImages.find((img) => img.id === 'testimonial-3'),
-    };
+export default function PortfolioPreview() {
+  return (
+    <section className="bg-gradient-to-b from-secondary/20 to-background py-20 md:py-28 overflow-hidden">
+      <div className="container">
+        <div className="md:flex md:items-center md:justify-between mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
+            <div className="max-w-2xl">
+                <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl text-foreground">
+                    Our Work, Designed to Perform
+                </h2>
+                <p className="mt-4 text-lg text-muted-foreground">
+                    A showcase of high-impact digital products and experiences.
+                </p>
+            </div>
+            <div className="mt-6 md:mt-0">
+                <Button asChild variant="outline">
+                    <Link href="/works">
+                        View Full Portfolio <MoveRight className="ml-2" />
+                    </Link>
+                </Button>
+            </div>
+        </div>
 
-    return (
-        <section className="bg-gradient-to-br from-background to-secondary/50 py-20 md:py-28 text-foreground relative overflow-hidden">
-            {/* Glow effects */}
-            <div className="absolute -top-1/4 -left-1/4 w-96 h-96 lg:w-[48rem] lg:h-[48rem] bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
-            <div className="absolute -bottom-1/4 -right-1/4 w-96 h-96 lg:w-[48rem] lg:h-[48rem] bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '4s' }} />
-        
-            <div className="container grid md:grid-cols-2 gap-16 items-center relative z-10">
-                {/* Left Column */}
-                <div className="animate-in fade-in slide-in-from-left-8 duration-700 space-y-8">
-                    <div>
-                        <p className="font-semibold text-primary mb-2">Testimonials</p>
-                        <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
-                            What Our Clients Say
-                        </h2>
-                    </div>
-
-                    <div className="bg-card/50 border border-border/50 rounded-lg p-4 flex items-center gap-4 shadow-lg backdrop-blur-sm">
-                        <CheckCircle className="h-10 w-10 text-primary flex-shrink-0" />
-                        <div>
-                            <p className="text-2xl font-bold">98%</p>
-                            <p className="text-muted-foreground text-sm">Problem Solved Rate</p>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-4">
-                        <Button variant="outline" className="w-full sm:w-auto justify-between">
-                            All Industries
-                            <ChevronDown className="h-4 w-4 ml-2" />
-                        </Button>
-                        <Button asChild className="w-full sm:w-auto">
-                            <Link href="/contact">Request Demo</Link>
-                        </Button>
-                    </div>
-                    <p className="text-sm text-muted-foreground">Join over 250+ satisfied clients.</p>
-                </div>
-                
-                {/* Right Column */}
-                <div className="relative animate-in fade-in slide-in-from-right-8 duration-700">
-                    {/* Testimonial cards */}
-                    <div className="space-y-8">
-                        {testimonials.map((testimonial, index) => (
+        <div className="relative">
+             <div className="flex gap-8 overflow-x-auto pb-8 -mb-8 -mx-4 px-4 snap-x snap-mandatory">
+                {projectsToShow.map((project, index) => (
+                    <div 
+                        key={project.slug} 
+                        className="snap-center shrink-0 w-[90%] md:w-[40%] lg:w-[30%] group animate-in fade-in slide-in-from-bottom-12 duration-700"
+                        style={{ animationDelay: `${index * 150}ms` }}
+                    >
+                        <Link href={`/works#${project.slug}`} className="block">
                             <div 
-                                key={testimonial.name}
-                                className="bg-card/50 border border-border/50 rounded-lg p-6 shadow-xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-primary/20"
-                                style={{ 
-                                    transform: `translateX(${index === 1 ? '2rem' : '0'})`,
-                                    zIndex: index,
-                                }}
+                                className="relative rounded-2xl bg-card/40 backdrop-blur-sm border border-white/10 shadow-2xl transition-all duration-300 h-[450px] overflow-hidden transform md:rotate-3 group-hover:rotate-0 group-hover:scale-105 group-hover:shadow-primary/30"
                             >
-                                <blockquote className="text-base leading-relaxed text-muted-foreground">
-                                    "{testimonial.quote}"
-                                </blockquote>
-                                <div className="mt-4 flex items-center gap-4">
-                                    {testimonialAvatars[testimonial.avatarId as keyof typeof testimonialAvatars] && (
+                                <div className="p-6">
+                                    <Badge variant="outline">{project.category}</Badge>
+                                    <h3 className="font-headline text-xl mt-4 text-foreground">{project.title}</h3>
+                                </div>
+                                <div className="absolute bottom-0 left-0 right-0 h-3/4">
                                     <Image
-                                        src={testimonialAvatars[testimonial.avatarId as keyof typeof testimonialAvatars]!.imageUrl}
-                                        alt={testimonial.name}
-                                        width={40}
-                                        height={40}
-                                        className="rounded-full"
-                                        data-ai-hint={testimonialAvatars[testimonial.avatarId as keyof typeof testimonialAvatars]!.imageHint}
+                                        src={project.image.imageUrl}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                        data-ai-hint={project.image.imageHint}
+                                        sizes="(max-width: 768px) 90vw, (max-width: 1200px) 40vw, 30vw"
                                     />
-                                    )}
-                                    <div>
-                                    <p className="font-semibold">{testimonial.name}</p>
-                                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                                    </div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/20 to-transparent"></div>
                                 </div>
                             </div>
-                        ))}
+                        </Link>
                     </div>
-
-                    {/* Rating Block */}
-                    <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-card/50 border border-border/50 rounded-full p-4 flex flex-col items-center justify-center text-center shadow-2xl backdrop-blur-sm z-10 transition-transform hover:scale-110">
-                        <div className="flex items-center">
-                            {[...Array(4)].map((_, i) => <Star key={i} className="h-5 w-5 fill-accent text-accent" />)}
-                            <Star className="h-5 w-5 fill-accent/50 text-accent" />
-                        </div>
-                        <p className="text-3xl font-bold mt-2">4.8</p>
-                        <p className="text-sm text-muted-foreground">from 1.2k ratings</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+                ))}
+             </div>
+        </div>
+      </div>
+    </section>
+  );
 }
