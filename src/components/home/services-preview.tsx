@@ -30,12 +30,12 @@ export default function ServicesPreview() {
           {featuredServices.map((service, index) => (
              <Link href={`/services#${service.slug}`} key={service.slug} className="group block h-full">
               <Card
-                className="flex h-full flex-col justify-start overflow-hidden rounded-lg border-border bg-card text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20 animate-in fade-in slide-in-from-bottom-12 duration-500"
+                className="flex h-full flex-col justify-start overflow-hidden rounded-lg border-border bg-card text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20 animate-in fade-in slide-in-from-bottom-12 duration-500"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardHeader>
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-secondary text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
-                    <service.icon className="h-6 w-6" />
+                <CardHeader className="items-center">
+                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
+                    <service.icon className="h-8 w-8" />
                   </div>
                   <CardTitle className="font-headline text-xl">
                     {service.title}
@@ -51,7 +51,7 @@ export default function ServicesPreview() {
 
         <div className="mt-16 text-center">
             <Button asChild size="lg" variant="default">
-                <Link href="/services">Explore All Services <MoveRight className="ml-2" /></Link>
+                <Link href="/services">View More Services <MoveRight className="ml-2" /></Link>
             </Button>
         </div>
 
