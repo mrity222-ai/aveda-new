@@ -29,35 +29,67 @@ export default function PortfolioPreview() {
             </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {projectsToShow.map((project) => (
-                <div 
-                    key={project.slug}
-                    className="group/card"
-                >
-                    <Link href={`/works#${project.slug}`} className="block">
-                        <div 
-                            className="relative rounded-2xl bg-card/40 backdrop-blur-sm border border-white/10 shadow-2xl transition-all duration-300 h-[450px] overflow-hidden transform md:rotate-3 group-hover/card:rotate-0 group-hover/card:scale-105 group-hover/card:shadow-primary/30"
-                        >
-                            <div className="p-6">
-                                <Badge variant="outline">{project.category}</Badge>
-                                <h3 className="font-headline text-xl mt-4 text-foreground">{project.title}</h3>
+        <div className="group relative mt-16 flex w-full overflow-x-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+            <div className="flex shrink-0 gap-8 animate-marquee-right group-hover:[animation-play-state:paused]">
+                {projectsToShow.map((project) => (
+                    <div 
+                        key={project.slug}
+                        className="group/card w-[300px] sm:w-[350px]"
+                    >
+                        <Link href={`/works#${project.slug}`} className="block">
+                            <div 
+                                className="relative rounded-2xl bg-card/40 backdrop-blur-sm border border-white/10 shadow-2xl transition-all duration-300 h-[450px] overflow-hidden transform md:rotate-3 group-hover/card:rotate-0 group-hover/card:scale-105 group-hover/card:shadow-primary/30"
+                            >
+                                <div className="p-6">
+                                    <Badge variant="outline">{project.category}</Badge>
+                                    <h3 className="font-headline text-xl mt-4 text-foreground">{project.title}</h3>
+                                </div>
+                                <div className="absolute bottom-0 left-0 right-0 h-3/4">
+                                    <Image
+                                        src={project.image.imageUrl}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover/card:scale-110"
+                                        data-ai-hint={project.image.imageHint}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/20 to-transparent"></div>
+                                </div>
                             </div>
-                            <div className="absolute bottom-0 left-0 right-0 h-3/4">
-                                <Image
-                                    src={project.image.imageUrl}
-                                    alt={project.title}
-                                    fill
-                                    className="object-cover transition-transform duration-500 group-hover/card:scale-110"
-                                    data-ai-hint={project.image.imageHint}
-                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/20 to-transparent"></div>
+                        </Link>
+                    </div>
+                ))}
+            </div>
+            <div className="flex shrink-0 gap-8 animate-marquee-right group-hover:[animation-play-state:paused]" aria-hidden="true">
+                {projectsToShow.map((project) => (
+                    <div 
+                        key={`${project.slug}-clone`}
+                        className="group/card w-[300px] sm:w-[350px]"
+                    >
+                        <Link href={`/works#${project.slug}`} className="block">
+                            <div 
+                                className="relative rounded-2xl bg-card/40 backdrop-blur-sm border border-white/10 shadow-2xl transition-all duration-300 h-[450px] overflow-hidden transform md:rotate-3 group-hover/card:rotate-0 group-hover/card:scale-105 group-hover/card:shadow-primary/30"
+                            >
+                                <div className="p-6">
+                                    <Badge variant="outline">{project.category}</Badge>
+                                    <h3 className="font-headline text-xl mt-4 text-foreground">{project.title}</h3>
+                                </div>
+                                <div className="absolute bottom-0 left-0 right-0 h-3/4">
+                                    <Image
+                                        src={project.image.imageUrl}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover/card:scale-110"
+                                        data-ai-hint={project.image.imageHint}
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/20 to-transparent"></div>
+                                </div>
                             </div>
-                        </div>
-                    </Link>
-                </div>
-            ))}
+                        </Link>
+                    </div>
+                ))}
+            </div>
         </div>
       </div>
     </section>
