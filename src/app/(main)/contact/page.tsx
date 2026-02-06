@@ -136,16 +136,17 @@ export default function ContactPage() {
         </section>
 
         {/* Why Contact Us Section */}
-        <section className="bg-secondary py-20 md:py-28">
+        <section className="relative overflow-hidden bg-black py-20 md:py-28">
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-primary/10 to-transparent opacity-50 blur-3xl" />
             <div className="container text-center">
                 <h2 className="font-headline text-3xl font-bold md:text-4xl">Why Contact Us?</h2>
                 <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                     {whyContactUs.map((value) => (
-                    <div key={value.title} className="group rounded-lg p-6 transition-all duration-300 hover:bg-muted/50 hover:-translate-y-2">
+                    <div key={value.title} className="group rounded-lg p-6 text-center transition-all duration-300 hover:-translate-y-2">
                         <div className="flex justify-center">
-                        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-muted text-primary ring-8 ring-muted transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:ring-primary/20">
-                            <value.icon className="h-8 w-8" />
-                        </div>
+                            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 ring-8 ring-primary/5 transition-all duration-300 group-hover:ring-primary/10">
+                                <value.icon className="h-10 w-10 text-primary transition-transform duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_hsl(var(--primary)/0.6)]" />
+                            </div>
                         </div>
                         <h3 className="mt-6 font-headline text-xl font-semibold">{value.title}</h3>
                         <p className="mt-2 text-muted-foreground">{value.description}</p>
