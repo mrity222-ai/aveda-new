@@ -18,6 +18,9 @@ import {
   Building2,
   Store,
   Users,
+  Layers,
+  Gem,
+  FileText,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -43,15 +46,35 @@ const WhatsAppIcon = () => (
     </svg>
   );
 
-const technologies = [
-    { name: 'React & Next.js' },
-    { name: 'Node.js & Laravel' },
-    { name: 'WordPress & Headless CMS' },
-    { name: 'AWS & Google Cloud' },
-    { name: 'Firebase' },
-    { name: 'AI & Genkit' },
-    { name: 'PostgreSQL & MongoDB' },
-    { name: 'Tailwind CSS' },
+const technologiesByCategory = [
+    {
+        category: 'Frontend',
+        items: [
+            { name: 'React & Next.js', icon: Code2 },
+            { name: 'Tailwind CSS', icon: Layers },
+        ]
+    },
+    {
+        category: 'Backend',
+        items: [
+            { name: 'Node.js & Laravel', icon: Server },
+            { name: 'PostgreSQL & MongoDB', icon: Database },
+        ]
+    },
+    {
+        category: 'Cloud & CMS',
+        items: [
+            { name: 'AWS & Google Cloud', icon: Cloud },
+            { name: 'Firebase', icon: Gem },
+            { name: 'WordPress & Headless CMS', icon: FileText },
+        ]
+    },
+    {
+        category: 'AI & Data',
+        items: [
+            { name: 'AI & Genkit', icon: Cpu },
+        ]
+    }
 ];
 
 const industries = [
@@ -184,12 +207,30 @@ export default function ServicesPage() {
         </section>
 
         {/* Technologies We Use Section */}
-        <section className="scroll-mt-20 text-center bg-black pb-20 md:pb-28">
-            <div className="container">
+        <section className="relative scroll-mt-20 bg-black text-center pb-20 md:pb-28">
+            <div className="absolute inset-0 z-0 opacity-20">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,_hsl(var(--destructive)/0.15)_0%,_transparent_60%)]" />
+            </div>
+            <div className="container relative z-10">
                 <h2 className="font-headline text-3xl font-bold">Technologies We Use</h2>
-                <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 opacity-75">
-                    {technologies.map(tech => (
-                        <span key={tech.name} className="text-xl font-semibold text-muted-foreground">{tech.name}</span>
+                <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">We leverage a modern, scalable, and secure technology stack to build robust digital solutions.</p>
+
+                <div className="mt-16 space-y-12">
+                    {technologiesByCategory.map(({ category, items }) => (
+                        <div key={category}>
+                            <h3 className="font-headline text-2xl font-semibold tracking-tight text-white/90">{category}</h3>
+                            <div className="mt-8 grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 md:grid-cols-4 lg:flex lg:flex-wrap lg:justify-center lg:gap-8">
+                                {items.map((tech) => (
+                                    <div key={tech.name} className="group relative rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-lg transition-all duration-300 hover:border-destructive/50 hover:bg-destructive/10 hover:shadow-2xl hover:shadow-destructive/20 lg:w-48">
+                                        <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                                        <div className="relative flex flex-col items-center justify-center gap-4">
+                                            <tech.icon className="h-10 w-10 text-white/80 transition-colors duration-300 group-hover:text-destructive" />
+                                            <p className="font-semibold text-sm text-center text-white">{tech.name}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>
