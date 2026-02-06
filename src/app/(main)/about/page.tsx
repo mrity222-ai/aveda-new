@@ -36,8 +36,8 @@ export default function AboutPage() {
     { name: 'AWS', imageUrl: 'https://picsum.photos/seed/awslogo/120/40' },
     { name: 'GoDaddy', imageUrl: 'https://picsum.photos/seed/godaddy/120/40' },
     { name: 'Next.js', imageUrl: 'https://picsum.photos/seed/nextjslogo/120/40' },
-    { name: 'Vercel', imageUrl: 'https://picsum.photos/seed/vercel/120/40' },
     { name: 'Figma', imageUrl: 'https://picsum.photos/seed/figma/120/40' },
+    { name: 'Vercel', imageUrl: 'https://picsum.photos/seed/vercel/120/40' },
   ];
 
   const recognitions = [
