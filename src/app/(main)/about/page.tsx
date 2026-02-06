@@ -1,7 +1,8 @@
 import Image from 'next/image';
-import { BrainCircuit, Target, TrendingUp, Users, Shield } from 'lucide-react';
+import { BrainCircuit, Target, TrendingUp, Users, Shield, Award, Star, Factory, Power } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
 
 export default function AboutPage() {
   const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
@@ -39,13 +40,14 @@ export default function AboutPage() {
     { name: 'Genkit' },
   ];
 
-  const certifications = [
-    { name: 'ISO 27001 Certified', imageId: 'cert-iso' },
-    { name: 'SOC 2 Compliant', imageId: 'cert-soc2' },
-    { name: 'Google Cloud Partner', imageId: 'cert-gcp' },
-    { name: 'AWS Certified', imageId: 'cert-aws' },
-    { name: 'Microsoft Partner', imageId: 'cert-msft' },
+  const recognitions = [
+    { name: 'ISO Certified', icon: Shield },
+    { name: 'MSME Registered', icon: Award },
+    { name: 'Startup India', icon: Star },
+    { name: 'Made in India', icon: Factory },
+    { name: 'Digital India', icon: Power },
   ];
+
 
   return (
     <div className="bg-background text-foreground">
@@ -162,34 +164,30 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Certifications & Compliance Section */}
-      <section className="py-20 md:py-28">
-        <div className="container text-center">
-          <h2 className="font-headline text-3xl font-bold md:text-4xl">Certifications & Compliance</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Officially recognized. Fully compliant. Enterprise ready.
-          </p>
-          <div className="mt-16 grid grid-cols-2 gap-y-10 gap-x-8 sm:grid-cols-3 lg:grid-cols-5">
-            {certifications.map((cert) => {
-              const image = PlaceHolderImages.find((img) => img.id === cert.imageId);
-              return (
-                <div key={cert.name} className="group flex flex-col items-center justify-center gap-4 text-center">
-                  <div className="relative h-20 w-20 overflow-hidden rounded-full bg-muted transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
-                    {image && (
-                      <Image
-                        src={image.imageUrl}
-                        alt={cert.name}
-                        fill
-                        className="object-contain p-2"
-                        sizes="80px"
-                        data-ai-hint={image.imageHint}
-                      />
-                    )}
+      {/* Trust & Recognition Section */}
+      <section className="relative overflow-hidden bg-black py-20 md:py-28">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute -top-1/4 -left-1/4 w-1/2 h-full bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
+          <div className="absolute -bottom-1/4 -right-1/4 w-1/2 h-full bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }} />
+        </div>
+        <div className="container relative z-10 text-center">
+            <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary backdrop-blur-sm shadow-[0_0_15px_hsl(var(--primary)/0.5)]">
+                Our Credentials
+            </Badge>
+          <h2 className="mt-4 font-headline text-3xl font-bold md:text-4xl">Nationally Recognized. Globally Trusted.</h2>
+          
+          <div className="mt-16">
+            <div className="flex w-full snap-x justify-start gap-8 overflow-x-auto pb-4 md:justify-center md:flex-wrap md:overflow-visible md:pb-0">
+              {recognitions.map((rec) => (
+                <div key={rec.name} className="group w-40 flex-shrink-0 snap-center flex flex-col items-center justify-center gap-4 text-center">
+                  <div className="relative flex h-28 w-28 items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:border-primary/50 group-hover:bg-primary/10 group-hover:shadow-2xl group-hover:shadow-primary/20">
+                    <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                    <rec.icon className="relative h-12 w-12 text-white transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]" />
                   </div>
-                  <p className="font-semibold">{cert.name}</p>
+                  <p className="font-semibold text-sm text-muted-foreground transition-colors group-hover:text-foreground">{rec.name}</p>
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
         </div>
       </section>
