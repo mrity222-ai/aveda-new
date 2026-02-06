@@ -13,21 +13,20 @@ import { Logo } from './logo';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-primary/20 bg-primary text-primary-foreground animate-in slide-in-from-bottom-16 duration-700 delay-500">
+    <footer className="border-t border-border bg-background">
       <div className="container py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Column 1: Brand */}
           <div className="space-y-6">
-            <Logo iconClassName="text-primary-foreground" />
-            <p className="text-sm text-primary-foreground/70">
-              AI-driven digital solutions for brands, businesses, and political
-              campaigns.
+            <Logo />
+            <p className="text-sm text-muted-foreground">
+              Delivering innovative IT solutions and digital services to drive business growth.
             </p>
             <div className="flex space-x-2">
               <Button
                 variant="outline"
                 size="icon"
-                className="border-primary-foreground/50 text-primary-foreground/80 transition-colors hover:border-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+                className="text-muted-foreground transition-colors hover:border-primary hover:text-primary"
                 asChild
               >
                 <Link href="#">
@@ -38,7 +37,7 @@ export default function Footer() {
               <Button
                 variant="outline"
                 size="icon"
-                className="border-primary-foreground/50 text-primary-foreground/80 transition-colors hover:border-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+                className="text-muted-foreground transition-colors hover:border-primary hover:text-primary"
                 asChild
               >
                 <Link href="#">
@@ -49,7 +48,7 @@ export default function Footer() {
               <Button
                 variant="outline"
                 size="icon"
-                className="border-primary-foreground/50 text-primary-foreground/80 transition-colors hover:border-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+                className="text-muted-foreground transition-colors hover:border-primary hover:text-primary"
                 asChild
               >
                 <Link href="#">
@@ -68,10 +67,10 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="group relative inline-block text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
+                    className="group relative inline-block text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {link.label}
-                    <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-primary-foreground transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </li>
               ))}
@@ -86,10 +85,10 @@ export default function Footer() {
                 <li key={service.slug}>
                   <Link
                     href={`/services#${service.slug}`}
-                    className="group relative inline-block text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
+                    className="group relative inline-block text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {service.title}
-                    <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-primary-foreground transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </li>
               ))}
@@ -104,19 +103,19 @@ export default function Footer() {
             <div className="mt-4 space-y-4">
               <a
                 href="mailto:Info.avedatechnoologies@gmail.com"
-                className="flex items-center gap-3 text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
+                className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
-                <Mail className="h-4 w-4 text-primary-foreground" />
+                <Mail className="h-4 w-4 text-primary" />
                 <span>Info.avedatechnoologies@gmail.com</span>
               </a>
               <a
                 href="tel:+919012887697"
-                className="flex items-center gap-3 text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
+                className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
-                <Phone className="h-4 w-4 text-primary-foreground" />
+                <Phone className="h-4 w-4 text-primary" />
                 <span>+91 9012887697</span>
               </a>
-              <Button asChild className="mt-6 !w-full" size="lg" variant="accent">
+              <Button asChild className="mt-6 w-full" size="lg" variant="default">
                 <Link href="/contact">
                   Start Your Project <MoveRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -126,7 +125,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 border-t border-primary-foreground/20 pt-8 text-center text-sm text-primary-foreground/70">
+        <div className="mt-16 border-t border-border pt-8 text-center text-sm text-muted-foreground">
           <p>
             &copy; {new Date().getFullYear()} Aveda Technologies. All Rights
             Reserved.

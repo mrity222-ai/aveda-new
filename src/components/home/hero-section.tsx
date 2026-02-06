@@ -8,23 +8,22 @@ export default function HeroSection() {
         <div className="mx-auto max-w-4xl text-center">
           <div className="animate-in fade-in slide-in-from-bottom-10 duration-700">
             <h1 className="font-headline text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
-              <span className="bg-gradient-to-br from-red-600 to-blue-600 bg-clip-text text-transparent">
-                Build Smarter Software
+              Driving Business Growth with{' '}
+              <span className="text-primary">
+                Intelligent IT Solutions
               </span>
-              <br />
-              for Modern Teams
             </h1>
           </div>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">
-            Our AI-powered platform helps you build, ship, and scale your
-            applications faster than ever before.
+            We build, implement, and manage cutting-edge technology solutions that empower your business to innovate and{' '}
+            <span className="font-semibold text-accent">succeed</span>.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4 animate-in fade-in slide-in-from-bottom-16 duration-700 delay-400">
-            <Button asChild size="lg" variant="gradient">
-              <Link href="/contact">Get Started Free</Link>
+            <Button asChild size="lg" variant="default">
+              <Link href="/services">Explore Our Services</Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href="/contact?demo=true">Request a Demo</Link>
+            <Button asChild size="lg" variant="destructive">
+              <Link href="/contact">Contact Sales</Link>
             </Button>
           </div>
         </div>

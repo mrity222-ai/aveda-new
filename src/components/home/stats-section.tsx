@@ -6,11 +6,10 @@ export default function StatsSection() {
       <div className="container">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl  animate-in fade-in slide-in-from-bottom-8 duration-700">
-            Trusted by the World's Best Teams
+            Trusted by Innovative Companies
           </h2>
           <p className="mt-4 text-lg text-muted-foreground  animate-in fade-in slide-in-from-bottom-10 duration-700 delay-100">
-            From innovative startups to Fortune 500 companies, our platform
-            powers high-performance engineering teams.
+            From agile startups to established enterprises, our clients rely on us for transformative technology solutions.
           </p>
         </div>
 

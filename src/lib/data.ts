@@ -40,12 +40,11 @@ export const navLinks = [
 ];
 
 export const trustLogos = [
-  // In a real app, these would be actual logos
-  { name: 'Startup Inc.' },
-  { name: 'Enterprise Corp.' },
-  { name: 'Growth Brands' },
-  { name: 'Global Ventures' },
-  { name: 'India Innovates' },
+  { name: 'InnovateX' },
+  { name: 'QuantumLeap' },
+  { name: 'Stellar Solutions' },
+  { name: 'Apex Enterprises' },
+  { name: 'Nexus Dynamics' },
 ];
 
 export const services = [
@@ -121,30 +120,30 @@ export const whyChooseUs = [
   {
     title: 'Result-Oriented Approach',
     description: 'We focus on delivering measurable results that align with your business goals.',
+    icon: LineChart,
   },
   {
-    title: 'Modern Technologies',
+    title: 'Expert Team',
+    description: 'Our team of certified professionals is dedicated to your project\'s success.',
+    icon: Users,
+  },
+  {
+    title: 'Innovative Technology',
     description: 'We leverage the latest technologies to build future-proof solutions.',
-  },
-  {
-    title: 'Dedicated Expert Team',
-    description: 'Our team of experts is dedicated to your project\'s success from start to finish.',
+    icon: Cpu,
   },
   {
     title: 'Transparent Communication',
     description: 'We believe in clear, honest, and continuous communication with our clients.',
-  },
-  {
-    title: 'On-Time Delivery',
-    description: 'We pride ourselves on delivering high-quality work within the agreed timeline.',
+    icon: PenTool,
   },
 ];
 
 export const stats = [
-  { value: '99.9%', label: 'Uptime' },
-  { value: '40%', label: 'Faster Deployments' },
-  { value: '10k+', label: 'Active Users' },
-  { value: '500+', label: 'Integrations' },
+  { value: '10+', label: 'Years of Experience' },
+  { value: '250+', label: 'Projects Delivered' },
+  { value: '98%', label: 'Client Satisfaction' },
+  { value: '15+', label: 'Industries Served' },
 ];
 
 export const portfolioProjects = [
