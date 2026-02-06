@@ -1,31 +1,30 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function HeroSection() {
-  const heroImage = PlaceHolderImages.find(
-    (img) => img.id === 'hero-background'
-  );
-
   return (
-    <section className="relative h-[600px] w-full bg-background">
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-foreground">
-        <div className="container">
-          <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl animate-in fade-in slide-in-from-bottom-10 duration-700">
-            Transforming Ideas Into Powerful Digital Experiences
-          </h1>
+    <section className="w-full bg-background py-20 md:py-32">
+      <div className="container">
+        <div className="mx-auto max-w-4xl text-center">
+          <div className="animate-in fade-in slide-in-from-bottom-10 duration-700">
+            <h1 className="font-headline text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
+              <span className="bg-gradient-to-br from-red-600 to-blue-600 bg-clip-text text-transparent">
+                Build Smarter Software
+              </span>
+              <br />
+              for Modern Teams
+            </h1>
+          </div>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">
-            At Aveda Technologies, we design and build high-performance digital
-            products that help businesses grow, scale, and lead in the digital
-            era.
+            Our AI-powered platform helps you build, ship, and scale your
+            applications faster than ever before.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4 animate-in fade-in slide-in-from-bottom-16 duration-700 delay-400">
-            <Button asChild size="lg" className="animate-pulse-red">
-              <Link href="/contact">Get Started</Link>
+            <Button asChild size="lg" variant="gradient">
+              <Link href="/contact">Get Started Free</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href="/works">View Our Work</Link>
+              <Link href="/contact?demo=true">Request a Demo</Link>
             </Button>
           </div>
         </div>
