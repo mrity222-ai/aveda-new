@@ -38,7 +38,6 @@ export default function AboutPage() {
     { name: 'Next.js', imageUrl: 'https://picsum.photos/seed/nextjslogo/120/40' },
     { name: 'Vercel', imageUrl: 'https://picsum.photos/seed/vercel/120/40' },
     { name: 'Figma', imageUrl: 'https://picsum.photos/seed/figma/120/40' },
-    { name: 'Genkit', imageUrl: 'https://picsum.photos/seed/genkit/120/40' },
   ];
 
   const recognitions = [
@@ -113,12 +112,13 @@ export default function AboutPage() {
 
       {/* Our Technology Partners Section */}
       <section className="relative overflow-hidden bg-black py-20 md:py-28">
-        <div className="absolute inset-0 opacity-50 bg-[radial-gradient(ellipse_at_center,_hsl(var(--accent)/0.3)_0%,_transparent_70%)]" />
+        <div className="absolute inset-0 opacity-50 bg-[radial-gradient(ellipse_at_center,_hsl(var(--accent)/0.2)_0%,_transparent_70%)]" />
+        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(ellipse_at_bottom,_hsl(var(--primary)/0.2)_0%,_transparent_80%)]" />
         <div className="container relative z-10 text-center">
-          <Badge variant="outline" className="border-accent/50 bg-accent/10 text-accent backdrop-blur-sm shadow-[0_0_15px_hsl(var(--accent)/0.5)]">
+          <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary backdrop-blur-sm shadow-[0_0_15px_hsl(var(--primary)/0.5)]">
             Our Technology Partners
           </Badge>
-          <h2 className="mt-4 font-headline text-4xl font-bold tracking-tight md:text-5xl">
+          <h2 className="mt-4 font-headline text-4xl font-bold tracking-tight text-primary md:text-5xl">
             Innovating with the World’s Best
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
@@ -131,10 +131,10 @@ export default function AboutPage() {
               <div className="flex gap-x-1">
                 <Hexagon name={partners[0].name} imageUrl={partners[0].imageUrl} delay="300ms" />
                 <Hexagon name={partners[1].name} imageUrl={partners[1].imageUrl} delay="400ms" />
-                <Hexagon name={partners[2].name} imageUrl={partners[2].imageUrl} delay="500ms" />
               </div>
               {/* Row 2 */}
               <div className="flex gap-x-1">
+                <Hexagon name={partners[2].name} imageUrl={partners[2].imageUrl} delay="500ms" />
                 <Hexagon name={partners[3].name} imageUrl={partners[3].imageUrl} delay="600ms" />
                 <Hexagon name={partners[4].name} imageUrl={partners[4].imageUrl} delay="700ms" />
               </div>
@@ -142,7 +142,6 @@ export default function AboutPage() {
               <div className="flex gap-x-1">
                 <Hexagon name={partners[5].name} imageUrl={partners[5].imageUrl} delay="800ms" />
                 <Hexagon name={partners[6].name} imageUrl={partners[6].imageUrl} delay="900ms" />
-                <Hexagon name={partners[7].name} imageUrl={partners[7].imageUrl} delay="1000ms" />
               </div>
             </div>
           </div>
