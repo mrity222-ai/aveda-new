@@ -2,94 +2,82 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { MoveRight } from 'lucide-react';
 import { portfolioProjects } from '@/lib/data';
+import { MoveRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
-const projectsToShow = portfolioProjects.slice(0, 4);
+const projectsToShow = portfolioProjects.slice(0, 6);
 
 export default function PortfolioPreview() {
   return (
-    <section className="bg-gradient-to-b from-secondary/20 to-background py-20 md:py-28 overflow-hidden">
-      <div className="container">
-        <div className="md:flex md:items-center md:justify-between mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
-            <div className="max-w-2xl">
-                <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl text-foreground">
-                    Our Work, Designed to Perform
-                </h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                    A showcase of high-impact digital products and experiences.
-                </p>
-            </div>
-            <div className="mt-6 md:mt-0">
-                <Button asChild variant="outline">
-                    <Link href="/works">
-                        View Full Portfolio <MoveRight className="ml-2" />
-                    </Link>
-                </Button>
-            </div>
+    <section className="relative overflow-hidden bg-background py-20 md:py-28">
+      {/* Background glows */}
+      <div className="absolute -top-1/4 left-0 -translate-x-1/4 w-1/2 h-full bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-40 animate-pulse" />
+      <div className="absolute -bottom-1/4 right-0 translate-x-1/4 w-1/2 h-full bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-40 animate-pulse" style={{ animationDelay: '2s' }} />
+
+      <div className="container relative z-10">
+        <div className="mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
+          <p className="mb-2 font-semibold text-primary">Our Latest Work</p>
+          <h2 className="font-headline text-4xl font-bold tracking-tight md:text-5xl text-foreground">
+            Showcasing Digital Excellence
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Projects since 2024
+          </p>
         </div>
 
-        <div className="group relative mt-16 flex w-full overflow-x-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-            <div className="flex shrink-0 gap-8 animate-marquee-right group-hover:[animation-play-state:paused]">
-                {projectsToShow.map((project) => (
-                    <div 
-                        key={project.slug}
-                        className="group/card w-[300px] sm:w-[350px]"
-                    >
-                        <Link href={`/works#${project.slug}`} className="block">
-                            <div 
-                                className="relative rounded-2xl bg-card/40 backdrop-blur-sm border border-white/10 shadow-2xl transition-all duration-300 h-[450px] overflow-hidden transform md:rotate-3 group-hover/card:rotate-0 group-hover/card:scale-105 group-hover/card:shadow-primary/30"
-                            >
-                                <div className="p-6">
-                                    <Badge variant="outline">{project.category}</Badge>
-                                    <h3 className="font-headline text-xl mt-4 text-foreground">{project.title}</h3>
-                                </div>
-                                <div className="absolute bottom-0 left-0 right-0 h-3/4">
-                                    <Image
-                                        src={project.image.imageUrl}
-                                        alt={project.title}
-                                        fill
-                                        className="object-cover transition-transform duration-500 group-hover/card:scale-110"
-                                        data-ai-hint={project.image.imageHint}
-                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/20 to-transparent"></div>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                ))}
-            </div>
-            <div className="flex shrink-0 gap-8 animate-marquee-right group-hover:[animation-play-state:paused]" aria-hidden="true">
-                {projectsToShow.map((project) => (
-                    <div 
-                        key={`${project.slug}-clone`}
-                        className="group/card w-[300px] sm:w-[350px]"
-                    >
-                        <Link href={`/works#${project.slug}`} className="block">
-                            <div 
-                                className="relative rounded-2xl bg-card/40 backdrop-blur-sm border border-white/10 shadow-2xl transition-all duration-300 h-[450px] overflow-hidden transform md:rotate-3 group-hover/card:rotate-0 group-hover/card:scale-105 group-hover/card:shadow-primary/30"
-                            >
-                                <div className="p-6">
-                                    <Badge variant="outline">{project.category}</Badge>
-                                    <h3 className="font-headline text-xl mt-4 text-foreground">{project.title}</h3>
-                                </div>
-                                <div className="absolute bottom-0 left-0 right-0 h-3/4">
-                                    <Image
-                                        src={project.image.imageUrl}
-                                        alt={project.title}
-                                        fill
-                                        className="object-cover transition-transform duration-500 group-hover/card:scale-110"
-                                        data-ai-hint={project.image.imageHint}
-                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/20 to-transparent"></div>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                ))}
-            </div>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {projectsToShow.map((project, index) => (
+            <Link 
+              key={project.slug} 
+              href={`/works#${project.slug}`}
+              className="group block animate-in fade-in slide-in-from-bottom-12 duration-700"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              <div 
+                className={cn(
+                  "relative overflow-hidden rounded-3xl border border-white/10 bg-black/30 backdrop-blur-lg transition-all duration-300",
+                  "h-[400px] group-hover:scale-[1.02] group-hover:shadow-2xl group-hover:shadow-primary/30"
+                )}
+              >
+                {/* Glowing border on hover */}
+                <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-r from-primary to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-75" />
+                
+                <div className="relative h-full w-full rounded-3xl">
+                  <Image
+                    src={project.image.imageUrl}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    data-ai-hint={project.image.imageHint}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+
+                  <div className="absolute bottom-0 left-0 p-6 text-white">
+                    <Badge variant="outline" className="border-white/20 bg-white/10 text-white backdrop-blur-md">
+                      {project.category}
+                    </Badge>
+                    <h3 className="mt-4 font-headline text-2xl font-bold">
+                      {project.title}
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <div className="mt-20 text-center animate-in fade-in slide-in-from-bottom-16 duration-700 delay-500">
+          <Button
+            asChild
+            size="lg"
+            className="rounded-full bg-gradient-to-r from-primary to-accent px-8 text-primary-foreground transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)] hover:scale-105"
+          >
+            <Link href="/works">
+              VIEW ALL PROJECTS
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
