@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Clock, BrainCircuit, UserCheck, Briefcase, MoveRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, BrainCircuit, UserCheck, Briefcase, MoveRight, Globe } from 'lucide-react';
 import { ContactForm } from '@/components/contact/contact-form';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
@@ -92,35 +92,44 @@ export default function ContactPage() {
         </section>
       
         {/* Form and Details Section */}
-        <section id="contact-form" className="py-20 md:py-28">
-            <div className="container">
-                <div className="grid gap-16 lg:grid-cols-5">
-                    <div className="lg:col-span-3">
-                        <h2 className="font-headline text-3xl font-semibold mb-8">Send Us a Message</h2>
-                        <ContactForm />
-                    </div>
-                    <div className="space-y-8 lg:col-span-2">
-                        <h2 className="font-headline text-3xl font-semibold">Contact Info</h2>
-                        <p className='text-muted-foreground'>Aveda Technologies</p>
-                        {contactDetails.map((detail) => (
-                        <div key={detail.title} className="flex items-start space-x-4">
-                            <div className="flex-shrink-0">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-md bg-primary/10 text-primary">
-                                <detail.icon className="h-6 w-6" />
-                            </div>
-                            </div>
-                            <div>
-                            <h3 className="text-lg font-semibold">{detail.title}</h3>
-                            {detail.href ? (
-                                <a href={detail.href} className="text-muted-foreground hover:text-primary">
-                                {detail.value}
-                                </a>
-                            ) : (
-                                <p className="text-muted-foreground">{detail.value}</p>
-                            )}
-                            </div>
+        <section id="contact-form" className="relative overflow-hidden bg-black py-20 md:py-28">
+            {/* Background visuals */}
+            <div className="absolute inset-0 z-0">
+                <Globe className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] text-primary/10" />
+                <div className="absolute -right-1/4 -bottom-1/4 h-1/2 w-1/2 rounded-full bg-primary/20 mix-blend-screen-plus animate-pulse opacity-50 blur-3xl filter" />
+                <div className="absolute -left-1/4 -top-1/4 h-1/2 w-1/2 rounded-full bg-primary/10 mix-blend-screen-plus animate-pulse opacity-50 blur-3xl filter" style={{ animationDelay: '2s' }} />
+            </div>
+
+            <div className="container relative z-10">
+                <div className="mx-auto max-w-5xl rounded-2xl border border-primary/20 bg-card/50 p-8 shadow-2xl shadow-primary/10 backdrop-blur-lg md:p-12">
+                    <div className="grid gap-16 lg:grid-cols-5">
+                        <div className="lg:col-span-3">
+                            <h2 className="mb-8 text-center font-headline text-3xl font-semibold lg:text-left">Send Us a Message</h2>
+                            <ContactForm />
                         </div>
-                        ))}
+                        <div className="space-y-8 lg:col-span-2">
+                            <h2 className="font-headline text-3xl font-semibold">Contact Info</h2>
+                            <p className='text-muted-foreground'>Aveda Technologies</p>
+                            {contactDetails.map((detail) => (
+                            <div key={detail.title} className="flex items-start space-x-4">
+                                <div className="flex-shrink-0">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-md bg-primary/10 text-primary">
+                                    <detail.icon className="h-6 w-6" />
+                                </div>
+                                </div>
+                                <div>
+                                <h3 className="text-lg font-semibold">{detail.title}</h3>
+                                {detail.href ? (
+                                    <a href={detail.href} className="text-muted-foreground hover:text-primary">
+                                    {detail.value}
+                                    </a>
+                                ) : (
+                                    <p className="text-muted-foreground">{detail.value}</p>
+                                )}
+                                </div>
+                            </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
