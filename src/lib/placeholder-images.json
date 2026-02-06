@@ -73,6 +73,12 @@
       "imageHint": "office building"
     },
     {
+      "id": "blog-brain-city",
+      "description": "A glowing red 3D brain-city hybrid illustration",
+      "imageUrl": "https://images.unsplash.com/photo-1683522689353-39589b9d3637?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxicmFpbiUyMGNpdHklMjByZWR8ZW58MHx8fHwxNzcwMjczNDQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "brain city"
+    },
+    {
       "id": "service-web-dev",
       "description": "A dark-themed image of a developer coding.",
       "imageUrl": "https://images.unsplash.com/photo-1550439062-609e1531270e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkZXZlbG9wZXIlMjBjb2RlJTIwZGFya3xlbnwwfHx8fDE3NzAyNzYwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
