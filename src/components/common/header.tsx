@@ -183,45 +183,71 @@ export default function Header() {
           </div>
         </div>
       </div>
+      {/* Mega Menu */}
       <div
         onMouseEnter={() => setServicesMenuOpen(true)}
         className={cn(
-          'absolute left-0 top-full w-full bg-background shadow-lg transition-all duration-300 ease-in-out',
-          'data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=closed]:slide-out-to-top-2',
-          'data-[state=open]:animate-in data-[state=open]:fade-in data-[state=open]:slide-in-from-top-2',
+          'absolute left-0 top-full w-full rounded-b-2xl border-t border-border/20 bg-background/90 shadow-2xl shadow-black/40 backdrop-blur-md transition-all duration-300 ease-in-out',
+          'data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=closed]:slide-out-to-top-4',
+          'data-[state=open]:animate-in data-[state=open]:fade-in data-[state=open]:slide-in-from-top-4',
           servicesMenuOpen
             ? 'data-[state=open]'
             : 'data-[state=closed] invisible'
         )}
       >
-        <div className="container p-6">
-          <div className="flex items-center justify-between">
-            <h3 className="font-headline text-lg font-semibold tracking-tight">
-              Our Services
-            </h3>
-            <Link
-              href="/services"
-              onClick={() => setServicesMenuOpen(false)}
-              className="text-sm text-primary hover:underline"
-            >
-              View All
-            </Link>
+        <div className="container mx-auto p-8">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+            {/* Left Column */}
+            <div className="md:col-span-3">
+              <h3 className="font-headline text-lg font-semibold tracking-tight text-foreground">
+                Our Services
+              </h3>
+              <div className="my-2 w-16 border-b border-primary" />
+              <p className="mt-4 text-sm text-muted-foreground">
+                Explore our full range of solutions designed for growth and innovation.
+              </p>
+              <Button asChild variant="outline" size="sm" className="mt-6">
+                  <Link href="/services" onClick={() => setServicesMenuOpen(false)}>
+                    View All Services
+                  </Link>
+              </Button>
+            </div>
+            
+            {/* Center Column */}
+            <div className="md:col-span-6">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+                {services.map((service) => (
+                  <li key={service.slug}>
+                    <Link
+                      href={`/services#${service.slug}`}
+                      onClick={() => setServicesMenuOpen(false)}
+                      className="group flex items-center gap-4 rounded-lg p-2 transition-colors hover:bg-white/5"
+                    >
+                      <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                        <service.icon className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">{service.title}</p>
+                      </div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            {/* Right Column */}
+            <div className="md:col-span-3 hidden md:block border-l border-white/10 pl-8">
+               <h4 className="font-semibold text-foreground">AI-Driven Innovation</h4>
+               <p className="mt-2 text-sm text-muted-foreground">
+                 Building scalable digital solutions with AI-driven innovation.
+               </p>
+               <Button asChild variant="link" className="p-0 h-auto mt-4 text-primary">
+                    <Link href="/contact" onClick={() => setServicesMenuOpen(false)}>
+                        Let's Talk <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                </Button>
+            </div>
           </div>
-          <div className="my-2 border-b" />
-          <ul className="grid grid-cols-1 gap-x-8 gap-y-3 pt-2 md:grid-cols-2">
-            {services.map((service) => (
-              <li key={service.slug}>
-                <Link
-                  href={`/services#${service.slug}`}
-                  onClick={() => setServicesMenuOpen(false)}
-                  className="group flex items-center justify-between py-1 text-muted-foreground transition-colors hover:text-primary"
-                >
-                  <span>{service.title}</span>
-                  <ArrowRight className="h-4 w-4 text-primary opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100" />
-                </Link>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </header>
