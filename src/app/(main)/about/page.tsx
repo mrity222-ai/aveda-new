@@ -4,7 +4,6 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 
 export default function AboutPage() {
-  const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-us-image');
   const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
 
   const values = [
@@ -93,27 +92,41 @@ export default function AboutPage() {
       </section>
 
       {/* Who We Are Section */}
-      <section className="py-20 md:py-28">
+      <section className="relative overflow-hidden bg-background py-20 md:py-28">
+        <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
+        <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }} />
+
         <div className="container">
-          <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
-            <div className="space-y-6">
-              <h2 className="font-headline text-3xl font-bold">Who We Are</h2>
+          <div className="grid items-center gap-16 md:grid-cols-2">
+            {/* Left Visual */}
+            <div className="relative flex h-96 items-center justify-center md:h-[450px]">
+              <div className="absolute h-64 w-64 rounded-full bg-primary/20 blur-3xl" />
+              <div className="absolute h-80 w-80 rounded-full border-2 border-dashed border-primary/30 animate-spin-slow" />
+              <div className="absolute h-60 w-60 rounded-full border-2 border-dashed border-accent/30 animate-spin-slow-reverse" />
+              <BrainCircuit className="relative h-48 w-48 text-primary drop-shadow-[0_0_15px_hsl(var(--primary)/0.7)]" />
+            </div>
+
+            {/* Right Content */}
+            <div className="space-y-8">
+              <div>
+                <p className="mb-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Who We Are</p>
+                <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
+                  Powering Your Vision with AI-First Innovation
+                </h2>
+              </div>
               <p className="text-lg text-muted-foreground">
                 Aveda Technologies is an AI-first digital company delivering advanced web, mobile, marketing, automation, and political campaigning solutions. We combine technology, data, and strategy to create measurable digital impact.
               </p>
-            </div>
-            <div className="group relative h-96 w-full overflow-hidden rounded-lg md:h-[450px]">
-              {aboutImage && (
-                <Image
-                  src={aboutImage.imageUrl}
-                  alt={aboutImage.description}
-                  fill
-                  className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  data-ai-hint={aboutImage.imageHint}
-                />
-              )}
-              <div className="absolute inset-0 rounded-lg bg-black/20 ring-2 ring-transparent transition-all duration-500 group-hover:bg-black/10 group-hover:ring-primary/50 group-hover:shadow-[0_0_30px_5px] group-hover:shadow-primary/20"></div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="rounded-xl border border-border/20 bg-card/50 p-6 backdrop-blur-sm">
+                      <h3 className="font-headline text-3xl font-bold text-primary">100+</h3>
+                      <p className="mt-1 text-muted-foreground">Projects Delivered</p>
+                  </div>
+                  <div className="rounded-xl border border-border/20 bg-card/50 p-6 backdrop-blur-sm">
+                      <h3 className="font-headline text-3xl font-bold text-primary">AI-Driven</h3>
+                      <p className="mt-1 text-muted-foreground">Solutions at Core</p>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
