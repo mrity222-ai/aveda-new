@@ -31,13 +31,14 @@ export default function AboutPage() {
   ];
 
   const partners = [
-    { name: 'Google Cloud' },
-    { name: 'Microsoft Azure' },
-    { name: 'Amazon Web Services' },
-    { name: 'Next.js' },
-    { name: 'Vercel' },
-    { name: 'Figma' },
-    { name: 'Genkit' },
+    { name: 'Hostinger', imageUrl: 'https://picsum.photos/seed/hostinger/120/40' },
+    { name: 'Google Cloud', imageUrl: 'https://picsum.photos/seed/gcloud/120/40' },
+    { name: 'AWS', imageUrl: 'https://picsum.photos/seed/awslogo/120/40' },
+    { name: 'GoDaddy', imageUrl: 'https://picsum.photos/seed/godaddy/120/40' },
+    { name: 'Next.js', imageUrl: 'https://picsum.photos/seed/nextjslogo/120/40' },
+    { name: 'Vercel', imageUrl: 'https://picsum.photos/seed/vercel/120/40' },
+    { name: 'Figma', imageUrl: 'https://picsum.photos/seed/figma/120/40' },
+    { name: 'Genkit', imageUrl: 'https://picsum.photos/seed/genkit/120/40' },
   ];
 
   const recognitions = [
@@ -47,6 +48,37 @@ export default function AboutPage() {
     { name: 'Made in India', imageId: 'cert-made-in-india' },
     { name: 'Digital India', imageId: 'cert-digital-india' },
   ];
+
+  const Hexagon = ({
+    name,
+    imageUrl,
+    delay,
+  }: {
+    name: string;
+    imageUrl: string;
+    delay: string;
+  }) => (
+    <div
+      className="group relative flex h-[115.47px] w-[100px] animate-in items-center justify-center zoom-in-90 fade-in transition-all duration-300 hover:z-10 hover:scale-110"
+      style={{ animationDelay: delay }}
+    >
+      <div
+        className="absolute inset-0 border border-accent/20 bg-white/5 shadow-[0_0_20px_hsl(var(--accent)/0.1)] backdrop-blur-md transition-all duration-300 group-hover:border-accent/50 group-hover:shadow-[0_0_30px_hsl(var(--accent)/0.3)]"
+        style={{
+          clipPath:
+            'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+        }}
+      />
+      <div className="relative h-8 w-16">
+        <Image
+          src={imageUrl}
+          alt={`${name} logo`}
+          fill
+          className="object-contain brightness-0 invert filter"
+        />
+      </div>
+    </div>
+  );
 
 
   return (
@@ -80,15 +112,39 @@ export default function AboutPage() {
       </section>
 
       {/* Our Technology Partners Section */}
-      <section className="py-20 md:py-28">
-        <div className="container text-center">
-          <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
-            We collaborate with trusted technology leaders to deliver secure and scalable digital solutions.
+      <section className="relative overflow-hidden bg-black py-20 md:py-28">
+        <div className="absolute inset-0 opacity-50 bg-[radial-gradient(ellipse_at_center,_hsl(var(--accent)/0.3)_0%,_transparent_70%)]" />
+        <div className="container relative z-10 text-center">
+          <Badge variant="outline" className="border-accent/50 bg-accent/10 text-accent backdrop-blur-sm shadow-[0_0_15px_hsl(var(--accent)/0.5)]">
+            Our Technology Partners
+          </Badge>
+          <h2 className="mt-4 font-headline text-4xl font-bold tracking-tight md:text-5xl">
+            Innovating with the World’s Best
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            We collaborate with global technology leaders to build secure, scalable, and cutting-edge solutions.
           </p>
-          <div className="mt-16 flex flex-wrap items-center justify-center gap-x-12 gap-y-8 opacity-75">
-            {partners.map((partner) => (
-               <span key={partner.name} className="text-xl font-semibold text-muted-foreground">{partner.name}</span>
-            ))}
+
+          <div className="mt-16 flex h-full min-h-[300px] items-center justify-center sm:min-h-[350px]">
+            <div className="flex origin-center flex-col items-center gap-y-[calc(-115.47px/4)] scale-75 sm:scale-90 md:scale-100">
+              {/* Row 1 */}
+              <div className="flex gap-x-1">
+                <Hexagon name={partners[0].name} imageUrl={partners[0].imageUrl} delay="300ms" />
+                <Hexagon name={partners[1].name} imageUrl={partners[1].imageUrl} delay="400ms" />
+                <Hexagon name={partners[2].name} imageUrl={partners[2].imageUrl} delay="500ms" />
+              </div>
+              {/* Row 2 */}
+              <div className="flex gap-x-1">
+                <Hexagon name={partners[3].name} imageUrl={partners[3].imageUrl} delay="600ms" />
+                <Hexagon name={partners[4].name} imageUrl={partners[4].imageUrl} delay="700ms" />
+              </div>
+              {/* Row 3 */}
+              <div className="flex gap-x-1">
+                <Hexagon name={partners[5].name} imageUrl={partners[5].imageUrl} delay="800ms" />
+                <Hexagon name={partners[6].name} imageUrl={partners[6].imageUrl} delay="900ms" />
+                <Hexagon name={partners[7].name} imageUrl={partners[7].imageUrl} delay="1000ms" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
