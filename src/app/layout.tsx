@@ -1,14 +1,19 @@
 import type { Metadata } from 'next';
-import { Domine } from 'next/font/google';
+import { Outfit, Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/common/header';
 import Footer from '@/components/common/footer';
 
-const domine = Domine({
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-body',
+});
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  variable: '--font-headline',
 });
 
 export const metadata: Metadata = {
@@ -26,7 +31,8 @@ export default function RootLayout({
       <body
         className={cn(
           'min-h-screen bg-background font-body antialiased',
-          domine.variable
+          inter.variable,
+          outfit.variable
         )}
       >
         <div className="relative flex min-h-dvh flex-col">
