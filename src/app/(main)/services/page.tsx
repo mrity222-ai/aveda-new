@@ -1,5 +1,4 @@
 
-
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -65,13 +64,26 @@ const industries = [
 
 export default function ServicesPage() {
     const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
-    const webDevImage = PlaceHolderImages.find((img) => img.id === 'service-web-dev-detail');
-    const appDevImage = PlaceHolderImages.find((img) => img.id === 'service-app-dev');
-    const uiUxImage = PlaceHolderImages.find((img) => img.id === 'service-ui-ux');
-    const marketingImage = PlaceHolderImages.find((img) => img.id === 'service-digital-marketing-detail');
-    const seoImage = PlaceHolderImages.find((img) => img.id === 'service-seo');
-    const aiImage = PlaceHolderImages.find((img) => img.id === 'service-ai');
-    const politicalImage = PlaceHolderImages.find((img) => img.id === 'service-political');
+    
+    const serviceImages: { [key: string]: (typeof PlaceHolderImages)[0] | undefined } = {
+        'web-development': PlaceHolderImages.find((img) => img.id === 'service-web-dev-detail'),
+        'app-development': PlaceHolderImages.find((img) => img.id === 'service-app-dev'),
+        'ui-ux-design': PlaceHolderImages.find((img) => img.id === 'service-ui-ux'),
+        'digital-marketing': PlaceHolderImages.find((img) => img.id === 'service-digital-marketing-detail'),
+        'seo-optimization': PlaceHolderImages.find((img) => img.id === 'service-seo'),
+        'ai-automation': PlaceHolderImages.find((img) => img.id === 'service-ai'),
+        'political-campaigning': PlaceHolderImages.find((img) => img.id === 'service-political'),
+    };
+    
+    const buttonLinks: {[key: string]: string} = {
+        'web-development': '/services/web-development',
+        'app-development': '/services/app-development',
+        'digital-marketing': '/services/digital-marketing',
+        'seo-optimization': '/services/seo-optimization',
+        'political-campaigning': '/services/political-campaigning',
+        'ui-ux-design': '/contact?service=UI%2FUX+Design',
+        'ai-automation': '/contact?service=AI+%26+Automation',
+    };
 
   return (
     <div className="bg-background text-foreground">
@@ -157,164 +169,80 @@ export default function ServicesPage() {
         </div>
       </section>
       
-      <div className="container space-y-20 md:space-y-28 py-20 md:py-28">
-        {/* Web Development Section */}
-        <section id="web-development" className="scroll-mt-20">
-            <div className="grid items-center gap-12 md:grid-cols-2">
-                <div>
-                    <h2 className="font-headline text-3xl font-bold">Web Development</h2>
-                    <p className="mt-4 text-muted-foreground">Scalable & secure websites. We build high-performance, secure, and scalable websites that drive business growth. Our solutions are tailored to your specific needs, from corporate sites to complex SaaS platforms.</p>
-                    <ul className="mt-6 space-y-3">
-                        {['Corporate Websites & Portals', 'E-commerce Platforms', 'SaaS Products & Dashboards', 'CMS & API Development'].map(detail => (
-                            <li key={detail} className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary" /><span>{detail}</span></li>
-                        ))}
-                    </ul>
-                    <Button asChild className="mt-8" variant="outline"><Link href="/services/web-development">Explore Web Development <MoveRight className="ml-2 h-4 w-4" /></Link></Button>
-                </div>
-                <div className="relative h-96 w-full">
-                    {webDevImage && <Image src={webDevImage.imageUrl} alt={webDevImage.description} fill className="rounded-lg object-cover" sizes="(max-width: 768px) 100vw, 50vw" data-ai-hint={webDevImage.imageHint} />}
-                </div>
-            </div>
-        </section>
+      <div className="relative bg-black py-20 md:py-28">
+        <div className="absolute inset-0 z-0 opacity-20">
+            <div className="absolute top-0 left-0 h-1/2 w-1/2 animate-pulse rounded-full bg-destructive/10 opacity-50 mix-blend-screen filter blur-3xl" />
+            <div className="absolute bottom-0 right-0 h-1/2 w-1/2 animate-pulse rounded-full bg-destructive/5 opacity-50 mix-blend-screen filter blur-3xl" style={{ animationDelay: '2s' }} />
+        </div>
+        <div className="container relative z-10 space-y-20 md:space-y-28">
+            {services.map((service, index) => {
+                const image = serviceImages[service.slug];
+                const isReversed = index % 2 !== 0;
 
-        {/* App Development Section */}
-        <section id="app-development" className="scroll-mt-20">
-            <div className="grid items-center gap-12 md:grid-cols-2">
-                 <div className="relative h-96 w-full md:order-last">
-                    {appDevImage && <Image src={appDevImage.imageUrl} alt={appDevImage.description} fill className="rounded-lg object-cover" sizes="(max-width: 768px) 100vw, 50vw" data-ai-hint={appDevImage.imageHint} />}
-                </div>
-                <div className="md:order-first">
-                    <h2 className="font-headline text-3xl font-bold">App Development</h2>
-                    <p className="mt-4 text-muted-foreground">High-performance mobile apps. From concept to launch, we create engaging and intuitive mobile applications for iOS and Android.</p>
-                    <ul className="mt-6 space-y-3">
-                        {['Android & iOS Apps', 'Business Apps', 'Admin Panels & Dashboards', 'API Integrations'].map(detail => (
-                            <li key={detail} className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary" /><span>{detail}</span></li>
-                        ))}
-                    </ul>
-                    <Button asChild className="mt-8"><Link href="/services/app-development">Build Your App <MoveRight className="ml-2 h-4 w-4" /></Link></Button>
-                </div>
-            </div>
-        </section>
-        
-        {/* UI/UX Design Section */}
-        <section id="ui-ux-design" className="scroll-mt-20 text-center">
-            <h2 className="font-headline text-3xl font-bold">UI/UX Design</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">Experiences users love. We focus on usability, conversions & trust.</p>
-            <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              {['Website UI Design', 'Mobile App UX', 'Dashboard & SaaS UI', 'Branding & Design Systems'].map(title => (
-                <Card key={title} className="group border-border bg-card p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10">
-                  <h3 className="font-semibold">{title}</h3>
-                </Card>
-              ))}
-            </div>
-        </section>
-
-        {/* Digital & Performance Marketing Section */}
-        <section id="digital-marketing" className="scroll-mt-20">
-             <div className="grid items-center gap-12 md:grid-cols-2">
-                <div>
-                    <Badge variant="default" className="mb-4 bg-primary/10 text-primary">Starting at ₹5,000 / month</Badge>
-                    <h2 className="font-headline text-3xl font-bold">Digital & Performance Marketing</h2>
-                    <p className="mt-4 text-muted-foreground">Leads & sales with AI. We run data-driven marketing campaigns that deliver measurable results.</p>
-                    <ul className="mt-6 space-y-3">
-                        {[
-                          'Social Media Marketing (Meta, Instagram)',
-                          'Performance Ads (Meta & Google)',
-                          'AI Audience Targeting',
-                          'Lead Generation',
-                          'Retargeting & Funnel Optimization',
-                          'Political Digital Campaigns'
-                        ].map(detail => (
-                            <li key={detail} className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary" /><span>{detail}</span></li>
-                        ))}
-                    </ul>
-                    <Button asChild className="mt-8"><Link href="/services/digital-marketing/pricing">Launch Campaign @ ₹5,000 <MoveRight className="ml-2 h-4 w-4" /></Link></Button>
-                </div>
-                <div className="relative h-96 w-full">
-                    {marketingImage && <Image src={marketingImage.imageUrl} alt={marketingImage.description} fill className="rounded-lg object-cover" sizes="(max-width: 768px) 100vw, 50vw" data-ai-hint={marketingImage.imageHint} />}
-                </div>
-            </div>
-        </section>
-
-        {/* SEO & Optimization Section */}
-        <section id="seo-optimization" className="scroll-mt-20">
-             <div className="grid items-center gap-12 md:grid-cols-2">
-                <div className="relative h-96 w-full md:order-last">
-                    {seoImage && <Image src={seoImage.imageUrl} alt={seoImage.description} fill className="rounded-lg object-cover" sizes="(max-width: 768px) 100vw, 50vw" data-ai-hint={seoImage.imageHint} />}
-                </div>
-                <div className="md:order-first">
-                    <h2 className="font-headline text-3xl font-bold">SEO & Optimization</h2>
-                    <p className="mt-4 text-muted-foreground">Rank higher, convert better. Climb search rankings and connect with your audience.</p>
-                    <ul className="mt-6 space-y-3">
-                        {['On-Page & Technical SEO', 'Keyword Research & Strategy', 'Link Building & Performance Audits', 'Local SEO / GEO Tagging'].map(detail => (
-                            <li key={detail} className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary" /><span>{detail}</span></li>
-                        ))}
-                    </ul>
-                    <Button asChild className="mt-8" variant="outline"><Link href="/services/seo-optimization">Boost Rankings <MoveRight className="ml-2 h-4 w-4" /></Link></Button>
-                </div>
-            </div>
-        </section>
-
-        {/* AI & Automation Section */}
-        <section id="ai-automation" className="scroll-mt-20 text-center">
-            <h2 className="font-headline text-3xl font-bold">AI & Automation</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">Smart tools for modern business. Leverage AI to automate processes, gain insights, and create smarter products.</p>
-            <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              {['AI Chatbots', 'Marketing Automation', 'CRM & Workflow Automation', 'Data Analytics & AI Insights'].map(title => (
-                <Card key={title} className="group border-border bg-card p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10">
-                  <h3 className="font-semibold">{title}</h3>
-                </Card>
-              ))}
-            </div>
-        </section>
-
-        {/* Political Campaigning with AI Section */}
-        <section id="political-campaigning" className="scroll-mt-20 bg-secondary -mx-4 sm:-mx-8 md:-mx-16 px-4 sm:px-8 md:px-16 py-20 md:py-28">
-            <div className="container grid items-center gap-12 md:grid-cols-2">
-                <div>
-                    <h2 className="font-headline text-3xl font-bold">Political Campaigning with AI</h2>
-                    <p className="mt-4 text-muted-foreground">Influence & voter targeting. Winning elections in the digital age requires data-driven precision.</p>
-                    <ul className="mt-6 space-y-3">
-                        {['AI Voter Targeting', 'Constituency Analysis', 'Social Media Political Ads', 'Narrative & Sentiment Analysis', 'Booth-level digital strategy'].map(detail => (
-                            <li key={detail} className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary" /><span>{detail}</span></li>
-                        ))}
-                    </ul>
-                    <Button asChild className="mt-8"><Link href="/services/political-campaigning">Start Political Campaign <MoveRight className="ml-2 h-4 w-4" /></Link></Button>
-                </div>
-                <div className="relative h-96 w-full">
-                    {politicalImage && <Image src={politicalImage.imageUrl} alt={politicalImage.description} fill className="rounded-lg object-cover" sizes="(max-width: 768px) 100vw, 50vw" data-ai-hint={politicalImage.imageHint} />}
-                </div>
-            </div>
-        </section>
+                return (
+                    <section key={service.slug} id={service.slug} className="scroll-mt-20">
+                        <div className="grid items-center gap-16 md:grid-cols-2">
+                            <div className={cn("relative h-96 w-full md:h-[500px]", isReversed && 'md:order-last')}>
+                                <div className="group relative h-full w-full">
+                                    <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-destructive via-transparent to-destructive/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                                    <div className="relative h-full overflow-hidden rounded-[15px] border border-destructive/30 bg-black/50 p-2 backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_0_30px_hsl(var(--destructive)/0.3)]">
+                                        {image && <Image src={image.imageUrl} alt={image.description || service.title} fill className="rounded-md object-cover" sizes="(max-width: 768px) 100vw, 50vw" data-ai-hint={image.imageHint} />}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={cn(isReversed && 'md:order-first')}>
+                                {service.slug === 'digital-marketing' && <Badge variant="destructive" className="mb-4">Starting at ₹5,000 / month</Badge>}
+                                <h2 className="font-headline text-3xl font-bold">{service.title}</h2>
+                                <p className="mt-4 text-muted-foreground">{service.description}</p>
+                                <ul className="mt-6 space-y-3">
+                                    {service.details.map(detail => (
+                                        <li key={detail} className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-destructive" /><span>{detail}</span></li>
+                                    ))}
+                                </ul>
+                                <Button asChild className="mt-8">
+                                    <Link href={buttonLinks[service.slug] || '/contact'}>
+                                        Learn More <MoveRight className="ml-2 h-4 w-4" />
+                                    </Link>
+                                </Button>
+                            </div>
+                        </div>
+                    </section>
+                )
+            })}
+        </div>
+      </div>
 
         {/* Industries We Serve Section */}
-        <section className="scroll-mt-20 text-center">
-            <h2 className="font-headline text-3xl font-bold">Industries We Serve</h2>
-            <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
-            {industries.map((item) => (
-                <div key={item.title} className="group flex flex-col items-center justify-center gap-4 text-center">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-card text-primary ring-8 ring-card transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:ring-primary/20">
-                    <item.icon className="h-10 w-10" />
+        <section className="scroll-mt-20 py-20 md:py-28 text-center bg-black">
+            <div className="container">
+                <h2 className="font-headline text-3xl font-bold">Industries We Serve</h2>
+                <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
+                {industries.map((item) => (
+                    <div key={item.title} className="group flex flex-col items-center justify-center gap-4 text-center">
+                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-card text-primary ring-8 ring-card transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:ring-primary/20">
+                        <item.icon className="h-10 w-10" />
+                    </div>
+                    <h3 className="mt-2 font-semibold">{item.title}</h3>
+                    </div>
+                ))}
                 </div>
-                <h3 className="mt-2 font-semibold">{item.title}</h3>
-                </div>
-            ))}
             </div>
         </section>
 
         {/* Technologies We Use Section */}
-        <section className="scroll-mt-20 text-center">
-            <h2 className="font-headline text-3xl font-bold">Technologies We Use</h2>
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 opacity-75">
-                {technologies.map(tech => (
-                    <span key={tech.name} className="text-xl font-semibold text-muted-foreground">{tech.name}</span>
-                ))}
+        <section className="scroll-mt-20 text-center bg-black pb-20 md:pb-28">
+            <div className="container">
+                <h2 className="font-headline text-3xl font-bold">Technologies We Use</h2>
+                <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 opacity-75">
+                    {technologies.map(tech => (
+                        <span key={tech.name} className="text-xl font-semibold text-muted-foreground">{tech.name}</span>
+                    ))}
+                </div>
             </div>
         </section>
-      </div>
 
        {/* Final CTA */}
-      <section className="mt-20 md:mt-28 border-t border-border bg-card py-20">
+      <section className="border-t border-border bg-card py-20">
         <div className="container text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
             Ready to Grow with AI-Powered Digital Solutions?
@@ -335,8 +263,3 @@ export default function ServicesPage() {
     </div>
   );
 }
-
-    
-
-    
-
