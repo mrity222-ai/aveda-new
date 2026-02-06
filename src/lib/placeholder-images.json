@@ -33,8 +33,8 @@
     {
       "id": "portfolio-saas",
       "description": "A screenshot of a SaaS platform interface.",
-      "imageUrl": "https://picsum.photos/seed/104/600/400",
-      "imageHint": "saas interface"
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e28f81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzYWFzJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc3NDUxMTM4OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "saas dashboard"
     },
     {
       "id": "portfolio-ecommerce",
@@ -129,8 +129,8 @@
     {
       "id": "cert-soc2",
       "description": "SOC 2 Compliant Badge",
-      "imageUrl": "https://picsum.photos/seed/soc2/200/200",
-      "imageHint": "SOC2 badge"
+      "imageUrl": "https://images.unsplash.com/photo-1557853103-64da9252458c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzZWN1cml0eSUyMGJhZGdlfGVufDB8fHx8MTc3NDUxMTQ4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "security badge"
     },
     {
       "id": "cert-gcp",
@@ -141,8 +141,8 @@
     {
       "id": "cert-aws",
       "description": "AWS Certified Badge",
-      "imageUrl": "https://picsum.photos/seed/aws/200/200",
-      "imageHint": "AWS badge"
+      "imageUrl": "https://images.unsplash.com/photo-1629858319321-c373570698a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhd3N8ZW58MHx8fHwxNzc0NTExNTIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "aws logo"
     },
     {
       "id": "cert-msft",
@@ -203,6 +203,12 @@
       "description": "A sophisticated AI dashboard showing voter analytics, sentiment graphs, and heatmaps.",
       "imageUrl": "https://images.unsplash.com/photo-1642427749670-f20e2e76f8c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzc0NDk0MDU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "analytics dashboard"
+    },
+    {
+      "id": "portfolio-health-app",
+      "description": "A screenshot of a healthcare mobile app.",
+      "imageUrl": "https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwYXBwJTIwbW9ja3VwfGVufDB8fHx8MTc3NDUxNTk3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "healthcare mockup"
     }
   ]
 }
