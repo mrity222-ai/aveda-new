@@ -140,10 +140,10 @@ export const whyChooseUs = [
 ];
 
 export const stats = [
-  { value: '10+', label: 'Years of Experience' },
-  { value: '250+', label: 'Projects Delivered' },
+  { value: '2+', label: 'Years of Experience' },
+  { value: '5+', label: 'Projects Delivered' },
   { value: '98%', label: 'Client Satisfaction' },
-  { value: '15+', label: 'Industries Served' },
+  { value: '3+', label: 'Industries Served' },
 ];
 
 export const portfolioProjects = [
