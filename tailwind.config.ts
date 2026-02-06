@@ -101,11 +101,21 @@ export default {
             boxShadow: '0 0 25px hsl(var(--primary) / 0.6)',
           },
         },
+        'spin-slow': {
+          from: { transform: 'rotate(0deg)' },
+          to: { transform: 'rotate(360deg)' },
+        },
+        'spin-slow-reverse': {
+          from: { transform: 'rotate(360deg)' },
+          to: { transform: 'rotate(0deg)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'pulse-red': 'pulse-red 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'spin-slow': 'spin-slow 20s linear infinite',
+        'spin-slow-reverse': 'spin-slow-reverse 25s linear infinite',
       },
     },
   },
