@@ -4,6 +4,8 @@ import { useState, useMemo } from 'react';
 import { blogPosts } from '@/lib/data';
 import { BlogPostCard } from '@/components/insides/blog-post-card';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const categories = [
   'All',
@@ -16,6 +18,7 @@ const categories = [
 
 export default function InsidesPage() {
   const [activeCategory, setActiveCategory] = useState('All');
+  const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
 
   const filteredPosts = useMemo(() => {
     if (activeCategory === 'All') {
@@ -28,7 +31,19 @@ export default function InsidesPage() {
     <div className="bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-background py-20 md:py-32">
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-background via-background/80 to-primary/20 opacity-30"></div>
+        <div className="absolute inset-0 z-0 opacity-10">
+          {heroBgImage && (
+            <Image
+              src={heroBgImage.imageUrl}
+              alt={heroBgImage.description}
+              fill
+              className="object-cover"
+              priority
+              data-ai-hint={heroBgImage.imageHint}
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
+        </div>
         <div className="container relative z-10 text-center">
           <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl animate-in fade-in slide-in-from-bottom-8 duration-700">
             AI-Driven Insights That Shape Decisions

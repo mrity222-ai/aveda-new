@@ -43,7 +43,7 @@ const WhatsAppIcon = () => (
   );
 
 export default function WebDevelopmentPage() {
-    const heroImage = PlaceHolderImages.find((img) => img.id === 'service-web-dev');
+    const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
     const detailImage = PlaceHolderImages.find((img) => img.id === 'service-web-dev-detail');
 
     const whyThisWorks = [
@@ -108,11 +108,11 @@ export default function WebDevelopmentPage() {
         <div className="bg-background text-foreground">
             {/* Hero Section */}
             <section className="relative overflow-hidden bg-background py-20 md:py-32">
-                <div className="absolute inset-0 z-0 opacity-20">
+                <div className="absolute inset-0 z-0 opacity-10">
                     {heroImage && (
                         <Image
                             src={heroImage.imageUrl}
-                            alt={heroImage.description}
+                            alt="Web Development background"
                             fill
                             className="object-cover"
                             priority

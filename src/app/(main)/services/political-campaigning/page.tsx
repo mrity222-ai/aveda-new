@@ -40,7 +40,7 @@ const WhatsAppIcon = () => (
 
 
 export default function PoliticalCampaigningPage() {
-    const heroImage = PlaceHolderImages.find((img) => img.id === 'service-political-hero');
+    const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
     const dashboardImage = PlaceHolderImages.find((img) => img.id === 'service-political-dashboard');
 
     const howAiWins = [
@@ -97,11 +97,11 @@ export default function PoliticalCampaigningPage() {
         <div className="bg-background text-foreground">
             {/* Hero Section */}
             <section className="relative overflow-hidden bg-background py-20 md:py-32">
-                 <div className="absolute inset-0 z-0 opacity-20">
+                 <div className="absolute inset-0 z-0 opacity-10">
                     {heroImage && (
                         <Image
                             src={heroImage.imageUrl}
-                            alt={heroImage.description}
+                            alt="Political Campaigning background"
                             fill
                             className="object-cover"
                             priority

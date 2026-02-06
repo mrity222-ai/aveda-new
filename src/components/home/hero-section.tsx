@@ -1,10 +1,26 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function HeroSection() {
+  const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
   return (
-    <section className="w-full bg-background py-20 md:py-32">
-      <div className="container">
+    <section className="relative w-full overflow-hidden bg-background py-20 md:py-32">
+      <div className="absolute inset-0 z-0 opacity-10">
+        {heroBgImage && (
+          <Image
+            src={heroBgImage.imageUrl}
+            alt={heroBgImage.description}
+            fill
+            className="object-cover"
+            priority
+            data-ai-hint={heroBgImage.imageHint}
+          />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
+      </div>
+      <div className="container relative z-10">
         <div className="mx-auto max-w-4xl text-center">
           <div className="animate-in fade-in slide-in-from-bottom-10 duration-700">
             <h1 className="font-headline text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">

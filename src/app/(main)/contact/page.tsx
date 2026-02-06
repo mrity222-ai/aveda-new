@@ -2,8 +2,12 @@ import Link from 'next/link';
 import { Mail, Phone, MapPin, Clock, BrainCircuit, UserCheck, Briefcase, MoveRight } from 'lucide-react';
 import { ContactForm } from '@/components/contact/contact-form';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function ContactPage() {
+  const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
+
   const contactDetails = [
     {
       icon: Mail,
@@ -56,7 +60,19 @@ export default function ContactPage() {
     <div className="bg-background text-foreground">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-background py-20 md:py-32">
-            <div className="absolute inset-0 z-0 bg-gradient-to-t from-background via-background/80 to-primary/20 opacity-30"></div>
+            <div className="absolute inset-0 z-0 opacity-10">
+                {heroBgImage && (
+                    <Image
+                    src={heroBgImage.imageUrl}
+                    alt={heroBgImage.description}
+                    fill
+                    className="object-cover"
+                    priority
+                    data-ai-hint={heroBgImage.imageHint}
+                    />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
+            </div>
             <div className="container relative z-10 text-center">
                 <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
                     Let’s Build Something Powerful Together

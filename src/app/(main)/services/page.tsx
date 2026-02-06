@@ -64,6 +64,7 @@ const industries = [
   ];
 
 export default function ServicesPage() {
+    const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
     const webDevImage = PlaceHolderImages.find((img) => img.id === 'service-web-dev-detail');
     const appDevImage = PlaceHolderImages.find((img) => img.id === 'service-app-dev');
     const uiUxImage = PlaceHolderImages.find((img) => img.id === 'service-ui-ux');
@@ -77,8 +78,17 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-background py-20 md:py-32">
         <div className="absolute inset-0 z-0 opacity-10">
-          {/* Animated background */}
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-primary/20"></div>
+            {heroBgImage && (
+                <Image
+                src={heroBgImage.imageUrl}
+                alt="Services background"
+                fill
+                className="object-cover"
+                priority
+                data-ai-hint={heroBgImage.imageHint}
+                />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-primary/20"></div>
         </div>
         <div className="container relative z-10 text-center">
           <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">

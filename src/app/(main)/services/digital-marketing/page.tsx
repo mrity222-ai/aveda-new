@@ -30,6 +30,7 @@ const WhatsAppIcon = () => (
   );
 
 export default function DigitalMarketingPage() {
+    const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
     const whyThisWorks = [
         {
             icon: Target,
@@ -70,7 +71,17 @@ export default function DigitalMarketingPage() {
         <div className="bg-background text-foreground">
             {/* Hero Section */}
             <section className="relative overflow-hidden bg-background py-20 md:py-32">
-                <div className="absolute inset-0 z-0 opacity-20">
+                <div className="absolute inset-0 z-0 opacity-10">
+                    {heroBgImage && (
+                        <Image
+                            src={heroBgImage.imageUrl}
+                            alt="Digital Marketing background"
+                            fill
+                            className="object-cover"
+                            priority
+                            data-ai-hint={heroBgImage.imageHint}
+                        />
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-primary/30"></div>
                 </div>
                 <div className="container relative z-10 text-center">

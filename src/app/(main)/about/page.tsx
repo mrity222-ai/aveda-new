@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 
 export default function AboutPage() {
   const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-us-image');
+  const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
 
   const values = [
     {
@@ -50,9 +51,19 @@ export default function AboutPage() {
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-secondary py-20 md:py-32">
+      <section className="relative overflow-hidden bg-background py-20 md:py-32">
         <div className="absolute inset-0 z-0 opacity-10">
-          {/* Subtle animated background */}
+          {heroBgImage && (
+            <Image
+              src={heroBgImage.imageUrl}
+              alt={heroBgImage.description}
+              fill
+              className="object-cover"
+              priority
+              data-ai-hint={heroBgImage.imageHint}
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
         </div>
         <div className="container relative z-10 text-center">
           <p className="font-headline text-sm uppercase tracking-widest text-primary">

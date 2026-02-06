@@ -131,12 +131,23 @@ const includedFeatures = [
   ]
 
 export default function PricingPage() {
+  const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
+
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-background py-20 md:py-32">
         <div className="absolute inset-0 z-0 opacity-10">
-          {/* Animated background */}
+          {heroBgImage && (
+            <Image
+              src={heroBgImage.imageUrl}
+              alt="Digital Marketing Pricing background"
+              fill
+              className="object-cover"
+              priority
+              data-ai-hint={heroBgImage.imageHint}
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-primary/20"></div>
         </div>
         <div className="container relative z-10 text-center">

@@ -166,7 +166,7 @@ function SeoAuditForm() {
   }
 
 export default function SeoOptimizationPage() {
-    const heroImage = PlaceHolderImages.find((img) => img.id === 'service-seo-hero');
+    const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
     const geoTaggingImage = PlaceHolderImages.find((img) => img.id === 'service-seo-map');
     
     const whyLocalSeo = [
@@ -232,37 +232,37 @@ export default function SeoOptimizationPage() {
     return (
         <div className="bg-background text-foreground">
             {/* Hero Section */}
-            <section className="relative h-[600px] w-full overflow-hidden">
-                {heroImage && (
-                    <Image
-                    src={heroImage.imageUrl}
-                    alt={heroImage.description}
-                    fill
-                    className="object-cover opacity-20"
-                    priority
-                    data-ai-hint={heroImage.imageHint}
-                    />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
-                <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-foreground">
-                    <div className="container">
-                        <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
-                            Get Found First in Your City
-                        </h1>
-                        <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
-                            Rank higher on Google Maps & local search using AI-powered Local SEO and GEO tagging strategies.
-                        </p>
-                        <div className="mt-8 flex flex-wrap justify-center gap-4">
-                            <Button asChild size="lg">
-                                <Link href="#lead-capture">Get Free Local SEO Audit</Link>
-                            </Button>
-                            <Button asChild size="lg" variant="outline">
-                                <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
-                                    <WhatsAppIcon />
-                                    WhatsApp Us
-                                </a>
-                            </Button>
-                        </div>
+            <section className="relative overflow-hidden bg-background py-20 md:py-32">
+                <div className="absolute inset-0 z-0 opacity-10">
+                    {heroImage && (
+                        <Image
+                        src={heroImage.imageUrl}
+                        alt="SEO Optimization background"
+                        fill
+                        className="object-cover"
+                        priority
+                        data-ai-hint={heroImage.imageHint}
+                        />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
+                </div>
+                <div className="container relative z-10 text-center">
+                    <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
+                        Get Found First in Your City
+                    </h1>
+                    <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
+                        Rank higher on Google Maps & local search using AI-powered Local SEO and GEO tagging strategies.
+                    </p>
+                    <div className="mt-8 flex flex-wrap justify-center gap-4">
+                        <Button asChild size="lg">
+                            <Link href="#lead-capture">Get Free Local SEO Audit</Link>
+                        </Button>
+                        <Button asChild size="lg" variant="outline">
+                            <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
+                                <WhatsAppIcon />
+                                WhatsApp Us
+                            </a>
+                        </Button>
                     </div>
                 </div>
             </section>
