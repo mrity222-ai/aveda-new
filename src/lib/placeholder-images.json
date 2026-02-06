@@ -123,7 +123,7 @@
     {
       "id": "cert-iso",
       "description": "ISO 27001 Certified Badge",
-      "imageUrl": "https://images.unsplash.com/photo-1561408564-99cd1624ccac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxJU08lMjBiYWRnZXxlbnwwfHx8fDE3NzAyNzk4MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1632154936605-956abf0221fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxJU08lMjBiYWRnZXxlbnwwfHx8fDE3NzA0MTYwMDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ISO badge"
     },
     {
@@ -209,6 +209,30 @@
       "description": "A screenshot of a healthcare mobile app.",
       "imageUrl": "https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwYXBwJTIwbW9ja3VwfGVufDB8fHx8MTc3NDUxNTk3OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "healthcare mockup"
+    },
+    {
+      "id": "cert-msme",
+      "description": "MSME Registered logo",
+      "imageUrl": "https://picsum.photos/seed/msme/120/120",
+      "imageHint": "msme logo"
+    },
+    {
+      "id": "cert-startup-india",
+      "description": "Startup India logo",
+      "imageUrl": "https://images.unsplash.com/photo-1657302155485-790b74d0b5d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdGFydHVwJTIwaW5kaWElMjBsb2dvfGVufDB8fHx8MTc3MDQxNjAwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "startup india logo"
+    },
+    {
+      "id": "cert-made-in-india",
+      "description": "Made in India logo",
+      "imageUrl": "https://picsum.photos/seed/made-in-india/120/120",
+      "imageHint": "made in india logo"
+    },
+    {
+      "id": "cert-digital-india",
+      "description": "Digital India logo",
+      "imageUrl": "https://images.unsplash.com/photo-1603812188201-1e6e13ad6cbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwaW5kaWElMjBsb2dvfGVufDB8fHx8MTc3MDQxNjAwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital india logo"
     }
   ]
 }

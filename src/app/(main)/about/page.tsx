@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { BrainCircuit, Target, TrendingUp, Users, Shield, Award, Star, Factory, Power } from 'lucide-react';
+import { BrainCircuit, Target, TrendingUp, Users } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
@@ -24,7 +24,7 @@ export default function AboutPage() {
       description: 'We are committed to delivering tangible returns and sustainable growth for all our clients.',
     },
     {
-      icon: Shield,
+      icon: Users,
       title: 'Political & Business Intelligence',
       description: 'We provide a unique blend of tech expertise and strategic insights for complex challenges.',
     },
@@ -41,11 +41,11 @@ export default function AboutPage() {
   ];
 
   const recognitions = [
-    { name: 'ISO Certified', icon: Shield },
-    { name: 'MSME Registered', icon: Award },
-    { name: 'Startup India', icon: Star },
-    { name: 'Made in India', icon: Factory },
-    { name: 'Digital India', icon: Power },
+    { name: 'ISO Certified', imageId: 'cert-iso' },
+    { name: 'MSME Registered', imageId: 'cert-msme' },
+    { name: 'Startup India', imageId: 'cert-startup-india' },
+    { name: 'Made in India', imageId: 'cert-made-in-india' },
+    { name: 'Digital India', imageId: 'cert-digital-india' },
   ];
 
 
@@ -178,15 +178,28 @@ export default function AboutPage() {
           
           <div className="mt-16">
             <div className="flex w-full snap-x justify-start gap-8 overflow-x-auto pb-4 md:justify-center md:flex-wrap md:overflow-visible md:pb-0">
-              {recognitions.map((rec) => (
-                <div key={rec.name} className="group w-40 flex-shrink-0 snap-center flex flex-col items-center justify-center gap-4 text-center">
-                  <div className="relative flex h-28 w-28 items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:border-primary/50 group-hover:bg-primary/10 group-hover:shadow-2xl group-hover:shadow-primary/20">
-                    <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
-                    <rec.icon className="relative h-12 w-12 text-white transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]" />
+              {recognitions.map((rec) => {
+                const image = PlaceHolderImages.find(p => p.id === rec.imageId);
+                return (
+                  <div key={rec.name} className="group w-40 flex-shrink-0 snap-center flex flex-col items-center justify-center gap-4 text-center">
+                    <div className="relative flex h-28 w-28 items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:border-primary/50 group-hover:bg-primary/10 group-hover:shadow-2xl group-hover:shadow-primary/20">
+                      <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                      {image && (
+                         <div className="relative h-12 w-12">
+                          <Image 
+                            src={image.imageUrl} 
+                            alt={rec.name} 
+                            fill
+                            className="object-contain brightness-0 invert filter transition-all duration-300"
+                            data-ai-hint={image.imageHint}
+                            />
+                         </div>
+                      )}
+                    </div>
+                    <p className="font-semibold text-sm text-muted-foreground transition-colors group-hover:text-foreground">{rec.name}</p>
                   </div>
-                  <p className="font-semibold text-sm text-muted-foreground transition-colors group-hover:text-foreground">{rec.name}</p>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         </div>
