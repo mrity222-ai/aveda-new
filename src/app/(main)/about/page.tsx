@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { BrainCircuit, Target, TrendingUp, Users } from 'lucide-react';
+import { BrainCircuit, Target, TrendingUp, Users, Shield } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 
@@ -23,7 +23,7 @@ export default function AboutPage() {
       description: 'We are committed to delivering tangible returns and sustainable growth for all our clients.',
     },
     {
-      icon: Users,
+      icon: Shield,
       title: 'Political & Business Intelligence',
       description: 'We provide a unique blend of tech expertise and strategic insights for complex challenges.',
     },
@@ -133,25 +133,32 @@ export default function AboutPage() {
       </section>
       
       {/* What Makes Us Different Section */}
-      <section className="bg-secondary py-20 md:py-28">
-        <div className="container text-center">
-          <h2 className="font-headline text-3xl font-bold md:text-4xl">What Makes Us Different</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Our core principles ensure we deliver unparalleled value and innovation.
-          </p>
-          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {values.map((value) => (
-              <div key={value.title} className="group rounded-lg p-6 transition-all duration-300 hover:bg-muted/50">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-muted text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
-                    <value.icon className="h-8 w-8" />
-                  </div>
-                </div>
-                <h3 className="mt-6 font-headline text-xl font-semibold">{value.title}</h3>
-                <p className="mt-2 text-muted-foreground">{value.description}</p>
-              </div>
-            ))}
-          </div>
+      <section className="relative overflow-hidden bg-secondary py-20 md:py-28">
+        <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
+        <div className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }}/>
+        <div className="container relative z-10 text-center">
+            <p className="font-headline text-sm uppercase tracking-widest text-primary drop-shadow-[0_0_8px_hsl(var(--primary)/0.7)]">
+                What Makes Us Different
+            </p>
+            <h2 className="mx-auto mt-4 max-w-3xl font-headline text-3xl font-bold md:text-4xl">
+                Our core principles ensure we deliver unparalleled value and innovation.
+            </h2>
+            <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
+                {values.map((value) => (
+                    <div key={value.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-card/50 p-8 backdrop-blur-lg transition-all duration-300 hover:-translate-y-2">
+                        <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                        <div className="relative">
+                            <div className="flex justify-center">
+                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)]">
+                                <value.icon className="h-8 w-8" />
+                                </div>
+                            </div>
+                            <h3 className="mt-6 font-headline text-xl font-semibold">{value.title}</h3>
+                            <p className="mt-2 text-muted-foreground">{value.description}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
       </section>
 
