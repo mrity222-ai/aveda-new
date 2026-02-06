@@ -1,60 +1,78 @@
 'use client';
 
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { services } from '@/lib/data';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { Button } from '../ui/button';
-import { MoveRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+
+const servicesData = [
+  {
+    title: 'Delivering Seamless Experiences',
+    description: 'We build fast, scalable, and secure websites that transform complex workflows into effortless digital journeys.',
+    slug: 'web-development',
+  },
+  {
+    title: 'Orchestrating Unified Frameworks',
+    description: 'From concept to launch, we craft high-performance mobile applications with clean architecture and smooth UX.',
+    slug: 'app-development',
+  },
+  {
+    title: 'Compounding Growth & Impact',
+    description: 'AI-driven automation, SEO, and performance marketing designed to accelerate growth and maximize results.',
+    slug: 'digital-marketing',
+  },
+];
 
 export default function ServicesPreview() {
-  const featuredServices = services.slice(0, 4);
-
   return (
-    <section className="bg-secondary py-20 md:py-28">
-      <div className="container">
+    <section className="relative overflow-hidden bg-gradient-to-b from-background to-secondary/30 py-20 md:py-28">
+      {/* Particle/Glow effects */}
+      <div className="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-96 h-96 bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
+      <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 w-96 h-96 bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }} />
+
+      <div className="container relative z-10">
         <div className="mb-16 text-center animate-in fade-in slide-in-from-bottom-8 duration-700">
+          <p className="mb-2 font-semibold text-primary">Our Services</p>
           <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
-            Our Core Services
+            One Service. Multiple Powerful Solutions.
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            A complete suite of digital solutions to transform your business and drive growth.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {featuredServices.map((service, index) => (
-             <Link href={`/services#${service.slug}`} key={service.slug} className="group block h-full">
-              <Card
-                className="flex h-full flex-col justify-start overflow-hidden rounded-lg border-border bg-card text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20 animate-in fade-in slide-in-from-bottom-12 duration-500"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardHeader className="items-center">
-                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
-                    <service.icon className="h-8 w-8" />
-                  </div>
-                  <CardTitle className="font-headline text-xl">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{service.description.substring(0,100) + '...'}</p>
-                </CardContent>
-              </Card>
-            </Link>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {servicesData.map((service, index) => (
+            <div
+              key={service.title}
+              className={cn(
+                'group relative rounded-2xl border border-white/10 bg-black/20 p-8 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 animate-in fade-in slide-in-from-bottom-12',
+                index === 1 && 'lg:translate-y-6', // for height variation
+              )}
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              {/* Card Gradient Glow */}
+              <div
+                className={cn(
+                  'absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-40'
+                )}
+              />
+              {/* Card background pattern */}
+              <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,0.05)_0%,_rgba(255,255,255,0)_60%)]" />
+
+              <div className="relative z-10 flex h-full flex-col">
+                <h3 className="font-headline text-2xl font-bold text-foreground">
+                  {service.title}
+                </h3>
+                <p className="mt-4 flex-grow text-muted-foreground">
+                  {service.description}
+                </p>
+                <Link
+                  href={`/services#${service.slug}`}
+                  className="mt-8 inline-flex items-center font-semibold text-accent transition-all group-hover:text-primary group-hover:gap-3"
+                >
+                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
           ))}
         </div>
-
-        <div className="mt-16 text-center">
-            <Button asChild size="lg" variant="default">
-                <Link href="/services">View More Services <MoveRight className="ml-2" /></Link>
-            </Button>
-        </div>
-
       </div>
     </section>
   );
