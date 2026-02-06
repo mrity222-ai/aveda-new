@@ -8,13 +8,22 @@ import {
   Mail,
   Phone,
   MoveRight,
+  Award,
 } from 'lucide-react';
 import { Logo } from './logo';
+import { Separator } from '@/components/ui/separator';
 
 export default function Footer() {
+  const recognitionBadges = [
+    { name: 'MSME Registered' },
+    { name: 'Startup India Recognized' },
+    { name: 'Digital India Partner' },
+  ];
+
   return (
-    <footer className="border-t border-border bg-background">
+    <footer className="border-t border-border/20 bg-background/95 backdrop-blur-sm">
       <div className="container py-16">
+        {/* Main Footer Content */}
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Column 1: Brand */}
           <div className="space-y-6">
@@ -26,7 +35,7 @@ export default function Footer() {
               <Button
                 variant="outline"
                 size="icon"
-                className="text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                className="border-border/50 text-muted-foreground transition-all duration-300 hover:border-accent hover:text-accent hover:shadow-[0_0_15px_hsl(var(--accent)/0.5)]"
                 asChild
               >
                 <Link href="#">
@@ -37,7 +46,7 @@ export default function Footer() {
               <Button
                 variant="outline"
                 size="icon"
-                className="text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                className="border-border/50 text-muted-foreground transition-all duration-300 hover:border-accent hover:text-accent hover:shadow-[0_0_15px_hsl(var(--accent)/0.5)]"
                 asChild
               >
                 <Link href="#">
@@ -48,7 +57,7 @@ export default function Footer() {
               <Button
                 variant="outline"
                 size="icon"
-                className="text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                className="border-border/50 text-muted-foreground transition-all duration-300 hover:border-accent hover:text-accent hover:shadow-[0_0_15px_hsl(var(--accent)/0.5)]"
                 asChild
               >
                 <Link href="#">
@@ -115,7 +124,7 @@ export default function Footer() {
                 <Phone className="h-4 w-4 text-primary" />
                 <span>+91 9012887697</span>
               </a>
-              <Button asChild className="mt-6 w-full" size="lg" variant="default">
+              <Button asChild className="mt-6 w-full bg-gradient-to-r from-primary to-accent text-primary-foreground transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)]" size="lg">
                 <Link href="/contact">
                   Start Your Project <MoveRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -124,12 +133,31 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-16 border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>
-            &copy; {new Date().getFullYear()} Aveda Technologies. All Rights
-            Reserved.
-          </p>
+        {/* Recognition Badges */}
+        <div className="mt-16 text-center">
+            <h4 className="mb-6 font-headline text-sm uppercase tracking-widest text-muted-foreground">Officially Recognized</h4>
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+                {recognitionBadges.map(badge => (
+                    <div key={badge.name} className="flex items-center gap-2 text-muted-foreground/80">
+                       <Award className="h-5 w-5 text-accent" />
+                       <span className='text-sm font-medium'>{badge.name}</span>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+      </div>
+      {/* Bottom Bar */}
+      <div className='border-t border-border/20'>
+        <div className="container flex flex-col items-center justify-between gap-4 py-6 text-sm text-muted-foreground md:flex-row">
+            <div className="flex gap-4">
+                <Link href="#" className="transition-colors hover:text-foreground">Privacy Policy</Link>
+                <Separator orientation='vertical' className='h-5 bg-border/50' />
+                <Link href="#" className="transition-colors hover:text-foreground">Terms & Conditions</Link>
+            </div>
+            <p>
+                &copy; {new Date().getFullYear()} Aveda Technologies. All Rights Reserved.
+            </p>
         </div>
       </div>
     </footer>
