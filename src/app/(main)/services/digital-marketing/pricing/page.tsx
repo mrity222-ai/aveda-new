@@ -85,6 +85,11 @@ const includedFeatures = [
       description: 'Custom strategies built on data and AI insights.',
     },
     {
+      icon: Sparkles,
+      title: 'Marketing with AI',
+      description: 'Leverage AI for campaign optimization and predictive analysis.',
+    },
+    {
       icon: CheckCircle,
       title: 'Performance Tracking',
       description: 'Real-time dashboards to monitor your campaign success.',
