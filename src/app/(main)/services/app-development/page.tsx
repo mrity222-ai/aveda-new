@@ -121,15 +121,16 @@ export default function AppDevelopmentPage() {
             </section>
 
             {/* What We Build Section */}
-            <section className="py-20 md:py-28">
+            <section className="bg-black py-20 md:py-28">
                 <div className="container text-center">
                     <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12">What We Build</h2>
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {whatWeBuild.map((item) => (
-                        <div key={item.title} className="group rounded-lg border border-border bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2">
+                        <div key={item.title} className="group rounded-xl border border-[#1a1a1a] bg-[#0a0a0a] p-8 text-center transition-all duration-300 hover:border-destructive hover:shadow-[0_0_20px_rgba(255,0,0,0.2)] hover:-translate-y-2">
                             <div className="flex justify-center">
-                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
-                                    <item.icon className="h-8 w-8" />
+                                <div className="relative flex h-20 w-20 items-center justify-center rounded-full">
+                                    <div className="absolute inset-0 rounded-full bg-destructive/10 blur-lg transition-all duration-300 group-hover:blur-xl"></div>
+                                    <item.icon className="relative h-10 w-10 text-destructive drop-shadow-[0_0_8px_hsl(var(--destructive)/0.8)]" />
                                 </div>
                             </div>
                             <h3 className="mt-6 font-headline text-xl font-semibold">{item.title}</h3>
