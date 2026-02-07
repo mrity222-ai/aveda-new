@@ -13,36 +13,6 @@
       "imageHint": "team collaboration"
     },
     {
-      "id": "portfolio-fintech",
-      "description": "A screenshot of a fintech dashboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1748439146117-31978164865d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmaW50ZWNoJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc3MDI3NTM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "fintech dashboard"
-    },
-    {
-      "id": "portfolio-corporate-website",
-      "description": "A screenshot of a modern corporate website.",
-      "imageUrl": "https://images.unsplash.com/photo-1723002312141-027f132f62de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb3Jwb3JhdGUlMjB3ZWJzaXRlfGVufDB8fHx8MTc3MDI3NTM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "corporate website"
-    },
-    {
-      "id": "portfolio-marketing-campaign",
-      "description": "Visuals representing a digital marketing campaign.",
-      "imageUrl": "https://images.unsplash.com/photo-1599413955192-1d5eb8099a9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFya2V0aW5nJTIwYW5hbHl0aWNzfGVufDB8fHx8MTc3MDI3NTM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "marketing analytics"
-    },
-    {
-      "id": "portfolio-saas",
-      "description": "A screenshot of a SaaS platform interface.",
-      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e28f81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzYWFzJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc3NDUxMTM4OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "saas dashboard"
-    },
-    {
-      "id": "portfolio-ecommerce",
-      "description": "A screenshot of an e-commerce store.",
-      "imageUrl": "https://images.unsplash.com/photo-1483985988355-763728e1935b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxvbmxpbmUlMjBzdG9yZXxlbnwwfHx8fDE3NzAxNTc4NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "online store"
-    },
-    {
       "id": "blog-tech-trends",
       "description": "An abstract image representing technology trends.",
       "imageUrl": "https://images.unsplash.com/photo-1759576981262-95fd51a994a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0ZWNoJTIwdHJlbmRzfGVufDB8fHx8MTc3MDI3NTM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -177,7 +147,7 @@
     {
       "id": "testimonial-3",
       "description": "Avatar of a third satisfied client",
-      "imageUrl": "https://images.unsplash.com/photo-1641288883869-c463bc6c2a58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBhdmF0YXJ8ZW58MHx8fHwxNzcwMzY0MjQ3fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1641288883869-c463bc6c2a58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBhdmF0YXJ8ZW58MHx8fHwxNzcwMzY0MjQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "person avatar"
     },
     {
@@ -211,12 +181,6 @@
       "imageHint": "analytics dashboard"
     },
     {
-      "id": "portfolio-health-app",
-      "description": "A screenshot of a healthcare mobile app.",
-      "imageUrl": "https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwYXBwJTIwbW9ja3VwfGVufDB8fHx8MTc3NDUxNTk3OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "healthcare mockup"
-    },
-    {
       "id": "cert-msme",
       "description": "MSME Registered logo",
       "imageUrl": "https://picsum.photos/seed/msme/120/120",
@@ -241,94 +205,94 @@
       "imageHint": "digital india logo"
     },
     {
-      "id": "portfolio-ada-chikankari",
+      "id": "p-ada-chikankari",
       "description": "A luxury white dress on a mannequin with a red glow.",
-      "imageUrl": "https://images.unsplash.com/photo-1694349327531-eff421067771?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBkcmVzc3xlbnwwfHx8fDE3NzA0NTYzMDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "luxury dress"
+      "imageUrl": "https://images.unsplash.com/photo-1694349327531-eff421067771?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjB3aGl0ZSUyMGRyZXNzfGVufDB8fHx8MTc3NDY0MjY2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "luxury white dress"
     },
     {
-      "id": "portfolio-ai-crm",
-      "description": "A dark dashboard with red line graphs and 'Sales Forecasting' text.",
-      "imageUrl": "https://images.unsplash.com/photo-1560150063-7fc89bd73bd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2FsZXMlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzcwNDU2MzA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "sales dashboard"
+      "id": "p-ai-sales-crm",
+      "description": "A dark dashboard with glowing red sales charts.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e28f81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncmFwaHMlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzc0NjQyNjk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "glowing red charts"
     },
     {
-      "id": "portfolio-rozana",
-      "description": "A mobile app UI showing a rural marketplace interface.",
-      "imageUrl": "https://images.unsplash.com/photo-1729477011965-2ed4ed8da4ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxydXJhbCUyMG1hcmtldHBsYWNlfGVufDB8fHx8MTc3MDQ1NjMwOHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "rural marketplace"
+      "id": "p-rozana",
+      "description": "A bustling rural Indian marketplace.",
+      "imageUrl": "https://images.unsplash.com/photo-1598449172314-9b83f8905307?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxydXJhbCUyMGluZGlhbiUyMG1hcmtldHxlbnwwfHx8fDE3NzQ2NDI3NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rural indian market"
     },
     {
-      "id": "portfolio-yalla-drive",
-      "description": "A smartphone mockup with a car booking map and Dubai icons.",
-      "imageUrl": "https://images.unsplash.com/photo-1621241756588-d58566e1980c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXIlMjBib29raW5nfGVufDB8fHx8MTc3MDQ1NjMwOHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "car booking"
+      "id": "p-yalla-drive",
+      "description": "A scenic mountain road at sunset.",
+      "imageUrl": "https://images.unsplash.com/photo-1502690822646-11883a45a0b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzY2VuaWMlMjBtb3VudGFpbiUyMHJvYWR8ZW58MHx8fHwxNzc0NjQyNzgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "scenic mountain road"
     },
     {
-      "id": "portfolio-enterprise-erp",
-      "description": "A complex data table UI with red 'B2B' status tags.",
-      "imageUrl": "https://images.unsplash.com/photo-1522071901873-411886a10004?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkYXRhJTIwdGFibGV8ZW58MHx8fHwxNzcwNDU2MzA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "data table"
+      "id": "p-gramik-connect",
+      "description": "A digital POS overlay on a green agricultural field.",
+      "imageUrl": "https://images.unsplash.com/photo-1560493676-04071c5f467b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhZ3JpY3VsdHVyYWwlMjBmaWVsZHxlbnwwfHx8fDE3NzQ2NDI4MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital POS agriculture"
     },
     {
-      "id": "portfolio-gramik-pos",
-      "description": "A digital POS machine mockup with agricultural data on screen.",
-      "imageUrl": "https://images.unsplash.com/photo-1766426497431-364665a97ac0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaWdpdGFsJTIwUE9TfGVufDB8fHx8MTc3MDQ1NjMwOHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "digital POS"
+      "id": "p-b2b-seo",
+      "description": "A 300% growth chart in neon red.",
+      "imageUrl": "https://images.unsplash.com/photo-1634933221443-7b6623d38392?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm93dGglMjBjaGFydCUyMHJlZHxlbnwwfHx8fDE3NzQ2NDI4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "300% growth chart"
     },
     {
-      "id": "portfolio-healthtech",
-      "description": "A clean medical dashboard with heart-rate icons in red.",
-      "imageUrl": "https://images.unsplash.com/photo-1616866179473-32cc45153877?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtZWRpY2FsJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc3MDQ1NjMwOHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "medical dashboard"
+      "id": "p-health-tech",
+      "description": "A glowing red shield icon with digital nodes.",
+      "imageUrl": "https://images.unsplash.com/photo-1618641974913-b547565b93c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZWQlMjBzaGllbGQlMjBpY29ufGVufDB8fHx8MTc3NDY0Mjg2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "glowing red shield"
     },
     {
-      "id": "portfolio-seo-growth",
-      "description": "A big '300%' organic traffic growth chart in glowing red.",
-      "imageUrl": "https://images.unsplash.com/photo-1622782914767-404fb9ab3f57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Z3Jvd3RoJTIwY2hhcnR8ZW58MHx8fHwxNzcwNDI2MDE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "growth chart"
+      "id": "p-political-dashboard",
+      "description": "A political data dashboard with red highlights.",
+      "imageUrl": "https://images.unsplash.com/photo-1642427749670-f20e2e76f8c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBkYXRhJTIwZGFzaGJvYXJkJTIwcmVkfGVufDB8fHx8MTc3NDY0Mjg5Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "political data dashboard"
     },
     {
-      "id": "portfolio-ai-chatbot",
-      "description": "A chat interface with red bubble accents and cloud icons.",
-      "imageUrl": "https://images.unsplash.com/photo-1694878981964-c9d8f1ffc19d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaGF0JTIwaW50ZXJmYWNlfGVufDB8fHx8MTc3MDM3NzQyMnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "chat interface"
+      "id": "p-ed-tech",
+      "description": "An online learning platform UI.",
+      "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c64c1bae548?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvbmxpbmUlMjBsZWFybmluZyUyMHBsYXRmb3JtfGVufDB8fHx8MTc3NDY0MjkxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "online learning platform"
     },
     {
-      "id": "portfolio-ai-crm-new",
-      "description": "A futuristic sales CRM dashboard with glowing red charts.",
-      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e28f81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzYWxlcyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzQ2MjM4NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "sales dashboard"
+      "id": "p-corporate-website",
+      "description": "A modern corporate finance website.",
+      "imageUrl": "https://images.unsplash.com/photo-1665686310934-8b13f740c0d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmaW5hbmNlJTIwd2Vic2l0ZXxlbnwwfHx8fDE3NzQ2NDI5NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern finance website"
     },
     {
-      "id": "portfolio-enterprise-erp-new",
-      "description": "A complex ERP system interface for enterprise clients.",
-      "imageUrl": "https://images.unsplash.com/photo-1642427749670-f20e2e76f8c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlcnAlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzc0NjIzODg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "erp dashboard"
+      "id": "p-yoga-app",
+      "description": "A serene yoga pose.",
+      "imageUrl": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHlzenJlbmUlMjB5b2dhfGVufDB8fHx8MTc3NDY0Mjk3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "serene yoga"
     },
     {
-      "id": "portfolio-healthtech-new",
-      "description": "A clean UI for a health-tech application, showing patient data.",
-      "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NzQ2MjM5MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "healthcare technology"
+      "id": "p-enterprise-erp",
+      "description": "A factory automation dashboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1633519881881-c1a673038677?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWN0b3J5JTIwYXV0b21hdGlvbiUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzQ2NDMwNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "factory automation dashboard"
     },
     {
-      "id": "portfolio-seo-growth-new",
-      "description": "A chart showing upward growth, representing content strategy success.",
-      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzZW8lMjBncm93dGh8ZW58MHx8fHwxNzc0NjIzOTMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "seo growth"
+      "id": "p-ai-chatbot",
+      "description": "A futuristic chat interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1555949963-ff980e6703ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwY2hhdCUyMGludGVyZmFjZXxlbnwwfHx8fDE3NzQ2NDMwNzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "futuristic chat interface"
     },
     {
-      "id": "portfolio-cloud-migration",
-      "description": "An abstract visualization of cloud data migration.",
-      "imageUrl": "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjbG91ZCUyMGlubmZyYXN0cnVjdHVyZXxlbnwwfHx8fDE3NzQ2MjM5NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cloud infrastructure"
+      "id": "p-pm-saas",
+      "description": "A project management dashboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1611095790444-1dfa35e37b52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9qZWN0JTIwbWFuYWdlbWVudCUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzQ2NDMwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "project management dashboard"
     },
     {
-      "id": "portfolio-ai-chatbot-new",
-      "description": "A UI mockup of an AI chatbot conversation.",
-      "imageUrl": "https://images.unsplash.com/photo-1555949963-ff980e6703ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGF0Ym90JTIwVUl8ZW58MHx8fHwxNzc0NjIzOTc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "chatbot ui"
+      "id": "p-cloud-migration",
+      "description": "An abstract visualization of cloud data.",
+      "imageUrl": "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGNsb3VkJTIwZGF0YXxlbnwwfHx8fDE3NzQ2NDMxMjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract cloud data"
     }
   ]
 }

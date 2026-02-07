@@ -2,7 +2,7 @@ import PortfolioGallery from '@/components/works/portfolio-gallery';
 
 export default function WorksPage() {
   return (
-    <div className="relative overflow-hidden bg-black text-foreground">
+    <div className="relative overflow-hidden bg-gradient-to-b from-gray-900 to-black text-foreground">
       <div className="absolute inset-0 z-0 opacity-40">
         <div className="absolute -top-1/4 left-0 -translate-x-1/4 w-1/2 h-full bg-destructive/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
         <div className="absolute -bottom-1/4 right-0 translate-x-1/4 w-1/2 h-full bg-destructive/5 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }} />
