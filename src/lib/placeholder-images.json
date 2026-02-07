@@ -239,6 +239,60 @@
       "description": "Digital India logo",
       "imageUrl": "https://images.unsplash.com/photo-1603812188201-1e6e13ad6cbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwaW5kaWElMjBsb2dvfGVufDB8fHx8MTc3MDQxNjAwNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "digital india logo"
+    },
+    {
+      "id": "portfolio-ada-chikankari",
+      "description": "A luxury white dress on a mannequin with a red glow.",
+      "imageUrl": "https://images.unsplash.com/photo-1694349327531-eff421067771?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBkcmVzc3xlbnwwfHx8fDE3NzA0NTYzMDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "luxury dress"
+    },
+    {
+      "id": "portfolio-ai-crm",
+      "description": "A dark dashboard with red line graphs and 'Sales Forecasting' text.",
+      "imageUrl": "https://images.unsplash.com/photo-1560150063-7fc89bd73bd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2FsZXMlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzcwNDU2MzA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sales dashboard"
+    },
+    {
+      "id": "portfolio-rozana",
+      "description": "A mobile app UI showing a rural marketplace interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1729477011965-2ed4ed8da4ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxydXJhbCUyMG1hcmtldHBsYWNlfGVufDB8fHx8MTc3MDQ1NjMwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rural marketplace"
+    },
+    {
+      "id": "portfolio-yalla-drive",
+      "description": "A smartphone mockup with a car booking map and Dubai icons.",
+      "imageUrl": "https://images.unsplash.com/photo-1621241756588-d58566e1980c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXIlMjBib29raW5nfGVufDB8fHx8MTc3MDQ1NjMwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "car booking"
+    },
+    {
+      "id": "portfolio-enterprise-erp",
+      "description": "A complex data table UI with red 'B2B' status tags.",
+      "imageUrl": "https://images.unsplash.com/photo-1522071901873-411886a10004?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkYXRhJTIwdGFibGV8ZW58MHx8fHwxNzcwNDU2MzA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data table"
+    },
+    {
+      "id": "portfolio-gramik-pos",
+      "description": "A digital POS machine mockup with agricultural data on screen.",
+      "imageUrl": "https://images.unsplash.com/photo-1766426497431-364665a97ac0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaWdpdGFsJTIwUE9TfGVufDB8fHx8MTc3MDQ1NjMwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital POS"
+    },
+    {
+      "id": "portfolio-healthtech",
+      "description": "A clean medical dashboard with heart-rate icons in red.",
+      "imageUrl": "https://images.unsplash.com/photo-1616866179473-32cc45153877?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtZWRpY2FsJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc3MDQ1NjMwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "medical dashboard"
+    },
+    {
+      "id": "portfolio-seo-growth",
+      "description": "A big '300%' organic traffic growth chart in glowing red.",
+      "imageUrl": "https://images.unsplash.com/photo-1622782914767-404fb9ab3f57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Z3Jvd3RoJTIwY2hhcnR8ZW58MHx8fHwxNzcwNDI2MDE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "growth chart"
+    },
+    {
+      "id": "portfolio-ai-chatbot",
+      "description": "A chat interface with red bubble accents and cloud icons.",
+      "imageUrl": "https://images.unsplash.com/photo-1694878981964-c9d8f1ffc19d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaGF0JTIwaW50ZXJmYWNlfGVufDB8fHx8MTc3MDM3NzQyMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chat interface"
     }
   ]
 }
