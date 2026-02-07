@@ -3,11 +3,6 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { z } from 'zod';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-
-import { Button } from '@/components/ui/button';
 import {
   MapPin,
   TrendingUp,
@@ -16,11 +11,10 @@ import {
   CheckCircle,
   MoveRight,
   Building,
-  Briefcase,
   HeartPulse,
   Vote,
   Search,
-  Image as ImageIcon,
+  ImageIcon,
   Bookmark,
   Award,
   ScanSearch,
@@ -30,23 +24,12 @@ import {
   Store,
   Wrench,
   Hospital,
-  Loader2,
   Rocket,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { useToast } from '@/hooks/use-toast';
-import { handleSeoFormSubmission } from './actions';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 
 const WhatsAppIcon = () => (
@@ -65,107 +48,6 @@ const WhatsAppIcon = () => (
       <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
     </svg>
   );
-
-const formSchema = z.object({
-    name: z.string().min(2, 'Name must be at least 2 characters.'),
-    phone: z.string().min(10, 'Please enter a valid phone number.'),
-    businessLocation: z.string().min(3, 'Please enter your business location.'),
-    website: z.string().optional(),
-  });
-
-function SeoAuditForm() {
-    const { toast } = useToast();
-    const form = useForm<z.infer<typeof formSchema>>({
-      resolver: zodResolver(formSchema),
-      defaultValues: {
-        name: '',
-        phone: '',
-        businessLocation: '',
-        website: '',
-      },
-    });
-  
-    const onSubmit = async (values: z.infer<typeof formSchema>) => {
-      const result = await handleSeoFormSubmission(values);
-  
-      if (result.success) {
-        toast({
-          title: 'Request Sent!',
-          description: result.message,
-        });
-        form.reset();
-      } else {
-        toast({
-          variant: 'destructive',
-          title: 'Uh oh! Something went wrong.',
-          description: result.message || 'There was a problem with your request.',
-        });
-      }
-    };
-  
-    return (
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                    <FormItem>
-                    <FormLabel>Full Name</FormLabel>
-                    <FormControl>
-                        <Input placeholder="Your Name" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                    </FormItem>
-                )}
-            />
-            <FormField
-                control={form.control}
-                name="phone"
-                render={({ field }) => (
-                    <FormItem>
-                    <FormLabel>Phone Number</FormLabel>
-                    <FormControl>
-                        <Input placeholder="+91 12345 67890" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                    </FormItem>
-                )}
-            />
-            <FormField
-                control={form.control}
-                name="businessLocation"
-                render={({ field }) => (
-                    <FormItem>
-                    <FormLabel>Business / Location</FormLabel>
-                    <FormControl>
-                        <Input placeholder="e.g., 'Cafe in Mumbai' or 'Lawyer in Delhi'" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                    </FormItem>
-                )}
-            />
-            <FormField
-                control={form.control}
-                name="website"
-                render={({ field }) => (
-                    <FormItem>
-                    <FormLabel>Website (Optional)</FormLabel>
-                    <FormControl>
-                        <Input placeholder="https://example.com" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                    </FormItem>
-                )}
-            />
-          <Button type="submit" disabled={form.formState.isSubmitting} className="w-full" size="lg">
-            {form.formState.isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-            Start Local Ranking
-          </Button>
-        </form>
-      </Form>
-    );
-  }
 
 export default function SeoOptimizationPage() {
     const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
@@ -203,33 +85,13 @@ export default function SeoOptimizationPage() {
         { icon: Award, title: 'Review & Reputation Management' },
     ];
 
-    const processSteps = [
-        { icon: ScanSearch, title: "Local SEO Audit", description: "We analyze your current standing and identify opportunities."},
-        { icon: Crosshair, title: "Keyword + City Targeting", description: "We find the exact terms local customers are using to find you."},
-        { icon: MapPin, title: "Google Maps & GEO Optimization", description: "We optimize your profile and content for location-based searches."},
-        { icon: FileText, title: "Content & Citation Building", description: "We build your authority with locally relevant content and listings."},
-        { icon: BarChart, title: "Ranking Tracking & Reporting", description: "We provide transparent reports on your local search performance."},
-    ]
-
-    const whoIsThisFor = [
-        { icon: Store, title: 'Local Businesses & Shops' },
-        { icon: Wrench, title: 'Service Providers' },
-        { icon: Hospital, title: 'Real Estate & Clinics' },
-        { icon: Vote, title: 'Political Offices & Constituencies' },
+    const roadmapSteps = [
+        { phase: "Month 1: Foundation", focus: "Audit & Strategy", deliverable: "Detailed SEO Health Report & City Keyword List.", icon: ScanSearch },
+        { phase: "Month 2: Optimization", focus: "Google Business Profile", deliverable: "Profile Verification & 360° GMB Optimization.", icon: Store },
+        { phase: "Month 3: Geo-Targeting", focus: "Content & Images", deliverable: "GEO-Tagged Image Uploads & City-Specific Pages.", icon: MapPin },
+        { phase: "Month 4: Authority", focus: "Citations & Reviews", deliverable: "50+ Local Directory Listings & Reputation Setup.", icon: Bookmark },
+        { phase: "Month 5 & Beyond", focus: "Scaling & Growth", deliverable: "Top 3 Map Pack Ranking & Monthly ROI Analytics.", icon: TrendingUp },
     ];
-
-    const results = [
-        { value: '70%', label: 'Increase in local calls'},
-        { value: 'Top 3', label: 'Map ranking improvement'},
-        { value: '55%', label: 'Website visits from nearby users'},
-    ]
-
-    const trustFactors = [
-        { text: 'AI-powered SEO workflows'},
-        { text: 'White-hat GEO tagging practices'},
-        { text: 'Transparent monthly reports'},
-        { text: 'Business + political expertise'},
-    ]
 
     return (
         <div className="bg-background text-foreground">
@@ -383,66 +245,54 @@ export default function SeoOptimizationPage() {
                 </div>
             </section>
 
-             {/* How Our Process Works Section */}
-            <section className="bg-secondary py-20 md:py-28">
-                <div className="container">
-                    <h2 className="text-center font-headline text-3xl font-bold md:text-4xl mb-16">How Our Process Works</h2>
+             {/* Roadmap Section */}
+            <section id="roadmap" className="bg-black py-20 md:py-28 relative">
+                <div className="absolute inset-x-0 top-1/4 h-1/2 bg-gradient-to-t from-destructive/10 to-transparent opacity-30 blur-3xl" />
+                <div className="container relative z-10">
+                    <div className="text-center mb-24">
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-white">Our 5-Month Local SEO Roadmap</h2>
+                        <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">A clear path to dominating local search results, from foundational audits to long-term growth and ranking.</p>
+                    </div>
                     <div className="relative">
-                        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2"></div>
-                        {processSteps.map((step, index) => (
-                            <div key={step.title} className={cn("relative mb-12 flex items-center w-full", index % 2 === 0 ? "justify-start" : "justify-end")}>
+                        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-destructive/20 shadow-[0_0_10px_hsl(var(--destructive)/0.5)] -translate-x-1/2"></div>
+                        {roadmapSteps.map((step, index) => (
+                            <div key={step.phase} className={cn("relative mb-12 flex items-center w-full", index % 2 === 0 ? "justify-start" : "justify-end")}>
                                 <div className={cn("w-1/2", index % 2 === 0 ? "pr-8" : "pl-8")}>
-                                <div className={cn("p-6 rounded-lg border border-border bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/10", index % 2 === 0 ? "text-left" : "text-right")}>
-                                        <Badge variant='outline' className={cn("mb-2", index % 2 !== 0 && 'ml-auto block w-fit' )}>Step {index + 1}</Badge>
-                                        <h3 className="font-headline text-xl font-semibold">{step.title}</h3>
-                                        <p className="mt-2 text-muted-foreground">{step.description}</p>
+                                    <div className={cn(
+                                        "group relative overflow-hidden p-6 rounded-2xl border border-destructive/30 bg-black/50 backdrop-blur-lg shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-destructive/20", 
+                                        index % 2 === 0 ? "text-left" : "text-right"
+                                    )}>
+                                        <div className="relative">
+                                            <p className="font-headline text-destructive">{step.phase}</p>
+                                            <h3 className="mt-2 font-headline text-xl font-semibold text-white">{step.focus}</h3>
+                                            <p className="mt-2 text-muted-foreground">{step.deliverable}</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-background p-2 rounded-full border-2 border-border">
-                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                                        <step.icon className="h-6 w-6" />
+                                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-black p-2 rounded-lg border-2 border-destructive/50">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-destructive/10 text-destructive">
+                                        <step.icon className="h-7 w-7" />
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
-                </div>
-            </section>
 
-            {/* Lead Capture Section */}
-            <section id="lead-capture" className="py-20 md:py-28">
-                <div className="container grid md:grid-cols-2 gap-16 items-center">
-                    <div>
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl">Ready to Dominate Local Search?</h2>
-                        <p className="mt-4 text-lg text-muted-foreground">Fill out the form to get a free, no-obligation Local SEO audit. We'll analyze your online presence and show you exactly how we can help you get more local customers.</p>
-                        
-                        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3 text-center">
-                            {results.map((stat) => (
-                                <div key={stat.label}>
-                                <p className="font-headline text-4xl font-bold text-primary">{stat.value}</p>
-                                <p className="mt-2 text-sm font-medium text-muted-foreground">{stat.label}</p>
-                                </div>
-                            ))}
-                        </div>
-
-                        <ul className="mt-12 space-y-4">
-                            {trustFactors.map((factor) => (
-                                <li key={factor.text} className="flex items-center gap-3">
-                                    <CheckCircle className="h-5 w-5 flex-shrink-0 text-primary" />
-                                    <span className="text-muted-foreground">{factor.text}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div>
-                        <div className="rounded-lg border border-border bg-card p-8 shadow-lg">
-                            <h3 className="font-headline text-2xl font-bold mb-6 text-center">Get Your Free Local SEO Audit</h3>
-                            <SeoAuditForm />
+                    <div className="mt-20 text-center">
+                        <h3 className="font-headline text-2xl font-bold text-white">Live Results Counter</h3>
+                        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                            <div className="rounded-2xl border border-destructive/20 bg-black/50 p-6 backdrop-blur-lg">
+                                <p className="font-headline text-5xl font-bold text-destructive drop-shadow-[0_0_10px_hsl(var(--destructive)/0.7)]">12,450+</p>
+                                <p className="mt-2 text-muted-foreground">Total Local Leads Generated</p>
+                            </div>
+                            <div className="rounded-2xl border border-destructive/20 bg-black/50 p-6 backdrop-blur-lg">
+                                <p className="font-headline text-5xl font-bold text-destructive drop-shadow-[0_0_10px_hsl(var(--destructive)/0.7)]">500+</p>
+                                <p className="mt-2 text-muted-foreground">Google Maps Rankings Secured</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-
 
             {/* Final CTA */}
             <section className="border-t border-border bg-card py-20">
@@ -468,5 +318,3 @@ export default function SeoOptimizationPage() {
         </div>
     );
 }
-
-    
