@@ -160,10 +160,6 @@ export default function AppDevelopmentPage() {
             {/* Portfolio Section */}
             <section className="bg-background py-20 md:py-28">
                 <div className="container">
-                    <div className="text-center mb-16">
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl">Our App Development Work</h2>
-                        <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Here are a few examples of mobile applications we've successfully designed and delivered.</p>
-                    </div>
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                         {appProjects.map((project) => (
                             <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
