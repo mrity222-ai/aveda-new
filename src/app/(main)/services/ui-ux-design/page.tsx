@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
-  CheckCircle,
   MoveRight,
   Figma,
   PenTool,
@@ -39,12 +38,6 @@ export default function UiUxDesignPage() {
         { icon: Bot, name: 'AI Design Tools' },
     ];
     
-    const ourApproach = [
-        'User-Centric Philosophy',
-        'Conversion-Driven Design',
-        'Mobile-First & Responsive',
-        'Accessibility & Inclusivity',
-    ];
 
     return (
         <div className="bg-background text-foreground">
@@ -123,42 +116,37 @@ export default function UiUxDesignPage() {
               </div>
             </section>
 
-            {/* Our Approach Section */}
-            <section className="py-20 md:py-28">
-                <div className="container grid md:grid-cols-2 gap-16 items-center">
-                    <div>
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Approach to Design</h2>
-                        <p className="mt-4 text-lg text-muted-foreground">We combine creativity with a strategic process to deliver designs that are both beautiful and effective.</p>
-                         <ul className="mt-8 space-y-4">
-                            {ourApproach.map((feature) => (
-                                <li key={feature} className="flex items-center gap-3 text-lg">
-                                    <CheckCircle className="h-6 w-6 flex-shrink-0 text-primary" />
-                                    <span>{feature}</span>
-                                </li>
-                            ))}
-                        </ul>
+            {/* Portfolio Section */}
+            <section className="bg-background py-20 md:py-28">
+                <div className="container">
+                    <div className="text-center mb-12">
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Design Showcase</h2>
+                        <p className="mt-4 text-lg text-muted-foreground">See how we've crafted exceptional user experiences.</p>
                     </div>
-                     <div className="grid grid-cols-2 gap-8">
-                        {uiuxProjects.map(project => {
-                           const projectImage = portfolioProjects.find(p => p.slug === project.slug)?.image;
-                           return (
-                             <Link href={`/works#${project.slug}`} key={project.slug} className="group relative h-64 overflow-hidden rounded-lg">
-                               {projectImage && (
-                                 <Image
-                                   src={projectImage.imageUrl}
-                                   alt={project.title}
-                                   fill
-                                   className="object-cover transition-all duration-500 group-hover:scale-105"
-                                   data-ai-hint={projectImage.imageHint}
-                                 />
-                               )}
-                               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                               <div className="absolute bottom-4 left-4">
-                                 <h3 className="font-headline text-lg font-bold text-white">{project.title}</h3>
-                               </div>
-                             </Link>
-                           );
-                         })}
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+                        {uiuxProjects.map((project) => (
+                            <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
+                                <div className="relative h-[450px] overflow-hidden rounded-xl border border-white/10 bg-black/30 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                                    <Image
+                                        src={project.image.imageUrl}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover opacity-70 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
+                                        data-ai-hint={project.image.imageHint}
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                                    <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                                        <h3 className="font-headline text-2xl font-bold">{project.title}</h3>
+                                        <div className="mt-2 flex flex-wrap gap-2">
+                                            {project.tags.map(tag => (
+                                                <Badge key={tag} variant="outline" className="w-fit border-white/20 bg-white/10 backdrop-blur-md">{tag}</Badge>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </section>
