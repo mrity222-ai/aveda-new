@@ -149,7 +149,7 @@ export default function Header() {
                               {services.map((service) => (
                                 <li key={service.slug}>
                                   <Link
-                                    href={`/services#${service.slug}`}
+                                    href={`/services/${service.slug}`}
                                     onClick={() => setOpen(false)}
                                     className="text-base text-muted-foreground transition-colors hover:text-primary"
                                   >
@@ -219,7 +219,7 @@ export default function Header() {
                 {services.map((service) => (
                   <li key={service.slug}>
                     <Link
-                      href={`/services#${service.slug}`}
+                      href={`/services/${service.slug}`}
                       onClick={() => setServicesMenuOpen(false)}
                       className="group flex items-center gap-4 rounded-lg p-2 transition-colors hover:bg-white/5"
                     >
