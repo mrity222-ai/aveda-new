@@ -185,11 +185,6 @@ export default function AppDevelopmentPage() {
                             </Link>
                         ))}
                     </div>
-                    <div className="mt-16 text-center">
-                        <Button asChild size="lg">
-                            <Link href="/works">View All Projects <MoveRight className="ml-2 h-4 w-4" /></Link>
-                        </Button>
-                    </div>
                 </div>
             </section>
             
