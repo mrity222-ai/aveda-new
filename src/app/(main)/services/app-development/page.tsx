@@ -15,8 +15,14 @@ import {
   MoveRight,
   Lightbulb,
   Code,
-  Cog,
   Rocket,
+  Code2,
+  Cpu,
+  Server,
+  Flame,
+  Cloud,
+  GitBranch,
+  Database,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
@@ -74,7 +80,15 @@ export default function AppDevelopmentPage() {
     ];
 
     const technologies = [
-        'Flutter', 'React Native', 'Kotlin', 'Swift', 'Node.js', 'Firebase', 'AWS'
+        { icon: Smartphone, name: 'Flutter' },
+        { icon: Code2, name: 'React Native' },
+        { icon: Cpu, name: 'Kotlin' },
+        { icon: Code, name: 'Swift' },
+        { icon: Server, name: 'Node.js' },
+        { icon: Flame, name: 'Firebase' },
+        { icon: Cloud, name: 'AWS' },
+        { icon: GitBranch, name: 'GraphQL'},
+        { icon: Database, name: 'PostgreSQL'}
     ];
     
     const whyChooseUs = [
@@ -175,13 +189,20 @@ export default function AppDevelopmentPage() {
                 </div>
             </section>
 
-            {/* Technologies We Use Section */}
-            <section className="py-20 md:py-28">
-                <div className="container text-center">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl">Technologies We Use</h2>
-                     <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 opacity-75">
-                        {technologies.map(tech => (
-                            <span key={tech} className="text-xl font-semibold text-muted-foreground">{tech}</span>
+            {/* Technologies Section */}
+            <section className="bg-black py-20 md:py-28 relative">
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-destructive/10 to-transparent opacity-50 blur-3xl" />
+                <div className="container text-center relative z-10">
+                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-white">Technologies We Use</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {technologies.map((tech) => (
+                        <div key={tech.name} className="group relative rounded-2xl border border-destructive/20 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20 hover:-translate-y-1">
+                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                            <div className="relative flex flex-col items-center justify-center gap-4">
+                                <tech.icon className="h-10 w-10 text-white/80 transition-all duration-300 group-hover:text-destructive group-hover:drop-shadow-[0_0_10px_hsl(var(--destructive)/0.8)]" />
+                                <p className="font-semibold text-sm text-center uppercase tracking-wider text-white">{tech.name}</p>
+                            </div>
+                        </div>
                         ))}
                     </div>
                 </div>
