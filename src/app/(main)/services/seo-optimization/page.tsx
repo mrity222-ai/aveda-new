@@ -52,6 +52,7 @@ const WhatsAppIcon = () => (
 export default function SeoOptimizationPage() {
     const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
     const geoTaggingImage = PlaceHolderImages.find((img) => img.id === 'service-seo-map');
+    const futuristicDashboardImage = PlaceHolderImages.find((img) => img.id === 'futuristic-seo-dashboard');
     
     const whyLocalSeo = [
         {
@@ -119,7 +120,7 @@ export default function SeoOptimizationPage() {
                     </p>
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
                         <Button asChild size="lg">
-                            <Link href="#lead-capture">Get Free Local SEO Audit</Link>
+                            <Link href="/contact?service=SEO+Optimization">Get Free Local SEO Audit</Link>
                         </Button>
                         <Button asChild size="lg" variant="outline">
                             <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
@@ -294,27 +295,33 @@ export default function SeoOptimizationPage() {
                 </div>
             </section>
 
-            {/* Final CTA */}
-            <section className="border-t border-border bg-card py-20">
-                <div className="container text-center">
-                    <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
-                        Dominate Local Search in Your Area
-                    </h2>
-                    <div className="mt-8 flex flex-wrap justify-center gap-4">
-                        <Button asChild size="lg">
-                            <Link href="#lead-capture">
-                                Get Free Local SEO Audit <MoveRight className="ml-2 h-5 w-5" />
-                            </Link>
-                        </Button>
-                         <Button asChild size="lg" variant="outline">
-                            <a href="tel:+919012887697">
-                                <PhoneCall />
-                                Call Now
-                            </a>
-                        </Button>
+            {/* Futuristic Dashboard Section */}
+            <section className="bg-black py-20 md:py-28 relative">
+                <div className="absolute inset-0 z-0 opacity-20 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]">
+                    <div className="absolute inset-0 bg-[radial-gradient(hsl(var(--destructive)/0.1)_1px,transparent_1px)] [background-size:32px_32px]"></div>
+                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black to-transparent"></div>
+                </div>
+                <div className="container relative z-10 text-center">
+                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-4 text-white drop-shadow-[0_0_10px_hsl(var(--destructive)/0.5)]">Your Command Center for Local SEO</h2>
+                    <p className="text-muted-foreground max-w-2xl mx-auto mb-12">
+                        Visualize your local dominance with our real-time, holographic city map dashboard, tracking every pin, keyword, and conversion.
+                    </p>
+                    <div className="relative aspect-video max-w-5xl mx-auto rounded-2xl overflow-hidden border-2 border-destructive/30 shadow-2xl shadow-destructive/20 bg-black/50 p-2 backdrop-blur-sm">
+                        {futuristicDashboardImage && (
+                            <Image
+                                src={futuristicDashboardImage.imageUrl}
+                                alt={futuristicDashboardImage.description}
+                                fill
+                                className="object-cover rounded-lg"
+                                data-ai-hint={futuristicDashboardImage.imageHint}
+                            />
+                        )}
+                         <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-black/50 to-transparent"></div>
                     </div>
                 </div>
             </section>
         </div>
     );
 }
+
+    
