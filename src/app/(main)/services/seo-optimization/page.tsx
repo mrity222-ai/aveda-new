@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -268,19 +269,24 @@ export default function SeoOptimizationPage() {
             </section>
 
             {/* Why Local SEO Matters Section */}
-            <section className="py-20 md:py-28">
-                <div className="container text-center">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12">Why Local SEO Matters</h2>
+            <section className="bg-black py-20 md:py-28 relative">
+                <div className="absolute inset-0 z-0 opacity-20 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]">
+                    <div className="absolute inset-0 bg-[radial-gradient(hsl(var(--chart-4)/0.1)_1px,transparent_1px)] [background-size:32px_32px]"></div>
+                </div>
+                <div className="container relative z-10 text-center">
+                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-4 text-white drop-shadow-[0_0_10px_hsl(var(--chart-4)/0.5)]">Why Local SEO Matters</h2>
+                    <p className="text-muted-foreground max-w-2xl mx-auto mb-12">AI-powered marketing plans designed for growth, visibility, and influence.</p>
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {whyLocalSeo.map((value) => (
-                        <div key={value.title} className="group rounded-lg border border-border bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2">
-                            <div className="flex justify-center">
-                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
-                                    <value.icon className="h-8 w-8" />
+                        <div key={value.title} className="group rounded-2xl border border-chart-4/20 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-chart-4/40 hover:shadow-2xl hover:shadow-chart-4/20 hover:-translate-y-1">
+                             <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-chart-4 via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                            <div className="relative flex flex-col items-center text-center">
+                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-chart-4/20 to-accent/20 text-white ring-8 ring-white/5 transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_20px_hsl(var(--chart-4)/0.5)]">
+                                    <value.icon className="h-8 w-8 transition-transform duration-300 group-hover:animate-pulse" />
                                 </div>
+                                <h3 className="mt-6 font-headline text-xl font-semibold text-white">{value.title}</h3>
+                                <p className="mt-2 text-muted-foreground">{value.description}</p>
                             </div>
-                            <h3 className="mt-6 font-headline text-xl font-semibold">{value.title}</h3>
-                            <p className="mt-2 text-muted-foreground">{value.description}</p>
                         </div>
                         ))}
                     </div>
