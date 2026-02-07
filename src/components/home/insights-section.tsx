@@ -33,7 +33,7 @@ export default function InsightsSection() {
         {/* Grid Layout */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Left Featured Card */}
-          <div className="group relative lg:col-span-2 rounded-3xl border bg-card p-1 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20">
+          <div className="group relative lg:col-span-2 rounded-3xl border bg-card p-1 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
             <div className="relative overflow-hidden rounded-[22px] bg-card">
               {featuredImage && (
                 <div className="relative h-80 w-full">

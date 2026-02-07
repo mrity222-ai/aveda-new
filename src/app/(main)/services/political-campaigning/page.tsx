@@ -167,7 +167,7 @@ export default function PoliticalCampaigningPage() {
                     <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12">How AI Wins Elections</h2>
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {howAiWins.map((item) => (
-                        <div key={item.title} className="group rounded-lg border border-border bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2">
+                        <div key={item.title} className="group rounded-lg border bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:-translate-y-2">
                             <div className="flex justify-center">
                                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
                                     <item.icon className="h-8 w-8" />
@@ -187,21 +187,21 @@ export default function PoliticalCampaigningPage() {
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                         {politicalProjects.map((project) => (
                             <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
-                                <div className="relative h-[450px] overflow-hidden rounded-xl border border-white/10 bg-background/30 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                                <div className="relative h-[450px] overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl">
                                     <Image
                                         src={project.image.imageUrl}
                                         alt={project.title}
                                         fill
-                                        className="object-cover opacity-70 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
+                                        className="object-cover transition-all duration-500 group-hover:scale-105"
                                         data-ai-hint={project.image.imageHint}
                                         sizes="(max-width: 768px) 100vw, 33vw"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-                                    <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                                        <h3 className="font-headline text-2xl font-bold">{project.title}</h3>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/40 to-transparent" />
+                                    <div className="absolute inset-0 flex flex-col justify-end p-6 text-foreground">
+                                        <h3 className="font-headline text-2xl font-bold drop-shadow-sm">{project.title}</h3>
                                         <div className="mt-2 flex flex-wrap gap-2">
                                             {project.tags.map(tag => (
-                                                <Badge key={tag} variant="outline" className="w-fit border-white/20 bg-white/10 backdrop-blur-md">{tag}</Badge>
+                                                <Badge key={tag} variant="outline" className="w-fit border-white/20 bg-black/10 text-white backdrop-blur-md">{tag}</Badge>
                                             ))}
                                         </div>
                                     </div>
@@ -214,12 +214,9 @@ export default function PoliticalCampaigningPage() {
             
             {/* Our AI-Powered Political Services Section */}
             <section className="bg-secondary py-20 md:py-28 relative overflow-hidden">
-                <div className="absolute inset-0 z-0 opacity-20 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]">
-                    <div className="absolute inset-0 bg-[radial-gradient(hsl(var(--primary)/0.1)_1px,transparent_1px)] [background-size:32px_32px]"></div>
-                </div>
                 <div className="container relative z-10">
                     <div className="text-center mb-16">
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-white drop-shadow-[0_0_10px_hsl(var(--primary)/0.5)]">
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-foreground">
                             Political Command Center
                         </h2>
                         <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
@@ -231,8 +228,7 @@ export default function PoliticalCampaigningPage() {
                         {/* Left Cards */}
                         <div className="md:col-span-3 space-y-8">
                             {ourServicesWithIcons.slice(0, 4).map((service) => (
-                                <div key={service.title} className="group relative rounded-xl border border-primary/20 bg-card/50 p-4 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
-                                    <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+                                <div key={service.title} className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:-translate-y-1">
                                     <div className="relative flex items-center gap-4">
                                         <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                                             <service.icon className="h-5 w-5" />
@@ -261,8 +257,7 @@ export default function PoliticalCampaigningPage() {
                         {/* Right Cards */}
                         <div className="md:col-span-3 space-y-8">
                             {ourServicesWithIcons.slice(4, 8).map((service) => (
-                                <div key={service.title} className="group relative rounded-xl border border-primary/20 bg-card/50 p-4 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
-                                    <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+                                <div key={service.title} className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:-translate-y-1">
                                     <div className="relative flex items-center gap-4">
                                         <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                                             <service.icon className="h-5 w-5" />
@@ -275,7 +270,7 @@ export default function PoliticalCampaigningPage() {
                     </div>
 
                     <div className="mt-16 text-center">
-                        <Badge variant="outline" className="border-accent/50 bg-accent/10 text-accent backdrop-blur-sm shadow-[0_0_15px_hsl(var(--accent)/0.3)]">
+                        <Badge variant="outline" className="border-accent/50 bg-accent/10 text-accent">
                             <Shield className="mr-2 h-4 w-4" /> Secure & Confidential Data Handling - Powered by AI.
                         </Badge>
                     </div>
@@ -291,7 +286,7 @@ export default function PoliticalCampaigningPage() {
                         {processSteps.map((step, index) => (
                             <div key={step.title} className={cn("relative mb-12 flex items-center w-full", index % 2 === 0 ? "justify-start" : "justify-end")}>
                                 <div className={cn("w-1/2", index % 2 === 0 ? "pr-8" : "pl-8")}>
-                                <div className={cn("p-6 rounded-lg border border-border bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/10", index % 2 === 0 ? "text-left" : "text-right")}>
+                                <div className={cn("p-6 rounded-lg border bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/10", index % 2 === 0 ? "text-left" : "text-right")}>
                                         <Badge variant='outline' className={cn("mb-2", index % 2 !== 0 && 'ml-auto block w-fit' )}>Step {index + 1}</Badge>
                                         <h3 className="font-headline text-xl font-semibold">{step.title}</h3>
                                         <p className="mt-2 text-muted-foreground">{step.description}</p>
@@ -310,15 +305,10 @@ export default function PoliticalCampaigningPage() {
 
              {/* Why Choose Us Section */}
             <section className="bg-secondary py-20 md:py-28 relative overflow-hidden">
-                <div className="absolute inset-0 z-0 opacity-20">
-                    <div className="absolute -left-1/4 -top-1/4 w-1/2 h-full bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
-                    <div className="absolute -right-1/4 -bottom-1/4 w-1/2 h-full bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }} />
-                </div>
-                
                 <div className="container relative z-10">
                     <div className="text-center mb-16">
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-white">Why Aveda For Your Campaign?</h2>
-                        <div className="mt-4 w-24 h-1 bg-primary mx-auto shadow-[0_0_10px_hsl(var(--primary)/0.8)]" />
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-foreground">Why Aveda For Your Campaign?</h2>
+                        <div className="mt-4 w-24 h-1 bg-primary mx-auto" />
                         <p className="mt-6 max-w-3xl mx-auto text-muted-foreground">
                             We're more than a service provider; we're your technology partner committed to delivering a decisive electoral advantage.
                         </p>
@@ -326,14 +316,13 @@ export default function PoliticalCampaigningPage() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
                         {whyChooseUs.map((feature) => (
-                            <div key={feature.title} className="group relative rounded-2xl border border-primary/20 bg-card/50 p-6 backdrop-blur-lg transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2">
-                                <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+                            <div key={feature.title} className="group relative rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:-translate-y-2">
                                 <div className="relative flex items-start gap-4">
-                                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary ring-4 ring-primary/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)]">
+                                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary ring-4 ring-primary/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/30">
                                         <feature.icon className="h-6 w-6" />
                                     </div>
                                     <div>
-                                        <h3 className="font-headline text-lg font-semibold text-white">{feature.title}</h3>
+                                        <h3 className="font-headline text-lg font-semibold text-foreground">{feature.title}</h3>
                                         <p className="mt-1 text-sm text-muted-foreground">{feature.description}</p>
                                     </div>
                                 </div>
@@ -342,7 +331,7 @@ export default function PoliticalCampaigningPage() {
                     </div>
                     
                     <div className='mt-24'>
-                        <div className="max-w-2xl mx-auto rounded-lg border border-primary/30 bg-card/50 p-6 flex items-start gap-4 backdrop-blur-md">
+                        <div className="max-w-2xl mx-auto rounded-lg border bg-card p-6 flex items-start gap-4">
                           <ShieldCheck className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                           <div>
                             <h3 className="font-semibold">Compliance First</h3>

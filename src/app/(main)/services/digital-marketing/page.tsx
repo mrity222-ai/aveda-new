@@ -66,7 +66,7 @@ export default function DigitalMarketingPage() {
                             data-ai-hint={heroBgImage.imageHint}
                         />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-primary/20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent"></div>
                 </div>
                 <div className="container relative z-10 text-center">
                     <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
@@ -90,7 +90,7 @@ export default function DigitalMarketingPage() {
             </section>
 
             {/* Digital Marketing & Results Section */}
-            <section className="bg-background py-20 md:py-28">
+            <section className="bg-secondary py-20 md:py-28">
                 <div className="container grid md:grid-cols-1 gap-16 items-center">
                     {/* Left Side (Content) */}
                     <div className="space-y-8 animate-in fade-in slide-in-from-left-12 duration-700">
@@ -105,20 +105,20 @@ export default function DigitalMarketingPage() {
                         </p>
                         {/* Stats */}
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-                            <div className="rounded-xl border border-primary/20 bg-card/50 p-6 backdrop-blur-md transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                            <div className="rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg">
                                 <h3 className="font-headline text-4xl font-bold text-primary">100K+</h3>
                                 <p className="mt-2 text-muted-foreground">Reach Generated</p>
                             </div>
-                            <div className="rounded-xl border border-primary/20 bg-card/50 p-6 backdrop-blur-md transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                            <div className="rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg">
                                 <h3 className="font-headline text-4xl font-bold text-primary">200%</h3>
                                 <p className="mt-2 text-muted-foreground">Avg. ROI</p>
                             </div>
-                            <div className="rounded-xl border border-primary/20 bg-card/50 p-6 backdrop-blur-md transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                            <div className="rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg">
                                 <h3 className="font-headline text-4xl font-bold text-primary">50+</h3>
                                 <p className="mt-2 text-muted-foreground">Happy Clients</p>
                             </div>
                         </div>
-                        <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-[0_0_20px_hsl(var(--primary)/0.5)] transition-all duration-300 hover:scale-105">
+                        <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-lg transition-all duration-300 hover:scale-105">
                             <Link href="/contact">
                                 Get in Touch <MoveRight className="ml-2 h-5 w-5" />
                             </Link>
@@ -128,7 +128,7 @@ export default function DigitalMarketingPage() {
             </section>
 
             {/* Service Details Section */}
-            <section className="bg-secondary py-20 md:py-28">
+            <section className="bg-background py-20 md:py-28">
               <div className="container items-center gap-16 md:grid md:grid-cols-2">
                   <div className="relative h-96 w-full md:h-[500px]">
                       {marketingImage && (
@@ -143,13 +143,13 @@ export default function DigitalMarketingPage() {
                       )}
                   </div>
                   <div className="mt-8 md:mt-0">
-                      <Badge variant="outline" className="mb-4 border-chart-3/30 bg-chart-3/20 text-chart-3 p-2 backdrop-blur-md">Starting at ₹5,000 / month</Badge>
+                      <Badge variant="destructive" className="mb-4">Starting at ₹5,000 / month</Badge>
                       <h2 className="font-headline text-3xl font-bold md:text-4xl">Digital &amp; Performance Marketing</h2>
                       <p className="mt-4 text-lg text-muted-foreground">We don't just run ads; we build AI-predictive models to forecast sales, use psychographic funnels to target user behavior, and provide real-time ROI dashboards. Our AI-powered campaigns generate leads, sales, and influence.</p>
                       
                       <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
                           {includedServices.map((service) => (
-                              <div key={service.text} className="group relative rounded-lg border border-primary/20 bg-card/50 p-4 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10">
+                              <div key={service.text} className="group relative rounded-lg border bg-card p-4 transition-all duration-300 hover:border-primary/40 hover:shadow-lg">
                                 <div className="flex items-center gap-4">
                                   <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                                     <service.icon className="h-5 w-5" />
@@ -167,7 +167,7 @@ export default function DigitalMarketingPage() {
             </section>
 
             {/* Portfolio Section */}
-            <section className="bg-background py-20 md:py-28">
+            <section className="bg-secondary py-20 md:py-28">
                 <div className="container">
                     <div className="text-center mb-12">
                         <h2 className="font-headline text-3xl font-bold md:text-4xl">Success Stories</h2>
@@ -176,21 +176,21 @@ export default function DigitalMarketingPage() {
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                         {marketingProjects.map((project) => (
                             <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
-                                <div className="relative h-[450px] overflow-hidden rounded-xl border border-white/10 bg-background/30 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                                <div className="relative h-[450px] overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl">
                                     <Image
                                         src={project.image.imageUrl}
                                         alt={project.title}
                                         fill
-                                        className="object-cover opacity-70 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
+                                        className="object-cover transition-all duration-500 group-hover:scale-105"
                                         data-ai-hint={project.image.imageHint}
                                         sizes="(max-width: 768px) 100vw, 33vw"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-                                    <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                                        <h3 className="font-headline text-2xl font-bold">{project.title}</h3>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/40 to-transparent" />
+                                    <div className="absolute inset-0 flex flex-col justify-end p-6 text-foreground">
+                                        <h3 className="font-headline text-2xl font-bold drop-shadow-sm">{project.title}</h3>
                                         <div className="mt-2 flex flex-wrap gap-2">
                                             {project.tags.map(tag => (
-                                                <Badge key={tag} variant="outline" className="w-fit border-white/20 bg-white/10 backdrop-blur-md">{tag}</Badge>
+                                                <Badge key={tag} variant="outline" className="w-fit border-white/20 bg-black/10 text-white backdrop-blur-md">{tag}</Badge>
                                             ))}
                                         </div>
                                     </div>
@@ -202,26 +202,25 @@ export default function DigitalMarketingPage() {
             </section>
 
              {/* Final CTA */}
-            <section className="relative overflow-hidden border-t border-transparent bg-gradient-to-tr from-[#1a0b2e] to-background py-20 md:py-28">
-                <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_rgba(118,50,235,0.15)_0%,_transparent_70%)] opacity-50" />
-                <div className="container relative z-10 text-center">
-                    <h2 className="font-headline text-4xl font-bold tracking-tight text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] md:text-5xl lg:text-6xl">
+            <section className="bg-background py-20 md:py-28">
+                <div className="container text-center">
+                    <h2 className="font-headline text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
                         Ready to Grow With AI Marketing?
                     </h2>
                     <div className="mt-8 flex flex-col items-center justify-center gap-6 sm:flex-row">
-                        <Button asChild size="lg" className="rounded-lg bg-[#E6007A] px-8 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#c40069] hover:shadow-2xl hover:shadow-[#E6007A]/50">
+                        <Button asChild size="lg" className="rounded-lg bg-primary px-8 text-primary-foreground shadow-lg transition-all duration-300 hover:scale-110 hover:bg-primary/90 hover:shadow-2xl hover:shadow-primary/50">
                             <Link href="/contact">
                               Get <span className="font-extrabold mx-1">FREE</span> Strategy Call
                             </Link>
                         </Button>
-                        <Button asChild size="lg" variant="ghost" className="text-white hover:bg-transparent hover:text-green-400">
+                        <Button asChild size="lg" variant="ghost" className="text-primary hover:bg-transparent">
                             <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
-                                <WhatsAppIcon className="text-green-400 drop-shadow-[0_0_8px_rgba(50,255,50,0.7)]" />
+                                <WhatsAppIcon className="text-primary" />
                                 WhatsApp Us
                             </a>
                         </Button>
                     </div>
-                    <p className="mt-6 text-sm text-white/70">Only 3 slots available for this month.</p>
+                    <p className="mt-6 text-sm text-muted-foreground">Only 3 slots available for this month.</p>
                 </div>
             </section>
         </div>

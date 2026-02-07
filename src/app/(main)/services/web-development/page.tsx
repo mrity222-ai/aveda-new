@@ -153,25 +153,22 @@ export default function WebDevelopmentPage() {
 
             {/* Why Our Web Development Works Section */}
             <section className="bg-secondary py-20 md:py-28 relative">
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-primary/5 to-transparent opacity-50 blur-3xl" />
                 <div className="container text-center">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-white">Why Our Web Development Works</h2>
+                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-foreground">Why Our Web Development Works</h2>
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {whyThisWorks.map((value, index) => (
                         <div 
                             key={value.title} 
-                            className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-card/50 p-8 backdrop-blur-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)] animate-in fade-in slide-in-from-bottom-12"
+                            className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12"
                             style={{ animationDelay: `${index * 150}ms` }}
                         >
-                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
-                            <div className="absolute top-0 left-0 w-2/3 h-2/3 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                             <div className="relative z-10 text-center">
                                 <div className="flex justify-center">
-                                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]">
+                                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/30">
                                         <value.icon className="h-10 w-10 transition-transform duration-300 group-hover:animate-pulse" />
                                     </div>
                                 </div>
-                                <h3 className="mt-6 font-headline text-xl font-bold text-white">{value.title}</h3>
+                                <h3 className="mt-6 font-headline text-xl font-bold text-foreground">{value.title}</h3>
                                 <p className="mt-2 text-muted-foreground">{value.description}</p>
                             </div>
                         </div>
@@ -182,13 +179,10 @@ export default function WebDevelopmentPage() {
 
             {/* Service Details Section */}
             <section className="relative overflow-hidden bg-background py-20 md:py-28">
-                <div className="absolute inset-0 z-0 opacity-20 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]">
-                    <div className="absolute inset-0 bg-[radial-gradient(hsl(var(--primary)/0.1)_1px,transparent_1px)] [background-size:32px_32px]"></div>
-                </div>
                 <div className="container relative z-10 grid items-center gap-16 md:grid-cols-2">
                     {/* Left Side (Content) */}
                     <div className="animate-in fade-in slide-in-from-left-12 duration-700">
-                        <h2 className="font-headline text-4xl font-bold uppercase tracking-wider text-white md:text-5xl">
+                        <h2 className="font-headline text-4xl font-bold uppercase tracking-wider text-foreground md:text-5xl">
                             WEB DEVELOPMENT
                         </h2>
                         <p className="mt-6 text-lg text-muted-foreground/80">
@@ -198,38 +192,29 @@ export default function WebDevelopmentPage() {
                         <ul className="mt-8 space-y-4">
                             {includedServices.map((detail) => (
                                 <li key={detail} className="flex items-center gap-4 text-lg">
-                                    <CheckCircle className="h-6 w-6 flex-shrink-0 text-primary drop-shadow-[0_0_8px_hsl(var(--primary)/0.8)]" />
+                                    <CheckCircle className="h-6 w-6 flex-shrink-0 text-primary" />
                                     <span className="text-muted-foreground">{detail}</span>
                                 </li>
                             ))}
                         </ul>
-                        <Button asChild size="lg" className="mt-10 bg-primary text-primary-foreground shadow-[0_0_20px_hsl(var(--primary)/0.5),inset_0_0_5px_rgba(255,255,255,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--primary)/0.7)]">
+                        <Button asChild size="lg" className="mt-10 bg-primary text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/30">
                             <Link href="/services">Explore More</Link>
                         </Button>
                     </div>
 
                     {/* Right Side (Visual Hero) */}
-                    <div className="relative flex h-[500px] w-full items-end justify-center md:h-[600px] animate-in fade-in zoom-in-90 duration-700">
-                        {/* Laser Grid Floor */}
-                        <div className="absolute bottom-0 h-1/3 w-full [perspective:300px]">
-                            <div className="h-full w-full bg-[repeating-linear-gradient(90deg,hsl(var(--primary)/0.15),hsl(var(--primary)/0.15)_1px,transparent_1px,transparent_40px),repeating-linear-gradient(0deg,hsl(var(--primary)/0.15),hsl(var(--primary)/0.15)_1px,transparent_1px,transparent_40px)] [transform:rotateX(75deg)]"></div>
-                            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
-                        </div>
-
-                        {/* Arch capsule */}
-                        <div className="relative h-full w-4/5 overflow-hidden rounded-t-[200px] border-2 border-primary/50 bg-card/30 p-2 shadow-[0_0_40px_hsl(var(--primary)/0.4)] backdrop-blur-sm">
+                    <div className="relative h-[500px] w-full md:h-[600px] animate-in fade-in zoom-in-90 duration-700">
+                        <div className="relative h-full w-full overflow-hidden rounded-lg border bg-card p-2 shadow-sm transition-all duration-300 group-hover:shadow-xl">
                             {detailImage && (
                                 <Image
                                     src={detailImage.imageUrl}
                                     alt={detailImage.description}
                                     fill
-                                    className="rounded-t-[190px] object-cover"
+                                    className="rounded-md object-cover"
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                     data-ai-hint={detailImage.imageHint}
                                 />
                             )}
-                            {/* Inner glow */}
-                            <div className="absolute inset-0 rounded-t-[200px] [box-shadow:inset_0_5px_30px_hsl(var(--primary)/0.3)]"></div>
                         </div>
                     </div>
                 </div>
@@ -237,28 +222,27 @@ export default function WebDevelopmentPage() {
 
             {/* How Our Process Works Section */}
             <section className="bg-secondary py-20 md:py-28 relative">
-                <div className="absolute inset-x-0 top-1/4 h-1/2 bg-gradient-to-t from-primary/5 to-transparent opacity-30 blur-3xl" />
                 <div className="container relative z-10">
-                    <h2 className="text-center font-headline text-3xl font-bold md:text-4xl mb-24 text-white">Our Development Process</h2>
+                    <h2 className="text-center font-headline text-3xl font-bold md:text-4xl mb-24 text-foreground">Our Development Process</h2>
                     <div className="relative">
-                        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 shadow-[0_0_10px_hsl(var(--primary)/0.5)] -translate-x-1/2"></div>
+                        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 -translate-x-1/2"></div>
                         {processSteps.map((step, index) => (
                             <div key={step.title} className={cn("relative mb-12 flex items-center w-full", index % 2 === 0 ? "justify-start" : "justify-end")}>
                                 <div className={cn("w-1/2", index % 2 === 0 ? "pr-8" : "pl-8")}>
                                 <div className={cn(
-                                    "group relative overflow-hidden p-6 rounded-2xl border border-primary/30 bg-card/50 backdrop-blur-lg shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20", 
+                                    "group relative overflow-hidden p-6 rounded-2xl border bg-card shadow-sm transition-all duration-300 hover:shadow-lg", 
                                     index % 2 === 0 ? "text-left" : "text-right"
                                 )}>
                                     <div className={cn("absolute top-0 font-headline text-8xl font-bold text-primary/10 -translate-y-4 transition-transform duration-300 group-hover:scale-110", index % 2 === 0 ? "right-0 translate-x-4" : "left-0 -translate-x-4")}>
                                         0{index + 1}
                                     </div>
                                     <div className="relative">
-                                        <h3 className="font-headline text-xl font-semibold text-white">{step.title}</h3>
+                                        <h3 className="font-headline text-xl font-semibold text-foreground">{step.title}</h3>
                                         <p className="mt-2 text-muted-foreground">{step.description}</p>
                                     </div>
                                     </div>
                                 </div>
-                                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-background p-2 rounded-lg border-2 border-primary/50">
+                                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-secondary p-2 rounded-lg border-2 border-primary/50">
                                     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
                                         <step.icon className="h-7 w-7" />
                                     </div>
@@ -271,16 +255,14 @@ export default function WebDevelopmentPage() {
             
             {/* Technologies Section */}
             <section className="bg-background py-20 md:py-28 relative">
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-primary/5 to-transparent opacity-50 blur-3xl" />
                 <div className="container text-center relative z-10">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-white">Technologies We Use</h2>
+                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-foreground">Technologies We Use</h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {technologies.map((tech) => (
-                        <div key={tech.name} className="group relative rounded-2xl border border-primary/20 bg-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
-                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                        <div key={tech.name} className="group relative rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:-translate-y-1">
                             <div className="relative flex flex-col items-center justify-center gap-4">
-                                <tech.icon className="h-10 w-10 text-white/80 transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]" />
-                                <p className="font-semibold text-sm text-center uppercase tracking-wider text-white">{tech.name}</p>
+                                <tech.icon className="h-10 w-10 text-foreground/80 transition-all duration-300 group-hover:text-primary" />
+                                <p className="font-semibold text-sm text-center uppercase tracking-wider text-foreground">{tech.name}</p>
                             </div>
                         </div>
                         ))}
@@ -290,22 +272,16 @@ export default function WebDevelopmentPage() {
             
             {/* Who is this for + Results Section */}
             <section className="bg-secondary py-20 md:py-28 relative overflow-hidden">
-                <div className="absolute inset-0 z-0 opacity-30">
-                    <div className="absolute -left-1/4 -bottom-1/4 w-1/2 h-full bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
-                    <div className="absolute -right-1/4 -top-1/4 w-1/2 h-full bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }} />
-                </div>
-
                 <div className="container grid md:grid-cols-2 gap-16 items-center relative z-10">
                     {/* Left Side: "Who This Is For" */}
                     <div>
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-white">Who This Is For</h2>
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-foreground">Who This Is For</h2>
                         <p className="mt-4 text-lg text-muted-foreground">Our web development services are perfect for organizations that need a powerful, reliable, and scalable online presence.</p>
                         <div className="mt-8 grid grid-cols-1 gap-6">
                             {whoIsThisFor.map((item) => (
-                                <div key={item.title} className="group relative rounded-xl border border-primary/20 bg-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10">
-                                    <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-60" />
+                                <div key={item.title} className="group relative rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-xl">
                                     <div className="relative flex items-start gap-6">
-                                        <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)]">
+                                        <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/30">
                                             <item.icon className="h-8 w-8" />
                                         </div>
                                         <div>
@@ -320,13 +296,12 @@ export default function WebDevelopmentPage() {
 
                     {/* Right Side: "Results & Impact" */}
                     <div className="space-y-8">
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-center md:text-left text-white">Results & Impact</h2>
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-center md:text-left text-foreground">Results & Impact</h2>
                         <div className="space-y-6">
                             {results.map((stat) => (
-                                <div key={stat.label} className="group relative rounded-xl border border-primary/20 bg-card/50 p-6 backdrop-blur-lg transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/20">
-                                    <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-60" />
+                                <div key={stat.label} className="group relative rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-xl">
                                     <div className="relative flex items-center justify-between gap-4">
-                                        <p className="font-headline text-5xl font-bold text-primary drop-shadow-[0_0_10px_hsl(var(--primary)/0.7)]">{stat.value}</p>
+                                        <p className="font-headline text-5xl font-bold text-primary">{stat.value}</p>
                                         <p className="text-right text-lg font-medium text-muted-foreground">{stat.label}</p>
                                     </div>
                                 </div>

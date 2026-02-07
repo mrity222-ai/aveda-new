@@ -154,7 +154,7 @@ export default function PricingPage() {
               data-ai-hint={heroBgImage.imageHint}
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-primary/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent"></div>
         </div>
         <div className="container relative z-10 text-center">
           <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
@@ -184,10 +184,10 @@ export default function PricingPage() {
                 <Card
                   key={plan.name}
                   className={cn(
-                    'relative flex h-full flex-col border-border/20 bg-card/50 backdrop-blur-lg transition-all duration-300',
+                    'relative flex h-full flex-col border bg-card transition-all duration-300',
                     plan.popular
-                      ? 'border-2 border-primary shadow-2xl shadow-primary/20'
-                      : 'border'
+                      ? 'border-2 border-primary shadow-xl shadow-primary/10'
+                      : 'border-border'
                   )}
                 >
                   {plan.popular && (
@@ -211,8 +211,8 @@ export default function PricingPage() {
                                   <Check className="h-5 w-5 flex-shrink-0 text-primary" />
                                   <span className={cn(
                                     "text-muted-foreground",
-                                    plan.name === 'Growth Plan' && feature.includes('AI-Based Targeting') && 'text-white font-semibold drop-shadow-[0_0_4px_hsl(var(--primary)/0.7)]',
-                                    plan.name === 'Premium AI Plan' && (feature.includes('Complete Website Development') || feature.includes('Lead Generation Funnels')) && 'text-white font-semibold',
+                                    plan.name === 'Growth Plan' && feature.includes('AI-Based Targeting') && 'text-foreground font-semibold',
+                                    plan.name === 'Premium AI Plan' && (feature.includes('Complete Website Development') || feature.includes('Lead Generation Funnels')) && 'text-foreground font-semibold',
                                   )}>
                                     {feature}
                                   </span>
@@ -224,11 +224,10 @@ export default function PricingPage() {
                       <Button asChild size="lg" 
                         className={cn(
                           'w-full',
-                          plan.name === 'Basic Plan' && 'border-primary text-primary hover:bg-primary/10 hover:text-primary',
-                          plan.name === 'Growth Plan' && 'bg-primary text-primary-foreground shadow-lg shadow-primary/50',
+                          plan.name === 'Growth Plan' && 'shadow-lg shadow-primary/20',
                           plan.name === 'Premium AI Plan' && 'bg-gradient-to-r from-accent to-primary text-white'
                         )} 
-                        variant={plan.name === 'Basic Plan' ? 'outline' : 'default'}
+                        variant={plan.popular ? 'default' : 'outline'}
                       >
                           <Link href="/contact">{plan.cta}</Link>
                       </Button>
@@ -238,7 +237,7 @@ export default function PricingPage() {
             ))}
           </div>
           <div className="mt-16 text-center">
-            <p className="animate-pulse text-xl font-bold italic text-white drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]">
+            <p className="animate-pulse text-xl font-bold italic text-primary">
               👉 Buy 12 Months & Get 1 Month FREE
             </p>
           </div>
@@ -251,10 +250,9 @@ export default function PricingPage() {
           <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16">What’s Included With Every Plan</h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {includedFeatures.map((value) => (
-              <div key={value.title} className="group relative rounded-xl border border-primary/20 bg-card/50 p-8 text-left backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
-                <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+              <div key={value.title} className="group relative rounded-xl border bg-card p-8 text-left transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-lg">
                 <div className="relative">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/30">
                         <value.icon className="h-6 w-6" />
                     </div>
                     <h3 className="mt-6 font-headline text-xl font-semibold text-foreground">{value.title}</h3>
@@ -264,27 +262,23 @@ export default function PricingPage() {
             ))}
           </div>
            <div className="mt-16">
-             <Badge variant="outline" className="border-accent/50 bg-accent/10 text-accent backdrop-blur-sm shadow-[0_0_15px_hsl(var(--accent)/0.3)]">No Hidden Costs. Guaranteed Results.</Badge>
+             <Badge variant="outline" className="border-accent/50 bg-accent/10 text-accent">No Hidden Costs. Guaranteed Results.</Badge>
         </div>
         </div>
       </section>
 
       {/* Why Aveda + Testimonials Section */}
       <section className="bg-secondary py-20 md:py-28 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_hsl(var(--primary)/0.1)_0%,_transparent_70%)]" />
-        </div>
         <div className="container relative z-10 grid gap-16 lg:grid-cols-2 items-start">
             <div>
-                <h2 className="font-headline text-3xl font-bold md:text-4xl text-white">Why Aveda Technologies?</h2>
-                <div className="mt-2 w-20 h-1 bg-primary shadow-[0_0_10px_hsl(var(--primary)/0.8)]" />
+                <h2 className="font-headline text-3xl font-bold md:text-4xl text-foreground">Why Aveda Technologies?</h2>
+                <div className="mt-2 w-20 h-1 bg-primary" />
                 <p className="mt-6 text-muted-foreground">We're more than a service provider; we're your technology partner committed to delivering results with transparent pricing and an AI-first approach.</p>
                  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {whyAveda.map((item) => (
-                        <div key={item.title} className="group relative overflow-hidden rounded-xl border border-primary/20 bg-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
-                          <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+                        <div key={item.title} className="group relative overflow-hidden rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:-translate-y-1">
                           <div className="relative">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary ring-4 ring-primary/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)]">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary ring-4 ring-primary/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/30">
                                 <item.icon className="h-6 w-6" />
                             </div>
                             <h3 className="mt-4 font-semibold text-foreground">{item.title}</h3>
@@ -297,8 +291,8 @@ export default function PricingPage() {
                  {testimonials.map((testimonial) => {
                      const image = PlaceHolderImages.find((img) => img.id === testimonial.avatarId);
                      return (
-                        <Card key={testimonial.name} className="relative overflow-hidden border-primary/20 bg-card/50 backdrop-blur-lg shadow-lg shadow-primary/10">
-                          <div className="absolute top-4 left-4 text-7xl font-bold text-primary/20 opacity-50">“</div>
+                        <Card key={testimonial.name} className="relative overflow-hidden border bg-card shadow-sm">
+                          <div className="absolute top-4 left-4 text-7xl font-bold text-primary/10 opacity-50">“</div>
                             <CardContent className="pt-10">
                                 <p className="relative z-10 text-lg italic text-muted-foreground">"{testimonial.quote}"</p>
                                 <div className="mt-6 flex items-center gap-4">
@@ -328,10 +322,9 @@ export default function PricingPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="relative overflow-hidden border-t border-transparent bg-gradient-to-tr from-[#1a0b2e] to-background py-20 md:py-28">
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_rgba(118,50,235,0.15)_0%,_transparent_70%)] opacity-50" />
-        <div className="container relative z-10 text-center">
-            <h2 className="font-headline text-4xl font-bold tracking-tight text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] md:text-5xl lg:text-6xl">
+      <section className="bg-background py-20 md:py-28">
+        <div className="container text-center">
+            <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
                 Ready to Grow With AI Marketing?
             </h2>
             <div className="mt-8 flex flex-col items-center justify-center gap-6 sm:flex-row">
@@ -340,14 +333,14 @@ export default function PricingPage() {
                       Get <span className="font-extrabold mx-1">FREE</span> Strategy Call
                     </Link>
                 </Button>
-                <Button asChild size="lg" variant="ghost" className="text-white hover:bg-transparent hover:text-green-400">
+                <Button asChild size="lg" variant="ghost" className="text-primary hover:bg-transparent">
                     <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
-                        <WhatsAppIcon className="text-green-400 drop-shadow-[0_0_8px_rgba(50,255,50,0.7)]" />
+                        <WhatsAppIcon className="text-primary" />
                         WhatsApp Us
                     </a>
                 </Button>
             </div>
-            <p className="mt-6 text-sm text-white/70">Only 3 slots available for this month.</p>
+            <p className="mt-6 text-sm text-muted-foreground">Only 3 slots available for this month.</p>
         </div>
       </section>
 

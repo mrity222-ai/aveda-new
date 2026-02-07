@@ -33,7 +33,7 @@ export default function PortfolioPreview() {
               <div 
                 className={cn(
                   "relative overflow-hidden rounded-3xl border bg-card transition-all duration-300",
-                  "h-[400px] group-hover:scale-[1.02] group-hover:shadow-xl group-hover:shadow-primary/20"
+                  "h-[400px] group-hover:scale-[1.02] group-hover:shadow-xl group-hover:shadow-primary/10"
                 )}
               >
                 <div className="relative h-full w-full rounded-3xl">
