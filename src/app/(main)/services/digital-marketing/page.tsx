@@ -4,11 +4,12 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
   Target,
-  LayoutTemplate,
   TrendingUp,
   Users,
-  CheckCircle,
   MoveRight,
+  BrainCircuit,
+  Repeat,
+  Megaphone,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
@@ -35,12 +36,12 @@ export default function DigitalMarketingPage() {
     const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
     
     const includedServices = [
-        'Social Media Marketing (Meta, Instagram)',
-        'Performance Ads (Meta & Google)',
-        'AI Audience Targeting & Segmentation',
-        'Lead Generation Campaigns',
-        'Retargeting & Funnel Optimization',
-        'Political Digital Campaigning',
+        { icon: Users, text: 'Social Media Marketing (Meta, Instagram)'},
+        { icon: Target, text: 'Performance Ads (Meta & Google)'},
+        { icon: BrainCircuit, text: 'AI Audience Targeting & Segmentation'},
+        { icon: TrendingUp, text: 'Lead Generation Campaigns'},
+        { icon: Repeat, text: 'Retargeting & Funnel Optimization'},
+        { icon: Megaphone, text: 'Political Digital Campaigning'},
     ];
     
     const marketingImage = PlaceHolderImages.find(
@@ -141,7 +142,7 @@ export default function DigitalMarketingPage() {
             </section>
 
             {/* Service Details Section */}
-            <section className="py-20 md:py-28 bg-secondary">
+            <section className="bg-black py-20 md:py-28">
               <div className="container items-center gap-16 md:grid md:grid-cols-2">
                   <div className="relative h-96 w-full md:h-[500px]">
                       {marketingImage && (
@@ -156,19 +157,23 @@ export default function DigitalMarketingPage() {
                       )}
                   </div>
                   <div className="mt-8 md:mt-0">
-                      <Badge variant="default" className="mb-4 bg-primary/10 text-primary">Starting at ₹5,000 / month</Badge>
+                      <Badge variant="outline" className="mb-4 border border-primary/30 bg-card/50 p-2 backdrop-blur-md">Starting at ₹5,000 / month</Badge>
                       <h2 className="font-headline text-3xl font-bold md:text-4xl">Digital & Performance Marketing</h2>
-                      <p className="mt-4 text-lg text-muted-foreground">AI-powered campaigns that generate leads, sales, and influence.</p>
+                      <p className="mt-4 text-lg text-muted-foreground">We don't just run ads; we build AI-predictive models to forecast sales, use psychographic funnels to target user behavior, and provide real-time ROI dashboards. Our AI-powered campaigns generate leads, sales, and influence.</p>
                       
-                      <ul className="mt-8 space-y-4">
-                          {includedServices.map((detail) => (
-                              <li key={detail} className="flex items-center gap-3">
-                                  <CheckCircle className="h-5 w-5 flex-shrink-0 text-primary" />
-                                  <span className="text-muted-foreground">{detail}</span>
-                              </li>
+                      <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                          {includedServices.map((service) => (
+                              <div key={service.text} className="group relative rounded-lg border border-primary/20 bg-card/50 p-4 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10">
+                                <div className="flex items-center gap-4">
+                                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+                                    <service.icon className="h-5 w-5" />
+                                  </div>
+                                  <span className="text-sm text-muted-foreground">{service.text}</span>
+                                </div>
+                              </div>
                           ))}
-                      </ul>
-                      <Button asChild size="lg" className="mt-8">
+                      </div>
+                      <Button asChild size="lg" className="mt-8 w-full bg-gradient-to-r from-destructive to-primary text-primary-foreground transition-all hover:scale-105">
                           <Link href="/services/digital-marketing/pricing">View Pricing & Plans</Link>
                       </Button>
                   </div>
