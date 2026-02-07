@@ -196,11 +196,11 @@ export const portfolioProjects = [
     image: findImage('p-b2b-seo'),
   },
   {
-    slug: 'healthtech-platform',
-    title: 'HealthTech Platform',
-    description: 'A secure platform for patient data management and telehealth consultations.',
-    tags: ['HealthTech'],
-    category: 'Web/App',
+    slug: 'b2b-healthtech-ui-ux-overhaul',
+    title: 'HealthTech UI/UX Overhaul',
+    description: 'Complete redesign of a health-tech platform, focusing on user-centric design to improve patient engagement.',
+    tags: ['UI/UX', 'Healthcare', 'Design'],
+    category: 'UI/UX Design',
     image: findImage('p-health-tech'),
   },
   {

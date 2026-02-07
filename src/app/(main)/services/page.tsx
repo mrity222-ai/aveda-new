@@ -104,7 +104,7 @@ export default function ServicesPage() {
         'digital-marketing': '/services/digital-marketing',
         'seo-optimization': '/services/seo-optimization',
         'political-campaigning': '/services/political-campaigning',
-        'ui-ux-design': '/contact?service=UI%2FUX+Design',
+        'ui-ux-design': '/services/ui-ux-design',
         'ai-automation': '/contact?service=AI+%26+Automation',
     };
 

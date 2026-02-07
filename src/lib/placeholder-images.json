@@ -272,7 +272,7 @@
     },
     {
       "id": "p-enterprise-erp",
-      "description": "A factory automation dashboard.",
+      "description": "A bespoke ERP system to streamline operations for a large manufacturing client.",
       "imageUrl": "https://images.unsplash.com/photo-1633519881881-c1a673038677?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWN0b3J5JTIwYXV0b21hdGlvbiUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzQ2NDMwNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "factory automation dashboard"
     },
@@ -293,6 +293,12 @@
       "description": "An abstract visualization of cloud data.",
       "imageUrl": "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGNsb3VkJTIwZGF0YXxlbnwwfHx8fDE3NzQ2NDMxMjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "abstract cloud data"
+    },
+    {
+      "id": "service-ui-ux-detail",
+      "description": "A 3D composition of floating UI/UX wireframes with colorful gradients.",
+      "imageUrl": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxVSSUyMFVYJTIwZGVzaWduJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc3NDY0MzE1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "UI UX design"
     }
   ]
 }
