@@ -66,11 +66,11 @@ export default function AppDevelopmentPage() {
     ];
 
     const processSteps = [
-        { icon: Lightbulb, title: "Idea & Strategy" },
-        { icon: PenTool, title: "UI / UX Design" },
-        { icon: Code, title: "App Development" },
-        { icon: ShieldCheck, title: "Testing & Security" },
-        { icon: Rocket, title: "Launch & Support" },
+        { icon: Lightbulb, title: "Idea & Strategy", description: "We'll workshop your idea, define the scope, and create a roadmap for a successful app launch." },
+        { icon: PenTool, title: "UI / UX Design", description: "Our designers create intuitive, beautiful interfaces that provide an exceptional user experience." },
+        { icon: Code, title: "App Development", description: "Our developers build your app using clean, scalable code for both iOS and Android platforms." },
+        { icon: ShieldCheck, title: "Testing & Security", description: "We conduct rigorous testing to ensure your app is bug-free, secure, and performs flawlessly." },
+        { icon: Rocket, title: "Launch & Support", description: "We handle the app store submission and provide ongoing support to ensure continued success." },
     ];
 
     const technologies = [
@@ -142,21 +142,35 @@ export default function AppDevelopmentPage() {
             </section>
 
             {/* Process Section */}
-            <section className="bg-secondary py-20 md:py-28">
-                <div className="container">
-                    <h2 className="text-center font-headline text-3xl font-bold md:text-4xl mb-16">Our Development Process</h2>
+            <section className="bg-black py-20 md:py-28 relative">
+                <div className="absolute inset-x-0 top-1/4 h-1/2 bg-gradient-to-t from-destructive/10 to-transparent opacity-30 blur-3xl" />
+                <div className="container relative z-10">
+                    <h2 className="text-center font-headline text-3xl font-bold md:text-4xl mb-24 text-white">Our Development Process</h2>
                     <div className="relative">
-                        <div className="absolute left-0 right-0 top-8 h-0.5 bg-border"></div>
-                        <div className="relative grid grid-cols-2 gap-y-8 md:grid-cols-5">
-                            {processSteps.map((step, index) => (
-                                <div key={step.title} className="flex flex-col items-center gap-4 text-center">
-                                    <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border-2 border-primary bg-secondary text-primary">
-                                        <step.icon className="h-8 w-8" />
+                        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-destructive/20 shadow-[0_0_10px_hsl(var(--destructive)/0.5)] -translate-x-1/2"></div>
+                        {processSteps.map((step, index) => (
+                            <div key={step.title} className={cn("relative mb-12 flex items-center w-full", index % 2 === 0 ? "justify-start" : "justify-end")}>
+                                <div className={cn("w-1/2", index % 2 === 0 ? "pr-8" : "pl-8")}>
+                                <div className={cn(
+                                    "group relative overflow-hidden p-6 rounded-lg border border-destructive/30 bg-black/50 backdrop-blur-lg shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-destructive/20", 
+                                    index % 2 === 0 ? "text-left" : "text-right"
+                                )}>
+                                    <div className={cn("absolute top-0 font-headline text-8xl font-bold text-destructive/10 -translate-y-4 transition-transform duration-300 group-hover:scale-110", index % 2 === 0 ? "right-0 translate-x-4" : "left-0 -translate-x-4")}>
+                                        0{index + 1}
                                     </div>
-                                    <p className="font-semibold">{step.title}</p>
+                                    <div className="relative">
+                                        <h3 className="font-headline text-xl font-semibold text-white">{step.title}</h3>
+                                        <p className="mt-2 text-muted-foreground">{step.description}</p>
+                                    </div>
+                                    </div>
                                 </div>
-                            ))}
-                        </div>
+                                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-black p-2 rounded-lg border-2 border-destructive/50">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-md bg-destructive/10 text-destructive">
+                                        <step.icon className="h-7 w-7" />
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
