@@ -354,17 +354,28 @@ export default function SeoOptimizationPage() {
             </section>
 
              {/* Our Local SEO Services Section */}
-            <section className="py-20 md:py-28">
-                <div className="container text-center">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12">Our Local SEO Services</h2>
+            <section className="bg-black py-20 md:py-28 relative">
+                <div className="absolute inset-0 z-0 opacity-20 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]">
+                    <div className="absolute inset-0 bg-[radial-gradient(hsl(var(--destructive)/0.1)_1px,transparent_1px)] [background-size:32px_32px]"></div>
+                </div>
+                <div className="container relative z-10 text-center">
+                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-white drop-shadow-[0_0_10px_hsl(var(--destructive)/0.5)]">Our Local SEO Services</h2>
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                         {services.map((service) => (
-                        <div key={service.title} className="group rounded-lg border border-border bg-card p-6 text-left transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10">
-                            <div className="flex items-center gap-4">
-                                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110">
-                                    <service.icon className="h-6 w-6" />
+                        <div key={service.title} className="group relative overflow-hidden rounded-2xl border border-destructive/20 bg-white/5 p-8 backdrop-blur-lg transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20 hover:-translate-y-2">
+                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                            <div className="relative z-10 flex h-full flex-col items-center text-center">
+                                <div className="flex-grow">
+                                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-destructive/10 text-destructive ring-8 ring-destructive/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-destructive group-hover:text-destructive-foreground group-hover:shadow-[0_0_20px_hsl(var(--destructive)/0.5)]">
+                                        <service.icon className="h-8 w-8" />
+                                    </div>
+                                    <h3 className="mt-6 font-headline text-xl font-semibold text-white">{service.title}</h3>
                                 </div>
-                                <h3 className="font-headline text-xl font-semibold">{service.title}</h3>
+                                <div className="mt-4">
+                                    <Link href="#" className="text-sm font-medium text-destructive opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                        View Case Study <MoveRight className="inline-block h-4 w-4" />
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                         ))}
