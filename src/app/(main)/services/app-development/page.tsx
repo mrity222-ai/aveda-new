@@ -47,7 +47,7 @@ const WhatsAppIcon = () => (
 );
 
 export default function AppDevelopmentPage() {
-    const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
+    const heroImage = PlaceHolderImages.find((img) => img.id === 'service-app-dev-hero');
     const appProjects = portfolioProjects.filter(p => ['yalla-drive', 'rozana', 'yoga-app'].includes(p.slug)).slice(0, 3);
 
     const whatWeBuild = [
@@ -104,8 +104,8 @@ export default function AppDevelopmentPage() {
     return (
         <div className="bg-background text-foreground">
             {/* Hero Section */}
-            <section className="relative overflow-hidden bg-background py-20 md:py-32">
-                 <div className="absolute inset-0 z-0 opacity-10">
+            <section className="relative overflow-hidden bg-black py-20 md:py-32">
+                 <div className="absolute inset-0 z-0 opacity-20">
                     {heroImage && (
                         <Image
                             src={heroImage.imageUrl}
@@ -116,10 +116,10 @@ export default function AppDevelopmentPage() {
                             data-ai-hint={heroImage.imageHint}
                         />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
                 </div>
                 <div className="container relative z-10 text-center">
-                    <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
+                    <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl text-white">
                         High-Performance Mobile App Development
                     </h1>
                     <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
@@ -139,7 +139,7 @@ export default function AppDevelopmentPage() {
             {/* What We Build Section */}
             <section className="bg-black py-20 md:py-28">
                 <div className="container text-center">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12">What We Build</h2>
+                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12 text-white">What We Build</h2>
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {whatWeBuild.map((item) => (
                         <div key={item.title} className="group rounded-xl border border-[#1a1a1a] bg-[#0a0a0a] p-8 text-center transition-all duration-300 hover:border-destructive hover:shadow-[0_0_20px_rgba(255,0,0,0.2)] hover:-translate-y-2">
@@ -149,7 +149,7 @@ export default function AppDevelopmentPage() {
                                     <item.icon className="relative h-10 w-10 text-destructive drop-shadow-[0_0_8px_hsl(var(--destructive)/0.8)]" />
                                 </div>
                             </div>
-                            <h3 className="mt-6 font-headline text-xl font-semibold">{item.title}</h3>
+                            <h3 className="mt-6 font-headline text-xl font-semibold text-white">{item.title}</h3>
                             <p className="mt-2 text-muted-foreground">{item.description}</p>
                         </div>
                         ))}
