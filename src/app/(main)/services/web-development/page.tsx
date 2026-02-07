@@ -12,12 +12,11 @@ import {
   Database,
   Cloud,
   Layers,
-  BookOpen,
+  Lightbulb,
   Rocket,
   Building2,
   Vote,
   Store,
-  Cog,
   Server,
   FileCode,
   Cpu,
@@ -81,10 +80,10 @@ export default function WebDevelopmentPage() {
     ];
 
     const processSteps = [
-        { icon: BookOpen, title: "Requirement & Strategy", description: "We start by understanding your goals, audience, and market to create a winning strategy."},
+        { icon: Lightbulb, title: "Requirement & Strategy", description: "We start by understanding your goals, audience, and market to create a winning strategy."},
         { icon: Layers, title: "UI/UX & Architecture", description: "We design intuitive user interfaces and a robust architecture that forms the foundation of your project."},
         { icon: Code, title: "Development & Integration", description: "Our expert developers bring the designs to life with clean, efficient code and seamless integrations."},
-        { icon: Cog, title: "Testing & Optimization", description: "Rigorous testing across devices ensures a bug-free, high-performance product before launch."},
+        { icon: ShieldCheck, title: "Testing & Optimization", description: "Rigorous testing across devices ensures a bug-free, high-performance product before launch."},
         { icon: Rocket, title: "Launch & Support", description: "We manage the deployment process and provide ongoing support to ensure your website runs smoothly."},
     ];
 
@@ -92,7 +91,7 @@ export default function WebDevelopmentPage() {
         { icon: Code, name: 'REACT & NEXT.JS' },
         { icon: Server, name: 'NODE.JS & LARAVEL' },
         { icon: FileCode, name: 'C++, HTML, CSS' },
-        { icon: BookOpen, name: 'HEADLESS CMS' },
+        { icon: Layers, name: 'HEADLESS CMS' },
         { icon: FileCode, name: 'PYTHON, PHP, JAVA' },
         { icon: Database, name: 'MYSQL & MONGODB' },
         { icon: Cloud, name: 'AWS & GOOGLE CLOUD' },
@@ -204,23 +203,31 @@ export default function WebDevelopmentPage() {
             </section>
 
             {/* How Our Process Works Section */}
-            <section className="py-20 md:py-28">
-                <div className="container">
-                    <h2 className="text-center font-headline text-3xl font-bold md:text-4xl mb-16">Our Development Process</h2>
+            <section className="bg-black py-20 md:py-28 relative">
+                <div className="absolute inset-x-0 top-1/4 h-1/2 bg-gradient-to-t from-destructive/10 to-transparent opacity-30 blur-3xl" />
+                <div className="container relative z-10">
+                    <h2 className="text-center font-headline text-3xl font-bold md:text-4xl mb-24 text-white">Our Development Process</h2>
                     <div className="relative">
-                        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2"></div>
+                        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-destructive/20 shadow-[0_0_10px_hsl(var(--destructive)/0.5)] -translate-x-1/2"></div>
                         {processSteps.map((step, index) => (
                             <div key={step.title} className={cn("relative mb-12 flex items-center w-full", index % 2 === 0 ? "justify-start" : "justify-end")}>
                                 <div className={cn("w-1/2", index % 2 === 0 ? "pr-8" : "pl-8")}>
-                                <div className={cn("p-6 rounded-lg border border-border bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/10", index % 2 === 0 ? "text-left" : "text-right")}>
-                                        <Badge variant='outline' className={cn("mb-2", index % 2 !== 0 && 'ml-auto block w-fit' )}>Step {index + 1}</Badge>
-                                        <h3 className="font-headline text-xl font-semibold">{step.title}</h3>
+                                <div className={cn(
+                                    "group relative overflow-hidden p-6 rounded-2xl border border-destructive/30 bg-black/50 backdrop-blur-lg shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-destructive/20", 
+                                    index % 2 === 0 ? "text-left" : "text-right"
+                                )}>
+                                    <div className={cn("absolute top-0 font-headline text-8xl font-bold text-destructive/10 -translate-y-4 transition-transform duration-300 group-hover:scale-110", index % 2 === 0 ? "right-0 translate-x-4" : "left-0 -translate-x-4")}>
+                                        0{index + 1}
+                                    </div>
+                                    <div className="relative">
+                                        <h3 className="font-headline text-xl font-semibold text-white">{step.title}</h3>
                                         <p className="mt-2 text-muted-foreground">{step.description}</p>
                                     </div>
+                                    </div>
                                 </div>
-                                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-background p-2 rounded-full border-2 border-border">
-                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                                        <step.icon className="h-6 w-6" />
+                                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-black p-2 rounded-full border-2 border-destructive/50">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-destructive/10 text-destructive">
+                                        <step.icon className="h-7 w-7" />
                                     </div>
                                 </div>
                             </div>
@@ -233,7 +240,7 @@ export default function WebDevelopmentPage() {
             <section className="bg-black py-20 md:py-28 relative">
                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-destructive/10 to-transparent opacity-50 blur-3xl" />
                 <div className="container text-center relative z-10">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16">Technologies We Use</h2>
+                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-white">Technologies We Use</h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {technologies.map((tech) => (
                         <div key={tech.name} className="group relative rounded-2xl border border-destructive/20 bg-black/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20 hover:-translate-y-1">
@@ -258,7 +265,7 @@ export default function WebDevelopmentPage() {
                 <div className="container grid md:grid-cols-2 gap-16 items-center relative z-10">
                     {/* Left Side: "Who This Is For" */}
                     <div>
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl">Who This Is For</h2>
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-white">Who This Is For</h2>
                         <p className="mt-4 text-lg text-muted-foreground">Our web development services are perfect for organizations that need a powerful, reliable, and scalable online presence.</p>
                         <div className="mt-8 grid grid-cols-1 gap-6">
                             {whoIsThisFor.map((item) => (
@@ -280,7 +287,7 @@ export default function WebDevelopmentPage() {
 
                     {/* Right Side: "Results & Impact" */}
                     <div className="space-y-8">
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-center md:text-left">Results & Impact</h2>
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-center md:text-left text-white">Results & Impact</h2>
                         <div className="space-y-6">
                             {results.map((stat) => (
                                 <div key={stat.label} className="group relative rounded-xl border border-destructive/20 bg-black/50 p-6 backdrop-blur-lg transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20">
