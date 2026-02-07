@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Check, CheckCircle, MoveRight, ShieldCheck, Clock, XCircle, Star, Sparkles, Cpu, Circle, Flame } from 'lucide-react';
+import { Check, CheckCircle, MoveRight, ShieldCheck, Clock, XCircle, Star, Sparkles, Cpu, Circle, Flame, BrainCircuit, Briefcase, TrendingUp } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
@@ -111,13 +111,6 @@ const includedFeatures = [
     }
   ];
 
-  const whyAveda = [
-      { title: 'AI-First Digital Agency'},
-      { title: 'Business + Political Marketing Expertise'},
-      { title: 'Result-Driven Approach'},
-      { title: 'Transparent Pricing'},
-  ]
-
   const testimonials = [
       {
           quote: "Aveda's AI-driven approach completely transformed our lead generation. We saw a 200% increase in qualified leads within the first quarter!",
@@ -138,6 +131,13 @@ const includedFeatures = [
 export default function PricingPage() {
   const [hoveredPlan, setHoveredPlan] = useState<string | null>(null);
   const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
+
+  const whyAveda = [
+    { title: 'AI-First Digital Agency', icon: BrainCircuit},
+    { title: 'Business + Political Expertise', icon: Briefcase},
+    { title: 'Result-Driven Approach', icon: TrendingUp},
+    { title: 'Transparent Pricing', icon: ShieldCheck},
+  ];
 
   return (
     <div className="bg-black text-foreground">
@@ -270,37 +270,53 @@ export default function PricingPage() {
       </section>
 
       {/* Why Aveda + Testimonials Section */}
-      <section className="bg-secondary py-20 md:py-28">
-        <div className="container grid gap-16 lg:grid-cols-2">
+      <section className="bg-black py-20 md:py-28 relative overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_hsl(var(--destructive)/0.1)_0%,_transparent_70%)]" />
+        </div>
+        <div className="container relative z-10 grid gap-16 lg:grid-cols-2 items-start">
             <div>
-                <h2 className="font-headline text-3xl font-bold md:text-4xl">Why Aveda Technologies?</h2>
-                 <ul className="mt-8 space-y-4">
-                    {whyAveda.map((item) => (
-                        <li key={item.title} className="flex items-center gap-3 text-lg">
-                            <CheckCircle className="h-6 w-6 flex-shrink-0 text-primary" />
-                            <span>{item.title}</span>
-                        </li>
-                    ))}
-                </ul>
+                <h2 className="font-headline text-3xl font-bold md:text-4xl text-white">Why Aveda Technologies?</h2>
+                <div className="mt-2 w-20 h-1 bg-destructive shadow-[0_0_10px_hsl(var(--destructive)/0.8)]" />
                 <p className="mt-6 text-muted-foreground">We're more than a service provider; we're your technology partner committed to delivering results with transparent pricing and an AI-first approach.</p>
+                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {whyAveda.map((item) => (
+                        <div key={item.title} className="group relative overflow-hidden rounded-xl border border-destructive/20 bg-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20 hover:-translate-y-1">
+                          <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+                          <div className="relative">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-destructive/10 text-destructive ring-4 ring-destructive/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-destructive group-hover:text-destructive-foreground group-hover:shadow-[0_0_20px_hsl(var(--destructive)/0.5)]">
+                                <item.icon className="h-6 w-6" />
+                            </div>
+                            <h3 className="mt-4 font-semibold text-foreground">{item.title}</h3>
+                          </div>
+                        </div>
+                    ))}
+                </div>
             </div>
             <div className="space-y-8">
                  {testimonials.map((testimonial) => {
                      const image = PlaceHolderImages.find((img) => img.id === testimonial.avatarId);
                      return (
-                        <Card key={testimonial.name} className="bg-card">
-                            <CardContent className="pt-6">
-                                <div className="flex items-center gap-1">
-                                    {[...Array(testimonial.rating)].map((_, i) => (
-                                        <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-                                    ))}
-                                </div>
-                                <p className="mt-4 text-muted-foreground">"{testimonial.quote}"</p>
+                        <Card key={testimonial.name} className="relative overflow-hidden border-destructive/20 bg-card/50 backdrop-blur-lg shadow-lg shadow-destructive/10">
+                          <div className="absolute top-4 left-4 text-7xl font-bold text-destructive/20 opacity-50">“</div>
+                            <CardContent className="pt-10">
+                                <p className="relative z-10 text-lg italic text-muted-foreground">"{testimonial.quote}"</p>
                                 <div className="mt-6 flex items-center gap-4">
-                                     {image && <Image src={image.imageUrl} alt={testimonial.name} width={48} height={48} className="rounded-full" data-ai-hint={image.imageHint} />}
+                                     {image && <Image src={image.imageUrl} alt={testimonial.name} width={48} height={48} className="rounded-full border-2 border-destructive/50" data-ai-hint={image.imageHint} />}
                                     <div>
                                         <p className="font-semibold">{testimonial.name}</p>
                                         <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                                    </div>
+                                    <div className="ml-auto">
+                                      {testimonial.name === 'Ankit Sharma' && (
+                                        <div className="text-center">
+                                          <p className="font-headline text-3xl font-bold text-destructive">200%</p>
+                                          <p className="text-xs text-muted-foreground">Lead Growth</p>
+                                        </div>
+                                      )}
+                                      {testimonial.name === 'Priya Singh' && (
+                                        <Star className="h-8 w-8 text-destructive fill-destructive" />
+                                      )}
                                     </div>
                                 </div>
                             </CardContent>
