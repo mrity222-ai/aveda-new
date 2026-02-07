@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, BrainCircuit, Globe } from 'lucide-react';
@@ -36,7 +37,7 @@ export default function AboutUs() {
                   <Globe className="h-6 w-6 text-accent" />
                   <span className="font-semibold">1+ Countries Served</span>
                </div>
-              <Button asChild className="bg-gradient-to-r from-accent to-primary text-white">
+              <Button asChild className="bg-primary text-white">
                 <Link href="/about">
                   Read More <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

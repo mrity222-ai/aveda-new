@@ -104,12 +104,17 @@ export default {
           from: { transform: 'rotate(360deg)' },
           to: { transform: 'rotate(0deg)' },
         },
+        'pulse-primary': {
+          '0%, 100%': { boxShadow: '0 0 0 0 hsl(var(--primary) / 0.7)' },
+          '50%': { boxShadow: '0 0 0 8px hsl(var(--primary) / 0)' }
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'spin-slow': 'spin-slow 20s linear infinite',
         'spin-slow-reverse': 'spin-slow-reverse 25s linear infinite',
+        'pulse-primary': 'pulse-primary 2s infinite',
       },
     },
   },

@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -225,7 +226,7 @@ export default function PricingPage() {
                         className={cn(
                           'w-full',
                           plan.name === 'Growth Plan' && 'shadow-lg shadow-primary/20',
-                          plan.name === 'Premium AI Plan' && 'bg-gradient-to-r from-accent to-primary text-white'
+                          plan.name === 'Premium AI Plan' && 'bg-primary text-white'
                         )} 
                         variant={plan.popular ? 'default' : 'outline'}
                       >

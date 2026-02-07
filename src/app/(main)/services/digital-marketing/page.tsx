@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -118,7 +119,7 @@ export default function DigitalMarketingPage() {
                                 <p className="mt-2 text-muted-foreground">Happy Clients</p>
                             </div>
                         </div>
-                        <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-lg transition-all duration-300 hover:scale-105">
+                        <Button asChild size="lg" className="rounded-full bg-primary text-primary-foreground shadow-lg transition-all duration-300 hover:scale-105">
                             <Link href="/contact">
                                 Get in Touch <MoveRight className="ml-2 h-5 w-5" />
                             </Link>
@@ -159,7 +160,7 @@ export default function DigitalMarketingPage() {
                               </div>
                           ))}
                       </div>
-                      <Button asChild size="lg" className="mt-8 w-full bg-gradient-to-r from-accent to-primary text-primary-foreground transition-all hover:scale-105">
+                      <Button asChild size="lg" className="mt-8 w-full bg-primary text-primary-foreground transition-all hover:scale-105">
                           <Link href="/services/digital-marketing/pricing">View Pricing &amp; Plans</Link>
                       </Button>
                   </div>

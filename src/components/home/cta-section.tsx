@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Globe } from 'lucide-react';
@@ -13,7 +14,7 @@ export default function CtaSection() {
           Ready to start your next project or need a technology partner? We're here to help.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Button asChild size="lg" className="bg-gradient-to-r from-accent to-primary text-white">
+          <Button asChild size="lg" className="bg-primary text-white">
             <Link href="/contact">Contact Us</Link>
           </Button>
           <Button asChild size="lg" variant="outline">

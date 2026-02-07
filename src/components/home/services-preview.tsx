@@ -1,3 +1,4 @@
+
 'use client';
 
 import { cn } from '@/lib/utils';
@@ -67,7 +68,7 @@ export default function ServicesPreview() {
           ))}
         </div>
         <div className="mt-16 text-center animate-in fade-in slide-in-from-bottom-16 duration-700 delay-500">
-           <Button asChild size="lg" className="bg-gradient-to-r from-accent to-primary text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg">
+           <Button asChild size="lg" className="bg-primary text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg">
             <Link href="/services">
               View More Services <ArrowRight className="ml-2 h-4 w-4" />
             </Link>

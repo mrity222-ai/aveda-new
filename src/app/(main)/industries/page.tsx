@@ -112,7 +112,7 @@ export default function IndustriesPage() {
             Let's discuss how we can tailor our solutions for your specific
             needs.
           </p>
-          <Button asChild size="lg" className="mt-8 bg-gradient-to-r from-accent to-primary text-white">
+          <Button asChild size="lg" className="mt-8 bg-primary text-white">
             <Link href="/contact">
               Talk to an Expert <MoveRight className="ml-2 h-5 w-5" />
             </Link>

@@ -121,7 +121,7 @@ export default function ServicesPage() {
             From websites to AI marketing and political campaigning — everything your brand needs to dominate digitally.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-gradient-to-r from-accent to-primary text-white">
+            <Button asChild size="lg" className="bg-primary text-white">
               <Link href="/contact">Get Free Strategy Call</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
@@ -179,7 +179,7 @@ export default function ServicesPage() {
                 <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
                 {industries.map((item) => (
                     <div key={item.title} className="group flex flex-col items-center justify-center gap-4 text-center">
-                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-card text-primary ring-8 ring-card transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:ring-primary/20">
+                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-card text-accent ring-8 ring-card transition-all duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:text-accent-foreground group-hover:ring-accent/20">
                         <item.icon className="h-10 w-10" />
                     </div>
                     <h3 className="mt-2 font-semibold">{item.title}</h3>
@@ -222,7 +222,7 @@ export default function ServicesPage() {
             Ready to Grow with AI-Powered Digital Solutions?
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-gradient-to-r from-accent to-primary text-white">
+            <Button asChild size="lg" className="bg-primary text-white">
                 <Link href="/contact">Get Free Consultation</Link>
             </Button>
             <Button asChild size="lg" variant="outline">

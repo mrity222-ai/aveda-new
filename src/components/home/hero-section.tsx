@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
@@ -19,10 +20,10 @@ export default function HeroSection() {
           </div>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">
             We build, implement, and manage cutting-edge technology solutions that empower your business to innovate and{' '}
-            <span className="font-semibold text-accent">succeed</span>.
+            <span className="font-semibold text-primary">succeed</span>.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4 animate-in fade-in slide-in-from-bottom-16 duration-700 delay-400">
-            <Button asChild size="lg" className="bg-gradient-to-r from-accent to-primary text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg">
+            <Button asChild size="lg" className="bg-primary text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg">
               <Link href="/services">Explore Our Services</Link>
             </Button>
             <Button asChild size="lg" variant="outline">

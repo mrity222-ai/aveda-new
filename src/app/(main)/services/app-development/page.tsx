@@ -105,7 +105,7 @@ export default function AppDevelopmentPage() {
         <div className="bg-background text-foreground">
             {/* Hero Section */}
             <section className="relative overflow-hidden bg-background py-20 md:py-32">
-                 <div className="absolute inset-0 z-0 opacity-30">
+                 <div className="absolute inset-0 z-0 opacity-10">
                     {heroImage && (
                         <Image
                             src={heroImage.imageUrl}

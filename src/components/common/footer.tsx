@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { services, footerLinks } from '@/lib/data';
 import { Button } from '@/components/ui/button';
@@ -124,7 +125,7 @@ export default function Footer() {
                 <Phone className="h-4 w-4 text-primary" />
                 <span>+91 9012887697</span>
               </a>
-              <Button asChild className="mt-6 w-full bg-gradient-to-r from-accent to-primary text-white" size="lg">
+              <Button asChild className="mt-6 w-full bg-primary text-white" size="lg">
                 <Link href="/contact">
                   Start Your Project <MoveRight className="ml-2 h-4 w-4" />
                 </Link>

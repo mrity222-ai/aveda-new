@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Clock, BrainCircuit, UserCheck, Briefcase, MoveRight, Globe } from 'lucide-react';
 import { ContactForm } from '@/components/contact/contact-form';
@@ -68,7 +69,7 @@ export default function ContactPage() {
                     AI-driven digital solutions for brands, businesses, and political campaigns.
                 </p>
                 <div className="mt-8 flex flex-wrap justify-center gap-4">
-                    <Button asChild size="lg" className="bg-gradient-to-r from-accent to-primary text-white">
+                    <Button asChild size="lg" className="bg-primary text-white">
                     <Link href="#contact-form">Get Started</Link>
                     </Button>
                     <Button asChild size="lg" variant="outline">
@@ -141,7 +142,7 @@ export default function ContactPage() {
                 <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
                     Your Vision. Our Technology.
                 </h2>
-                <Button asChild size="lg" className="mt-8 bg-gradient-to-r from-accent to-primary text-white">
+                <Button asChild size="lg" className="mt-8 bg-primary text-white">
                     <Link href="#contact-form">
                     Start Your Project <MoveRight className="ml-2 h-5 w-5" />
                     </Link>

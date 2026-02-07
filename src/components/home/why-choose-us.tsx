@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -65,7 +66,7 @@ export default function PortfolioPreview() {
           <Button
             asChild
             size="lg"
-            className="rounded-full bg-gradient-to-r from-accent to-primary px-8 text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg"
+            className="rounded-full bg-primary px-8 text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg"
           >
             <Link href="/works">
               VIEW ALL PROJECTS
