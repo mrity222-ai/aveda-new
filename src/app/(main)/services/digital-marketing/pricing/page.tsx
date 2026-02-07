@@ -328,22 +328,26 @@ export default function PricingPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="border-t border-border bg-card py-20">
-        <div className="container text-center">
-            <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
+      <section className="relative overflow-hidden border-t border-transparent bg-gradient-to-tr from-[#1a0b2e] to-black py-20 md:py-28">
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_rgba(118,50,235,0.15)_0%,_transparent_70%)] opacity-50" />
+        <div className="container relative z-10 text-center">
+            <h2 className="font-headline text-4xl font-bold tracking-tight text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] md:text-5xl lg:text-6xl">
                 Ready to Grow With AI Marketing?
             </h2>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <Button asChild size="lg">
-                    <Link href="/contact">Get Free Strategy Call</Link>
+            <div className="mt-8 flex flex-col items-center justify-center gap-6 sm:flex-row">
+                <Button asChild size="lg" className="rounded-lg bg-[#E6007A] px-8 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#c40069] hover:shadow-2xl hover:shadow-[#E6007A]/50">
+                    <Link href="/contact">
+                      Get <span className="font-extrabold mx-1">FREE</span> Strategy Call
+                    </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline">
+                <Button asChild size="lg" variant="ghost" className="text-white hover:bg-transparent hover:text-green-400">
                     <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
-                        <WhatsAppIcon />
+                        <WhatsAppIcon className="text-green-400 drop-shadow-[0_0_8px_rgba(50,255,50,0.7)]" />
                         WhatsApp Us
                     </a>
                 </Button>
             </div>
+            <p className="mt-6 text-sm text-white/70">Only 3 slots available for this month.</p>
         </div>
       </section>
 
