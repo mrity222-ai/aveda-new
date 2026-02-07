@@ -1,4 +1,6 @@
 
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -18,6 +20,11 @@ import {
   Info,
   Megaphone,
   MapPin,
+  BrainCircuit,
+  Cpu,
+  Signal,
+  Award,
+  ShieldCheck,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
@@ -92,11 +99,31 @@ export default function PoliticalCampaigningPage() {
     ];
 
     const whyChooseUs = [
-      'Specialized Political & Tech Expertise',
-      'Data-Driven, AI-First Approach',
-      'Ethical & Compliant Methodologies',
-      'Real-time, Actionable Intelligence',
-      'Proven Track Record of Success',
+      {
+        icon: BrainCircuit,
+        title: 'Political Acumen + AI Tech',
+        description: 'We merge deep political expertise with cutting-edge AI for a decisive electoral advantage.'
+      },
+      {
+        icon: Cpu,
+        title: 'Data-Driven, AI-First Approach',
+        description: 'Advanced analytics and AI models drive every decision, from voter targeting to sentiment analysis.'
+      },
+      {
+        icon: ShieldCheck,
+        title: 'Ethical & Compliant Methodologies',
+        description: 'Our strategies strictly adhere to platform policies and electoral regulations, ensuring data privacy.'
+      },
+      {
+        icon: Signal,
+        title: 'Real-time Actionable Intelligence',
+        description: 'Our digital war room provides live insights to adapt and respond to the campaign landscape instantly.'
+      },
+      {
+        icon: Award,
+        title: 'Proven Track Record of Success',
+        description: 'We have a history of delivering measurable results in high-stakes political campaigns.'
+      }
     ];
 
     return (
@@ -282,26 +309,44 @@ export default function PoliticalCampaigningPage() {
             </section>
 
              {/* Why Choose Us Section */}
-            <section className="bg-secondary py-20 md:py-28">
-                <div className="container grid md:grid-cols-2 gap-16 items-center">
-                    <div>
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl">Why Aveda For Your Campaign?</h2>
-                        <p className="mt-4 text-lg text-muted-foreground">We combine deep political acumen with cutting-edge AI technology to deliver a decisive advantage. Our team understands the nuances of both technology and electoral politics.</p>
-                         <ul className="mt-8 space-y-4">
-                            {whyChooseUs.map((feature) => (
-                                <li key={feature} className="flex items-center gap-3 text-lg">
-                                    <Shield className="h-6 w-6 flex-shrink-0 text-primary" />
-                                    <span>{feature}</span>
-                                </li>
-                            ))}
-                        </ul>
+            <section className="bg-black py-20 md:py-28 relative overflow-hidden">
+                <div className="absolute inset-0 z-0 opacity-20">
+                    <div className="absolute -left-1/4 -top-1/4 w-1/2 h-full bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
+                    <div className="absolute -right-1/4 -bottom-1/4 w-1/2 h-full bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }} />
+                </div>
+                
+                <div className="container relative z-10">
+                    <div className="text-center mb-16">
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-white">Why Aveda For Your Campaign?</h2>
+                        <div className="mt-4 w-24 h-1 bg-primary mx-auto shadow-[0_0_10px_hsl(var(--primary)/0.8)]" />
+                        <p className="mt-6 max-w-3xl mx-auto text-muted-foreground">
+                            We're more than a service provider; we're your technology partner committed to delivering a decisive electoral advantage.
+                        </p>
                     </div>
-                    <div className='space-y-4'>
-                        <div className="rounded-lg border border-border bg-card p-6 flex items-center gap-4">
-                          <Info className="h-8 w-8 text-primary flex-shrink-0" />
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+                        {whyChooseUs.map((feature) => (
+                            <div key={feature.title} className="group relative rounded-2xl border border-primary/20 bg-card/50 p-6 backdrop-blur-lg transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2">
+                                <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+                                <div className="relative flex items-start gap-4">
+                                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary ring-4 ring-primary/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)]">
+                                        <feature.icon className="h-6 w-6" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-headline text-lg font-semibold text-white">{feature.title}</h3>
+                                        <p className="mt-1 text-sm text-muted-foreground">{feature.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    
+                    <div className='mt-24'>
+                        <div className="max-w-2xl mx-auto rounded-lg border border-primary/30 bg-card/50 p-6 flex items-start gap-4 backdrop-blur-md">
+                          <ShieldCheck className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                           <div>
-                            <h3 className="font-semibold">Disclaimer</h3>
-                            <p className="text-sm text-muted-foreground">All campaign strategies and digital activities comply with platform policies and local election regulations.</p>
+                            <h3 className="font-semibold">Compliance First</h3>
+                            <p className="text-sm text-muted-foreground">All our methodologies are compliant with platform policies (Google/Meta) and Election Commission guidelines. Data privacy is our priority.</p>
                           </div>
                         </div>
                     </div>
@@ -331,3 +376,4 @@ export default function PoliticalCampaigningPage() {
             </section>
         </div>
     );
+}
