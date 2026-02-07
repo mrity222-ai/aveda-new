@@ -157,7 +157,7 @@ export default function DigitalMarketingPage() {
                       )}
                   </div>
                   <div className="mt-8 md:mt-0">
-                      <Badge variant="outline" className="mb-4 border border-primary/30 bg-card/50 p-2 backdrop-blur-md">Starting at ₹5,000 / month</Badge>
+                      <Badge variant="outline" className="mb-4 border-chart-3/30 bg-chart-3/20 text-chart-3 p-2 backdrop-blur-md">Starting at ₹5,000 / month</Badge>
                       <h2 className="font-headline text-3xl font-bold md:text-4xl">Digital & Performance Marketing</h2>
                       <p className="mt-4 text-lg text-muted-foreground">We don't just run ads; we build AI-predictive models to forecast sales, use psychographic funnels to target user behavior, and provide real-time ROI dashboards. Our AI-powered campaigns generate leads, sales, and influence.</p>
                       
