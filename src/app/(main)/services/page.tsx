@@ -1,4 +1,5 @@
 
+
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -105,7 +106,7 @@ export default function ServicesPage() {
         'seo-optimization': '/services/seo-optimization',
         'political-campaigning': '/services/political-campaigning',
         'ui-ux-design': '/services/ui-ux-design',
-        'ai-automation': '/contact?service=AI+%26+Automation',
+        'ai-automation': '/services/ai-automation',
     };
 
   return (
@@ -127,7 +128,7 @@ export default function ServicesPage() {
         </div>
         <div className="container relative z-10 text-center">
           <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
-            End-to-End Digital, AI & Political Growth Solutions
+            End-to-End Digital, AI &amp; Political Growth Solutions
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
             From websites to AI marketing and political campaigning — everything your brand needs to dominate digitally.
