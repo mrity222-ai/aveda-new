@@ -19,6 +19,10 @@ import {
   Store,
   Cog,
   Server,
+  FileCode,
+  Cpu,
+  Container,
+  Wind,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
@@ -85,10 +89,16 @@ export default function WebDevelopmentPage() {
     ];
 
     const technologies = [
-        { icon: Code, name: 'React & Next.js' },
-        { icon: Server, name: 'Node.js & Laravel' },
-        { icon: Database, name: 'Headless CMS' },
-        { icon: Cloud, name: 'AWS & Cloud' },
+        { icon: Code, name: 'REACT & NEXT.JS' },
+        { icon: Server, name: 'NODE.JS & LARAVEL' },
+        { icon: FileCode, name: 'C++, HTML, CSS' },
+        { icon: BookOpen, name: 'HEADLESS CMS' },
+        { icon: FileCode, name: 'PYTHON, PHP, JAVA' },
+        { icon: Database, name: 'MYSQL & MONGODB' },
+        { icon: Cloud, name: 'AWS & GOOGLE CLOUD' },
+        { icon: Container, name: 'DEVOPS & DOCKER' },
+        { icon: Cpu, name: 'AI & MACHINE LEARNING' },
+        { icon: Wind, name: 'TAILWIND CSS' },
     ];
     
     const whoIsThisFor = [
@@ -220,16 +230,18 @@ export default function WebDevelopmentPage() {
             </section>
             
             {/* Technologies Section */}
-            <section className="bg-secondary py-20 md:py-28">
-                <div className="container text-center">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12">Technologies We Use</h2>
-                     <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+            <section className="bg-black py-20 md:py-28 relative">
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-destructive/10 to-transparent opacity-50 blur-3xl" />
+                <div className="container text-center relative z-10">
+                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16">Technologies We Use</h2>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {technologies.map((tech) => (
-                        <div key={tech.name} className="group flex flex-col items-center justify-center gap-4 text-center transition-all duration-300 hover:-translate-y-2">
-                            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-card text-primary ring-8 ring-card transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:ring-primary/20">
-                                <tech.icon className="h-10 w-10" />
+                        <div key={tech.name} className="group relative rounded-2xl border border-destructive/20 bg-black/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20 hover:-translate-y-1">
+                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                            <div className="relative flex flex-col items-center justify-center gap-4">
+                                <tech.icon className="h-10 w-10 text-white/80 transition-all duration-300 group-hover:text-destructive group-hover:drop-shadow-[0_0_10px_hsl(var(--destructive)/0.8)]" />
+                                <p className="font-semibold text-sm text-center uppercase tracking-wider text-white">{tech.name}</p>
                             </div>
-                            <h3 className="mt-2 font-semibold">{tech.name}</h3>
                         </div>
                         ))}
                     </div>
