@@ -93,10 +93,10 @@ export default function UiUxDesignPage() {
                       
                       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
                           {processSteps.map((step) => (
-                              <div key={step.title} className="group relative overflow-hidden rounded-2xl border border-accent/20 bg-card/40 p-6 backdrop-blur-sm transition-all duration-300 hover:border-accent/70 hover:shadow-2xl hover:shadow-accent/10">
-                                <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-accent via-transparent to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+                              <div key={step.title} className="group relative overflow-hidden rounded-2xl border border-destructive/20 bg-card/40 p-6 backdrop-blur-sm transition-all duration-300 hover:border-destructive/70 hover:shadow-2xl hover:shadow-destructive/10">
+                                <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-destructive via-transparent to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
                                 <div className="relative">
-                                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent transition-all duration-300 group-hover:bg-accent group-hover:text-accent-foreground group-hover:scale-110">
+                                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-destructive/10 text-destructive transition-all duration-300 group-hover:bg-destructive group-hover:text-destructive-foreground group-hover:scale-110">
                                     <step.icon className="h-6 w-6" />
                                   </div>
                                   <h3 className="mt-4 font-semibold">{step.title}</h3>
@@ -171,7 +171,7 @@ export default function UiUxDesignPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {tools.map((tool) => (
                         <div key={tool.name} className="group relative rounded-2xl border border-destructive/20 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20 hover:-translate-y-1">
-                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-destructive via-transparent to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
                             <div className="relative flex flex-col items-center justify-center gap-4">
                                 <div className="flex h-20 w-20 items-center justify-center">
                                     <tool.icon className="h-10 w-10 text-white/80 transition-all duration-300 group-hover:text-destructive group-hover:drop-shadow-[0_0_10px_hsl(var(--destructive)/0.8)]" />
