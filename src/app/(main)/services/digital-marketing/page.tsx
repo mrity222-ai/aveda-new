@@ -1,3 +1,4 @@
+'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -49,7 +50,6 @@ export default function DigitalMarketingPage() {
       );
       
     const marketingProjects = portfolioProjects.filter(p => ['b2b-seo-strategy', 'political-dashboard', 'ada-chikankari'].includes(p.slug)).slice(0, 3);
-    const resultsImage = PlaceHolderImages.find((img) => img.id === 'service-digital-marketing');
 
     return (
         <div className="bg-background text-foreground">
@@ -91,7 +91,7 @@ export default function DigitalMarketingPage() {
 
             {/* Digital Marketing & Results Section */}
             <section className="bg-black py-20 md:py-28">
-                <div className="container grid md:grid-cols-2 gap-16 items-center">
+                <div className="container grid md:grid-cols-1 gap-16 items-center">
                     {/* Left Side (Content) */}
                     <div className="space-y-8 animate-in fade-in slide-in-from-left-12 duration-700">
                         <h2 className="font-headline text-4xl font-bold tracking-tight md:text-5xl">
@@ -124,20 +124,6 @@ export default function DigitalMarketingPage() {
                             </Link>
                         </Button>
                     </div>
-                    
-                    {/* Right Side (Visual) */}
-                    <div className="relative h-96 w-full md:h-[500px] animate-in fade-in zoom-in-90 duration-700">
-                        {resultsImage && (
-                            <Image
-                                src={resultsImage.imageUrl}
-                                alt="Digital Marketing Results"
-                                fill
-                                className="rounded-lg object-cover"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                data-ai-hint={resultsImage.imageHint}
-                            />
-                        )}
-                    </div>
                 </div>
             </section>
 
@@ -158,7 +144,7 @@ export default function DigitalMarketingPage() {
                   </div>
                   <div className="mt-8 md:mt-0">
                       <Badge variant="outline" className="mb-4 border-chart-3/30 bg-chart-3/20 text-chart-3 p-2 backdrop-blur-md">Starting at ₹5,000 / month</Badge>
-                      <h2 className="font-headline text-3xl font-bold md:text-4xl">Digital & Performance Marketing</h2>
+                      <h2 className="font-headline text-3xl font-bold md:text-4xl">Digital &amp; Performance Marketing</h2>
                       <p className="mt-4 text-lg text-muted-foreground">We don't just run ads; we build AI-predictive models to forecast sales, use psychographic funnels to target user behavior, and provide real-time ROI dashboards. Our AI-powered campaigns generate leads, sales, and influence.</p>
                       
                       <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -174,7 +160,7 @@ export default function DigitalMarketingPage() {
                           ))}
                       </div>
                       <Button asChild size="lg" className="mt-8 w-full bg-gradient-to-r from-destructive to-primary text-primary-foreground transition-all hover:scale-105">
-                          <Link href="/services/digital-marketing/pricing">View Pricing & Plans</Link>
+                          <Link href="/services/digital-marketing/pricing">View Pricing &amp; Plans</Link>
                       </Button>
                   </div>
               </div>
@@ -230,4 +216,3 @@ export default function DigitalMarketingPage() {
             </section>
         </div>
     );
-}
