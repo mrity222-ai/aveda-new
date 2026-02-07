@@ -74,9 +74,9 @@ export default function WebDevelopmentPage() {
     ];
 
     const includedServices = [
-        'Corporate Websites & Portals',
+        'Corporate Websites',
         'E-commerce Platforms',
-        'SaaS Products & Dashboards',
+        'SaaS Products',
         'CMS & API Development',
     ];
 
@@ -179,37 +179,58 @@ export default function WebDevelopmentPage() {
             </section>
 
             {/* Service Details Section */}
-            <section className="bg-secondary py-20 md:py-28">
-              <div className="container items-center gap-16 md:grid md:grid-cols-2">
-                  <div className="mt-8 md:mt-0">
-                      <h2 className="font-headline text-3xl font-bold md:text-4xl">Web Development</h2>
-                      <p className="mt-4 text-lg text-muted-foreground">We build high-performance, secure, and scalable websites that drive business growth. Every solution is tailored to your goals and users.</p>
-                      
-                      <ul className="mt-8 space-y-4">
-                          {includedServices.map((detail) => (
-                              <li key={detail} className="flex items-center gap-3">
-                                  <CheckCircle className="h-5 w-5 flex-shrink-0 text-primary" />
-                                  <span className="text-muted-foreground">{detail}</span>
-                              </li>
-                          ))}
-                      </ul>
-                      <Button asChild size="lg" className="mt-8" variant="outline">
-                          <Link href="/services">Explore More</Link>
-                      </Button>
-                  </div>
-                   <div className="relative h-96 w-full md:h-[500px] mt-8 md:mt-0">
-                      {detailImage && (
-                          <Image
-                          src={detailImage.imageUrl}
-                          alt={detailImage.description}
-                          fill
-                          className="rounded-lg object-cover"
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                          data-ai-hint={detailImage.imageHint}
-                          />
-                      )}
-                  </div>
-              </div>
+            <section className="relative overflow-hidden bg-black py-20 md:py-28">
+                <div className="absolute inset-0 z-0 opacity-20 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]">
+                    <div className="absolute inset-0 bg-[radial-gradient(hsl(var(--destructive)/0.1)_1px,transparent_1px)] [background-size:32px_32px]"></div>
+                </div>
+                <div className="container relative z-10 grid items-center gap-16 md:grid-cols-2">
+                    {/* Left Side (Content) */}
+                    <div className="animate-in fade-in slide-in-from-left-12 duration-700">
+                        <h2 className="font-headline text-4xl font-bold uppercase tracking-wider text-white md:text-5xl">
+                            Web Development
+                        </h2>
+                        <p className="mt-6 text-lg text-muted-foreground/80">
+                            We build high-performance, secure, and scalable websites that drive business growth. Every solution is tailored to your goals and users.
+                        </p>
+                        
+                        <ul className="mt-8 space-y-4">
+                            {includedServices.map((detail) => (
+                                <li key={detail} className="flex items-center gap-4 text-lg">
+                                    <CheckCircle className="h-6 w-6 flex-shrink-0 text-destructive drop-shadow-[0_0_8px_hsl(var(--destructive)/0.8)]" />
+                                    <span className="text-muted-foreground">{detail}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <Button asChild size="lg" className="mt-10 rounded-full bg-destructive text-destructive-foreground shadow-[0_0_20px_hsl(var(--destructive)/0.5),inset_0_0_5px_rgba(255,255,255,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.7)]">
+                            <Link href="/services">Explore More</Link>
+                        </Button>
+                    </div>
+
+                    {/* Right Side (Visual Hero) */}
+                    <div className="relative flex h-[500px] w-full items-end justify-center md:h-[600px] animate-in fade-in zoom-in-90 duration-700">
+                        {/* Laser Grid Floor */}
+                        <div className="absolute bottom-0 h-1/3 w-full [perspective:300px]">
+                            <div className="h-full w-full bg-[repeating-linear-gradient(90deg,hsl(var(--destructive)/0.15),hsl(var(--destructive)/0.15)_1px,transparent_1px,transparent_40px),repeating-linear-gradient(0deg,hsl(var(--destructive)/0.15),hsl(var(--destructive)/0.15)_1px,transparent_1px,transparent_40px)] [transform:rotateX(75deg)]"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+                        </div>
+
+                        {/* Arch capsule */}
+                        <div className="relative h-full w-4/5 overflow-hidden rounded-t-[200px] border-2 border-destructive/50 bg-black/30 p-2 shadow-[0_0_40px_hsl(var(--destructive)/0.4)] backdrop-blur-sm">
+                            {detailImage && (
+                                <Image
+                                    src={detailImage.imageUrl}
+                                    alt={detailImage.description}
+                                    fill
+                                    className="rounded-t-[190px] object-cover"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    data-ai-hint={detailImage.imageHint}
+                                />
+                            )}
+                            {/* Inner glow */}
+                            <div className="absolute inset-0 rounded-t-[200px] [box-shadow:inset_0_5px_30px_hsl(var(--destructive)/0.3)]"></div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             {/* How Our Process Works Section */}
