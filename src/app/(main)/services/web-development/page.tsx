@@ -1,4 +1,6 @@
 
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -187,7 +189,7 @@ export default function WebDevelopmentPage() {
                     {/* Left Side (Content) */}
                     <div className="animate-in fade-in slide-in-from-left-12 duration-700">
                         <h2 className="font-headline text-4xl font-bold uppercase tracking-wider text-white md:text-5xl">
-                            Web Development
+                            WEB DEVELOPMENT
                         </h2>
                         <p className="mt-6 text-lg text-muted-foreground/80">
                             We build high-performance, secure, and scalable websites that drive business growth. Every solution is tailored to your goals and users.
@@ -201,7 +203,7 @@ export default function WebDevelopmentPage() {
                                 </li>
                             ))}
                         </ul>
-                        <Button asChild size="lg" className="mt-10 rounded-full bg-destructive text-destructive-foreground shadow-[0_0_20px_hsl(var(--destructive)/0.5),inset_0_0_5px_rgba(255,255,255,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.7)]">
+                        <Button asChild size="lg" className="mt-10 bg-destructive text-destructive-foreground shadow-[0_0_20px_hsl(var(--destructive)/0.5),inset_0_0_5px_rgba(255,255,255,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.7)]">
                             <Link href="/services">Explore More</Link>
                         </Button>
                     </div>
@@ -256,8 +258,8 @@ export default function WebDevelopmentPage() {
                                     </div>
                                     </div>
                                 </div>
-                                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-black p-2 rounded-full border-2 border-destructive/50">
-                                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-destructive/10 text-destructive">
+                                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-black p-2 rounded-lg border-2 border-destructive/50">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-destructive/10 text-destructive">
                                         <step.icon className="h-7 w-7" />
                                     </div>
                                 </div>
