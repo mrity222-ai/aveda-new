@@ -157,6 +157,46 @@ export default function AppDevelopmentPage() {
                 </div>
             </section>
 
+            {/* Portfolio Section */}
+            <section className="bg-background py-20 md:py-28">
+                <div className="container">
+                    <div className="text-center mb-16">
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl">Our App Development Work</h2>
+                        <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Here are a few examples of mobile applications we've successfully designed and delivered.</p>
+                    </div>
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+                        {appProjects.map((project) => (
+                            <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
+                                <div className="relative h-[450px] overflow-hidden rounded-xl border border-white/10 bg-black/30 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                                    <Image
+                                        src={project.image.imageUrl}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover opacity-70 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
+                                        data-ai-hint={project.image.imageHint}
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                                    <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                                        <h3 className="font-headline text-2xl font-bold">{project.title}</h3>
+                                        <div className="mt-2 flex flex-wrap gap-2">
+                                            {project.tags.map(tag => (
+                                                <Badge key={tag} variant="outline" className="w-fit border-white/20 bg-white/10 backdrop-blur-md">{tag}</Badge>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                    <div className="mt-16 text-center">
+                        <Button asChild size="lg">
+                            <Link href="/works">View All Projects <MoveRight className="ml-2 h-4 w-4" /></Link>
+                        </Button>
+                    </div>
+                </div>
+            </section>
+            
             {/* Process Section */}
             <section className="bg-black py-20 md:py-28 relative">
                 <div className="absolute inset-x-0 top-1/4 h-1/2 bg-gradient-to-t from-destructive/10 to-transparent opacity-30 blur-3xl" />
@@ -210,46 +250,6 @@ export default function AppDevelopmentPage() {
                 </div>
             </section>
             
-            {/* Portfolio Section */}
-            <section className="bg-background py-20 md:py-28">
-                <div className="container">
-                    <div className="text-center mb-16">
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl">Our App Development Work</h2>
-                        <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Here are a few examples of mobile applications we've successfully designed and delivered.</p>
-                    </div>
-                    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-                        {appProjects.map((project) => (
-                            <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
-                                <div className="relative h-[450px] overflow-hidden rounded-xl border border-white/10 bg-black/30 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
-                                    <Image
-                                        src={project.image.imageUrl}
-                                        alt={project.title}
-                                        fill
-                                        className="object-cover opacity-70 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
-                                        data-ai-hint={project.image.imageHint}
-                                        sizes="(max-width: 768px) 100vw, 33vw"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                                    <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                                        <h3 className="font-headline text-2xl font-bold">{project.title}</h3>
-                                        <div className="mt-2 flex flex-wrap gap-2">
-                                            {project.tags.map(tag => (
-                                                <Badge key={tag} variant="outline" className="w-fit border-white/20 bg-white/10 backdrop-blur-md">{tag}</Badge>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-                    <div className="mt-16 text-center">
-                        <Button asChild size="lg">
-                            <Link href="/works">View All Projects <MoveRight className="ml-2 h-4 w-4" /></Link>
-                        </Button>
-                    </div>
-                </div>
-            </section>
-
             {/* Why Choose Us Section */}
             <section className="bg-secondary py-20 md:py-28">
                 <div className="container grid md:grid-cols-2 gap-16 items-center">
