@@ -10,11 +10,7 @@ const projectsToShow = portfolioProjects.slice(0, 6);
 
 export default function PortfolioPreview() {
   return (
-    <section className="relative overflow-hidden bg-background py-20 md:py-28">
-      {/* Background glows */}
-      <div className="absolute -top-1/4 left-0 -translate-x-1/4 w-1/2 h-full bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-40 animate-pulse" />
-      <div className="absolute -bottom-1/4 right-0 translate-x-1/4 w-1/2 h-full bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-40 animate-pulse" style={{ animationDelay: '2s' }} />
-
+    <section className="relative overflow-hidden bg-secondary py-20 md:py-28">
       <div className="container relative z-10">
         <div className="mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
           <p className="mb-2 font-semibold text-primary">Our Latest Work</p>
@@ -36,13 +32,10 @@ export default function PortfolioPreview() {
             >
               <div 
                 className={cn(
-                  "relative overflow-hidden rounded-3xl border border-white/10 bg-black/30 backdrop-blur-lg transition-all duration-300",
-                  "h-[400px] group-hover:scale-[1.02] group-hover:shadow-2xl group-hover:shadow-primary/30"
+                  "relative overflow-hidden rounded-3xl border bg-card transition-all duration-300",
+                  "h-[400px] group-hover:scale-[1.02] group-hover:shadow-xl group-hover:shadow-primary/20"
                 )}
               >
-                {/* Glowing border on hover */}
-                <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-r from-primary to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-75" />
-                
                 <div className="relative h-full w-full rounded-3xl">
                   <Image
                     src={project.image.imageUrl}
@@ -52,10 +45,10 @@ export default function PortfolioPreview() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     data-ai-hint={project.image.imageHint}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
 
                   <div className="absolute bottom-0 left-0 p-6 text-white">
-                    <Badge variant="outline" className="border-white/20 bg-white/10 text-white backdrop-blur-md">
+                    <Badge variant="outline" className="border-white/20 bg-black/20 text-white backdrop-blur-md">
                       {project.category}
                     </Badge>
                     <h3 className="mt-4 font-headline text-2xl font-bold">
@@ -72,7 +65,7 @@ export default function PortfolioPreview() {
           <Button
             asChild
             size="lg"
-            className="rounded-full bg-gradient-to-r from-primary to-accent px-8 text-primary-foreground transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)] hover:scale-105"
+            className="rounded-full bg-gradient-to-r from-accent to-primary px-8 text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg"
           >
             <Link href="/works">
               VIEW ALL PROJECTS

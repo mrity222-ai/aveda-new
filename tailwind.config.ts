@@ -96,11 +96,6 @@ export default {
             height: '0',
           },
         },
-        'pulse-primary': {
-          '50%': {
-            boxShadow: '0 0 25px hsl(var(--primary) / 0.6)',
-          },
-        },
         'spin-slow': {
           from: { transform: 'rotate(0deg)' },
           to: { transform: 'rotate(360deg)' },
@@ -113,7 +108,6 @@ export default {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'pulse-primary': 'pulse-primary 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'spin-slow': 'spin-slow 20s linear infinite',
         'spin-slow-reverse': 'spin-slow-reverse 25s linear infinite',
       },

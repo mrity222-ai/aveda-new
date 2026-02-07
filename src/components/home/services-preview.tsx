@@ -30,11 +30,7 @@ const servicesData = [
 
 export default function ServicesPreview() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-background to-secondary/30 py-20 md:py-28">
-      {/* Particle/Glow effects */}
-      <div className="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-96 h-96 bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
-      <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 w-96 h-96 bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }} />
-
+    <section className="relative overflow-hidden bg-secondary py-20 md:py-28">
       <div className="container relative z-10">
         <div className="mb-16 text-center animate-in fade-in slide-in-from-bottom-8 duration-700">
           <p className="mb-2 font-semibold text-primary">Our Services</p>
@@ -51,21 +47,12 @@ export default function ServicesPreview() {
             <div
               key={service.title}
               className={cn(
-                'group relative rounded-2xl border border-white/10 bg-black/20 p-8 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 animate-in fade-in slide-in-from-bottom-12'
+                'group relative rounded-2xl border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12'
               )}
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              {/* Card Gradient Glow */}
-              <div
-                className={cn(
-                  'absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-40'
-                )}
-              />
-              {/* Card background pattern */}
-              <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,0.03)_0%,_rgba(255,255,255,0)_60%)]" />
-
               <div className="relative z-10 flex h-full flex-col">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
                   <service.icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-6 font-headline text-xl font-bold text-foreground">
@@ -74,13 +61,13 @@ export default function ServicesPreview() {
                 <p className="mt-4 flex-grow text-sm text-muted-foreground">
                   {service.description}
                 </p>
-                <div className="mt-6 w-full border-t border-white/10" />
+                <div className="mt-6 w-full border-t border-border" />
               </div>
             </div>
           ))}
         </div>
         <div className="mt-16 text-center animate-in fade-in slide-in-from-bottom-16 duration-700 delay-500">
-           <Button asChild size="lg" className="bg-gradient-to-r from-primary to-accent text-primary-foreground transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)] hover:scale-105">
+           <Button asChild size="lg" className="bg-gradient-to-r from-accent to-primary text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg">
             <Link href="/services">
               View More Services <ArrowRight className="ml-2 h-4 w-4" />
             </Link>

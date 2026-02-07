@@ -67,7 +67,7 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
   });
 
   return (
-    <Card className="group flex flex-col overflow-hidden rounded-lg border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10">
+    <Card className="group flex flex-col overflow-hidden rounded-lg border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10">
       <CardHeader className="p-0">
         <div className="relative h-56 w-full overflow-hidden">
           <Image
@@ -78,11 +78,10 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             data-ai-hint={post.image.imageHint}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         </div>
       </CardHeader>
       <CardContent className="flex-grow p-6">
-        <Badge variant="default" className="mb-2 bg-primary/10 text-primary hover:bg-primary/20">{post.category}</Badge>
+        <Badge variant="outline" className="mb-2 text-primary border-primary">{post.category}</Badge>
         <CardTitle className="mt-2 font-headline text-xl transition-colors group-hover:text-primary">{post.title}</CardTitle>
         <div className="mt-3 flex items-center space-x-4 text-xs text-muted-foreground">
             <div className="flex items-center gap-1">

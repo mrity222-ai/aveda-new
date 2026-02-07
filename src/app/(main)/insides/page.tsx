@@ -41,20 +41,7 @@ export default function InsidesPage() {
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-background py-20 md:py-32">
-        <div className="absolute inset-0 z-0 opacity-10">
-          {heroBgImage && (
-            <Image
-              src={heroBgImage.imageUrl}
-              alt={heroBgImage.description}
-              fill
-              className="object-cover"
-              priority
-              data-ai-hint={heroBgImage.imageHint}
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
-        </div>
+      <section className="relative overflow-hidden bg-secondary py-20 md:py-32">
         <div className="container relative z-10 text-center">
           <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl animate-in fade-in slide-in-from-bottom-8 duration-700">
             AI-Driven Insights That Shape Decisions
@@ -83,7 +70,7 @@ export default function InsidesPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 </div>
                 <div className="animate-in fade-in slide-in-from-right-12 duration-700">
-                    <Badge variant="outline" className="mb-4 text-primary border-primary/50">{featuredPost.category}</Badge>
+                    <Badge variant="outline" className="mb-4 text-primary border-primary">{featuredPost.category}</Badge>
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">
                         <Link href={`/insides#${featuredPost.slug}`} className="hover:text-primary transition-colors">{featuredPost.title}</Link>
                     </h2>
@@ -110,7 +97,7 @@ export default function InsidesPage() {
         </section>
 
         {/* Category Filters */}
-        <div className="mb-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 border-b border-border">
+        <div className="mb-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 border-b">
           {categories.map(category => (
             <button
               key={category}

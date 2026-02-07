@@ -113,19 +113,6 @@ export default function ServicesPage() {
     <div className="bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-background py-20 md:py-32">
-        <div className="absolute inset-0 z-0 opacity-10">
-            {heroBgImage && (
-                <Image
-                src={heroBgImage.imageUrl}
-                alt="Services background"
-                fill
-                className="object-cover"
-                priority
-                data-ai-hint={heroBgImage.imageHint}
-                />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-primary/20"></div>
-        </div>
         <div className="container relative z-10 text-center">
           <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
             End-to-End Digital, AI &amp; Political Growth Solutions
@@ -134,7 +121,7 @@ export default function ServicesPage() {
             From websites to AI marketing and political campaigning — everything your brand needs to dominate digitally.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="bg-gradient-to-r from-accent to-primary text-white">
               <Link href="/contact">Get Free Strategy Call</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
@@ -148,10 +135,6 @@ export default function ServicesPage() {
       </section>
       
       <div className="relative bg-secondary py-20 md:py-28">
-        <div className="absolute inset-0 z-0 opacity-20">
-            <div className="absolute top-0 left-0 h-1/2 w-1/2 animate-pulse rounded-full bg-primary/5 opacity-50 mix-blend-screen filter blur-3xl" />
-            <div className="absolute bottom-0 right-0 h-1/2 w-1/2 animate-pulse rounded-full bg-accent/5 opacity-50 mix-blend-screen filter blur-3xl" style={{ animationDelay: '2s' }} />
-        </div>
         <div className="container relative z-10 space-y-20 md:space-y-28">
             {services.map((service, index) => {
                 const image = serviceImages[service.slug];
@@ -162,8 +145,7 @@ export default function ServicesPage() {
                         <div className="grid items-center gap-16 md:grid-cols-2">
                             <div className={cn("relative h-96 w-full md:h-[500px]", isReversed && 'md:order-last')}>
                                 <div className="group relative h-full w-full">
-                                    <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                                    <div className="relative h-full overflow-hidden rounded-[15px] border border-primary/30 bg-card/50 p-2 backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)]">
+                                    <div className="relative h-full overflow-hidden rounded-lg border bg-card p-2 shadow-sm transition-all duration-300 group-hover:shadow-xl">
                                         {image && <Image src={image.imageUrl} alt={image.description || service.title} fill className="rounded-md object-cover" sizes="(max-width: 768px) 100vw, 50vw" data-ai-hint={image.imageHint} />}
                                     </div>
                                 </div>
@@ -209,9 +191,6 @@ export default function ServicesPage() {
 
         {/* Technologies We Use Section */}
         <section className="relative scroll-mt-20 bg-secondary text-center pb-20 md:pb-28">
-            <div className="absolute inset-0 z-0 opacity-20">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,_hsl(var(--primary)/0.15)_0%,_transparent_60%)]" />
-            </div>
             <div className="container relative z-10">
                 <h2 className="font-headline text-3xl font-bold">Technologies We Use</h2>
                 <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">We leverage a modern, scalable, and secure technology stack to build robust digital solutions.</p>
@@ -219,14 +198,13 @@ export default function ServicesPage() {
                 <div className="mt-16 space-y-12">
                     {technologiesByCategory.map(({ category, items }) => (
                         <div key={category}>
-                            <h3 className="font-headline text-2xl font-semibold tracking-tight text-white/90">{category}</h3>
+                            <h3 className="font-headline text-2xl font-semibold tracking-tight">{category}</h3>
                             <div className="mt-8 grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 md:grid-cols-4 lg:flex lg:flex-wrap lg:justify-center lg:gap-8">
                                 {items.map((tech) => (
-                                    <div key={tech.name} className="group relative rounded-xl border border-white/10 bg-card/50 p-6 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:bg-primary/10 hover:shadow-2xl hover:shadow-primary/20 lg:w-48">
-                                        <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                                    <div key={tech.name} className="group relative rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:bg-card hover:shadow-lg lg:w-48">
                                         <div className="relative flex flex-col items-center justify-center gap-4">
-                                            <tech.icon className="h-10 w-10 text-white/80 transition-colors duration-300 group-hover:text-primary" />
-                                            <p className="font-semibold text-sm text-center text-white">{tech.name}</p>
+                                            <tech.icon className="h-10 w-10 text-muted-foreground transition-colors duration-300 group-hover:text-primary" />
+                                            <p className="font-semibold text-sm text-center">{tech.name}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -238,13 +216,13 @@ export default function ServicesPage() {
         </section>
 
        {/* Final CTA */}
-      <section className="border-t border-border bg-card py-20">
+      <section className="border-t border-border bg-background py-20">
         <div className="container text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
             Ready to Grow with AI-Powered Digital Solutions?
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="bg-gradient-to-r from-accent to-primary text-white">
                 <Link href="/contact">Get Free Consultation</Link>
             </Button>
             <Button asChild size="lg" variant="outline">

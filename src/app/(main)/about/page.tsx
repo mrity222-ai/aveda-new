@@ -63,7 +63,7 @@ export default function AboutPage() {
       style={{ animationDelay: delay }}
     >
       <div
-        className="absolute inset-0 border border-primary/20 bg-card/50 shadow-[0_0_20px_hsl(var(--primary)/0.1)] backdrop-blur-md transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)]"
+        className="absolute inset-0 border bg-card/80 shadow-sm transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-lg"
         style={{
           clipPath:
             'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
@@ -74,7 +74,7 @@ export default function AboutPage() {
           src={imageUrl}
           alt={`${name} logo`}
           fill
-          className="object-contain brightness-0 invert filter"
+          className="object-contain"
         />
       </div>
     </div>
@@ -85,19 +85,6 @@ export default function AboutPage() {
     <div className="bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-background py-20 md:py-32">
-        <div className="absolute inset-0 z-0 opacity-10">
-          {heroBgImage && (
-            <Image
-              src={heroBgImage.imageUrl}
-              alt={heroBgImage.description}
-              fill
-              className="object-cover"
-              priority
-              data-ai-hint={heroBgImage.imageHint}
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
-        </div>
         <div className="container relative z-10 text-center">
           <p className="font-headline text-sm uppercase tracking-widest text-primary">
             About Aveda Technologies
@@ -113,9 +100,8 @@ export default function AboutPage() {
 
       {/* Our Technology Partners Section */}
       <section className="relative overflow-hidden bg-background py-20 md:py-28">
-        <div className="absolute inset-0 opacity-50 bg-[radial-gradient(ellipse_at_center,_hsl(var(--primary)/0.1)_0%,_transparent_70%)]" />
         <div className="container relative z-10 text-center">
-          <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary backdrop-blur-sm shadow-[0_0_15px_hsl(var(--primary)/0.5)]">
+          <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary">
             Our Technology Partners
           </Badge>
           <h2 className="mt-4 font-headline text-4xl font-bold tracking-tight text-primary md:text-5xl">
@@ -149,18 +135,14 @@ export default function AboutPage() {
       </section>
 
       {/* Who We Are Section */}
-      <section className="relative overflow-hidden bg-background py-20 md:py-28">
-        <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
-        <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }} />
-
+      <section className="relative overflow-hidden bg-secondary py-20 md:py-28">
         <div className="container">
           <div className="grid items-center gap-16 md:grid-cols-2">
             {/* Left Visual */}
             <div className="relative flex h-96 items-center justify-center md:h-[450px]">
-              <div className="absolute h-64 w-64 rounded-full bg-primary/20 blur-3xl" />
               <div className="absolute h-80 w-80 rounded-full border-2 border-dashed border-primary/30 animate-spin-slow" />
               <div className="absolute h-60 w-60 rounded-full border-2 border-dashed border-accent/30 animate-spin-slow-reverse" />
-              <BrainCircuit className="relative h-48 w-48 text-primary drop-shadow-[0_0_15px_hsl(var(--primary)/0.7)]" />
+              <BrainCircuit className="relative h-48 w-48 text-primary" />
             </div>
 
             {/* Right Content */}
@@ -175,11 +157,11 @@ export default function AboutPage() {
                 Aveda Technologies is an AI-first digital company delivering advanced web, mobile, marketing, automation, and political campaigning solutions. We combine technology, data, and strategy to create measurable digital impact.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="rounded-xl border border-border/20 bg-card/50 p-6 backdrop-blur-md">
+                  <div className="rounded-xl border bg-card p-6">
                       <h3 className="font-headline text-3xl font-bold text-primary">100+</h3>
                       <p className="mt-1 text-muted-foreground">Projects Delivered</p>
                   </div>
-                  <div className="rounded-xl border border-border/20 bg-card/50 p-6 backdrop-blur-md">
+                  <div className="rounded-xl border bg-card p-6">
                       <h3 className="font-headline text-3xl font-bold text-primary">AI-Driven</h3>
                       <p className="mt-1 text-muted-foreground">Solutions</p>
                   </div>
@@ -190,11 +172,9 @@ export default function AboutPage() {
       </section>
       
       {/* What Makes Us Different Section */}
-      <section className="relative overflow-hidden bg-secondary py-20 md:py-28">
-        <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
-        <div className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }}/>
+      <section className="relative overflow-hidden bg-background py-20 md:py-28">
         <div className="container relative z-10 text-center">
-            <p className="font-headline text-sm uppercase tracking-widest text-primary drop-shadow-[0_0_8px_hsl(var(--primary)/0.7)]">
+            <p className="font-headline text-sm uppercase tracking-widest text-primary">
                 What Makes Us Different
             </p>
             <h2 className="mx-auto mt-4 max-w-3xl font-headline text-3xl font-bold md:text-4xl">
@@ -202,11 +182,10 @@ export default function AboutPage() {
             </h2>
             <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
                 {values.map((value) => (
-                    <div key={value.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-card/50 p-8 backdrop-blur-lg transition-all duration-300 hover:-translate-y-2">
-                        <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <div key={value.title} className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
                         <div className="relative">
                             <div className="flex justify-center">
-                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)]">
+                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
                                 <value.icon className="h-8 w-8" />
                                 </div>
                             </div>
@@ -220,13 +199,9 @@ export default function AboutPage() {
       </section>
 
       {/* Trust & Recognition Section */}
-      <section className="relative overflow-hidden bg-background py-20 md:py-28">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute -top-1/4 -left-1/4 w-1/2 h-full bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
-          <div className="absolute -bottom-1/4 -right-1/4 w-1/2 h-full bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }} />
-        </div>
+      <section className="relative overflow-hidden bg-secondary py-20 md:py-28">
         <div className="container relative z-10 text-center">
-            <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary backdrop-blur-sm shadow-[0_0_15px_hsl(var(--primary)/0.5)]">
+            <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary">
                 Our Credentials
             </Badge>
           <h2 className="mt-4 font-headline text-3xl font-bold md:text-4xl">Nationally Recognized. Globally Trusted.</h2>
@@ -237,15 +212,14 @@ export default function AboutPage() {
                 const image = PlaceHolderImages.find(p => p.id === rec.imageId);
                 return (
                   <div key={rec.name} className="group w-40 flex-shrink-0 snap-center flex flex-col items-center justify-center gap-4 text-center">
-                    <div className="relative flex h-28 w-28 items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:border-primary/50 group-hover:bg-primary/10 group-hover:shadow-2xl group-hover:shadow-primary/20">
-                      <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                    <div className="relative flex h-28 w-28 items-center justify-center rounded-2xl border bg-card p-4 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-primary/50 group-hover:bg-card group-hover:shadow-lg">
                       {image && (
                          <div className="relative h-12 w-12">
                           <Image 
                             src={image.imageUrl} 
                             alt={rec.name} 
                             fill
-                            className="object-contain brightness-0 invert filter transition-all duration-300"
+                            className="object-contain transition-all duration-300"
                             data-ai-hint={image.imageHint}
                             />
                          </div>

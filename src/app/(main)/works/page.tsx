@@ -7,29 +7,7 @@ export default function WorksPage() {
     (img) => img.id === 'hero-background'
   );
   return (
-    <div className="relative overflow-hidden bg-background text-foreground">
-      {heroBgImage && (
-        <div className="absolute inset-0 z-0 opacity-10">
-          <Image
-            src={heroBgImage.imageUrl}
-            alt={heroBgImage.description}
-            fill
-            className="object-cover"
-            priority
-            data-ai-hint={heroBgImage.imageHint}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background to-background" />
-        </div>
-      )}
-      <div className="absolute inset-0 z-0 opacity-40">
-        <div
-          className="absolute -top-1/4 left-0 -translate-x-1/4 w-1/2 h-full bg-primary/5 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse"
-        />
-        <div
-          className="absolute -bottom-1/4 right-0 translate-x-1/4 w-1/2 h-full bg-accent/5 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse"
-          style={{ animationDelay: '2s' }}
-        />
-      </div>
+    <div className="relative overflow-hidden bg-secondary text-foreground">
       <div className="container relative z-10 py-20 md:py-28">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">

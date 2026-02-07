@@ -45,17 +45,11 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [hasMounted]);
 
-  const showSolidHeader = !hasMounted
-    ? pathname !== '/'
-    : pathname !== '/' || isScrolled;
-
   return (
     <header
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300 animate-in fade-in slide-in-from-top-4',
-        showSolidHeader
-          ? 'border-b bg-background/80 backdrop-blur-sm shadow-sm'
-          : 'bg-transparent'
+        'border-b bg-background/80 backdrop-blur-sm'
       )}
       onMouseLeave={() => setServicesMenuOpen(false)}
     >
@@ -73,7 +67,7 @@ export default function Header() {
                       'transition-colors hover:text-primary',
                       pathname.startsWith(link.href) || servicesMenuOpen
                         ? 'text-primary'
-                        : 'text-foreground/60'
+                        : 'text-muted-foreground'
                     )}
                   >
                     {link.label}
@@ -83,7 +77,7 @@ export default function Header() {
                       'h-4 w-4 transition-transform duration-200',
                       pathname.startsWith(link.href) || servicesMenuOpen
                         ? 'text-primary'
-                        : 'text-foreground/60',
+                        : 'text-muted-foreground',
                       servicesMenuOpen && 'rotate-180'
                     )}
                   />
@@ -96,8 +90,8 @@ export default function Header() {
                 className={cn(
                   'transition-colors hover:text-primary',
                   pathname === link.href
-                    ? 'text-primary'
-                    : 'text-foreground/60'
+                    ? 'text-foreground'
+                    : 'text-muted-foreground'
                 )}
               >
                 {link.label}
@@ -187,7 +181,7 @@ export default function Header() {
       <div
         onMouseEnter={() => setServicesMenuOpen(true)}
         className={cn(
-          'absolute left-0 top-full w-full rounded-b-2xl border-t border-border/20 bg-background/90 shadow-2xl shadow-black/40 backdrop-blur-md transition-all duration-300 ease-in-out',
+          'absolute left-0 top-full w-full rounded-b-2xl border-t bg-background/90 shadow-2xl backdrop-blur-md transition-all duration-300 ease-in-out',
           'data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=closed]:slide-out-to-top-4',
           'data-[state=open]:animate-in data-[state=open]:fade-in data-[state=open]:slide-in-from-top-4',
           servicesMenuOpen
@@ -221,7 +215,7 @@ export default function Header() {
                     <Link
                       href={`/services/${service.slug}`}
                       onClick={() => setServicesMenuOpen(false)}
-                      className="group flex items-center gap-4 rounded-lg p-2 transition-colors hover:bg-white/5"
+                      className="group flex items-center gap-4 rounded-lg p-2 transition-colors hover:bg-secondary"
                     >
                       <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                         <service.icon className="h-5 w-5" />
@@ -236,7 +230,7 @@ export default function Header() {
             </div>
             
             {/* Right Column */}
-            <div className="md:col-span-3 hidden md:block border-l border-white/10 pl-8">
+            <div className="md:col-span-3 hidden md:block border-l pl-8">
                <h4 className="font-semibold text-foreground">AI-Driven Innovation</h4>
                <p className="mt-2 text-sm text-muted-foreground">
                  Building scalable digital solutions with AI-driven innovation.

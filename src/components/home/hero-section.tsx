@@ -7,19 +7,6 @@ export default function HeroSection() {
   const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
   return (
     <section className="relative w-full overflow-hidden bg-background py-20 md:py-32">
-      <div className="absolute inset-0 z-0 opacity-10">
-        {heroBgImage && (
-          <Image
-            src={heroBgImage.imageUrl}
-            alt={heroBgImage.description}
-            fill
-            className="object-cover"
-            priority
-            data-ai-hint={heroBgImage.imageHint}
-          />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
-      </div>
       <div className="container relative z-10">
         <div className="mx-auto max-w-4xl text-center">
           <div className="animate-in fade-in slide-in-from-bottom-10 duration-700">
@@ -35,7 +22,7 @@ export default function HeroSection() {
             <span className="font-semibold text-accent">succeed</span>.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4 animate-in fade-in slide-in-from-bottom-16 duration-700 delay-400">
-            <Button asChild size="lg" variant="default">
+            <Button asChild size="lg" className="bg-gradient-to-r from-accent to-primary text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg">
               <Link href="/services">Explore Our Services</Link>
             </Button>
             <Button asChild size="lg" variant="outline">

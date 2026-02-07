@@ -29,7 +29,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
     return (
-        <section className="bg-secondary py-20 md:py-28">
+        <section className="bg-background py-20 md:py-28">
             <div className="container">
                 <div className="text-center mb-16">
                     <p className="mb-2 font-semibold text-primary">Testimonials</p>
@@ -44,11 +44,11 @@ export default function TestimonialsSection() {
                     {testimonials.map((testimonial) => {
                         const image = PlaceHolderImages.find((img) => img.id === testimonial.avatarId);
                         return (
-                            <Card key={testimonial.name} className="bg-card border-border/20 transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10">
+                            <Card key={testimonial.name} className="bg-card border transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10">
                                 <CardContent className="pt-6">
                                     <div className="flex items-center gap-1">
                                         {[...Array(testimonial.rating)].map((_, i) => (
-                                            <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                                            <Star key={i} className="h-5 w-5 fill-accent text-accent" />
                                         ))}
                                     </div>
                                     <p className="mt-4 text-muted-foreground">"{testimonial.quote}"</p>
