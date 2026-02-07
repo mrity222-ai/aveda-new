@@ -28,7 +28,13 @@ export default function PortfolioGallery() {
               <div className="space-y-4 p-6">
                 <h3 className="font-headline text-xl font-bold">{project.title}</h3>
                 <p className="text-sm text-muted-foreground">{project.description}</p>
-                <Badge variant="destructive">{project.category}</Badge>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <Badge key={tag} variant="destructive">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
