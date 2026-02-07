@@ -31,6 +31,7 @@ import {
   Wrench,
   Hospital,
   Loader2,
+  Rocket,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
@@ -294,31 +295,62 @@ export default function SeoOptimizationPage() {
             </section>
 
              {/* What is GEO Tagging Section */}
-             <section className="py-20 md:py-28 bg-secondary">
-              <div className="container items-center gap-16 md:grid md:grid-cols-2">
-                  <div className="relative h-96 w-full md:h-[500px]">
-                      {geoTaggingImage && (
-                          <Image
-                          src={geoTaggingImage.imageUrl}
-                          alt={geoTaggingImage.description}
-                          fill
-                          className="rounded-lg object-cover"
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                          data-ai-hint={geoTaggingImage.imageHint}
-                          />
-                      )}
-                  </div>
-                  <div className="mt-8 md:mt-0">
-                      <h2 className="font-headline text-3xl font-bold md:text-4xl">What is GEO Tagging?</h2>
-                      <p className="mt-4 text-lg text-muted-foreground">GEO tagging embeds precise location data into your website's content, images, and posts. This tells search engines exactly where you are and what areas you serve, giving you a powerful advantage in local search results.</p>
-                      
-                      <ul className="mt-8 space-y-4">
-                          <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 flex-shrink-0 text-primary" /><span>Location tagging for images, pages & posts</span></li>
-                          <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 flex-shrink-0 text-primary" /><span>City-wise keyword targeting</span></li>
-                          <li className="flex items-center gap-3"><CheckCircle className="h-5 w-5 flex-shrink-0 text-primary" /><span>Hyper-local visibility boost</span></li>
-                      </ul>
-                  </div>
-              </div>
+            <section className="bg-black py-20 md:py-28 relative overflow-hidden">
+                <div className="absolute inset-0 z-0 opacity-20 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]">
+                    <div className="absolute inset-0 bg-[radial-gradient(hsl(var(--destructive)/0.1)_1px,transparent_1px)] [background-size:32px_32px]"></div>
+                </div>
+                <div className="container relative z-10 grid items-center gap-16 md:grid-cols-2">
+                    <div className="relative h-96 w-full md:h-[500px] animate-in fade-in zoom-in-90 duration-700">
+                        {geoTaggingImage && (
+                            <Image
+                            src={geoTaggingImage.imageUrl}
+                            alt={geoTaggingImage.description}
+                            fill
+                            className="rounded-lg object-contain"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            data-ai-hint={geoTaggingImage.imageHint}
+                            />
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    </div>
+                    <div className="mt-8 md:mt-0 animate-in fade-in slide-in-from-right-12 duration-700">
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-white">What is GEO Tagging?</h2>
+                        <p className="mt-4 text-lg text-muted-foreground">GEO tagging embeds precise location data into your website's content, images, and posts. This tells search engines exactly where you are and what areas you serve, giving you a powerful advantage in local search results.</p>
+                        
+                        <div className="mt-8 grid gap-4">
+                            <div className="group relative rounded-xl border border-destructive/20 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-xl hover:shadow-destructive/10">
+                                <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-destructive via-transparent to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-60" />
+                                <div className="relative flex items-center gap-4">
+                                    <MapPin className="h-6 w-6 text-destructive flex-shrink-0"/>
+                                    <div>
+                                        <h3 className="font-semibold text-white">Location Tagging</h3>
+                                        <p className="text-sm text-muted-foreground">For images, pages, and posts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <div className="group relative rounded-xl border border-destructive/20 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-xl hover:shadow-destructive/10">
+                                 <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-destructive via-transparent to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-60" />
+                                <div className="relative flex items-center gap-4">
+                                    <Crosshair className="h-6 w-6 text-destructive flex-shrink-0"/>
+                                    <div>
+                                        <h3 className="font-semibold text-white">City-wise Targeting</h3>
+                                        <p className="text-sm text-muted-foreground">Precision keyword targeting.</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <div className="group relative rounded-xl border border-destructive/20 bg-white/5 p-4 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-xl hover:shadow-destructive/10">
+                                 <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-destructive via-transparent to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-60" />
+                                <div className="relative flex items-center gap-4">
+                                    <Rocket className="h-6 w-6 text-destructive flex-shrink-0"/>
+                                    <div>
+                                        <h3 className="font-semibold text-white">Hyper-local Boost</h3>
+                                        <p className="text-sm text-muted-foreground">A visibility boost for your business.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
              {/* Our Local SEO Services Section */}
@@ -425,3 +457,5 @@ export default function SeoOptimizationPage() {
         </div>
     );
 }
+
+    
