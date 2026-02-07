@@ -155,10 +155,6 @@ export default function PoliticalCampaigningPage() {
             {/* Campaign Success Stories Section */}
             <section className="bg-black py-20 md:py-28">
                 <div className="container">
-                    <div className="text-center mb-12">
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl">Campaign Success Stories</h2>
-                        <p className="mt-4 text-lg text-muted-foreground">Explore how our AI-driven strategies have delivered electoral advantages.</p>
-                    </div>
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                         {politicalProjects.map((project) => (
                             <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
