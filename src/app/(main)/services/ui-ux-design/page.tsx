@@ -3,10 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
-  Search,
-  LayoutGrid,
-  Palette,
-  Eye,
   CheckCircle,
   MoveRight,
   Figma,
@@ -14,6 +10,10 @@ import {
   Bot,
   Box,
   Gem,
+  Fingerprint,
+  BoxSelect,
+  Wand2,
+  SearchCheck,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
@@ -25,10 +25,10 @@ export default function UiUxDesignPage() {
     const uiuxProjects = portfolioProjects.filter(p => ['b2b-healthtech-ui-ux-overhaul', 'ai-sales-crm', 'yoga-app'].includes(p.slug)).slice(0, 3);
 
     const processSteps = [
-        { icon: Search, title: 'User Research & Personas', description: 'Deeply understanding your users to build products they love.' },
-        { icon: LayoutGrid, title: 'Wireframing & Prototyping', description: 'Structuring and testing the user flow before a single line of code is written.' },
-        { icon: Palette, title: 'Intuitive UI Design', description: 'Creating visually stunning and easy-to-navigate interfaces.' },
-        { icon: Eye, title: 'Usability Testing', description: 'Ensuring the final product is flawless and meets user expectations.' },
+        { icon: Fingerprint, title: 'User Research & Personas', description: 'Deeply understanding your users to build products they love.' },
+        { icon: BoxSelect, title: 'Wireframing & Prototyping', description: 'Structuring and testing the user flow before a single line of code is written.' },
+        { icon: Wand2, title: 'Intuitive UI Design', description: 'Creating visually stunning and easy-to-navigate interfaces.' },
+        { icon: SearchCheck, title: 'Usability Testing', description: 'Ensuring the final product is flawless and meets user expectations.' },
     ];
 
     const tools = [
@@ -83,36 +83,42 @@ export default function UiUxDesignPage() {
 
             {/* Main Split-Screen Section */}
             <section className="bg-black py-20 md:py-28">
-              <div className="container items-center gap-16 md:grid md:grid-cols-2">
-                  <div className="relative h-96 w-full md:h-[500px]">
+              <div className="container grid items-center gap-16 lg:grid-cols-5">
+                  {/* Left Side (Content) */}
+                  <div className="lg:col-span-3">
+                      <h2 className="font-headline text-3xl font-bold md:text-4xl">
+                        <span className="bg-gradient-to-r from-primary to-destructive bg-clip-text text-transparent">Functional Beauty</span>, Built for Conversion
+                      </h2>
+                      <p className="mt-4 text-lg text-muted-foreground">Our design philosophy is simple: create interfaces that are not only aesthetically pleasing but also intuitive and effective. We focus on user-centric design to ensure your digital product solves real problems and achieves your business goals.</p>
+                      
+                      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                          {processSteps.map((step) => (
+                              <div key={step.title} className="group relative overflow-hidden rounded-2xl border border-accent/20 bg-card/40 p-6 backdrop-blur-sm transition-all duration-300 hover:border-accent/70 hover:shadow-2xl hover:shadow-accent/10">
+                                <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-accent via-transparent to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+                                <div className="relative">
+                                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent transition-all duration-300 group-hover:bg-accent group-hover:text-accent-foreground group-hover:scale-110">
+                                    <step.icon className="h-6 w-6" />
+                                  </div>
+                                  <h3 className="mt-4 font-semibold">{step.title}</h3>
+                                  <p className="mt-1 text-sm text-muted-foreground">{step.description}</p>
+                                </div>
+                              </div>
+                          ))}
+                      </div>
+                  </div>
+
+                  {/* Right Side (Visual Hero) */}
+                  <div className="relative mt-16 h-96 w-full lg:col-span-2 lg:mt-0 lg:h-[500px]">
                       {detailImage && (
                           <Image
                           src={detailImage.imageUrl}
                           alt={detailImage.description}
                           fill
-                          className="rounded-lg object-cover"
-                          sizes="(max-width: 768px) 100vw, 50vw"
+                          className="rounded-lg object-contain"
+                          sizes="(max-width: 1024px) 100vw, 40vw"
                           data-ai-hint={detailImage.imageHint}
                           />
                       )}
-                  </div>
-                  <div className="mt-8 md:mt-0">
-                      <h2 className="font-headline text-3xl font-bold md:text-4xl">Functional Beauty, Built for Conversion</h2>
-                      <p className="mt-4 text-lg text-muted-foreground">Our design philosophy is simple: create interfaces that are not only aesthetically pleasing but also intuitive and effective. We focus on user-centric design to ensure your digital product solves real problems and achieves your business goals.</p>
-                      
-                      <ul className="mt-8 space-y-6">
-                          {processSteps.map((step) => (
-                              <li key={step.title} className="flex items-start gap-4">
-                                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                                    <step.icon className="h-6 w-6" />
-                                  </div>
-                                  <div>
-                                    <h3 className="font-semibold">{step.title}</h3>
-                                    <p className="text-sm text-muted-foreground">{step.description}</p>
-                                  </div>
-                              </li>
-                          ))}
-                      </ul>
                   </div>
               </div>
             </section>
