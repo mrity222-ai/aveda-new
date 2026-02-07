@@ -1,11 +1,34 @@
 import PortfolioGallery from '@/components/works/portfolio-gallery';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function WorksPage() {
+  const heroBgImage = PlaceHolderImages.find(
+    (img) => img.id === 'hero-background'
+  );
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-gray-900 to-black text-foreground">
+    <div className="relative overflow-hidden bg-black text-foreground">
+      {heroBgImage && (
+        <div className="absolute inset-0 z-0 opacity-10">
+          <Image
+            src={heroBgImage.imageUrl}
+            alt={heroBgImage.description}
+            fill
+            className="object-cover"
+            priority
+            data-ai-hint={heroBgImage.imageHint}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black to-black" />
+        </div>
+      )}
       <div className="absolute inset-0 z-0 opacity-40">
-        <div className="absolute -top-1/4 left-0 -translate-x-1/4 w-1/2 h-full bg-destructive/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
-        <div className="absolute -bottom-1/4 right-0 translate-x-1/4 w-1/2 h-full bg-destructive/5 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }} />
+        <div
+          className="absolute -top-1/4 left-0 -translate-x-1/4 w-1/2 h-full bg-destructive/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse"
+        />
+        <div
+          className="absolute -bottom-1/4 right-0 translate-x-1/4 w-1/2 h-full bg-destructive/5 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse"
+          style={{ animationDelay: '2s' }}
+        />
       </div>
       <div className="container relative z-10 py-20 md:py-28">
         <div className="mx-auto max-w-4xl text-center">
@@ -13,7 +36,9 @@ export default function WorksPage() {
             Our Work
           </h1>
           <p className="mt-6 text-lg text-muted-foreground">
-            We are proud of the solutions we've delivered. Explore our portfolio to see the impact we've made for our clients across various industries.
+            We are proud of the solutions we've delivered. Explore our portfolio
+            to see the impact we've made for our clients across various
+            industries.
           </p>
         </div>
         <PortfolioGallery />
