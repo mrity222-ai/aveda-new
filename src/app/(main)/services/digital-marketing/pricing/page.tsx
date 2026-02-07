@@ -80,7 +80,7 @@ const pricingPlans = [
 
 const includedFeatures = [
     {
-      icon: Sparkles,
+      icon: Cpu,
       title: 'AI-Powered Strategy',
       description: 'Custom strategies built on data and AI insights.',
     },
@@ -100,7 +100,7 @@ const includedFeatures = [
       description: 'Clear, concise reports on your marketing performance.',
     },
     {
-        icon: CheckCircle,
+        icon: ShieldCheck,
         title: 'Business & Political Expertise',
         description: 'Specialized knowledge for corporate and political goals.',
     }
@@ -241,20 +241,26 @@ export default function PricingPage() {
       </section>
 
       {/* Included with every plan */}
-      <section className="py-20 md:py-28">
+      <section className="bg-black py-20 md:py-28">
         <div className="container text-center">
-          <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12">What’s Included With Every Plan</h2>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
+          <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16">What’s Included With Every Plan</h2>
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {includedFeatures.map((value) => (
-              <div key={value.title} className="group flex flex-col items-center justify-start gap-4 p-4 text-center transition-all duration-300 hover:-translate-y-2">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
-                    <value.icon className="h-8 w-8" />
+              <div key={value.title} className="group relative rounded-xl border border-destructive/20 bg-card/50 p-8 text-left backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-destructive/50 hover:shadow-2xl hover:shadow-destructive/20">
+                <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+                <div className="relative">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-destructive/10 text-destructive ring-8 ring-destructive/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-destructive group-hover:text-destructive-foreground group-hover:shadow-[0_0_20px_hsl(var(--destructive)/0.5)]">
+                        <value.icon className="h-6 w-6" />
+                    </div>
+                    <h3 className="mt-6 font-headline text-xl font-semibold text-foreground">{value.title}</h3>
+                    <p className="mt-2 text-muted-foreground">{value.description}</p>
                 </div>
-                <h3 className="mt-4 font-headline text-lg font-semibold">{value.title}</h3>
-                <p className="text-sm text-muted-foreground">{value.description}</p>
               </div>
             ))}
           </div>
+           <div className="mt-16">
+             <Badge variant="outline" className="border-accent/50 bg-accent/10 text-accent backdrop-blur-sm shadow-[0_0_15px_hsl(var(--accent)/0.3)]">No Hidden Costs. Guaranteed Results.</Badge>
+        </div>
         </div>
       </section>
 
