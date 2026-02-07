@@ -1,8 +1,11 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Check, CheckCircle, MoveRight, ShieldCheck, Clock, XCircle, Star, Sparkles } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Check, CheckCircle, MoveRight, ShieldCheck, Clock, XCircle, Star, Sparkles, Cpu, Circle, Flame } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
@@ -40,7 +43,6 @@ const pricingPlans = [
       cta: 'Choose Plan',
       variant: 'outline',
       popular: false,
-      emoji: '🔴',
     },
     {
       name: 'Growth Plan',
@@ -57,7 +59,6 @@ const pricingPlans = [
       cta: 'Choose Plan',
       variant: 'default',
       popular: true,
-      emoji: '🔥',
     },
     {
       name: 'Premium AI Plan',
@@ -74,7 +75,6 @@ const pricingPlans = [
       cta: 'Start Premium',
       variant: 'outline',
       popular: false,
-      emoji: '⚫',
     },
   ];
 
@@ -131,10 +131,11 @@ const includedFeatures = [
   ]
 
 export default function PricingPage() {
+  const [hoveredPlan, setHoveredPlan] = useState<string | null>(null);
   const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
 
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-black text-foreground">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-background py-20 md:py-32">
         <div className="absolute inset-0 z-0 opacity-10">
@@ -161,56 +162,83 @@ export default function PricingPage() {
       </section>
 
       {/* Pricing Cards Section */}
-      <section className="py-20 md:py-28">
+      <section className="bg-black py-20 md:py-28">
         <div className="container">
           <div className="grid gap-8 lg:grid-cols-3">
             {pricingPlans.map((plan) => (
-              <Card
+              <div
                 key={plan.name}
+                onMouseEnter={() => setHoveredPlan(plan.name)}
+                onMouseLeave={() => setHoveredPlan(null)}
                 className={cn(
-                  'flex flex-col border-border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2',
-                  plan.popular && 'border-2 border-primary shadow-2xl shadow-primary/10'
+                  'transition-all duration-300',
+                  hoveredPlan && hoveredPlan !== plan.name ? 'blur-sm scale-95' : '',
+                  hoveredPlan === plan.name ? 'lg:scale-105' : ''
                 )}
               >
-                {plan.popular && (
-                    <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground">MOST POPULAR</Badge>
-                )}
-                <CardHeader className="text-center">
-                    <CardTitle className="font-headline text-2xl">{plan.emoji} {plan.name}</CardTitle>
-                    <div className="text-4xl font-bold">
-                        {plan.price}
-                        <span className="text-lg font-normal text-muted-foreground">{plan.period}</span>
-                    </div>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                    <ul className="space-y-4">
-                        {plan.features.map((feature, i) => (
-                            <li key={i} className="flex items-center gap-3">
-                                <Check className="h-5 w-5 flex-shrink-0 text-primary" />
-                                <span className="text-muted-foreground">{feature}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </CardContent>
-                <div className="p-6">
-                    <Button asChild size="lg" className="w-full" variant={plan.variant as any}>
-                        <Link href="/contact">{plan.cta}</Link>
-                    </Button>
-                </div>
-              </Card>
+                <Card
+                  key={plan.name}
+                  className={cn(
+                    'relative flex h-full flex-col border-border/20 bg-white/5 backdrop-blur-lg transition-all duration-300',
+                    plan.popular
+                      ? 'border-2 border-destructive shadow-2xl shadow-destructive/20'
+                      : 'border'
+                  )}
+                >
+                  {plan.popular && (
+                      <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-destructive text-destructive-foreground">MOST POPULAR 🔥</Badge>
+                  )}
+                  <CardHeader className="text-center pt-8">
+                      <div className="flex items-center justify-center gap-2">
+                        {plan.name === 'Basic Plan' && <Circle className="h-4 w-4 text-destructive fill-destructive" />}
+                        {plan.name === 'Premium AI Plan' && <Cpu className="h-6 w-6 text-accent" />}
+                        <CardTitle className="font-headline text-2xl">{plan.name}</CardTitle>
+                      </div>
+                      <div className="text-4xl font-bold">
+                          {plan.price}
+                          <span className="text-lg font-normal text-muted-foreground">{plan.period}</span>
+                      </div>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                      <ul className="space-y-4">
+                          {plan.features.map((feature, i) => (
+                              <li key={i} className="flex items-center gap-3">
+                                  <Check className="h-5 w-5 flex-shrink-0 text-destructive" />
+                                  <span className={cn(
+                                    "text-muted-foreground",
+                                    plan.name === 'Growth Plan' && feature.includes('AI-Based Targeting') && 'text-white font-semibold drop-shadow-[0_0_4px_hsl(var(--destructive)/0.7)]',
+                                    plan.name === 'Premium AI Plan' && (feature.includes('Complete Website Development') || feature.includes('Lead Generation Funnels')) && 'text-white font-semibold',
+                                  )}>
+                                    {feature}
+                                  </span>
+                              </li>
+                          ))}
+                      </ul>
+                  </CardContent>
+                  <div className="p-6">
+                      <Button asChild size="lg" 
+                        className={cn(
+                          'w-full',
+                          plan.name === 'Basic Plan' && 'border-destructive text-destructive hover:bg-destructive/10 hover:text-destructive',
+                          plan.name === 'Growth Plan' && 'bg-destructive text-destructive-foreground shadow-lg shadow-destructive/50',
+                          plan.name === 'Premium AI Plan' && 'bg-gradient-to-r from-primary to-destructive text-white'
+                        )} 
+                        variant={plan.name === 'Basic Plan' ? 'outline' : 'default'}
+                      >
+                          <Link href="/contact">{plan.cta}</Link>
+                      </Button>
+                  </div>
+                </Card>
+              </div>
             ))}
+          </div>
+          <div className="mt-16 text-center">
+            <p className="animate-pulse text-xl font-bold italic text-white drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]">
+              👉 Buy 12 Months & Get 1 Month FREE
+            </p>
           </div>
         </div>
       </section>
-
-        {/* Annual Offer Banner */}
-        <section className="py-8">
-            <div className="container">
-                <div className="rounded-lg bg-gradient-to-r from-primary/80 to-primary p-6 text-center text-primary-foreground">
-                    <p className="animate-pulse text-xl font-bold">👉 Buy 12 Months & Get 1 Month FREE</p>
-                </div>
-            </div>
-        </section>
 
       {/* Included with every plan */}
       <section className="py-20 md:py-28">
