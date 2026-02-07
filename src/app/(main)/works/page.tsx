@@ -2,8 +2,8 @@ import PortfolioGallery from '@/components/works/portfolio-gallery';
 
 export default function WorksPage() {
   return (
-    <div className="py-20 md:py-28">
-      <div className="container">
+    <div className="bg-black text-foreground">
+      <div className="container py-20 md:py-28">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
             Our Work Speaks for Itself
