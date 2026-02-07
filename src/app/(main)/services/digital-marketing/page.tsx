@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -32,29 +33,7 @@ const WhatsAppIcon = () => (
 
 export default function DigitalMarketingPage() {
     const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
-    const whyThisWorks = [
-        {
-            icon: Target,
-            title: 'AI-Based Targeting',
-            description: 'Precision audience targeting using advanced AI models to maximize reach and engagement.',
-        },
-        {
-            icon: LayoutTemplate,
-            title: 'High-Converting Landing Pages',
-            description: 'Custom-designed landing pages optimized for conversion and a seamless user experience.',
-        },
-        {
-            icon: TrendingUp,
-            title: 'Real-Time Performance Tracking',
-            description: 'Live dashboards to monitor campaign performance, track ROI, and make data-driven decisions.',
-        },
-        {
-            icon: Users,
-            title: 'Political & Business Expertise',
-            description: 'Specialized strategies for both corporate marketing and political campaign intelligence.',
-        },
-    ];
-
+    
     const includedServices = [
         'Social Media Marketing (Meta, Instagram)',
         'Performance Ads (Meta & Google)',
@@ -69,6 +48,7 @@ export default function DigitalMarketingPage() {
       );
       
     const marketingProjects = portfolioProjects.filter(p => ['b2b-seo-strategy', 'political-dashboard', 'ada-chikankari'].includes(p.slug)).slice(0, 3);
+    const resultsImage = PlaceHolderImages.find((img) => img.id === 'service-digital-marketing');
 
     return (
         <div className="bg-background text-foreground">
@@ -108,22 +88,54 @@ export default function DigitalMarketingPage() {
                 </div>
             </section>
 
-            {/* Why This Works Section */}
-            <section className="py-20 md:py-28">
-                <div className="container text-center">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12">Why Our Approach Works</h2>
-                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                        {whyThisWorks.map((value) => (
-                        <div key={value.title} className="group rounded-lg border border-border bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2">
-                            <div className="flex justify-center">
-                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
-                                    <value.icon className="h-8 w-8" />
-                                </div>
+            {/* Digital Marketing & Results Section */}
+            <section className="bg-black py-20 md:py-28">
+                <div className="container grid md:grid-cols-2 gap-16 items-center">
+                    {/* Left Side (Content) */}
+                    <div className="space-y-8 animate-in fade-in slide-in-from-left-12 duration-700">
+                        <h2 className="font-headline text-4xl font-bold tracking-tight md:text-5xl">
+                            Campaigns Crafted by Us, <br />
+                            <span className="bg-gradient-to-r from-primary to-destructive bg-clip-text text-transparent">
+                                Results Driven for You
+                            </span>
+                        </h2>
+                        <p className="text-lg text-muted-foreground">
+                            We accelerate your business growth through data-driven SEO, targeted digital campaigns, and a relentless focus on performance.
+                        </p>
+                        {/* Stats */}
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                            <div className="rounded-xl border border-primary/20 bg-card/50 p-6 backdrop-blur-md transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                                <h3 className="font-headline text-4xl font-bold text-primary">100K+</h3>
+                                <p className="mt-2 text-muted-foreground">Reach Generated</p>
                             </div>
-                            <h3 className="mt-6 font-headline text-xl font-semibold">{value.title}</h3>
-                            <p className="mt-2 text-muted-foreground">{value.description}</p>
+                            <div className="rounded-xl border border-primary/20 bg-card/50 p-6 backdrop-blur-md transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                                <h3 className="font-headline text-4xl font-bold text-primary">200%</h3>
+                                <p className="mt-2 text-muted-foreground">Avg. ROI</p>
+                            </div>
+                            <div className="rounded-xl border border-primary/20 bg-card/50 p-6 backdrop-blur-md transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                                <h3 className="font-headline text-4xl font-bold text-primary">50+</h3>
+                                <p className="mt-2 text-muted-foreground">Happy Clients</p>
+                            </div>
                         </div>
-                        ))}
+                        <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-primary to-destructive text-primary-foreground shadow-[0_0_20px_hsl(var(--primary)/0.5)] transition-all duration-300 hover:scale-105">
+                            <Link href="/contact">
+                                Get in Touch <MoveRight className="ml-2 h-5 w-5" />
+                            </Link>
+                        </Button>
+                    </div>
+                    
+                    {/* Right Side (Visual) */}
+                    <div className="relative h-96 w-full md:h-[500px] animate-in fade-in zoom-in-90 duration-700">
+                        {resultsImage && (
+                            <Image
+                                src={resultsImage.imageUrl}
+                                alt="Digital Marketing Results"
+                                fill
+                                className="rounded-lg object-cover"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                data-ai-hint={resultsImage.imageHint}
+                            />
+                        )}
                     </div>
                 </div>
             </section>
