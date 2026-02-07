@@ -20,6 +20,7 @@ import {
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { portfolioProjects } from '@/lib/data';
 
 const WhatsAppIcon = () => (
     <svg
@@ -42,6 +43,9 @@ const WhatsAppIcon = () => (
 export default function PoliticalCampaigningPage() {
     const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
     const dashboardImage = PlaceHolderImages.find((img) => img.id === 'service-political-dashboard');
+    const politicalProjects = portfolioProjects.filter(p => 
+        ['political-dashboard', 'b2b-seo-strategy', 'ai-sales-crm'].includes(p.slug)
+    ).slice(0, 3);
 
     const howAiWins = [
         {
@@ -143,6 +147,41 @@ export default function PoliticalCampaigningPage() {
                             <h3 className="mt-6 font-headline text-xl font-semibold">{item.title}</h3>
                             <p className="mt-2 text-muted-foreground">{item.description}</p>
                         </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Campaign Success Stories Section */}
+            <section className="bg-black py-20 md:py-28">
+                <div className="container">
+                    <div className="text-center mb-12">
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl">Campaign Success Stories</h2>
+                        <p className="mt-4 text-lg text-muted-foreground">Explore how our AI-driven strategies have delivered electoral advantages.</p>
+                    </div>
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+                        {politicalProjects.map((project) => (
+                            <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
+                                <div className="relative h-[450px] overflow-hidden rounded-xl border border-white/10 bg-black/30 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                                    <Image
+                                        src={project.image.imageUrl}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover opacity-70 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
+                                        data-ai-hint={project.image.imageHint}
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                                    <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                                        <h3 className="font-headline text-2xl font-bold">{project.title}</h3>
+                                        <div className="mt-2 flex flex-wrap gap-2">
+                                            {project.tags.map(tag => (
+                                                <Badge key={tag} variant="outline" className="w-fit border-white/20 bg-white/10 backdrop-blur-md">{tag}</Badge>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -256,5 +295,3 @@ export default function PoliticalCampaigningPage() {
         </div>
     );
 }
-
-    
