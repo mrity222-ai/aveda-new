@@ -92,10 +92,10 @@ export default function WebDevelopmentPage() {
     ];
     
     const whoIsThisFor = [
-        { icon: Building2, title: 'Businesses & Enterprises' },
-        { icon: Rocket, title: 'Startups & SaaS Founders' },
-        { icon: Store, title: 'E-commerce Brands' },
-        { icon: Vote, title: 'Political & Public Platforms' },
+        { icon: Building2, title: 'Businesses & Enterprises', description: 'Scalable architecture that grows with your enterprise.' },
+        { icon: Rocket, title: 'Startups & SaaS Founders', description: 'Rapid MVP development to get your vision to market fast.' },
+        { icon: Store, title: 'E-commerce Brands', description: 'Conversion-optimized platforms designed to boost sales.' },
+        { icon: Vote, title: 'Political & Public Platforms', description: 'Secure and high-availability solutions for public outreach.' },
     ];
 
     const results = [
@@ -237,35 +237,53 @@ export default function WebDevelopmentPage() {
             </section>
             
             {/* Who is this for + Results Section */}
-            <section className="py-20 md:py-28">
-                <div className="container grid md:grid-cols-2 gap-16 items-center">
+            <section className="bg-black py-20 md:py-28 relative overflow-hidden">
+                <div className="absolute inset-0 z-0 opacity-30">
+                    <div className="absolute -left-1/4 -bottom-1/4 w-1/2 h-full bg-destructive/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
+                    <div className="absolute -right-1/4 -top-1/4 w-1/2 h-full bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }} />
+                </div>
+
+                <div className="container grid md:grid-cols-2 gap-16 items-center relative z-10">
+                    {/* Left Side: "Who This Is For" */}
                     <div>
                         <h2 className="font-headline text-3xl font-bold md:text-4xl">Who This Is For</h2>
                         <p className="mt-4 text-lg text-muted-foreground">Our web development services are perfect for organizations that need a powerful, reliable, and scalable online presence.</p>
-                         <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                        <div className="mt-8 grid grid-cols-1 gap-6">
                             {whoIsThisFor.map((item) => (
-                                <div key={item.title} className="flex items-center gap-4 rounded-lg border border-border bg-card p-4">
-                                     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                                        <item.icon className="h-6 w-6" />
+                                <div key={item.title} className="group relative rounded-xl border border-destructive/20 bg-black/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-xl hover:shadow-destructive/10">
+                                    <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-60" />
+                                    <div className="relative flex items-start gap-6">
+                                        <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-lg bg-destructive/10 text-destructive transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_20px_hsl(var(--destructive)/0.5)]">
+                                            <item.icon className="h-8 w-8" />
+                                        </div>
+                                        <div>
+                                            <h3 className="font-headline text-xl font-bold text-foreground">{item.title}</h3>
+                                            <p className="mt-2 text-muted-foreground">{item.description}</p>
+                                        </div>
                                     </div>
-                                    <h3 className="font-semibold">{item.title}</h3>
                                 </div>
                             ))}
                         </div>
                     </div>
-                    <div>
-                         <h2 className="font-headline text-3xl font-bold md:text-4xl text-center md:text-left">Results & Impact</h2>
-                        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3 text-center">
+
+                    {/* Right Side: "Results & Impact" */}
+                    <div className="space-y-8">
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-center md:text-left">Results & Impact</h2>
+                        <div className="space-y-6">
                             {results.map((stat) => (
-                                <div key={stat.label}>
-                                <p className="font-headline text-5xl font-bold text-primary">{stat.value}</p>
-                                <p className="mt-2 text-sm font-medium text-muted-foreground">{stat.label}</p>
+                                <div key={stat.label} className="group relative rounded-xl border border-destructive/20 bg-black/50 p-6 backdrop-blur-lg transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20">
+                                    <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-60" />
+                                    <div className="relative flex items-center justify-between gap-4">
+                                        <p className="font-headline text-5xl font-bold text-destructive drop-shadow-[0_0_10px_hsl(var(--destructive)/0.7)]">{stat.value}</p>
+                                        <p className="text-right text-lg font-medium text-muted-foreground">{stat.label}</p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
             </section>
+
 
              {/* Final CTA */}
             <section className="border-t border-border bg-card py-20">
