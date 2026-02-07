@@ -11,25 +11,13 @@ import {
   MoveRight,
   Figma,
   PenTool,
-  Bot
+  Bot,
+  Box,
+  Gem,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { portfolioProjects } from '@/lib/data';
-
-const AdobeXdIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.42 3H4.01c-.75 0-1.42.37-1.42 1.25v15.5C2.59 20.63 3.26 21 4.01 21h15.98c.75 0 1.42-.37 1.42-1.25V10.7z" fill="#FF61F6"/>
-        <path d="M21.41 3h-7.99l7.99 7.7V4.25C21.41 3.37 20.74 3 19.99 3z" fill="#EF41C6"/>
-        <path d="M9.53 15.22a.49.49 0 0 1-.35-.14l-2.04-2.09c-.19-.2-.19-.51 0-.71s.5-.2.69 0l2.04 2.1c.19.2.19.51 0 .71-.1.1-.23.13-.34.13zm4.59-5.11h-2.1c-.28 0-.5.22-.5.5v.06c0 .28.22.5.5.5h1.56l-2.07 2.87a.49.49 0 0 0 .02.68l.06.05c.18.15.46.12.61-.06l2.39-3.32v.02h.01V10.6c0-.27-.22-.49-.5-.49z" fill="#00003A"/>
-    </svg>
-)
-
-const SketchIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6.23 3.68l11.54 0-2.89 2.8-2.88-2.8-2.89 2.8L6.23 3.68zM3.41 6.48l8.59 8.34 8.59-8.34-5.73 5.56-2.86-2.78-2.86 2.78L3.41 6.48zM12 14.82l-8.59-8.34h17.18L12 14.82zM6.23 20.32l2.88-2.8 2.89 2.8 2.88-2.8 2.89 2.8-5.77-5.6-5.77 5.6z" fill="#FDB300"/>
-    </svg>
-)
 
 export default function UiUxDesignPage() {
     const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
@@ -45,8 +33,8 @@ export default function UiUxDesignPage() {
 
     const tools = [
         { icon: Figma, name: 'Figma' },
-        { icon: AdobeXdIcon, name: 'Adobe XD' },
-        { icon: SketchIcon, name: 'Sketch' },
+        { icon: Box, name: 'Adobe XD' },
+        { icon: Gem, name: 'Sketch' },
         { icon: PenTool, name: 'Pen & Paper' },
         { icon: Bot, name: 'AI Design Tools' },
     ];
@@ -170,16 +158,20 @@ export default function UiUxDesignPage() {
             </section>
 
              {/* Tools We Use Section */}
-            <section className="bg-secondary py-20 md:py-28">
-                <div className="container text-center">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12">Tools We Use</h2>
-                    <div className="mx-auto grid max-w-4xl grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5">
+            <section className="bg-black py-20 md:py-28 relative">
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-destructive/10 to-transparent opacity-50 blur-3xl" />
+                <div className="container text-center relative z-10">
+                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-white">Tools We Use</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {tools.map((tool) => (
-                        <div key={tool.name} className="group flex flex-col items-center gap-4">
-                           <div className="flex h-20 w-20 items-center justify-center rounded-full bg-card text-primary ring-8 ring-card transition-all duration-300 group-hover:scale-110 group-hover:text-primary-foreground group-hover:bg-primary">
-                             <tool.icon />
-                           </div>
-                           <p className="font-semibold">{tool.name}</p>
+                        <div key={tool.name} className="group relative rounded-2xl border border-destructive/20 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20 hover:-translate-y-1">
+                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                            <div className="relative flex flex-col items-center justify-center gap-4">
+                                <div className="flex h-20 w-20 items-center justify-center">
+                                    <tool.icon className="h-10 w-10 text-white/80 transition-all duration-300 group-hover:text-destructive group-hover:drop-shadow-[0_0_10px_hsl(var(--destructive)/0.8)]" />
+                                </div>
+                                <p className="font-semibold text-sm text-center uppercase tracking-wider text-white">{tool.name}</p>
+                            </div>
                         </div>
                         ))}
                     </div>
