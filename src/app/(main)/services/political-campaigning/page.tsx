@@ -15,7 +15,9 @@ import {
   Rocket,
   CheckCircle,
   MoveRight,
-  Info
+  Info,
+  Megaphone,
+  MapPin,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
@@ -78,16 +80,16 @@ export default function PoliticalCampaigningPage() {
         { icon: Rocket, title: "Reporting & Insights", description: "You get transparent reports on reach, engagement, and sentiment, providing clear strategic intelligence."},
     ];
 
-    const ourServices = [
-      'AI Voter Targeting & Segmentation',
-      'Constituency & Demographic Analysis',
-      'Social Media Political Ad Campaigns',
-      'Narrative & Online Sentiment Analysis',
-      'Digital War Room & Response Team',
-      'Booth-Level Digital Strategy',
-      'Influencer & Community Outreach',
-      'Whatsapp & IVR Campaigns'
-    ]
+    const ourServicesWithIcons = [
+        { icon: Target, title: 'AI Voter Targeting & Segmentation' },
+        { icon: PieChart, title: 'Constituency & Demographic Analysis' },
+        { icon: Megaphone, title: 'Social Media Political Ad Campaigns' },
+        { icon: Bot, title: 'Narrative & Online Sentiment Analysis' },
+        { icon: Shield, title: 'Digital War Room & Response Team' },
+        { icon: MapPin, title: 'Booth-Level Digital Strategy' },
+        { icon: Users, title: 'Influencer & Community Outreach' },
+        { icon: WhatsAppIcon, title: 'Whatsapp & IVR Campaigns' }
+    ];
 
     const whyChooseUs = [
       'Specialized Political & Tech Expertise',
@@ -183,35 +185,74 @@ export default function PoliticalCampaigningPage() {
                 </div>
             </section>
             
-            {/* Our Services Section */}
-             <section className="bg-secondary py-20 md:py-28">
-              <div className="container items-center gap-16 md:grid md:grid-cols-2">
-                  <div className="relative h-96 w-full md:h-[500px]">
-                      {dashboardImage && (
-                          <Image
-                          src={dashboardImage.imageUrl}
-                          alt={dashboardImage.description}
-                          fill
-                          className="rounded-lg object-cover"
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                          data-ai-hint={dashboardImage.imageHint}
-                          />
-                      )}
-                  </div>
-                  <div className="mt-8 md:mt-0">
-                      <h2 className="font-headline text-3xl font-bold md:text-4xl">Our AI-Powered Political Services</h2>
-                      <p className="mt-4 text-lg text-muted-foreground">We provide a full suite of digital and AI services designed for the unique challenges of political campaigning.</p>
-                      
-                      <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                          {ourServices.map((detail) => (
-                              <li key={detail} className="flex items-center gap-3">
-                                  <CheckCircle className="h-5 w-5 flex-shrink-0 text-primary" />
-                                  <span className="text-muted-foreground">{detail}</span>
-                              </li>
-                          ))}
-                      </ul>
-                  </div>
-              </div>
+            {/* Our AI-Powered Political Services Section */}
+            <section className="bg-black py-20 md:py-28 relative overflow-hidden">
+                <div className="absolute inset-0 z-0 opacity-20 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]">
+                    <div className="absolute inset-0 bg-[radial-gradient(hsl(var(--destructive)/0.1)_1px,transparent_1px)] [background-size:32px_32px]"></div>
+                </div>
+                <div className="container relative z-10">
+                    <div className="text-center mb-16">
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-white drop-shadow-[0_0_10px_hsl(var(--destructive)/0.5)]">
+                            Political Command Center
+                        </h2>
+                        <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+                            A complete suite of AI-powered services for modern political campaigning.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                        {/* Left Cards */}
+                        <div className="md:col-span-3 space-y-8">
+                            {ourServicesWithIcons.slice(0, 4).map((service) => (
+                                <div key={service.title} className="group relative rounded-xl border border-destructive/20 bg-card/50 p-4 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20 hover:-translate-y-1">
+                                    <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+                                    <div className="relative flex items-center gap-4">
+                                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-destructive/10 text-destructive transition-all duration-300 group-hover:bg-destructive group-hover:text-destructive-foreground">
+                                            <service.icon className="h-5 w-5" />
+                                        </div>
+                                        <p className="text-sm font-medium text-muted-foreground">{service.title}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        
+                        {/* Center Image */}
+                        <div className="md:col-span-6 relative h-[400px] w-full md:h-[600px]">
+                            {dashboardImage && (
+                                <Image
+                                    src={dashboardImage.imageUrl}
+                                    alt={dashboardImage.description}
+                                    fill
+                                    className="object-contain"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    data-ai-hint={dashboardImage.imageHint}
+                                />
+                            )}
+                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        </div>
+
+                        {/* Right Cards */}
+                        <div className="md:col-span-3 space-y-8">
+                            {ourServicesWithIcons.slice(4, 8).map((service) => (
+                                <div key={service.title} className="group relative rounded-xl border border-destructive/20 bg-card/50 p-4 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20 hover:-translate-y-1">
+                                    <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+                                    <div className="relative flex items-center gap-4">
+                                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-destructive/10 text-destructive transition-all duration-300 group-hover:bg-destructive group-hover:text-destructive-foreground">
+                                            <service.icon className="h-5 w-5" />
+                                        </div>
+                                        <p className="text-sm font-medium text-muted-foreground">{service.title}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="mt-16 text-center">
+                        <Badge variant="outline" className="border-accent/50 bg-accent/10 text-accent backdrop-blur-sm shadow-[0_0_15px_hsl(var(--accent)/0.3)]">
+                            <Shield className="mr-2 h-4 w-4" /> Secure & Confidential Data Handling - Powered by AI.
+                        </Badge>
+                    </div>
+                </div>
             </section>
             
              {/* Process Section */}
@@ -290,4 +331,3 @@ export default function PoliticalCampaigningPage() {
             </section>
         </div>
     );
-}
