@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -148,20 +149,29 @@ export default function WebDevelopmentPage() {
                 </div>
             </section>
 
-            {/* Why This Works Section */}
-            <section className="py-20 md:py-28">
+            {/* Why Our Web Development Works Section */}
+            <section className="bg-black py-20 md:py-28 relative">
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-destructive/5 to-transparent opacity-50 blur-3xl" />
                 <div className="container text-center">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12">Why Our Web Development Works</h2>
+                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-white">Why Our Web Development Works</h2>
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                        {whyThisWorks.map((value) => (
-                        <div key={value.title} className="group rounded-lg border border-border bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2">
-                            <div className="flex justify-center">
-                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
-                                    <value.icon className="h-8 w-8" />
+                        {whyThisWorks.map((value, index) => (
+                        <div 
+                            key={value.title} 
+                            className="group relative overflow-hidden rounded-2xl border border-destructive/20 bg-black/50 p-8 backdrop-blur-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.3)] animate-in fade-in slide-in-from-bottom-12"
+                            style={{ animationDelay: `${index * 150}ms` }}
+                        >
+                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                            <div className="absolute top-0 left-0 w-2/3 h-2/3 bg-gradient-to-br from-destructive/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                            <div className="relative z-10 text-center">
+                                <div className="flex justify-center">
+                                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-destructive/10 text-destructive transition-all duration-300 group-hover:scale-110 group-hover:bg-destructive group-hover:text-destructive-foreground group-hover:shadow-[0_0_25px_hsl(var(--destructive)/0.7)]">
+                                        <value.icon className="h-10 w-10 transition-transform duration-300 group-hover:animate-pulse" />
+                                    </div>
                                 </div>
+                                <h3 className="mt-6 font-headline text-xl font-bold text-white">{value.title}</h3>
+                                <p className="mt-2 text-muted-foreground">{value.description}</p>
                             </div>
-                            <h3 className="mt-6 font-headline text-xl font-semibold">{value.title}</h3>
-                            <p className="mt-2 text-muted-foreground">{value.description}</p>
                         </div>
                         ))}
                     </div>
