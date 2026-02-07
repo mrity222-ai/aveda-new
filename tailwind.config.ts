@@ -77,7 +77,7 @@ export default {
         sm: 'calc(var(--radius) - 4px)',
       },
       boxShadow: {
-        'red-glow': '0 0 15px hsl(var(--primary) / 0.5)',
+        'primary-glow': '0 0 15px hsl(var(--primary) / 0.5)',
       },
       keyframes: {
         'accordion-down': {
@@ -96,7 +96,7 @@ export default {
             height: '0',
           },
         },
-        'pulse-red': {
+        'pulse-primary': {
           '50%': {
             boxShadow: '0 0 25px hsl(var(--primary) / 0.6)',
           },
@@ -113,7 +113,7 @@ export default {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'pulse-red': 'pulse-red 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'pulse-primary': 'pulse-primary 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'spin-slow': 'spin-slow 20s linear infinite',
         'spin-slow-reverse': 'spin-slow-reverse 25s linear infinite',
       },

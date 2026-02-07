@@ -147,10 +147,10 @@ export default function ServicesPage() {
         </div>
       </section>
       
-      <div className="relative bg-black py-20 md:py-28">
+      <div className="relative bg-secondary py-20 md:py-28">
         <div className="absolute inset-0 z-0 opacity-20">
-            <div className="absolute top-0 left-0 h-1/2 w-1/2 animate-pulse rounded-full bg-destructive/10 opacity-50 mix-blend-screen filter blur-3xl" />
-            <div className="absolute bottom-0 right-0 h-1/2 w-1/2 animate-pulse rounded-full bg-destructive/5 opacity-50 mix-blend-screen filter blur-3xl" style={{ animationDelay: '2s' }} />
+            <div className="absolute top-0 left-0 h-1/2 w-1/2 animate-pulse rounded-full bg-primary/5 opacity-50 mix-blend-screen filter blur-3xl" />
+            <div className="absolute bottom-0 right-0 h-1/2 w-1/2 animate-pulse rounded-full bg-accent/5 opacity-50 mix-blend-screen filter blur-3xl" style={{ animationDelay: '2s' }} />
         </div>
         <div className="container relative z-10 space-y-20 md:space-y-28">
             {services.map((service, index) => {
@@ -162,8 +162,8 @@ export default function ServicesPage() {
                         <div className="grid items-center gap-16 md:grid-cols-2">
                             <div className={cn("relative h-96 w-full md:h-[500px]", isReversed && 'md:order-last')}>
                                 <div className="group relative h-full w-full">
-                                    <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-destructive via-transparent to-destructive/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                                    <div className="relative h-full overflow-hidden rounded-[15px] border border-destructive/30 bg-black/50 p-2 backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_0_30px_hsl(var(--destructive)/0.3)]">
+                                    <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                                    <div className="relative h-full overflow-hidden rounded-[15px] border border-primary/30 bg-card/50 p-2 backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)]">
                                         {image && <Image src={image.imageUrl} alt={image.description || service.title} fill className="rounded-md object-cover" sizes="(max-width: 768px) 100vw, 50vw" data-ai-hint={image.imageHint} />}
                                     </div>
                                 </div>
@@ -174,7 +174,7 @@ export default function ServicesPage() {
                                 <p className="mt-4 text-muted-foreground">{service.description}</p>
                                 <ul className="mt-6 space-y-3">
                                     {service.details.map(detail => (
-                                        <li key={detail} className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-destructive" /><span>{detail}</span></li>
+                                        <li key={detail} className="flex items-center gap-3"><CheckCircle className="h-5 w-5 text-primary" /><span>{detail}</span></li>
                                     ))}
                                 </ul>
                                 <Button asChild className="mt-8">
@@ -191,7 +191,7 @@ export default function ServicesPage() {
       </div>
 
         {/* Industries We Serve Section */}
-        <section className="scroll-mt-20 py-20 md:py-28 text-center bg-black">
+        <section className="scroll-mt-20 py-20 md:py-28 text-center bg-background">
             <div className="container">
                 <h2 className="font-headline text-3xl font-bold">Industries We Serve</h2>
                 <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
@@ -208,9 +208,9 @@ export default function ServicesPage() {
         </section>
 
         {/* Technologies We Use Section */}
-        <section className="relative scroll-mt-20 bg-black text-center pb-20 md:pb-28">
+        <section className="relative scroll-mt-20 bg-secondary text-center pb-20 md:pb-28">
             <div className="absolute inset-0 z-0 opacity-20">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,_hsl(var(--destructive)/0.15)_0%,_transparent_60%)]" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,_hsl(var(--primary)/0.15)_0%,_transparent_60%)]" />
             </div>
             <div className="container relative z-10">
                 <h2 className="font-headline text-3xl font-bold">Technologies We Use</h2>
@@ -222,10 +222,10 @@ export default function ServicesPage() {
                             <h3 className="font-headline text-2xl font-semibold tracking-tight text-white/90">{category}</h3>
                             <div className="mt-8 grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 md:grid-cols-4 lg:flex lg:flex-wrap lg:justify-center lg:gap-8">
                                 {items.map((tech) => (
-                                    <div key={tech.name} className="group relative rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-lg transition-all duration-300 hover:border-destructive/50 hover:bg-destructive/10 hover:shadow-2xl hover:shadow-destructive/20 lg:w-48">
-                                        <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                                    <div key={tech.name} className="group relative rounded-xl border border-white/10 bg-card/50 p-6 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:bg-primary/10 hover:shadow-2xl hover:shadow-primary/20 lg:w-48">
+                                        <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
                                         <div className="relative flex flex-col items-center justify-center gap-4">
-                                            <tech.icon className="h-10 w-10 text-white/80 transition-colors duration-300 group-hover:text-destructive" />
+                                            <tech.icon className="h-10 w-10 text-white/80 transition-colors duration-300 group-hover:text-primary" />
                                             <p className="font-semibold text-sm text-center text-white">{tech.name}</p>
                                         </div>
                                     </div>

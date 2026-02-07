@@ -63,7 +63,7 @@ export default function AboutPage() {
       style={{ animationDelay: delay }}
     >
       <div
-        className="absolute inset-0 border border-accent/20 bg-white/5 shadow-[0_0_20px_hsl(var(--accent)/0.1)] backdrop-blur-md transition-all duration-300 group-hover:border-accent/50 group-hover:shadow-[0_0_30px_hsl(var(--accent)/0.3)]"
+        className="absolute inset-0 border border-primary/20 bg-card/50 shadow-[0_0_20px_hsl(var(--primary)/0.1)] backdrop-blur-md transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)]"
         style={{
           clipPath:
             'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
@@ -112,9 +112,8 @@ export default function AboutPage() {
       </section>
 
       {/* Our Technology Partners Section */}
-      <section className="relative overflow-hidden bg-black py-20 md:py-28">
-        <div className="absolute inset-0 opacity-50 bg-[radial-gradient(ellipse_at_center,_hsl(var(--accent)/0.2)_0%,_transparent_70%)]" />
-        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(ellipse_at_bottom,_hsl(var(--primary)/0.2)_0%,_transparent_80%)]" />
+      <section className="relative overflow-hidden bg-background py-20 md:py-28">
+        <div className="absolute inset-0 opacity-50 bg-[radial-gradient(ellipse_at_center,_hsl(var(--primary)/0.1)_0%,_transparent_70%)]" />
         <div className="container relative z-10 text-center">
           <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary backdrop-blur-sm shadow-[0_0_15px_hsl(var(--primary)/0.5)]">
             Our Technology Partners
@@ -221,7 +220,7 @@ export default function AboutPage() {
       </section>
 
       {/* Trust & Recognition Section */}
-      <section className="relative overflow-hidden bg-black py-20 md:py-28">
+      <section className="relative overflow-hidden bg-background py-20 md:py-28">
         <div className="absolute inset-0 z-0">
           <div className="absolute -top-1/4 -left-1/4 w-1/2 h-full bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
           <div className="absolute -bottom-1/4 -right-1/4 w-1/2 h-full bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }} />

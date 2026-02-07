@@ -47,7 +47,7 @@ const PythonIcon = () => (
 )
 
 const OpenAIIcon = () => (
-    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white/80 transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]"><title>OpenAI</title><path fill="currentColor" d="M20.219 19.82a8.743 8.743 0 0 1-13.402-4.966c.275-2.623 1.043-4.996 2.19-6.938 1.04-1.76 2.45-3.235 4.103-4.328A8.743 8.743 0 0 1 18.068 8.5a8.742 8.742 0 0 1-2.992 10.912c.55.337 1.08.723 1.586 1.151.08.067.14.15.19.24.16.29.07.66-.23.82-.29.16-.66.07-.82-.23a4.37 4.37 0 0 1-2.02-2.135c-.15-.29-.42-.48-.74-.53a4.37 4.37 0 0 0-4.04 2.807c-.16.3-.07.66.23.81.29.16.66.07.82-.23a2.62 2.62 0 0 1 2.42-1.68c.25 0 .49.09.68.25.3.25.4.65.25.99a2.62 2.62 0 0 1-3.63 1.72c-.3-.16-.66-.07-.82.23-.16.29-.07.66.23.82a4.37 4.37 0 0 0 6.06-2.86c.15-.3.42-.48.74-.53a4.37 4.37 0 0 1 4.04-2.808c.3-.05.58.11.69.39.16.29.07.66-.23.81-.3.16-.66.07-.82-.23a2.62 2.62 0 0 0-2.43 1.68c.09-.18.09.38-.03.56.2.62.77 1.03 1.41 1.03.2 0 .4-.04.59-.12.3-.16.66-.07.82.23.15.3.06.66-.24.82zM12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zM3.78 19.82A8.743 8.743 0 0 1 17.182 4.966c-.275 2.623-1.043 4.996-2.19 6.938-1.04 1.76-2.45 3.235-4.103 4.328a8.743 8.743 0 0 1-5.952 4.912c-.55-.337-1.08-.723-1.586-1.151a.523.523 0 0 1-.19-.24c-.16-.29-.07-.66.23-.82.29-.16.66-.07.82.23a4.37 4.37 0 0 1 2.02 2.135c.15.29.42.48.74.53a4.37 4.37 0 0 0 4.04-2.807c.16-.3.07-.66-.23-.81-.29-.16-.66-.07-.82.23a2.62 2.62 0 0 1-2.42 1.68c-.25 0-.49-.09-.68-.25a.874.874 0 0 1-.25-.99 2.62 2.62 0 0 1 3.63-1.72c.3.16.66.07.82-.23.16-.29.07-.66-.23-.82a4.37 4.37 0 0 0-6.06 2.86c-.15.3-.42.48-.74-.53a4.37 4.37 0 0 1-4.04 2.808c-.3.05-.58-.11-.69-.39-.16-.29-.07-.66.23-.81.3-.16.66-.07.82.23a2.62 2.62 0 0 0 2.43-1.68c.09-.18.09.38.03-.56a1.75 1.75 0 0 0-1.41-1.03c-.2 0-.4.04-.59.12-.3.16-.66-.07-.82-.23-.15-.3-.06.66.24-.82z"/></svg>
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white/80 transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]"><title>OpenAI</title><path fill="currentColor" d="M20.219 19.82a8.743 8.743 0 0 1-13.402-4.966c.275-2.623 1.043-4.996 2.19-6.938 1.04-1.76 2.45-3.235 4.103-4.328A8.743 8.743 0 0 1 18.068 8.5a8.742 8.742 0 0 1-2.992 10.912c.55.337 1.08.723 1.586 1.151.08.067.14.15.19.24.16.29.07.66-.23.82-.29.16-.66.07-.82-.23a4.37 4.37 0 0 1-2.02-2.135c-.15-.29-.42-.48-.74-.53a4.37 4.37 0 0 0-4.04 2.807c-.16.3-.07.66.23.81.29.16.66.07.82-.23a2.62 2.62 0 0 1 2.42-1.68c.25 0 .49.09.68.25.3.25.4.65.25.99a2.62 2.62 0 0 1-3.63 1.72c-.3-.16-.66-.07-.82.23-.16.29-.07.66.23.82a4.37 4.37 0 0 0 6.06-2.86c.15-.3.42-.48.74-.53a4.37 4.37 0 0 1 4.04-2.808c.3-.05.58.11.69.39.16.29.07.66-.23.81-.3.16-.66.07-.82-.23a2.62 2.62 0 0 0-2.43 1.68c.09-.18.09.38-.03-.56.2.62.77 1.03 1.41 1.03.2 0 .4-.04.59-.12.3-.16.66-.07-.82.23.15.3.06.66-.24.82zM12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zM3.78 19.82A8.743 8.743 0 0 1 17.182 4.966c-.275 2.623-1.043 4.996-2.19 6.938-1.04 1.76-2.45 3.235-4.103 4.328a8.743 8.743 0 0 1-5.952 4.912c-.55-.337-1.08-.723-1.586-1.151a.523.523 0 0 1-.19-.24c-.16-.29-.07-.66.23-.82.29-.16.66-.07.82.23a4.37 4.37 0 0 1 2.02 2.135c.15.29.42.48.74.53a4.37 4.37 0 0 0 4.04-2.807c.16-.3.07-.66-.23-.81-.29-.16-.66-.07-.82.23a2.62 2.62 0 0 1-2.42 1.68c-.25 0-.49-.09-.68-.25a.874.874 0 0 1-.25-.99 2.62 2.62 0 0 1 3.63-1.72c.3.16.66.07.82-.23.16-.29.07-.66-.23-.82a4.37 4.37 0 0 0-6.06 2.86c-.15.3-.42.48-.74-.53a4.37 4.37 0 0 1-4.04 2.808c-.3.05-.58-.11-.69-.39-.16-.29-.07-.66.23-.81.3-.16.66-.07.82.23a2.62 2.62 0 0 0 2.43-1.68c.09-.18.09.38.03-.56a1.75 1.75 0 0 0-1.41-1.03c-.2 0-.4.04-.59.12-.3.16-.66-.07-.82-.23-.15-.3-.06.66.24-.82z"/></svg>
 )
 
 const TensorFlowIcon = () => (
@@ -91,7 +91,7 @@ export default function AiAutomationPage() {
     return (
         <div className="bg-background text-foreground">
             {/* Hero Section */}
-            <section className="relative overflow-hidden bg-black py-20 md:py-32">
+            <section className="relative overflow-hidden bg-background py-20 md:py-32">
                  <div className="absolute inset-0 z-0 opacity-20">
                     {heroImage && (
                         <Image
@@ -103,7 +103,7 @@ export default function AiAutomationPage() {
                             data-ai-hint={heroImage.imageHint}
                         />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
                 </div>
                 <div className="container relative z-10 text-center">
                     <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl text-white">
@@ -124,12 +124,12 @@ export default function AiAutomationPage() {
             </section>
 
             {/* Core Services Bento Grid */}
-            <section className="bg-black py-20 md:py-28">
+            <section className="bg-background py-20 md:py-28">
                 <div className="container text-center">
                     <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12 text-white">Core Automation Services</h2>
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {coreServices.map((item) => (
-                        <div key={item.title} className="group rounded-xl border border-primary/20 bg-card/50 p-8 text-center transition-all duration-300 hover:border-primary hover:shadow-[0_0_20px_rgba(255,0,0,0.2)] hover:-translate-y-2 backdrop-blur-sm">
+                        <div key={item.title} className="group rounded-xl border border-primary/20 bg-card/50 p-8 text-center transition-all duration-300 hover:border-primary hover:shadow-[0_0_20px_hsl(var(--primary)/0.2)] hover:-translate-y-2 backdrop-blur-sm">
                             <div className="flex justify-center">
                                 <div className="relative flex h-20 w-20 items-center justify-center rounded-full">
                                     <div className="absolute inset-0 rounded-full bg-primary/10 blur-lg transition-all duration-300 group-hover:blur-xl"></div>
@@ -172,13 +172,13 @@ export default function AiAutomationPage() {
             </section>
             
             {/* Tech Stack Section */}
-            <section className="bg-black py-20 md:py-28 relative">
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-primary/10 to-transparent opacity-50 blur-3xl" />
+            <section className="bg-background py-20 md:py-28 relative">
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-primary/5 to-transparent opacity-50 blur-3xl" />
                 <div className="container text-center relative z-10">
                     <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-white">Our Technology Stack</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {techStack.map((tech) => (
-                        <div key={tech.name} className="group relative rounded-2xl border border-primary/20 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
+                        <div key={tech.name} className="group relative rounded-2xl border border-primary/20 bg-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
                             <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
                             <div className="relative flex flex-col items-center justify-center gap-4">
                                 <tech.icon />

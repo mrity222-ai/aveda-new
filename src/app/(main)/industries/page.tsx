@@ -82,7 +82,7 @@ export default function IndustriesPage() {
             {industries.map((item, index) => (
               <div
                 key={item.title}
-                className="group relative overflow-hidden rounded-lg border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-16 duration-500"
+                className="group relative overflow-hidden rounded-lg border border-border/50 bg-card/50 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-16 duration-500"
                 style={{ animationDelay: `${index * 100 + 400}ms` }}
               >
                 <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/5 opacity-0 transition-all duration-500 group-hover:scale-[8] group-hover:opacity-100"></div>
@@ -112,7 +112,7 @@ export default function IndustriesPage() {
             Let's discuss how we can tailor our solutions for your specific
             needs.
           </p>
-          <Button asChild size="lg" className="mt-8 animate-pulse-red">
+          <Button asChild size="lg" className="mt-8 animate-pulse-primary">
             <Link href="/contact">
               Talk to an Expert <MoveRight className="ml-2 h-5 w-5" />
             </Link>

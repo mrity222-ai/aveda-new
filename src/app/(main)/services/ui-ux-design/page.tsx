@@ -75,21 +75,21 @@ export default function UiUxDesignPage() {
             </section>
 
             {/* Main Split-Screen Section */}
-            <section className="bg-black py-20 md:py-28">
+            <section className="bg-secondary py-20 md:py-28">
               <div className="container grid items-center gap-16 lg:grid-cols-5">
                   {/* Left Side (Content) */}
                   <div className="lg:col-span-3">
                       <h2 className="font-headline text-3xl font-bold md:text-4xl">
-                        <span className="bg-gradient-to-r from-primary to-destructive bg-clip-text text-transparent">Functional Beauty</span>, Built for Conversion
+                        <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Functional Beauty</span>, Built for Conversion
                       </h2>
                       <p className="mt-4 text-lg text-muted-foreground">Our design philosophy is simple: create interfaces that are not only aesthetically pleasing but also intuitive and effective. We focus on user-centric design to ensure your digital product solves real problems and achieves your business goals.</p>
                       
                       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
                           {processSteps.map((step) => (
-                              <div key={step.title} className="group relative overflow-hidden rounded-2xl border border-destructive/20 bg-card/40 p-6 backdrop-blur-sm transition-all duration-300 hover:border-destructive/70 hover:shadow-2xl hover:shadow-destructive/10">
-                                <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-destructive via-transparent to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+                              <div key={step.title} className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-card/40 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/70 hover:shadow-2xl hover:shadow-primary/10">
+                                <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
                                 <div className="relative">
-                                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-destructive/10 text-destructive transition-all duration-300 group-hover:bg-destructive group-hover:text-destructive-foreground group-hover:scale-110">
+                                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110">
                                     <step.icon className="h-6 w-6" />
                                   </div>
                                   <h3 className="mt-4 font-semibold">{step.title}</h3>
@@ -126,7 +126,7 @@ export default function UiUxDesignPage() {
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                         {uiuxProjects.map((project) => (
                             <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
-                                <div className="relative h-[450px] overflow-hidden rounded-xl border border-white/10 bg-black/30 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                                <div className="relative h-[450px] overflow-hidden rounded-xl border border-white/10 bg-background/30 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
                                     <Image
                                         src={project.image.imageUrl}
                                         alt={project.title}
@@ -135,7 +135,7 @@ export default function UiUxDesignPage() {
                                         data-ai-hint={project.image.imageHint}
                                         sizes="(max-width: 768px) 100vw, 33vw"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                                     <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
                                         <h3 className="font-headline text-2xl font-bold">{project.title}</h3>
                                         <div className="mt-2 flex flex-wrap gap-2">
@@ -152,17 +152,17 @@ export default function UiUxDesignPage() {
             </section>
 
              {/* Tools We Use Section */}
-            <section className="bg-black py-20 md:py-28 relative">
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-destructive/10 to-transparent opacity-50 blur-3xl" />
+            <section className="bg-secondary py-20 md:py-28 relative">
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-primary/5 to-transparent opacity-50 blur-3xl" />
                 <div className="container text-center relative z-10">
                     <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-white">Tools We Use</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {tools.map((tool) => (
-                        <div key={tool.name} className="group relative rounded-2xl border border-destructive/20 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20 hover:-translate-y-1">
-                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-destructive via-transparent to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                        <div key={tool.name} className="group relative rounded-2xl border border-primary/20 bg-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
+                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
                             <div className="relative flex flex-col items-center justify-center gap-4">
                                 <div className="flex h-20 w-20 items-center justify-center">
-                                    <tool.icon className="h-10 w-10 text-white/80 transition-all duration-300 group-hover:text-destructive group-hover:drop-shadow-[0_0_10px_hsl(var(--destructive)/0.8)]" />
+                                    <tool.icon className="h-10 w-10 text-white/80 transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]" />
                                 </div>
                                 <p className="font-semibold text-sm text-center uppercase tracking-wider text-white">{tool.name}</p>
                             </div>

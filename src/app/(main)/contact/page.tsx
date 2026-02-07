@@ -92,12 +92,12 @@ export default function ContactPage() {
         </section>
       
         {/* Form and Details Section */}
-        <section id="contact-form" className="relative overflow-hidden bg-black py-20 md:py-28">
+        <section id="contact-form" className="relative overflow-hidden bg-secondary py-20 md:py-28">
             {/* Background visuals */}
             <div className="absolute inset-0 z-0">
-                <Globe className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] text-primary/10" />
-                <div className="absolute -right-1/4 -bottom-1/4 h-1/2 w-1/2 rounded-full bg-primary/20 mix-blend-screen-plus animate-pulse opacity-50 blur-3xl filter" />
-                <div className="absolute -left-1/4 -top-1/4 h-1/2 w-1/2 rounded-full bg-primary/10 mix-blend-screen-plus animate-pulse opacity-50 blur-3xl filter" style={{ animationDelay: '2s' }} />
+                <Globe className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] text-primary/5" />
+                <div className="absolute -right-1/4 -bottom-1/4 h-1/2 w-1/2 rounded-full bg-primary/10 mix-blend-screen-plus animate-pulse opacity-50 blur-3xl filter" />
+                <div className="absolute -left-1/4 -top-1/4 h-1/2 w-1/2 rounded-full bg-accent/5 mix-blend-screen-plus animate-pulse opacity-50 blur-3xl filter" style={{ animationDelay: '2s' }} />
             </div>
 
             <div className="container relative z-10">
@@ -136,8 +136,8 @@ export default function ContactPage() {
         </section>
 
         {/* Why Contact Us Section */}
-        <section className="relative overflow-hidden bg-black py-20 md:py-28">
-            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-primary/10 to-transparent opacity-50 blur-3xl" />
+        <section className="relative overflow-hidden bg-background py-20 md:py-28">
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-primary/5 to-transparent opacity-50 blur-3xl" />
             <div className="container text-center">
                 <h2 className="font-headline text-3xl font-bold md:text-4xl">Why Contact Us?</h2>
                 <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">

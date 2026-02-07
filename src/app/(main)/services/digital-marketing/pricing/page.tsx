@@ -140,7 +140,7 @@ export default function PricingPage() {
   ];
 
   return (
-    <div className="bg-black text-foreground">
+    <div className="bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-background py-20 md:py-32">
         <div className="absolute inset-0 z-0 opacity-10">
@@ -167,7 +167,7 @@ export default function PricingPage() {
       </section>
 
       {/* Pricing Cards Section */}
-      <section className="bg-black py-20 md:py-28">
+      <section className="bg-secondary py-20 md:py-28">
         <div className="container">
           <div className="grid gap-8 lg:grid-cols-3">
             {pricingPlans.map((plan) => (
@@ -184,18 +184,18 @@ export default function PricingPage() {
                 <Card
                   key={plan.name}
                   className={cn(
-                    'relative flex h-full flex-col border-border/20 bg-white/5 backdrop-blur-lg transition-all duration-300',
+                    'relative flex h-full flex-col border-border/20 bg-card/50 backdrop-blur-lg transition-all duration-300',
                     plan.popular
-                      ? 'border-2 border-destructive shadow-2xl shadow-destructive/20'
+                      ? 'border-2 border-primary shadow-2xl shadow-primary/20'
                       : 'border'
                   )}
                 >
                   {plan.popular && (
-                      <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-destructive text-destructive-foreground">MOST POPULAR 🔥</Badge>
+                      <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground">MOST POPULAR 🔥</Badge>
                   )}
                   <CardHeader className="text-center pt-8">
                       <div className="flex items-center justify-center gap-2">
-                        {plan.name === 'Basic Plan' && <Circle className="h-4 w-4 text-destructive fill-destructive" />}
+                        {plan.name === 'Basic Plan' && <Circle className="h-4 w-4 text-primary fill-primary" />}
                         {plan.name === 'Premium AI Plan' && <Cpu className="h-6 w-6 text-accent" />}
                         <CardTitle className="font-headline text-2xl">{plan.name}</CardTitle>
                       </div>
@@ -208,10 +208,10 @@ export default function PricingPage() {
                       <ul className="space-y-4">
                           {plan.features.map((feature, i) => (
                               <li key={i} className="flex items-center gap-3">
-                                  <Check className="h-5 w-5 flex-shrink-0 text-destructive" />
+                                  <Check className="h-5 w-5 flex-shrink-0 text-primary" />
                                   <span className={cn(
                                     "text-muted-foreground",
-                                    plan.name === 'Growth Plan' && feature.includes('AI-Based Targeting') && 'text-white font-semibold drop-shadow-[0_0_4px_hsl(var(--destructive)/0.7)]',
+                                    plan.name === 'Growth Plan' && feature.includes('AI-Based Targeting') && 'text-white font-semibold drop-shadow-[0_0_4px_hsl(var(--primary)/0.7)]',
                                     plan.name === 'Premium AI Plan' && (feature.includes('Complete Website Development') || feature.includes('Lead Generation Funnels')) && 'text-white font-semibold',
                                   )}>
                                     {feature}
@@ -224,9 +224,9 @@ export default function PricingPage() {
                       <Button asChild size="lg" 
                         className={cn(
                           'w-full',
-                          plan.name === 'Basic Plan' && 'border-destructive text-destructive hover:bg-destructive/10 hover:text-destructive',
-                          plan.name === 'Growth Plan' && 'bg-destructive text-destructive-foreground shadow-lg shadow-destructive/50',
-                          plan.name === 'Premium AI Plan' && 'bg-gradient-to-r from-primary to-destructive text-white'
+                          plan.name === 'Basic Plan' && 'border-primary text-primary hover:bg-primary/10 hover:text-primary',
+                          plan.name === 'Growth Plan' && 'bg-primary text-primary-foreground shadow-lg shadow-primary/50',
+                          plan.name === 'Premium AI Plan' && 'bg-gradient-to-r from-accent to-primary text-white'
                         )} 
                         variant={plan.name === 'Basic Plan' ? 'outline' : 'default'}
                       >
@@ -246,15 +246,15 @@ export default function PricingPage() {
       </section>
 
       {/* Included with every plan */}
-      <section className="bg-black py-20 md:py-28">
+      <section className="bg-background py-20 md:py-28">
         <div className="container text-center">
           <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16">What’s Included With Every Plan</h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {includedFeatures.map((value) => (
-              <div key={value.title} className="group relative rounded-xl border border-destructive/20 bg-card/50 p-8 text-left backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-destructive/50 hover:shadow-2xl hover:shadow-destructive/20">
-                <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+              <div key={value.title} className="group relative rounded-xl border border-primary/20 bg-card/50 p-8 text-left backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
                 <div className="relative">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-destructive/10 text-destructive ring-8 ring-destructive/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-destructive group-hover:text-destructive-foreground group-hover:shadow-[0_0_20px_hsl(var(--destructive)/0.5)]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)]">
                         <value.icon className="h-6 w-6" />
                     </div>
                     <h3 className="mt-6 font-headline text-xl font-semibold text-foreground">{value.title}</h3>
@@ -270,21 +270,21 @@ export default function PricingPage() {
       </section>
 
       {/* Why Aveda + Testimonials Section */}
-      <section className="bg-black py-20 md:py-28 relative overflow-hidden">
+      <section className="bg-secondary py-20 md:py-28 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_hsl(var(--destructive)/0.1)_0%,_transparent_70%)]" />
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_hsl(var(--primary)/0.1)_0%,_transparent_70%)]" />
         </div>
         <div className="container relative z-10 grid gap-16 lg:grid-cols-2 items-start">
             <div>
                 <h2 className="font-headline text-3xl font-bold md:text-4xl text-white">Why Aveda Technologies?</h2>
-                <div className="mt-2 w-20 h-1 bg-destructive shadow-[0_0_10px_hsl(var(--destructive)/0.8)]" />
+                <div className="mt-2 w-20 h-1 bg-primary shadow-[0_0_10px_hsl(var(--primary)/0.8)]" />
                 <p className="mt-6 text-muted-foreground">We're more than a service provider; we're your technology partner committed to delivering results with transparent pricing and an AI-first approach.</p>
                  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {whyAveda.map((item) => (
-                        <div key={item.title} className="group relative overflow-hidden rounded-xl border border-destructive/20 bg-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20 hover:-translate-y-1">
-                          <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+                        <div key={item.title} className="group relative overflow-hidden rounded-xl border border-primary/20 bg-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
+                          <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
                           <div className="relative">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-destructive/10 text-destructive ring-4 ring-destructive/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-destructive group-hover:text-destructive-foreground group-hover:shadow-[0_0_20px_hsl(var(--destructive)/0.5)]">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary ring-4 ring-primary/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)]">
                                 <item.icon className="h-6 w-6" />
                             </div>
                             <h3 className="mt-4 font-semibold text-foreground">{item.title}</h3>
@@ -297,12 +297,12 @@ export default function PricingPage() {
                  {testimonials.map((testimonial) => {
                      const image = PlaceHolderImages.find((img) => img.id === testimonial.avatarId);
                      return (
-                        <Card key={testimonial.name} className="relative overflow-hidden border-destructive/20 bg-card/50 backdrop-blur-lg shadow-lg shadow-destructive/10">
-                          <div className="absolute top-4 left-4 text-7xl font-bold text-destructive/20 opacity-50">“</div>
+                        <Card key={testimonial.name} className="relative overflow-hidden border-primary/20 bg-card/50 backdrop-blur-lg shadow-lg shadow-primary/10">
+                          <div className="absolute top-4 left-4 text-7xl font-bold text-primary/20 opacity-50">“</div>
                             <CardContent className="pt-10">
                                 <p className="relative z-10 text-lg italic text-muted-foreground">"{testimonial.quote}"</p>
                                 <div className="mt-6 flex items-center gap-4">
-                                     {image && <Image src={image.imageUrl} alt={testimonial.name} width={48} height={48} className="rounded-full border-2 border-destructive/50" data-ai-hint={image.imageHint} />}
+                                     {image && <Image src={image.imageUrl} alt={testimonial.name} width={48} height={48} className="rounded-full border-2 border-primary/50" data-ai-hint={image.imageHint} />}
                                     <div>
                                         <p className="font-semibold">{testimonial.name}</p>
                                         <p className="text-sm text-muted-foreground">{testimonial.company}</p>
@@ -310,12 +310,12 @@ export default function PricingPage() {
                                     <div className="ml-auto">
                                       {testimonial.name === 'Ankit Sharma' && (
                                         <div className="text-center">
-                                          <p className="font-headline text-3xl font-bold text-destructive">200%</p>
+                                          <p className="font-headline text-3xl font-bold text-primary">200%</p>
                                           <p className="text-xs text-muted-foreground">Lead Growth</p>
                                         </div>
                                       )}
                                       {testimonial.name === 'Priya Singh' && (
-                                        <Star className="h-8 w-8 text-destructive fill-destructive" />
+                                        <Star className="h-8 w-8 text-primary fill-primary" />
                                       )}
                                     </div>
                                 </div>
@@ -328,14 +328,14 @@ export default function PricingPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="relative overflow-hidden border-t border-transparent bg-gradient-to-tr from-[#1a0b2e] to-black py-20 md:py-28">
+      <section className="relative overflow-hidden border-t border-transparent bg-gradient-to-tr from-[#1a0b2e] to-background py-20 md:py-28">
         <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_rgba(118,50,235,0.15)_0%,_transparent_70%)] opacity-50" />
         <div className="container relative z-10 text-center">
             <h2 className="font-headline text-4xl font-bold tracking-tight text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] md:text-5xl lg:text-6xl">
                 Ready to Grow With AI Marketing?
             </h2>
             <div className="mt-8 flex flex-col items-center justify-center gap-6 sm:flex-row">
-                <Button asChild size="lg" className="rounded-lg bg-[#E6007A] px-8 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#c40069] hover:shadow-2xl hover:shadow-[#E6007A]/50">
+                <Button asChild size="lg" className="rounded-lg bg-primary px-8 text-primary-foreground shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-primary/50">
                     <Link href="/contact">
                       Get <span className="font-extrabold mx-1">FREE</span> Strategy Call
                     </Link>

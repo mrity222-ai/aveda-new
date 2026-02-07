@@ -162,7 +162,7 @@ export default function PoliticalCampaigningPage() {
             </section>
 
             {/* How AI Wins Elections Section */}
-            <section className="py-20 md:py-28">
+            <section className="py-20 md:py-28 bg-secondary">
                 <div className="container text-center">
                     <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12">How AI Wins Elections</h2>
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -180,14 +180,14 @@ export default function PoliticalCampaigningPage() {
                     </div>
                 </div>
             </section>
-
+            
             {/* Campaign Success Stories Section */}
-            <section className="bg-black py-20 md:py-28">
+            <section className="bg-background py-20 md:py-28">
                 <div className="container">
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                         {politicalProjects.map((project) => (
                             <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
-                                <div className="relative h-[450px] overflow-hidden rounded-xl border border-white/10 bg-black/30 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                                <div className="relative h-[450px] overflow-hidden rounded-xl border border-white/10 bg-background/30 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
                                     <Image
                                         src={project.image.imageUrl}
                                         alt={project.title}
@@ -196,7 +196,7 @@ export default function PoliticalCampaigningPage() {
                                         data-ai-hint={project.image.imageHint}
                                         sizes="(max-width: 768px) 100vw, 33vw"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                                     <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
                                         <h3 className="font-headline text-2xl font-bold">{project.title}</h3>
                                         <div className="mt-2 flex flex-wrap gap-2">
@@ -213,13 +213,13 @@ export default function PoliticalCampaigningPage() {
             </section>
             
             {/* Our AI-Powered Political Services Section */}
-            <section className="bg-black py-20 md:py-28 relative overflow-hidden">
+            <section className="bg-secondary py-20 md:py-28 relative overflow-hidden">
                 <div className="absolute inset-0 z-0 opacity-20 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]">
-                    <div className="absolute inset-0 bg-[radial-gradient(hsl(var(--destructive)/0.1)_1px,transparent_1px)] [background-size:32px_32px]"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(hsl(var(--primary)/0.1)_1px,transparent_1px)] [background-size:32px_32px]"></div>
                 </div>
                 <div className="container relative z-10">
                     <div className="text-center mb-16">
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-white drop-shadow-[0_0_10px_hsl(var(--destructive)/0.5)]">
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-white drop-shadow-[0_0_10px_hsl(var(--primary)/0.5)]">
                             Political Command Center
                         </h2>
                         <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
@@ -231,10 +231,10 @@ export default function PoliticalCampaigningPage() {
                         {/* Left Cards */}
                         <div className="md:col-span-3 space-y-8">
                             {ourServicesWithIcons.slice(0, 4).map((service) => (
-                                <div key={service.title} className="group relative rounded-xl border border-destructive/20 bg-card/50 p-4 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20 hover:-translate-y-1">
-                                    <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+                                <div key={service.title} className="group relative rounded-xl border border-primary/20 bg-card/50 p-4 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
+                                    <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
                                     <div className="relative flex items-center gap-4">
-                                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-destructive/10 text-destructive transition-all duration-300 group-hover:bg-destructive group-hover:text-destructive-foreground">
+                                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                                             <service.icon className="h-5 w-5" />
                                         </div>
                                         <p className="text-sm font-medium text-muted-foreground">{service.title}</p>
@@ -255,16 +255,16 @@ export default function PoliticalCampaigningPage() {
                                     data-ai-hint={dashboardImage.imageHint}
                                 />
                             )}
-                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                             <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent"></div>
                         </div>
 
                         {/* Right Cards */}
                         <div className="md:col-span-3 space-y-8">
                             {ourServicesWithIcons.slice(4, 8).map((service) => (
-                                <div key={service.title} className="group relative rounded-xl border border-destructive/20 bg-card/50 p-4 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20 hover:-translate-y-1">
-                                    <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
+                                <div key={service.title} className="group relative rounded-xl border border-primary/20 bg-card/50 p-4 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
+                                    <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-50" />
                                     <div className="relative flex items-center gap-4">
-                                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-destructive/10 text-destructive transition-all duration-300 group-hover:bg-destructive group-hover:text-destructive-foreground">
+                                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                                             <service.icon className="h-5 w-5" />
                                         </div>
                                         <p className="text-sm font-medium text-muted-foreground">{service.title}</p>
@@ -283,7 +283,7 @@ export default function PoliticalCampaigningPage() {
             </section>
             
              {/* Process Section */}
-            <section className="py-20 md:py-28">
+            <section className="py-20 md:py-28 bg-background">
                 <div className="container">
                     <h2 className="text-center font-headline text-3xl font-bold md:text-4xl mb-16">Our Campaign Process</h2>
                     <div className="relative">
@@ -309,7 +309,7 @@ export default function PoliticalCampaigningPage() {
             </section>
 
              {/* Why Choose Us Section */}
-            <section className="bg-black py-20 md:py-28 relative overflow-hidden">
+            <section className="bg-secondary py-20 md:py-28 relative overflow-hidden">
                 <div className="absolute inset-0 z-0 opacity-20">
                     <div className="absolute -left-1/4 -top-1/4 w-1/2 h-full bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" />
                     <div className="absolute -right-1/4 -bottom-1/4 w-1/2 h-full bg-accent/10 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }} />

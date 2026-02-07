@@ -104,8 +104,8 @@ export default function AppDevelopmentPage() {
     return (
         <div className="bg-background text-foreground">
             {/* Hero Section */}
-            <section className="relative overflow-hidden bg-black py-20 md:py-32">
-                 <div className="absolute inset-0 z-0 opacity-20">
+            <section className="relative overflow-hidden bg-background py-20 md:py-32">
+                 <div className="absolute inset-0 z-0 opacity-30">
                     {heroImage && (
                         <Image
                             src={heroImage.imageUrl}
@@ -116,7 +116,7 @@ export default function AppDevelopmentPage() {
                             data-ai-hint={heroImage.imageHint}
                         />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
                 </div>
                 <div className="container relative z-10 text-center">
                     <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl text-white">
@@ -137,16 +137,16 @@ export default function AppDevelopmentPage() {
             </section>
 
             {/* What We Build Section */}
-            <section className="bg-black py-20 md:py-28">
+            <section className="bg-background py-20 md:py-28">
                 <div className="container text-center">
                     <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12 text-white">What We Build</h2>
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {whatWeBuild.map((item) => (
-                        <div key={item.title} className="group rounded-xl border border-[#1a1a1a] bg-[#0a0a0a] p-8 text-center transition-all duration-300 hover:border-destructive hover:shadow-[0_0_20px_rgba(255,0,0,0.2)] hover:-translate-y-2">
+                        <div key={item.title} className="group rounded-xl border border-primary/20 bg-card/50 p-8 text-center backdrop-blur-sm transition-all duration-300 hover:border-primary hover:shadow-[0_0_20px_hsl(var(--primary)/0.2)] hover:-translate-y-2">
                             <div className="flex justify-center">
                                 <div className="relative flex h-20 w-20 items-center justify-center rounded-full">
-                                    <div className="absolute inset-0 rounded-full bg-destructive/10 blur-lg transition-all duration-300 group-hover:blur-xl"></div>
-                                    <item.icon className="relative h-10 w-10 text-destructive drop-shadow-[0_0_8px_hsl(var(--destructive)/0.8)]" />
+                                    <div className="absolute inset-0 rounded-full bg-primary/10 blur-lg transition-all duration-300 group-hover:blur-xl"></div>
+                                    <item.icon className="relative h-10 w-10 text-primary drop-shadow-[0_0_8px_hsl(var(--primary)/0.8)]" />
                                 </div>
                             </div>
                             <h3 className="mt-6 font-headline text-xl font-semibold text-white">{item.title}</h3>
@@ -158,12 +158,16 @@ export default function AppDevelopmentPage() {
             </section>
 
             {/* Portfolio Section */}
-            <section className="bg-background py-20 md:py-28">
+            <section className="bg-secondary py-20 md:py-28">
                 <div className="container">
+                     <div className="text-center mb-12">
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl">Our App Showcase</h2>
+                        <p className="mt-4 text-lg text-muted-foreground">Explore some of the mobile experiences we've crafted.</p>
+                    </div>
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                         {appProjects.map((project) => (
                             <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
-                                <div className="relative h-[450px] overflow-hidden rounded-xl border border-white/10 bg-black/30 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                                <div className="relative h-[450px] overflow-hidden rounded-xl border border-white/10 bg-background/30 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
                                     <Image
                                         src={project.image.imageUrl}
                                         alt={project.title}
@@ -172,7 +176,7 @@ export default function AppDevelopmentPage() {
                                         data-ai-hint={project.image.imageHint}
                                         sizes="(max-width: 768px) 100vw, 33vw"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                                     <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
                                         <h3 className="font-headline text-2xl font-bold">{project.title}</h3>
                                         <div className="mt-2 flex flex-wrap gap-2">
@@ -189,20 +193,20 @@ export default function AppDevelopmentPage() {
             </section>
             
             {/* Process Section */}
-            <section className="bg-black py-20 md:py-28 relative">
-                <div className="absolute inset-x-0 top-1/4 h-1/2 bg-gradient-to-t from-destructive/10 to-transparent opacity-30 blur-3xl" />
+            <section className="bg-background py-20 md:py-28 relative">
+                <div className="absolute inset-x-0 top-1/4 h-1/2 bg-gradient-to-t from-primary/5 to-transparent opacity-30 blur-3xl" />
                 <div className="container relative z-10">
                     <h2 className="text-center font-headline text-3xl font-bold md:text-4xl mb-24 text-white">Our Development Process</h2>
                     <div className="relative">
-                        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-destructive/20 shadow-[0_0_10px_hsl(var(--destructive)/0.5)] -translate-x-1/2"></div>
+                        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 shadow-[0_0_10px_hsl(var(--primary)/0.5)] -translate-x-1/2"></div>
                         {processSteps.map((step, index) => (
                             <div key={step.title} className={cn("relative mb-12 flex items-center w-full", index % 2 === 0 ? "justify-start" : "justify-end")}>
                                 <div className={cn("w-1/2", index % 2 === 0 ? "pr-8" : "pl-8")}>
                                 <div className={cn(
-                                    "group relative overflow-hidden p-6 rounded-lg border border-destructive/30 bg-black/50 backdrop-blur-lg shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-destructive/20", 
+                                    "group relative overflow-hidden p-6 rounded-lg border border-primary/30 bg-card/50 backdrop-blur-lg shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20", 
                                     index % 2 === 0 ? "text-left" : "text-right"
                                 )}>
-                                    <div className={cn("absolute top-0 font-headline text-8xl font-bold text-destructive/10 -translate-y-4 transition-transform duration-300 group-hover:scale-110", index % 2 === 0 ? "right-0 translate-x-4" : "left-0 -translate-x-4")}>
+                                    <div className={cn("absolute top-0 font-headline text-8xl font-bold text-primary/10 -translate-y-4 transition-transform duration-300 group-hover:scale-110", index % 2 === 0 ? "right-0 translate-x-4" : "left-0 -translate-x-4")}>
                                         0{index + 1}
                                     </div>
                                     <div className="relative">
@@ -211,8 +215,8 @@ export default function AppDevelopmentPage() {
                                     </div>
                                     </div>
                                 </div>
-                                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-black p-2 rounded-lg border-2 border-destructive/50">
-                                    <div className="flex h-12 w-12 items-center justify-center rounded-md bg-destructive/10 text-destructive">
+                                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-background p-2 rounded-lg border-2 border-primary/50">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-md bg-primary/10 text-primary">
                                         <step.icon className="h-7 w-7" />
                                     </div>
                                 </div>
@@ -223,16 +227,16 @@ export default function AppDevelopmentPage() {
             </section>
 
             {/* Technologies Section */}
-            <section className="bg-black py-20 md:py-28 relative">
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-destructive/10 to-transparent opacity-50 blur-3xl" />
+            <section className="bg-secondary py-20 md:py-28 relative">
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-primary/5 to-transparent opacity-50 blur-3xl" />
                 <div className="container text-center relative z-10">
                     <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-white">Technologies We Use</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {technologies.map((tech) => (
-                        <div key={tech.name} className="group relative rounded-2xl border border-destructive/20 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-destructive/40 hover:shadow-2xl hover:shadow-destructive/20 hover:-translate-y-1">
-                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-destructive via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
+                        <div key={tech.name} className="group relative rounded-2xl border border-primary/20 bg-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
+                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-primary via-transparent to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
                             <div className="relative flex flex-col items-center justify-center gap-4">
-                                <tech.icon className="h-10 w-10 text-white/80 transition-all duration-300 group-hover:text-destructive group-hover:drop-shadow-[0_0_10px_hsl(var(--destructive)/0.8)]" />
+                                <tech.icon className="h-10 w-10 text-white/80 transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]" />
                                 <p className="font-semibold text-sm text-center uppercase tracking-wider text-white">{tech.name}</p>
                             </div>
                         </div>
@@ -242,7 +246,7 @@ export default function AppDevelopmentPage() {
             </section>
             
             {/* Why Choose Us Section */}
-            <section className="bg-secondary py-20 md:py-28">
+            <section className="bg-background py-20 md:py-28">
                 <div className="container grid md:grid-cols-2 gap-16 items-center">
                     <div>
                         <h2 className="font-headline text-3xl font-bold md:text-4xl">Why Choose Us for Your App Development</h2>

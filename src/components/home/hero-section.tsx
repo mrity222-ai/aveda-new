@@ -25,7 +25,7 @@ export default function HeroSection() {
           <div className="animate-in fade-in slide-in-from-bottom-10 duration-700">
             <h1 className="font-headline text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
               Driving Business Growth with{' '}
-              <span className="text-primary">
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Intelligent IT Solutions
               </span>
             </h1>
@@ -38,7 +38,7 @@ export default function HeroSection() {
             <Button asChild size="lg" variant="default">
               <Link href="/services">Explore Our Services</Link>
             </Button>
-            <Button asChild size="lg" variant="destructive">
+            <Button asChild size="lg" variant="outline">
               <Link href="/contact">Contact Sales</Link>
             </Button>
           </div>

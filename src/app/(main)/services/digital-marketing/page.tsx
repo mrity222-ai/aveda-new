@@ -66,7 +66,7 @@ export default function DigitalMarketingPage() {
                             data-ai-hint={heroBgImage.imageHint}
                         />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-primary/30"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-primary/20"></div>
                 </div>
                 <div className="container relative z-10 text-center">
                     <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
@@ -90,13 +90,13 @@ export default function DigitalMarketingPage() {
             </section>
 
             {/* Digital Marketing & Results Section */}
-            <section className="bg-black py-20 md:py-28">
+            <section className="bg-background py-20 md:py-28">
                 <div className="container grid md:grid-cols-1 gap-16 items-center">
                     {/* Left Side (Content) */}
                     <div className="space-y-8 animate-in fade-in slide-in-from-left-12 duration-700">
                         <h2 className="font-headline text-4xl font-bold tracking-tight md:text-5xl">
                             Campaigns Crafted by Us, <br />
-                            <span className="bg-gradient-to-r from-primary to-destructive bg-clip-text text-transparent">
+                            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                                 Results Driven for You
                             </span>
                         </h2>
@@ -118,7 +118,7 @@ export default function DigitalMarketingPage() {
                                 <p className="mt-2 text-muted-foreground">Happy Clients</p>
                             </div>
                         </div>
-                        <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-primary to-destructive text-primary-foreground shadow-[0_0_20px_hsl(var(--primary)/0.5)] transition-all duration-300 hover:scale-105">
+                        <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-[0_0_20px_hsl(var(--primary)/0.5)] transition-all duration-300 hover:scale-105">
                             <Link href="/contact">
                                 Get in Touch <MoveRight className="ml-2 h-5 w-5" />
                             </Link>
@@ -128,7 +128,7 @@ export default function DigitalMarketingPage() {
             </section>
 
             {/* Service Details Section */}
-            <section className="bg-black py-20 md:py-28">
+            <section className="bg-secondary py-20 md:py-28">
               <div className="container items-center gap-16 md:grid md:grid-cols-2">
                   <div className="relative h-96 w-full md:h-[500px]">
                       {marketingImage && (
@@ -159,7 +159,7 @@ export default function DigitalMarketingPage() {
                               </div>
                           ))}
                       </div>
-                      <Button asChild size="lg" className="mt-8 w-full bg-gradient-to-r from-destructive to-primary text-primary-foreground transition-all hover:scale-105">
+                      <Button asChild size="lg" className="mt-8 w-full bg-gradient-to-r from-accent to-primary text-primary-foreground transition-all hover:scale-105">
                           <Link href="/services/digital-marketing/pricing">View Pricing &amp; Plans</Link>
                       </Button>
                   </div>
@@ -176,7 +176,7 @@ export default function DigitalMarketingPage() {
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                         {marketingProjects.map((project) => (
                             <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
-                                <div className="relative h-[450px] overflow-hidden rounded-xl border border-white/10 bg-black/30 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+                                <div className="relative h-[450px] overflow-hidden rounded-xl border border-white/10 bg-background/30 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
                                     <Image
                                         src={project.image.imageUrl}
                                         alt={project.title}
@@ -185,7 +185,7 @@ export default function DigitalMarketingPage() {
                                         data-ai-hint={project.image.imageHint}
                                         sizes="(max-width: 768px) 100vw, 33vw"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                                     <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
                                         <h3 className="font-headline text-2xl font-bold">{project.title}</h3>
                                         <div className="mt-2 flex flex-wrap gap-2">
@@ -202,7 +202,7 @@ export default function DigitalMarketingPage() {
             </section>
 
              {/* Final CTA */}
-            <section className="relative overflow-hidden border-t border-transparent bg-gradient-to-tr from-[#1a0b2e] to-black py-20 md:py-28">
+            <section className="relative overflow-hidden border-t border-transparent bg-gradient-to-tr from-[#1a0b2e] to-background py-20 md:py-28">
                 <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_rgba(118,50,235,0.15)_0%,_transparent_70%)] opacity-50" />
                 <div className="container relative z-10 text-center">
                     <h2 className="font-headline text-4xl font-bold tracking-tight text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] md:text-5xl lg:text-6xl">
