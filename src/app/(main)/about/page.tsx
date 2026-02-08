@@ -221,14 +221,19 @@ export default function AboutPage() {
       {/* Leadership Section */}
       <section className="bg-background py-20 md:py-28">
         <div className="container text-center">
-          <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">Meet Our Leadership</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">The visionaries driving our innovation and success.</p>
+          <h2 className="font-headline text-3xl font-bold uppercase text-accent md:text-4xl">
+            Meet Our Team of Innovators
+          </h2>
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+            A Global Team of Innovators driving our success.
+          </p>
           <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
             {leadership.map((leader, index) => {
               const image = PlaceHolderImages.find(p => p.id === leader.imageId);
               const leaderOrder = [1,0,2];
+              const isHighlighted = leader.name === 'Vinod Kumar';
               return (
-                <div key={leader.name} className={cn("group relative overflow-hidden rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary hover:shadow-primary/20 soft-shadow hover:-translate-y-2", `md:order-${leaderOrder[index]}`)}>
+                <div key={leader.name} className={cn("group relative overflow-hidden rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/20 soft-shadow hover:-translate-y-2", `md:order-${leaderOrder[index]}`)}>
                   {image && (
                     <div className="relative aspect-square overflow-hidden rounded-lg">
                       <Image
@@ -238,12 +243,16 @@ export default function AboutPage() {
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                         data-ai-hint={image.imageHint}
                       />
-                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 group-hover:from-black/80" />
                     </div>
                   )}
                   <div className="mt-4 text-center">
-                    <h3 className="font-headline text-2xl font-bold text-accent transition-colors duration-300 group-hover:text-primary">{leader.name}</h3>
-                    <p className="mt-1 text-muted-foreground transition-colors duration-300" style={{color: 'var(--cyan)'}}>{leader.designation}</p>
+                    <h3 className={cn(
+                        "font-headline text-2xl font-bold text-accent transition-colors duration-300",
+                        isHighlighted ? "text-primary" : "group-hover:text-primary"
+                    )}>
+                        {leader.name}
+                    </h3>
+                    <p className="mt-1 text-muted-foreground">{leader.designation}</p>
                     <div className="mt-4 flex justify-center space-x-3">
                       <a href={leader.socials.twitter} className="text-muted-foreground hover:text-primary"><Twitter className="h-5 w-5" /></a>
                       <a href={leader.socials.linkedin} className="text-muted-foreground hover:text-primary"><Linkedin className="h-5 w-5" /></a>
