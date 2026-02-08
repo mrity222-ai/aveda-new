@@ -56,6 +56,12 @@ export default function AboutPage() {
       designation: 'Co-Founder & CEO',
       imageId: 'leader-raj',
       socials: { twitter: '#', linkedin: '#' }
+    },
+    {
+      name: 'Deepak Yadav',
+      designation: 'Co-Founder & Innovation & Growth Lead',
+      imageId: 'leader-deepak',
+      socials: { twitter: '#', linkedin: '#' }
     }
   ];
 
@@ -228,7 +234,7 @@ export default function AboutPage() {
                 </div>
             </div>
           
-            <div className="max-w-sm mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
                 {leadership.map((leader, index) => {
                 const image = PlaceHolderImages.find(p => p.id === leader.imageId);
                 return (
