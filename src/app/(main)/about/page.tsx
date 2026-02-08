@@ -222,48 +222,58 @@ export default function AboutPage() {
       <section className="bg-background py-20 md:py-28 relative overflow-hidden">
         <div className="absolute top-0 left-0 -z-10 h-64 w-64 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-50 blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 -z-10 h-64 w-64 bg-gradient-to-tl from-accent/10 via-transparent to-transparent opacity-50 blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
-        <div className="container text-center">
-          <h2 className="font-headline text-3xl font-bold uppercase text-foreground md:text-4xl">
-            Meet Our Team of Innovators
-          </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            A global team building future-ready technology solutions.
-          </p>
-          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
-            {leadership.map((leader, index) => {
-              const image = PlaceHolderImages.find(p => p.id === leader.imageId);
-              const leaderOrder = [1,0,2];
-              const isHighlighted = leader.name === 'Vinod Kumar';
-              return (
-                <div key={leader.name} className={cn("group relative overflow-hidden rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/20 soft-shadow hover:-translate-y-2", `md:order-${leaderOrder[index]}`)}>
-                  {image && (
-                    <div className="relative aspect-square overflow-hidden rounded-lg">
-                      <Image
-                        src={image.imageUrl}
-                        alt={leader.name}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                        data-ai-hint={image.imageHint}
-                      />
-                    </div>
-                  )}
-                  <div className="mt-4 text-center">
-                    <h3 className={cn(
-                        "font-headline text-2xl font-bold text-foreground transition-colors duration-300",
-                        isHighlighted ? "text-primary" : "group-hover:text-primary"
-                    )}>
-                        {leader.name}
-                    </h3>
-                    <p className="mt-1 text-muted-foreground">{leader.designation}</p>
-                    <div className="mt-4 flex justify-center space-x-3">
-                      <a href={leader.socials.twitter} className="text-muted-foreground hover:text-primary"><Twitter className="h-5 w-5" /></a>
-                      <a href={leader.socials.linkedin} className="text-muted-foreground hover:text-primary"><Linkedin className="h-5 w-5" /></a>
-                    </div>
-                  </div>
+        <div className="container">
+            <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
+                <div className="text-left">
+                    <h2 className="font-headline text-4xl font-bold uppercase text-foreground md:text-5xl">
+                        Meet Our Team of Innovators
+                    </h2>
+                    <p className="mt-6 max-w-xl text-lg text-muted-foreground">
+                        A global team building future-ready technology solutions.
+                    </p>
                 </div>
-              )
-            })}
-          </div>
+                <div className="relative hidden md:flex h-64 items-center justify-center">
+                    <div className="absolute h-80 w-80 rounded-full border-2 border-dashed border-primary/30 animate-spin-slow opacity-50" />
+                    <div className="absolute h-60 w-60 rounded-full border-2 border-dashed border-accent/30 animate-spin-slow-reverse opacity-50" />
+                    <Users className="relative h-32 w-32 text-accent opacity-30" />
+                </div>
+            </div>
+          
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+                {leadership.map((leader, index) => {
+                const image = PlaceHolderImages.find(p => p.id === leader.imageId);
+                const leaderOrder = [1,0,2];
+                const isHighlighted = leader.name === 'Vinod Kumar';
+                return (
+                    <div key={leader.name} className={cn("group relative overflow-hidden rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/20 soft-shadow hover:-translate-y-2", `md:order-${leaderOrder[index]}`)}>
+                    {image && (
+                        <div className="relative aspect-square overflow-hidden rounded-lg">
+                        <Image
+                            src={image.imageUrl}
+                            alt={leader.name}
+                            fill
+                            className="object-cover transition-transform duration-500 group-hover:scale-110"
+                            data-ai-hint={image.imageHint}
+                        />
+                        </div>
+                    )}
+                    <div className="mt-4 text-center">
+                        <h3 className={cn(
+                            "font-headline text-2xl font-bold text-foreground transition-colors duration-300",
+                            isHighlighted ? "text-primary" : "group-hover:text-primary"
+                        )}>
+                            {leader.name}
+                        </h3>
+                        <p className="mt-1 text-muted-foreground">{leader.designation}</p>
+                        <div className="mt-4 flex justify-center space-x-3">
+                        <a href={leader.socials.twitter} className="text-muted-foreground hover:text-primary"><Twitter className="h-5 w-5" /></a>
+                        <a href={leader.socials.linkedin} className="text-muted-foreground hover:text-primary"><Linkedin className="h-5 w-5" /></a>
+                        </div>
+                    </div>
+                    </div>
+                )
+                })}
+            </div>
         </div>
       </section>
 
