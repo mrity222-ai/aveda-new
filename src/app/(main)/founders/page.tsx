@@ -7,8 +7,71 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
+import { useState, useMemo } from 'react';
+import { Button } from '@/components/ui/button';
+
+const allGalleryItems = [
+  {
+    id: 'gallery-field-work',
+    title: 'Agritech Field Work',
+    category: 'Agritech Field Work',
+    image: PlaceHolderImages.find(p => p.id === 'p-gramik-connect')!,
+    width: 500,
+    height: 700
+  },
+  {
+    id: 'gallery-ai-research',
+    title: 'AI Research',
+    category: 'AI Research',
+    image: PlaceHolderImages.find(p => p.id === 'p-ai-sales-crm')!,
+    width: 500,
+    height: 400
+  },
+  {
+    id: 'gallery-workshop',
+    title: 'Events & Workshops',
+    category: 'Events & Workshops',
+    image: PlaceHolderImages.find(p => p.id === 'p-ed-tech')!,
+    width: 500,
+    height: 600
+  },
+  {
+    id: 'gallery-team',
+    title: 'Team Innovators',
+    category: 'Team Innovators',
+    image: PlaceHolderImages.find(p => p.id === 'about-us-image')!,
+    width: 500,
+    height: 500
+  },
+  {
+    id: 'gallery-iit-kanpur',
+    title: 'IIT Kanpur Session',
+    category: 'Events & Workshops',
+    image: PlaceHolderImages.find(p => p.id === 'p-corporate-website')!,
+    width: 500,
+    height: 400,
+  },
+  {
+      id: 'gallery-robotics',
+      title: 'Robotics & Automation',
+      category: 'AI Research',
+      image: PlaceHolderImages.find(p => p.id === 'p-enterprise-erp')!,
+      width: 500,
+      height: 650
+  }
+];
+
+const galleryCategories = ['All', 'Agritech Field Work', 'AI Research', 'Events & Workshops', 'Team Innovators'];
+
 
 export default function FoundersPage() {
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  const filteredItems = useMemo(() => {
+      if (activeCategory === 'All') return allGalleryItems;
+      return allGalleryItems.filter(item => item.category === activeCategory);
+  }, [activeCategory]);
+  
   const founders = [
     {
       name: 'Raj Mani Yadav',
@@ -47,13 +110,6 @@ export default function FoundersPage() {
 
   const raj = founders[0];
   const rajImage = PlaceHolderImages.find(p => p.id === raj.imageId);
-  const galleryImages = [
-    PlaceHolderImages.find(p => p.id === 'p-ai-sales-crm'),
-    PlaceHolderImages.find(p => p.id === 'p-health-tech'),
-    PlaceHolderImages.find(p => p.id === 'p-political-dashboard'),
-    PlaceHolderImages.find(p => p.id === 'p-b2b-seo'),
-  ].filter((p): p is NonNullable<typeof p> => !!p);
-
 
   return (
     <div className="bg-background text-foreground">
@@ -159,27 +215,42 @@ export default function FoundersPage() {
       </section>
 
       {/* Gallery Section */}
-      <section className="bg-secondary py-20 md:py-28">
+      <section className="bg-accent py-20 md:py-28">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">Our Vision in Action</h2>
-            <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-              Visualizing the impact of our intelligent solutions across different domains.
+            <h2 className="font-headline text-3xl font-bold text-accent-foreground md:text-4xl">Our Vision in Action</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-accent-foreground/80">
+              A gallery of our work, research, and team moments that drive our mission forward.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {galleryImages.map((image) => (
-              <div key={image.id} className="group relative aspect-video overflow-hidden rounded-2xl border bg-card soft-shadow">
+
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {galleryCategories.map((category) => (
+                <Button
+                    key={category}
+                    variant={activeCategory === category ? 'default' : 'secondary'}
+                    onClick={() => setActiveCategory(category)}
+                    className="rounded-full px-4 py-1 h-auto text-sm"
+                >
+                    {category}
+                </Button>
+            ))}
+          </div>
+          
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
+            {filteredItems.map((item) => (
+              <div key={item.id} className="group relative overflow-hidden rounded-2xl border-2 border-transparent hover:border-primary transition-all duration-300 break-inside-avoid soft-shadow">
                 <Image
-                  src={image.imageUrl}
-                  alt={image.description}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  data-ai-hint={image.imageHint}
+                  src={item.image.imageUrl}
+                  alt={item.title}
+                  width={item.width}
+                  height={item.height}
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+                  data-ai-hint={item.image.imageHint}
                 />
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                 <div className="absolute bottom-0 left-0 p-6">
-                    <p className="text-white font-semibold">{image.description}</p>
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                 <div className="absolute bottom-0 left-0 w-full p-4 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+                    <p className="text-white font-semibold text-lg drop-shadow-md">{item.title}</p>
                  </div>
               </div>
             ))}
