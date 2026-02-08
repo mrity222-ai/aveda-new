@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Target, Cog, BrainCircuit, Sprout, Quote, GraduationCap, Bot, Container, Globe, Cpu, BarChart, Signal, Cloud, ShieldCheck, Users } from 'lucide-react';
+import { Target, Cog, BrainCircuit, Sprout, Quote, GraduationCap, Bot, Container, Cpu } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -64,36 +64,6 @@ export default function FoundersPage() {
       icon: Container,
       title: 'Intelligent Logistics',
       description: 'Optimizing supply chains with AI-powered routing, demand forecasting, and automation.',
-    },
-    {
-      icon: Globe,
-      title: 'Digital Ecosystems',
-      description: 'Creating integrated platforms that connect services, users, and data seamlessly.',
-    },
-    {
-      icon: BarChart,
-      title: 'Data Analytics & Insights',
-      description: 'Transforming raw data into actionable intelligence for strategic business growth.',
-    },
-    {
-      icon: Signal,
-      title: 'IoT & Connected Devices',
-      description: 'Engineering smart, connected devices that gather data and enable remote control.',
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Designing and managing scalable, secure, and resilient cloud-native solutions.',
-    },
-    {
-      icon: ShieldCheck,
-      title: 'Cybersecurity',
-      description: 'Protecting digital assets with robust security protocols and threat intelligence.',
-    },
-    {
-      icon: Users,
-      title: 'User-Centric Design',
-      description: 'Crafting intuitive and engaging user experiences that drive adoption and satisfaction.',
     },
   ];
 
@@ -217,7 +187,7 @@ export default function FoundersPage() {
               We are dedicated to pioneering solutions across key technological domains that will shape the future of industry and society.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {focusAreas.map((area) => (
               <div key={area.title} className="group relative overflow-hidden rounded-2xl border bg-card p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow">
                 <div className="relative flex flex-col items-center h-full">
