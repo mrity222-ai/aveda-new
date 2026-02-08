@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import { BrainCircuit, Target, TrendingUp, Users } from 'lucide-react';
+import { BrainCircuit, Target, TrendingUp, Users, Twitter, Linkedin } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
@@ -49,6 +49,27 @@ export default function AboutPage() {
     { name: 'Digital India', imageId: 'cert-digital-india' },
   ];
 
+  const leadership = [
+    {
+      name: 'Raj Mani Yadav',
+      designation: 'Co-Founder & CEO',
+      imageId: 'leader-raj',
+      socials: { twitter: '#', linkedin: '#' }
+    },
+    {
+      name: 'Vinod Kumar',
+      designation: 'Founder',
+      imageId: 'leader-vinod',
+      socials: { twitter: '#', linkedin: '#' }
+    },
+    {
+      name: 'Deepak Yadav',
+      designation: 'Co-Founder & CTO',
+      imageId: 'leader-deepak',
+      socials: { twitter: '#', linkedin: '#' }
+    }
+  ];
+
   const Hexagon = ({
     name,
     imageUrl,
@@ -60,7 +81,6 @@ export default function AboutPage() {
   }) => (
     <div
       className="group relative flex h-[115.47px] w-[100px] animate-in items-center justify-center zoom-in-90 fade-in transition-all duration-300 hover:z-10 hover:scale-110"
-      style={{ animationDelay: delay }}
     >
       <div
         className="absolute inset-0 border bg-card/80 shadow-sm transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-lg"
@@ -195,6 +215,44 @@ export default function AboutPage() {
                     </div>
                 ))}
             </div>
+        </div>
+      </section>
+
+      {/* Leadership Section */}
+      <section className="bg-background py-20 md:py-28">
+        <div className="container text-center">
+          <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">Meet Our Leadership</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">The visionaries driving our innovation and success.</p>
+          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+            {leadership.map((leader, index) => {
+              const image = PlaceHolderImages.find(p => p.id === leader.imageId);
+              const leaderOrder = [1,0,2];
+              return (
+                <div key={leader.name} className={cn("group relative overflow-hidden rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary hover:shadow-primary/20 soft-shadow hover:-translate-y-2", `md:order-${leaderOrder[index]}`)}>
+                  {image && (
+                    <div className="relative aspect-square overflow-hidden rounded-lg">
+                      <Image
+                        src={image.imageUrl}
+                        alt={leader.name}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-ai-hint={image.imageHint}
+                      />
+                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 group-hover:from-black/80" />
+                    </div>
+                  )}
+                  <div className="mt-4 text-center">
+                    <h3 className="font-headline text-2xl font-bold text-accent transition-colors duration-300 group-hover:text-primary">{leader.name}</h3>
+                    <p className="mt-1 text-muted-foreground transition-colors duration-300" style={{color: 'var(--cyan)'}}>{leader.designation}</p>
+                    <div className="mt-4 flex justify-center space-x-3">
+                      <a href={leader.socials.twitter} className="text-muted-foreground hover:text-primary"><Twitter className="h-5 w-5" /></a>
+                      <a href={leader.socials.linkedin} className="text-muted-foreground hover:text-primary"><Linkedin className="h-5 w-5" /></a>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </section>
 

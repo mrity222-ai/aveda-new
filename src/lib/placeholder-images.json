@@ -305,6 +305,24 @@
       "description": "Futuristic local SEO dashboard with a holographic city map",
       "imageUrl": "https://images.unsplash.com/photo-1642427749670-f20e2e76f8c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzc0NDk0MDU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "futuristic dashboard"
+    },
+    {
+      "id": "leader-raj",
+      "description": "Professional corporate portrait of Raj Mani Yadav",
+      "imageUrl": "https://images.unsplash.com/photo-1641260774125-04d527b376a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYWxlJTIwY29ycG9yYXRlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcwNTMzMDkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male corporate portrait"
+    },
+    {
+      "id": "leader-vinod",
+      "description": "Professional corporate portrait of Vinod Kumar",
+      "imageUrl": "https://images.unsplash.com/photo-1672825523661-80df832c6a1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYWxlJTIwY29ycG9yYXRlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcwNTMzMDkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male corporate portrait"
+    },
+    {
+      "id": "leader-deepak",
+      "description": "Professional corporate portrait of Deepak Yadav",
+      "imageUrl": "https://images.unsplash.com/photo-1672825523661-80df832c6a1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYWxlJTIwY29ycG9yYXRlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcwNTMzMDkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male corporate portrait"
     }
   ]
 }
