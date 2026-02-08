@@ -266,11 +266,7 @@ export default function AboutPage() {
                             {leader.name}
                         </h3>
                         <p className="mt-1 text-muted-foreground">{leader.designation}</p>
-                        <div className="mt-4 flex justify-center space-x-3">
-                        <a href={leader.socials.twitter} className="text-muted-foreground hover:text-primary"><Twitter className="h-5 w-5" /></a>
-                        <a href={leader.socials.linkedin} className="text-muted-foreground hover:text-primary"><Linkedin className="h-5 w-5" /></a>
-                        </div>
-                        <Link href="#" className="mt-6 inline-flex items-center text-sm font-semibold text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <Link href="#" className="mt-4 inline-flex items-center text-sm font-semibold text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                             View Bio <MoveRight className="ml-2 h-4 w-4" />
                         </Link>
                     </div>
