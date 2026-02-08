@@ -1,7 +1,8 @@
+'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Target, Cog, BrainCircuit, Sprout, Quote, GraduationCap, Bot, Container, Cpu } from 'lucide-react';
+import { Target, Cog, BrainCircuit, Sprout, Quote, GraduationCap } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -42,29 +43,6 @@ export default function FoundersPage() {
         },
       ]
     }
-  ];
-
-  const focusAreas = [
-    {
-      icon: Sprout,
-      title: 'Agritech Innovation',
-      description: 'Pioneering technology to modernize agriculture, increase yields, and promote sustainability.',
-    },
-    {
-      icon: Bot,
-      title: 'Robotics & Automation',
-      description: 'Developing robotic solutions to automate complex industrial processes and enhance productivity.',
-    },
-    {
-      icon: Cpu,
-      title: 'AI & Machine Learning',
-      description: 'Building intelligent systems that learn, adapt, and drive decision-making.',
-    },
-    {
-      icon: Container,
-      title: 'Intelligent Logistics',
-      description: 'Optimizing supply chains with AI-powered routing, demand forecasting, and automation.',
-    },
   ];
 
   const raj = founders[0];
@@ -177,31 +155,6 @@ export default function FoundersPage() {
                 </p>
               </CardContent>
             </Card>
-        </div>
-      </section>
-
-      {/* Core Capabilities Section */}
-      <section className="bg-background py-20 md:py-28">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">Our Core Capabilities</h2>
-            <p className="mt-4 max-w-3xl mx-auto text-muted-foreground">
-              We are dedicated to pioneering solutions across key technological domains that will shape the future of industry and society.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {focusAreas.map((area) => (
-              <div key={area.title} className="group relative overflow-hidden rounded-2xl border bg-card p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow">
-                <div className="relative flex flex-col items-center h-full">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
-                    <area.icon className="h-8 w-8" />
-                  </div>
-                  <h3 className="mt-6 font-headline text-lg font-semibold text-accent">{area.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground flex-grow">{area.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
