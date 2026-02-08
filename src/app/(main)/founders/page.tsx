@@ -208,8 +208,33 @@ export default function FoundersPage() {
         </div>
       </section>
 
-      {/* Gallery Section */}
+      {/* Core Capabilities Section */}
       <section className="bg-background py-20 md:py-28">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">Our Core Capabilities</h2>
+            <p className="mt-4 max-w-3xl mx-auto text-muted-foreground">
+              We are dedicated to pioneering solutions across key technological domains that will shape the future of industry and society.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            {focusAreas.map((area) => (
+              <div key={area.title} className="group relative overflow-hidden rounded-2xl border bg-card p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow">
+                <div className="relative flex flex-col items-center h-full">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
+                    <area.icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="mt-6 font-headline text-lg font-semibold text-accent">{area.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground flex-grow">{area.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="bg-secondary py-20 md:py-28">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">Our Vision in Action</h2>
@@ -231,31 +256,6 @@ export default function FoundersPage() {
                  <div className="absolute bottom-0 left-0 p-6">
                     <p className="text-white font-semibold">{image.description}</p>
                  </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Core Capabilities Section */}
-      <section className="bg-secondary py-20 md:py-28">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">Our Core Capabilities</h2>
-            <p className="mt-4 max-w-3xl mx-auto text-muted-foreground">
-              We are dedicated to pioneering solutions across key technological domains that will shape the future of industry and society.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {focusAreas.map((area) => (
-              <div key={area.title} className="group relative overflow-hidden rounded-2xl border bg-card p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow">
-                <div className="relative flex flex-col items-center h-full">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
-                    <area.icon className="h-8 w-8" />
-                  </div>
-                  <h3 className="mt-6 font-headline text-lg font-semibold text-accent">{area.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground flex-grow">{area.description}</p>
-                </div>
               </div>
             ))}
           </div>
