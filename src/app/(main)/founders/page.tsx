@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Target, Cog, BrainCircuit, Sprout, Quote, GraduationCap } from 'lucide-react';
+import { Target, Cog, BrainCircuit, Sprout, Quote, GraduationCap, Bot, Container, Globe, Cpu, BarChart, Signal, Cloud, ShieldCheck, Users } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -42,6 +42,59 @@ export default function FoundersPage() {
         },
       ]
     }
+  ];
+
+  const focusAreas = [
+    {
+      icon: Sprout,
+      title: 'Agritech Innovation',
+      description: 'Pioneering technology to modernize agriculture, increase yields, and promote sustainability.',
+    },
+    {
+      icon: Bot,
+      title: 'Robotics & Automation',
+      description: 'Developing robotic solutions to automate complex industrial processes and enhance productivity.',
+    },
+    {
+      icon: Cpu,
+      title: 'AI & Machine Learning',
+      description: 'Building intelligent systems that learn, adapt, and drive decision-making.',
+    },
+    {
+      icon: Container,
+      title: 'Intelligent Logistics',
+      description: 'Optimizing supply chains with AI-powered routing, demand forecasting, and automation.',
+    },
+    {
+      icon: Globe,
+      title: 'Digital Ecosystems',
+      description: 'Creating integrated platforms that connect services, users, and data seamlessly.',
+    },
+    {
+      icon: BarChart,
+      title: 'Data Analytics & Insights',
+      description: 'Transforming raw data into actionable intelligence for strategic business growth.',
+    },
+    {
+      icon: Signal,
+      title: 'IoT & Connected Devices',
+      description: 'Engineering smart, connected devices that gather data and enable remote control.',
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Infrastructure',
+      description: 'Designing and managing scalable, secure, and resilient cloud-native solutions.',
+    },
+    {
+      icon: ShieldCheck,
+      title: 'Cybersecurity',
+      description: 'Protecting digital assets with robust security protocols and threat intelligence.',
+    },
+    {
+      icon: Users,
+      title: 'User-Centric Design',
+      description: 'Crafting intuitive and engaging user experiences that drive adoption and satisfaction.',
+    },
   ];
 
   const raj = founders[0];
@@ -85,7 +138,7 @@ export default function FoundersPage() {
                     <h2 className="font-headline text-3xl font-bold text-primary">{raj.name}</h2>
                     <p className="mt-2 font-semibold text-accent">{raj.newDesignation}</p>
                     <Separator className="my-6" />
-                    <p className="text-muted-foreground text-lg">{raj.bio}</p>
+                    <p className="text-lg text-muted-foreground">{raj.bio}</p>
                     <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
                         {raj.expertise.map(item => (
                             <div key={item.title} className="flex items-center gap-3 rounded-lg border bg-card p-3 soft-shadow">
@@ -145,6 +198,31 @@ export default function FoundersPage() {
                 </p>
               </CardContent>
             </Card>
+        </div>
+      </section>
+
+      {/* Core Capabilities Section */}
+      <section className="bg-background py-20 md:py-28">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">Our Core Capabilities</h2>
+            <p className="mt-4 max-w-3xl mx-auto text-muted-foreground">
+              We are dedicated to pioneering solutions across key technological domains that will shape the future of industry and society.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            {focusAreas.map((area) => (
+              <div key={area.title} className="group relative overflow-hidden rounded-2xl border bg-card p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow">
+                <div className="relative flex flex-col items-center h-full">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
+                    <area.icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="mt-6 font-headline text-lg font-semibold text-accent">{area.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground flex-grow">{area.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
