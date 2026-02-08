@@ -1,6 +1,9 @@
 import { Mail } from 'lucide-react';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function PrivacyPolicyPage() {
+  const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
   const sections = [
     {
       title: 'Introduction',
@@ -56,8 +59,21 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="bg-white text-gray-800">
       {/* Header Section */}
-      <section className="bg-white py-20 md:py-28">
-        <div className="container text-center">
+      <section className="relative overflow-hidden bg-white py-20 md:py-28">
+        <div className="absolute inset-0 z-0 opacity-10">
+            {heroBgImage && (
+              <Image
+                src={heroBgImage.imageUrl}
+                alt="Background"
+                fill
+                className="object-cover"
+                priority
+                data-ai-hint={heroBgImage.imageHint}
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent" />
+        </div>
+        <div className="container relative z-10 text-center">
           <h1 className="font-headline text-4xl font-bold text-gray-900 md:text-5xl">
             Privacy Policy
           </h1>
