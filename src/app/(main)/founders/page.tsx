@@ -164,12 +164,14 @@ export default function FoundersPage() {
       </section>
 
       {/* Our Mission Section */}
-      <section className="bg-secondary py-20 md:py-28">
+      <section className="bg-background py-20 md:py-28 relative overflow-hidden">
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10 opacity-50"></div>
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-accent/10 rounded-full blur-3xl -z-10 opacity-50"></div>
         <div className="container text-center">
             <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl mb-8">Our Mission</h2>
-            <Card className="max-w-4xl mx-auto p-8 border-primary/20 bg-card soft-shadow">
+            <Card className="max-w-4xl mx-auto p-8 border-primary/20 bg-card/60 backdrop-blur-sm soft-shadow">
               <CardContent className="p-0">
-                <Target className="h-12 w-12 text-primary/50 mx-auto mb-4" />
+                <Target className="h-12 w-12 text-primary mx-auto mb-6" />
                 <p className="text-2xl font-headline text-foreground">
                   To drive India’s growth through Agritech, Robotics, and AI Automation by building intelligent logistics and digital innovation ecosystems.
                 </p>
