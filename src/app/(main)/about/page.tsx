@@ -53,7 +53,7 @@ export default function AboutPage() {
   const leadership = [
     {
       name: 'Raj Mani Yadav',
-      designation: 'Co-Founder & CEO',
+      designation: 'Founder | AI & Agritech Innovation Leader',
       imageId: 'leader-raj',
       bioLink: '/founders',
       socials: { twitter: '#', linkedin: '#' }
