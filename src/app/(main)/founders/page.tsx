@@ -99,6 +99,13 @@ export default function FoundersPage() {
 
   const raj = founders[0];
   const rajImage = PlaceHolderImages.find(p => p.id === raj.imageId);
+  const galleryImages = [
+    PlaceHolderImages.find(p => p.id === 'p-ai-sales-crm'),
+    PlaceHolderImages.find(p => p.id === 'p-health-tech'),
+    PlaceHolderImages.find(p => p.id === 'p-political-dashboard'),
+    PlaceHolderImages.find(p => p.id === 'p-b2b-seo'),
+  ].filter((p): p is NonNullable<typeof p> => !!p);
+
 
   return (
     <div className="bg-background text-foreground">
@@ -201,8 +208,37 @@ export default function FoundersPage() {
         </div>
       </section>
 
-      {/* Core Capabilities Section */}
+      {/* Gallery Section */}
       <section className="bg-background py-20 md:py-28">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">Our Vision in Action</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+              Visualizing the impact of our intelligent solutions across different domains.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {galleryImages.map((image) => (
+              <div key={image.id} className="group relative aspect-video overflow-hidden rounded-2xl border bg-card soft-shadow">
+                <Image
+                  src={image.imageUrl}
+                  alt={image.description}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  data-ai-hint={image.imageHint}
+                />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                 <div className="absolute bottom-0 left-0 p-6">
+                    <p className="text-white font-semibold">{image.description}</p>
+                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Core Capabilities Section */}
+      <section className="bg-secondary py-20 md:py-28">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">Our Core Capabilities</h2>
