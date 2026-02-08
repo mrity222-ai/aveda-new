@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Quote } from 'lucide-react';
+import { Target } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -77,15 +77,15 @@ export default function FoundersPage() {
         </div>
       </section>
 
-      {/* Founder Philosophy Section */}
+      {/* Our Mission Section */}
       <section className="bg-secondary py-20 md:py-28">
         <div className="container text-center">
-            <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl mb-8">Our Founder Philosophy</h2>
-            <Card className="max-w-3xl mx-auto p-8 border-primary/20 bg-card soft-shadow">
+            <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl mb-8">Our Mission</h2>
+            <Card className="max-w-4xl mx-auto p-8 border-primary/20 bg-card soft-shadow">
               <CardContent className="p-0">
-                <Quote className="h-12 w-12 text-primary/50 mx-auto mb-4" />
-                <p className="text-2xl font-headline italic text-foreground">
-                  “Innovation is not just about technology — it’s about creating meaningful impact through smart solutions.”
+                <Target className="h-12 w-12 text-primary/50 mx-auto mb-4" />
+                <p className="text-2xl font-headline text-foreground">
+                  To drive India’s growth through Agritech, Robotics, and AI Automation by building intelligent logistics and digital innovation ecosystems.
                 </p>
               </CardContent>
             </Card>
