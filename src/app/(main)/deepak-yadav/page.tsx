@@ -41,11 +41,27 @@ export default function DeepakYadavPage() {
   };
 
   const deepakImage = PlaceHolderImages.find(p => p.id === deepak.imageId);
+  const heroBgImage = PlaceHolderImages.find(p => p.id === 'hero-background');
+  const aboutUsImage = PlaceHolderImages.find(p => p.id === 'about-us-image');
+  const missionBgImage = PlaceHolderImages.find(p => p.id === 'blog-brain-city');
+
 
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-secondary py-20 md:py-32">
+        <div className="absolute inset-0 z-0 opacity-10">
+          {heroBgImage && (
+            <Image
+              src={heroBgImage.imageUrl}
+              alt="Background"
+              fill
+              className="object-cover"
+              data-ai-hint={heroBgImage.imageHint}
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-transparent"></div>
+        </div>
         <div className="container relative z-10 text-center">
           <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl">
             Meet Our Founder
@@ -57,8 +73,19 @@ export default function DeepakYadavPage() {
       </section>
 
       {/* Founder Section */}
-      <section className="py-20 md:py-28">
-        <div className="container">
+      <section className="relative bg-background py-20 md:py-28">
+         <div className="absolute inset-0 z-0 opacity-5">
+          {aboutUsImage && (
+            <Image
+              src={aboutUsImage.imageUrl}
+              alt="Background"
+              fill
+              className="object-cover"
+              data-ai-hint={aboutUsImage.imageHint}
+            />
+          )}
+        </div>
+        <div className="container relative z-10">
           
           {/* Deepak Yadav */}
           <div>
@@ -105,10 +132,10 @@ export default function DeepakYadavPage() {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     {deepak.education.map((edu, index) => (
-                        <Card key={index} className="border bg-card p-6 soft-shadow rounded-2xl">
+                        <Card key={index} className="border bg-card p-6 soft-shadow rounded-3xl">
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                                    <edu.icon className="h-6 w-6" />
+                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                    <edu.icon className="h-8 w-8" />
                                 </div>
                                 <h4 className="font-headline text-xl font-bold text-accent">{edu.category}</h4>
                             </div>
@@ -130,10 +157,22 @@ export default function DeepakYadavPage() {
       </section>
 
       {/* Our Mission Section */}
-      <section className="bg-background py-20 md:py-28 relative overflow-hidden">
+      <section className="bg-secondary py-20 md:py-28 relative overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-10">
+            {missionBgImage && (
+                <Image
+                    src={missionBgImage.imageUrl}
+                    alt="Background"
+                    fill
+                    className="object-cover"
+                    data-ai-hint={missionBgImage.imageHint}
+                />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-transparent"></div>
+        </div>
         <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10 opacity-50"></div>
         <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-accent/10 rounded-full blur-3xl -z-10 opacity-50"></div>
-        <div className="container text-center">
+        <div className="container relative z-10 text-center">
             <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl mb-8">Our Mission</h2>
             <Card className="max-w-4xl mx-auto p-8 border-primary/20 bg-card/60 backdrop-blur-sm soft-shadow">
               <CardContent className="p-0">
