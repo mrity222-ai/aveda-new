@@ -278,23 +278,36 @@ export default function PoliticalCampaigningPage() {
             </section>
             
              {/* Process Section */}
-            <section className="py-20 md:py-28 bg-background">
-                <div className="container">
-                    <h2 className="text-center font-headline text-3xl font-bold text-accent md:text-4xl mb-16">Our Campaign Process</h2>
+             <section id="process" className="bg-background py-20 md:py-28 relative overflow-hidden">
+                <div className="container relative z-10">
+                    <div className="text-center mb-24">
+                        <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">Our Campaign Process</h2>
+                        <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">A clear, data-driven path to electoral success, from initial strategy to final victory.</p>
+                    </div>
                     <div className="relative">
-                        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2"></div>
+                        <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-primary/20 -translate-x-1/2 animate-neon-pulse-line"></div>
                         {processSteps.map((step, index) => (
-                            <div key={step.title} className={cn("relative mb-12 flex items-center w-full", index % 2 === 0 ? "justify-start" : "justify-end")}>
-                                <div className={cn("w-1/2", index % 2 === 0 ? "pr-8" : "pl-8")}>
-                                <div className={cn("p-6 rounded-lg border bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/10", index % 2 === 0 ? "text-left" : "text-right")}>
-                                        <Badge variant='outline' className={cn("mb-2", index % 2 !== 0 && 'ml-auto block w-fit' )}>Step {index + 1}</Badge>
-                                        <h3 className="font-headline text-xl font-semibold text-accent">{step.title}</h3>
-                                        <p className="mt-2 text-muted-foreground">{step.description}</p>
+                            <div key={step.title} className={cn("relative mb-16 flex items-center w-full", index % 2 === 0 ? "justify-start" : "justify-end")}>
+                                <div className={cn("w-1/2", index % 2 === 0 ? "pr-12" : "pl-12")}>
+                                    <div className={cn(
+                                        "group relative overflow-hidden p-6 rounded-2xl border border-primary/20 bg-card/50 backdrop-blur-sm shadow-lg", 
+                                        "transition-all duration-300 hover:shadow-primary/20 hover:border-primary/50 hover:scale-105"
+                                    )}>
+                                        <div className={cn(
+                                            "absolute top-0 font-headline text-8xl font-bold text-primary opacity-10 drop-shadow-[0_0_8px_hsl(var(--primary)/0.5)] -translate-y-4 transition-all duration-300 group-hover:scale-110 group-hover:opacity-20", 
+                                            index % 2 === 0 ? "right-0 translate-x-4" : "left-0 -translate-x-4"
+                                        )}>
+                                            0{index + 1}
+                                        </div>
+                                        <div className="relative">
+                                            <h3 className="font-headline text-xl font-semibold text-accent">{step.title}</h3>
+                                            <p className="mt-2 text-muted-foreground">{step.description}</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-background p-2 rounded-full border-2 border-border">
-                                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                                        <step.icon className="h-6 w-6" />
+                                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-background p-2 rounded-full border-2 border-primary/50">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary shadow-lg shadow-primary/30">
+                                        <step.icon className="h-7 w-7" />
                                     </div>
                                 </div>
                             </div>
