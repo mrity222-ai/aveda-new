@@ -41,19 +41,11 @@ export default function FoundersPage() {
           icon: BrainCircuit,
         },
       ]
-    },
-    {
-      name: 'Vinod Kumar',
-      designation: 'Co-Founder & Technology Consultant',
-      imageId: 'leader-vinod',
-      bio: "Vinod Kumar brings deep expertise in technology consulting and system architecture. He plays a key role in shaping long-term technology roadmaps and guiding innovation across products. His approach combines strategic thinking with practical execution to deliver sustainable and high-performance digital solutions."
     }
   ];
 
   const raj = founders[0];
-  const vinod = founders[1];
   const rajImage = PlaceHolderImages.find(p => p.id === raj.imageId);
-  const vinodImage = PlaceHolderImages.find(p => p.id === vinod.imageId);
 
   return (
     <div className="bg-background text-foreground">
@@ -61,10 +53,10 @@ export default function FoundersPage() {
       <section className="relative overflow-hidden bg-secondary py-20 md:py-32">
         <div className="container relative z-10 text-center">
           <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl">
-            Meet Our Founders
+            Meet Our Founder
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
-            The visionaries behind the innovation at Aveda Digital.
+            The visionary behind the innovation at Aveda Digital.
           </p>
         </div>
       </section>
@@ -135,31 +127,6 @@ export default function FoundersPage() {
                         </div>
                     ))}
                 </div>
-            </div>
-          </div>
-
-          {/* Vinod Kumar */}
-          <div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-                <div className="md:col-span-1 md:order-last">
-                    {vinodImage && (
-                      <div className="relative aspect-square rounded-full overflow-hidden border-4 border-primary/20 shadow-lg soft-shadow">
-                        <Image
-                          src={vinodImage.imageUrl}
-                          alt={vinod.name}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={vinodImage.imageHint}
-                        />
-                      </div>
-                    )}
-                  </div>
-                  <div className="md:col-span-2 md:order-first">
-                    <h2 className="font-headline text-3xl font-bold text-accent">{vinod.name}</h2>
-                    <p className="mt-2 font-semibold text-primary">{vinod.designation}</p>
-                    <Separator className="my-4" />
-                    <p className="text-muted-foreground text-lg">{vinod.bio}</p>
-                  </div>
             </div>
           </div>
 

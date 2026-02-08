@@ -56,12 +56,6 @@ export default function AboutPage() {
       designation: 'Co-Founder & CEO',
       imageId: 'leader-raj',
       socials: { twitter: '#', linkedin: '#' }
-    },
-    {
-      name: 'Vinod Kumar',
-      designation: 'Founder',
-      imageId: 'leader-vinod',
-      socials: { twitter: '#', linkedin: '#' }
     }
   ];
 
@@ -234,10 +228,9 @@ export default function AboutPage() {
                 </div>
             </div>
           
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div className="max-w-sm mx-auto">
                 {leadership.map((leader, index) => {
                 const image = PlaceHolderImages.find(p => p.id === leader.imageId);
-                const isHighlighted = leader.name === 'Vinod Kumar';
                 return (
                     <div key={leader.name} className="group relative overflow-hidden rounded-3xl border bg-card p-6 transition-all duration-300 hover:border-primary/20 soft-shadow hover:-translate-y-2">
                     {image && (
@@ -254,7 +247,7 @@ export default function AboutPage() {
                     <div className="mt-4 text-center">
                         <h3 className={cn(
                             "font-headline text-2xl font-bold text-foreground transition-colors duration-300",
-                            isHighlighted ? "text-primary" : "group-hover:text-primary"
+                            "group-hover:text-primary"
                         )}>
                             {leader.name}
                         </h3>
