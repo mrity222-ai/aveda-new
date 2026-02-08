@@ -301,6 +301,40 @@ export default function SeoOptimizationPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Final CTA */}
+            <section className="relative overflow-hidden border-t border-border bg-card py-20">
+                <div className="absolute inset-0 z-0 opacity-10">
+                    {heroImage && (
+                        <Image
+                            src={heroImage.imageUrl}
+                            alt="Ready to Dominate Local Search background"
+                            fill
+                            className="object-cover"
+                            data-ai-hint={heroImage.imageHint}
+                        />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent"></div>
+                </div>
+                <div className="container relative z-10 text-center">
+                    <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
+                        Ready to Dominate Local Search?
+                    </h2>
+                    <div className="mt-8 flex flex-wrap justify-center gap-4">
+                        <Button asChild size="lg">
+                            <Link href="/contact?service=SEO+Optimization">
+                                Get Your Free Audit <MoveRight className="ml-2 h-5 w-5" />
+                            </Link>
+                        </Button>
+                        <Button asChild size="lg" variant="outline">
+                            <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
+                                <WhatsAppIcon />
+                                WhatsApp Us
+                            </a>
+                        </Button>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }

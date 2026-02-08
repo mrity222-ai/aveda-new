@@ -203,20 +203,32 @@ export default function DigitalMarketingPage() {
             </section>
 
              {/* Final CTA */}
-            <section className="bg-background py-20 md:py-28">
-                <div className="container text-center">
-                    <h2 className="font-headline text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+             <section className="relative overflow-hidden bg-card border-t py-20 md:py-28">
+                <div className="absolute inset-0 z-0 opacity-10">
+                    {heroBgImage && (
+                        <Image
+                            src={heroBgImage.imageUrl}
+                            alt="Ready to Grow With AI Marketing background"
+                            fill
+                            className="object-cover"
+                            data-ai-hint={heroBgImage.imageHint}
+                        />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent"></div>
+                </div>
+                <div className="container relative z-10 text-center">
+                    <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
                         Ready to Grow With AI Marketing?
                     </h2>
-                    <div className="mt-8 flex flex-col items-center justify-center gap-6 sm:flex-row">
-                        <Button asChild size="lg" className="rounded-lg bg-primary px-8 text-primary-foreground shadow-lg transition-all duration-300 hover:scale-110 hover:bg-primary/90 hover:shadow-2xl hover:shadow-primary/50">
-                            <Link href="/contact">
-                              Get <span className="font-extrabold mx-1">FREE</span> Strategy Call
+                    <div className="mt-8 flex flex-wrap justify-center gap-4">
+                        <Button asChild size="lg">
+                            <Link href="/contact?service=Digital+Marketing">
+                              Get FREE Strategy Call
                             </Link>
                         </Button>
-                        <Button asChild size="lg" variant="ghost" className="text-primary hover:bg-transparent">
+                        <Button asChild size="lg" variant="outline">
                             <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
-                                <WhatsAppIcon className="text-primary" />
+                                <WhatsAppIcon />
                                 WhatsApp Us
                             </a>
                         </Button>
@@ -226,3 +238,4 @@ export default function DigitalMarketingPage() {
             </section>
         </div>
     );
+}

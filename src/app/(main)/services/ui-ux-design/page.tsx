@@ -18,6 +18,23 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { portfolioProjects } from '@/lib/data';
 
+const WhatsAppIcon = () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-5 w-5"
+    >
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+    </svg>
+);
+
 export default function UiUxDesignPage() {
     const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
     const detailImage = PlaceHolderImages.find((img) => img.id === 'service-ui-ux-detail');
@@ -170,18 +187,38 @@ export default function UiUxDesignPage() {
             </section>
 
              {/* Final CTA */}
-            <section className="border-t border-border bg-card py-20">
-                <div className="container text-center">
-                    <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
-                        Ready to Create an Unforgettable User Experience?
-                    </h2>
-                    <Button asChild size="lg" className="mt-8">
-                        <Link href="/contact?service=UI%2FUX+Design">
-                            Discuss Your Project <MoveRight className="ml-2 h-5 w-5" />
-                        </Link>
-                    </Button>
-                </div>
-            </section>
+            <section className="relative overflow-hidden border-t border-border bg-card py-20">
+                <div className="absolute inset-0 z-0 opacity-10">
+                   {heroImage && (
+                       <Image
+                           src={heroImage.imageUrl}
+                           alt="Ready to Create an Unforgettable User Experience background"
+                           fill
+                           className="object-cover"
+                           data-ai-hint={heroImage.imageHint}
+                       />
+                   )}
+                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent"></div>
+               </div>
+               <div className="container relative z-10 text-center">
+                   <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
+                       Ready to Create an Unforgettable User Experience?
+                   </h2>
+                   <div className="mt-8 flex flex-wrap justify-center gap-4">
+                       <Button asChild size="lg">
+                           <Link href="/contact?service=UI%2FUX+Design">
+                               Discuss Your Project <MoveRight className="ml-2 h-5 w-5" />
+                           </Link>
+                       </Button>
+                       <Button asChild size="lg" variant="outline">
+                           <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
+                               <WhatsAppIcon />
+                               WhatsApp Us
+                           </a>
+                       </Button>
+                   </div>
+               </div>
+           </section>
         </div>
     );
 }

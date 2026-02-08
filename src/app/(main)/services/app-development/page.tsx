@@ -281,9 +281,21 @@ export default function AppDevelopmentPage() {
             </section>
 
              {/* Final CTA */}
-            <section className="border-t border-border bg-card py-20">
-                <div className="container text-center">
-                    <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
+            <section className="relative overflow-hidden border-t border-border bg-card py-20">
+                <div className="absolute inset-0 z-0 opacity-10">
+                    {heroImage && (
+                        <Image
+                            src={heroImage.imageUrl}
+                            alt="Turn Your App Idea into Reality background"
+                            fill
+                            className="object-cover"
+                            data-ai-hint={heroImage.imageHint}
+                        />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent"></div>
+                </div>
+                <div className="container relative z-10 text-center">
+                    <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
                         Turn Your App Idea into Reality
                     </h2>
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
