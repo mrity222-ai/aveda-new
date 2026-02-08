@@ -25,11 +25,11 @@ export default function AboutUs() {
           <div className="space-y-8 animate-in fade-in slide-in-from-right-12 duration-700">
             <div>
               <p className="mb-2 font-semibold text-primary">About Us</p>
-              <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tight text-accent md:text-4xl">
                 Engineering Excellence Since 2024
               </h2>
             </div>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-foreground/80">
               Aveda Digital is a team of skilled engineers and digital experts delivering enterprise-grade IT solutions. From startups to large organizations, we build scalable systems across multiple industries, driving innovation through technology and AI-powered solutions.
             </p>
             <div className="flex flex-wrap items-center gap-4">
@@ -37,7 +37,7 @@ export default function AboutUs() {
                   <Globe className="h-6 w-6 text-accent" />
                   <span className="font-semibold">1+ Countries Served</span>
                </div>
-              <Button asChild className="bg-primary text-white">
+              <Button asChild>
                 <Link href="/about">
                   Read More <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

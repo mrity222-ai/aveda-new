@@ -108,6 +108,10 @@ export default {
           '0%, 100%': { boxShadow: '0 0 0 0 hsl(var(--primary) / 0.7)' },
           '50%': { boxShadow: '0 0 0 8px hsl(var(--primary) / 0)' }
         },
+        'icon-bounce': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -115,6 +119,7 @@ export default {
         'spin-slow': 'spin-slow 20s linear infinite',
         'spin-slow-reverse': 'spin-slow-reverse 25s linear infinite',
         'pulse-primary': 'pulse-primary 2s infinite',
+        'icon-bounce': 'icon-bounce 0.6s ease',
       },
     },
   },

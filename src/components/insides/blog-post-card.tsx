@@ -67,7 +67,7 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
   });
 
   return (
-    <Card className="group flex flex-col overflow-hidden rounded-lg border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10">
+    <Card className="group flex flex-col overflow-hidden rounded-lg border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 soft-shadow hover:border-primary">
       <CardHeader className="p-0">
         <div className="relative h-56 w-full overflow-hidden">
           <Image
@@ -82,7 +82,7 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
       </CardHeader>
       <CardContent className="flex-grow p-6">
         <Badge variant="outline" className="mb-2 text-primary border-primary">{post.category}</Badge>
-        <CardTitle className="mt-2 font-headline text-xl transition-colors group-hover:text-primary">{post.title}</CardTitle>
+        <CardTitle className="mt-2 font-headline text-xl text-accent transition-colors group-hover:text-primary">{post.title}</CardTitle>
         <div className="mt-3 flex items-center space-x-4 text-xs text-muted-foreground">
             <div className="flex items-center gap-1">
                 <Calendar className="h-3 w-3" />

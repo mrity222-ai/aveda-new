@@ -11,19 +11,19 @@ export default function HeroSection() {
       <div className="container relative z-10">
         <div className="mx-auto max-w-4xl text-center">
           <div className="animate-in fade-in slide-in-from-bottom-10 duration-700">
-            <h1 className="font-headline text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
+            <h1 className="text-5xl font-extrabold tracking-tight text-accent sm:text-6xl md:text-7xl">
               Driving Business Growth with{' '}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <span className="text-primary">
                 Intelligent IT Solutions
               </span>
             </h1>
           </div>
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-foreground/80 animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">
             We build, implement, and manage cutting-edge technology solutions that empower your business to innovate and{' '}
             <span className="font-semibold text-primary">succeed</span>.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4 animate-in fade-in slide-in-from-bottom-16 duration-700 delay-400">
-            <Button asChild size="lg" className="bg-primary text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg">
+            <Button asChild size="lg">
               <Link href="/services">Explore Our Services</Link>
             </Button>
             <Button asChild size="lg" variant="outline">

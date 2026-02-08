@@ -89,7 +89,7 @@ export default function AboutPage() {
           <p className="font-headline text-sm uppercase tracking-widest text-primary">
             About Aveda Digital
           </p>
-          <h1 className="mt-4 font-headline text-4xl font-bold tracking-tight md:text-6xl">
+          <h1 className="mt-4 font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl">
             Building Intelligent Digital & Political Systems with AI
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
@@ -104,7 +104,7 @@ export default function AboutPage() {
           <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary">
             Our Technology Partners
           </Badge>
-          <h2 className="mt-4 font-headline text-4xl font-bold tracking-tight text-primary md:text-5xl">
+          <h2 className="mt-4 font-headline text-4xl font-bold tracking-tight text-accent md:text-5xl">
             Innovating with the World’s Best
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
@@ -148,8 +148,8 @@ export default function AboutPage() {
             {/* Right Content */}
             <div className="space-y-8">
               <div>
-                <p className="mb-2 font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Who We Are</p>
-                <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
+                <p className="mb-2 font-semibold text-primary">Who We Are</p>
+                <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
                   Powering Your Vision with AI-First Innovation
                 </h2>
               </div>
@@ -157,11 +157,11 @@ export default function AboutPage() {
                 Aveda Digital is an AI-first digital company delivering advanced web, mobile, marketing, automation, and political campaigning solutions. We combine technology, data, and strategy to create measurable digital impact.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="rounded-xl border bg-card p-6">
+                  <div className="rounded-xl border bg-card p-6 soft-shadow">
                       <h3 className="font-headline text-3xl font-bold text-primary">100+</h3>
                       <p className="mt-1 text-muted-foreground">Projects Delivered</p>
                   </div>
-                  <div className="rounded-xl border bg-card p-6">
+                  <div className="rounded-xl border bg-card p-6 soft-shadow">
                       <h3 className="font-headline text-3xl font-bold text-primary">AI-Driven</h3>
                       <p className="mt-1 text-muted-foreground">Solutions</p>
                   </div>
@@ -177,19 +177,19 @@ export default function AboutPage() {
             <p className="font-headline text-sm uppercase tracking-widest text-primary">
                 What Makes Us Different
             </p>
-            <h2 className="mx-auto mt-4 max-w-3xl font-headline text-3xl font-bold md:text-4xl">
+            <h2 className="mx-auto mt-4 max-w-3xl font-headline text-3xl font-bold text-accent md:text-4xl">
                 Our core principles ensure we deliver unparalleled value and innovation.
             </h2>
             <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
                 {values.map((value) => (
-                    <div key={value.title} className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                    <div key={value.title} className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow">
                         <div className="relative">
                             <div className="flex justify-center">
                                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
                                 <value.icon className="h-8 w-8" />
                                 </div>
                             </div>
-                            <h3 className="mt-6 font-headline text-xl font-semibold">{value.title}</h3>
+                            <h3 className="mt-6 font-headline text-xl font-semibold text-accent">{value.title}</h3>
                             <p className="mt-2 text-muted-foreground">{value.description}</p>
                         </div>
                     </div>
@@ -204,7 +204,7 @@ export default function AboutPage() {
             <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary">
                 Our Credentials
             </Badge>
-          <h2 className="mt-4 font-headline text-3xl font-bold md:text-4xl">Nationally Recognized. Globally Trusted.</h2>
+          <h2 className="mt-4 font-headline text-3xl font-bold text-accent md:text-4xl">Nationally Recognized. Globally Trusted.</h2>
           
           <div className="mt-16">
             <div className="flex w-full snap-x justify-start gap-8 overflow-x-auto pb-4 md:justify-center md:flex-wrap md:overflow-visible md:pb-0">
@@ -212,7 +212,7 @@ export default function AboutPage() {
                 const image = PlaceHolderImages.find(p => p.id === rec.imageId);
                 return (
                   <div key={rec.name} className="group w-40 flex-shrink-0 snap-center flex flex-col items-center justify-center gap-4 text-center">
-                    <div className="relative flex h-28 w-28 items-center justify-center rounded-2xl border bg-card p-4 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-primary/50 group-hover:bg-card group-hover:shadow-lg">
+                    <div className="relative flex h-28 w-28 items-center justify-center rounded-2xl border bg-card p-4 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-primary/50 soft-shadow">
                       {image && (
                          <div className="relative h-12 w-12">
                           <Image 

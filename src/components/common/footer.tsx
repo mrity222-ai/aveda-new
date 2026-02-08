@@ -71,7 +71,7 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h3 className="font-headline text-lg font-semibold">Quick Links</h3>
+            <h3 className="font-headline text-lg font-semibold text-accent">Quick Links</h3>
             <ul className="mt-4 space-y-3">
               {footerLinks.quick.map((link) => (
                 <li key={link.label}>
@@ -89,7 +89,7 @@ export default function Footer() {
 
           {/* Column 3: Services */}
           <div>
-            <h3 className="font-headline text-lg font-semibold">Our Services</h3>
+            <h3 className="font-headline text-lg font-semibold text-accent">Our Services</h3>
             <ul className="mt-4 space-y-3">
               {services.map((service) => (
                 <li key={service.slug}>
@@ -107,7 +107,7 @@ export default function Footer() {
 
           {/* Column 4: Get in Touch */}
           <div>
-            <h3 className="font-headline text-lg font-semibold">
+            <h3 className="font-headline text-lg font-semibold text-accent">
               Get in Touch
             </h3>
             <div className="mt-4 space-y-4">
@@ -125,7 +125,7 @@ export default function Footer() {
                 <Phone className="h-4 w-4 text-primary" />
                 <span>+91 9012887697</span>
               </a>
-              <Button asChild className="mt-6 w-full bg-primary text-white" size="lg">
+              <Button asChild className="mt-6 w-full" size="lg">
                 <Link href="/contact">
                   Start Your Project <MoveRight className="ml-2 h-4 w-4" />
                 </Link>

@@ -35,10 +35,10 @@ export default function ServicesPreview() {
       <div className="container relative z-10">
         <div className="mb-16 text-center animate-in fade-in slide-in-from-bottom-8 duration-700">
           <p className="mb-2 font-semibold text-primary">Our Services</p>
-          <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-accent md:text-4xl">
             A Complete Suite of Digital Solutions
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-2xl text-foreground/80">
             To transform your business and drive sustainable growth.
           </p>
         </div>
@@ -48,18 +48,18 @@ export default function ServicesPreview() {
             <div
               key={service.title}
               className={cn(
-                'group relative rounded-2xl border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12'
+                'group relative rounded-2xl border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow animate-in fade-in slide-in-from-bottom-12'
               )}
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="relative z-10 flex h-full flex-col">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110">
                   <service.icon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-6 font-headline text-xl font-bold text-foreground">
+                <h3 className="mt-6 text-xl font-bold text-accent">
                   {service.title}
                 </h3>
-                <p className="mt-4 flex-grow text-sm text-muted-foreground">
+                <p className="mt-4 flex-grow text-sm text-foreground/80">
                   {service.description}
                 </p>
                 <div className="mt-6 w-full border-t border-border" />
@@ -68,7 +68,7 @@ export default function ServicesPreview() {
           ))}
         </div>
         <div className="mt-16 text-center animate-in fade-in slide-in-from-bottom-16 duration-700 delay-500">
-           <Button asChild size="lg" className="bg-primary text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg">
+           <Button asChild size="lg">
             <Link href="/services">
               View More Services <ArrowRight className="ml-2 h-4 w-4" />
             </Link>

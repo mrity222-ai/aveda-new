@@ -193,7 +193,7 @@ export default function Header() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
             {/* Left Column */}
             <div className="md:col-span-3">
-              <h3 className="font-headline text-lg font-semibold tracking-tight text-foreground">
+              <h3 className="font-headline text-lg font-semibold tracking-tight text-accent">
                 Our Services
               </h3>
               <div className="my-2 w-16 border-b border-primary" />
@@ -231,7 +231,7 @@ export default function Header() {
             
             {/* Right Column */}
             <div className="md:col-span-3 hidden md:block border-l pl-8">
-               <h4 className="font-semibold text-foreground">AI-Driven Innovation</h4>
+               <h4 className="font-semibold text-accent">AI-Driven Innovation</h4>
                <p className="mt-2 text-sm text-muted-foreground">
                  Building scalable digital solutions with AI-driven innovation.
                </p>

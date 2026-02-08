@@ -34,10 +34,10 @@ export default function TestimonialsSection() {
             <div className="container">
                 <div className="text-center mb-16">
                     <p className="mb-2 font-semibold text-primary">Testimonials</p>
-                    <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
+                    <h2 className="text-3xl font-bold tracking-tight text-accent md:text-4xl">
                         What Our Clients Say
                     </h2>
-                    <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+                    <p className="mx-auto mt-4 max-w-2xl text-foreground/80">
                         Real feedback from partners we've helped succeed.
                     </p>
                 </div>
@@ -45,7 +45,7 @@ export default function TestimonialsSection() {
                     {testimonials.map((testimonial) => {
                         const image = PlaceHolderImages.find((img) => img.id === testimonial.avatarId);
                         return (
-                            <Card key={testimonial.name} className="bg-card border transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10">
+                            <Card key={testimonial.name} className="bg-card border transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow">
                                 <CardContent className="pt-6">
                                     <div className="flex items-center gap-1">
                                         {[...Array(testimonial.rating)].map((_, i) => (

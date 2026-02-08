@@ -43,17 +43,15 @@ const Hexagon = ({
 );
 
 export default function StatsSection() {
-  // I am replacing the StatsSection with a new ClientsSection as per the prompt.
-  // The filename remains the same to replace the old section.
   return (
     <section className="relative overflow-hidden bg-background py-20 md:py-28">
       <div className="container relative z-10">
         <div className="grid items-center gap-16 md:grid-cols-2">
           <div className="animate-in slide-in-from-left-12 fade-in duration-500">
-            <p className="text-muted-foreground">
+            <p className="text-foreground/80">
               Crafting digital success for top-notch companies
             </p>
-            <h2 className="mt-2 font-headline text-5xl font-extrabold tracking-tighter md:text-6xl">
+            <h2 className="mt-2 text-5xl font-extrabold tracking-tighter text-accent md:text-6xl">
               OUR CLIENTS
             </h2>
           </div>

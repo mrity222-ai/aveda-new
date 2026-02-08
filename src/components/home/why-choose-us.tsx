@@ -15,10 +15,10 @@ export default function PortfolioPreview() {
       <div className="container relative z-10">
         <div className="mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
           <p className="mb-2 font-semibold text-primary">Our Latest Work</p>
-          <h2 className="font-headline text-4xl font-bold tracking-tight md:text-5xl text-foreground">
+          <h2 className="text-4xl font-bold tracking-tight text-accent md:text-5xl">
             Showcasing Digital Excellence
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-lg text-foreground/80">
             Projects since 2024
           </p>
         </div>
@@ -33,8 +33,8 @@ export default function PortfolioPreview() {
             >
               <div 
                 className={cn(
-                  "relative overflow-hidden rounded-3xl border bg-card transition-all duration-300",
-                  "h-[400px] group-hover:scale-[1.02] group-hover:shadow-xl group-hover:shadow-primary/10"
+                  "relative overflow-hidden rounded-3xl border bg-card transition-all duration-300 soft-shadow hover:border-primary",
+                  "h-[400px] group-hover:scale-[1.02]"
                 )}
               >
                 <div className="relative h-full w-full rounded-3xl">
@@ -66,7 +66,7 @@ export default function PortfolioPreview() {
           <Button
             asChild
             size="lg"
-            className="rounded-full bg-primary px-8 text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg"
+            className="rounded-full px-8"
           >
             <Link href="/works">
               VIEW ALL PROJECTS

@@ -25,7 +25,7 @@ export default function InsightsSection() {
           <Button asChild variant="outline" className="mb-4 rounded-full border-primary/50 bg-primary/10 text-primary hover:bg-primary/20 hover:text-primary">
             <Link href="/insides">Explore Insights</Link>
           </Button>
-          <h2 className="font-headline text-4xl font-bold tracking-tight md:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-accent md:text-5xl">
             Knowledge to Power Your Digital Transformation
           </h2>
         </div>
@@ -33,7 +33,7 @@ export default function InsightsSection() {
         {/* Grid Layout */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Left Featured Card */}
-          <div className="group relative lg:col-span-2 rounded-3xl border bg-card p-1 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
+          <div className="group relative lg:col-span-2 rounded-3xl border bg-card p-1 transition-all duration-300 soft-shadow hover:border-primary">
             <div className="relative overflow-hidden rounded-[22px] bg-card">
               {featuredImage && (
                 <div className="relative h-80 w-full">
@@ -48,7 +48,7 @@ export default function InsightsSection() {
                 </div>
               )}
               <div className="p-8">
-                <h3 className="font-headline text-3xl font-bold text-foreground">
+                <h3 className="text-3xl font-bold text-accent">
                   <Link href={`/insides#${featuredPost.slug}`} className="hover:text-primary transition-colors">{featuredPost.title}</Link>
                 </h3>
                 <div className="mt-4 flex items-center space-x-6 text-sm text-muted-foreground">
@@ -83,10 +83,10 @@ export default function InsightsSection() {
           <div className="space-y-8">
             {otherPosts.map((post, index) => (
               <Link key={post.slug} href={`/insides#${post.slug}`} className="group block">
-                <div className="relative rounded-3xl border bg-card p-6 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
+                <div className="relative rounded-3xl border bg-card p-6 transition-all duration-300 soft-shadow hover:border-primary hover:-translate-y-1">
                   <div className="relative flex items-center justify-between">
                     <div>
-                      <h4 className="font-headline text-xl font-bold text-foreground transition-colors group-hover:text-primary">
+                      <h4 className="text-xl font-bold text-accent transition-colors group-hover:text-primary">
                         {post.title}
                       </h4>
                       <span className="mt-2 inline-block text-sm font-medium text-primary">Read Article →</span>

@@ -67,7 +67,7 @@ export default function IndustriesPage() {
       <section className="py-20 md:py-28">
         <div className="container">
           <div className="mx-auto mb-16 max-w-3xl text-center">
-            <h1 className="font-headline text-4xl font-bold tracking-tight md:text-5xl animate-in fade-in slide-in-from-bottom-8 duration-700">
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-5xl animate-in fade-in slide-in-from-bottom-8 duration-700">
               Industries We Empower With AI
             </h1>
             <p className="mt-4 text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-10 duration-700 delay-100">
@@ -82,7 +82,7 @@ export default function IndustriesPage() {
             {industries.map((item, index) => (
               <div
                 key={item.title}
-                className="group relative overflow-hidden rounded-lg border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-16 duration-500"
+                className="group relative overflow-hidden rounded-lg border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow animate-in fade-in slide-in-from-bottom-16 duration-500"
                 style={{ animationDelay: `${index * 100 + 400}ms` }}
               >
                 <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/5 opacity-0 transition-all duration-500 group-hover:scale-[8] group-hover:opacity-100"></div>
@@ -90,7 +90,7 @@ export default function IndustriesPage() {
                   <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
                     <item.icon className="h-8 w-8" />
                   </div>
-                  <h3 className="font-headline text-xl font-semibold text-foreground">
+                  <h3 className="font-headline text-xl font-semibold text-accent">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-muted-foreground">
@@ -105,14 +105,14 @@ export default function IndustriesPage() {
 
       <section className="border-t bg-secondary py-20 animate-in fade-in duration-700">
         <div className="container text-center">
-          <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
             Your Industry. Our AI Expertise.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Let's discuss how we can tailor our solutions for your specific
             needs.
           </p>
-          <Button asChild size="lg" className="mt-8 bg-primary text-white">
+          <Button asChild size="lg" className="mt-8">
             <Link href="/contact">
               Talk to an Expert <MoveRight className="ml-2 h-5 w-5" />
             </Link>

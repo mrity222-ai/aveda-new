@@ -44,7 +44,7 @@ export default function InsidesPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-secondary py-20 md:py-32">
         <div className="container relative z-10 text-center">
-          <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl animate-in fade-in slide-in-from-bottom-8 duration-700">
+          <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl animate-in fade-in slide-in-from-bottom-8 duration-700">
             AI-Driven Insights That Shape Decisions
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-10 duration-700 delay-100">
@@ -72,7 +72,7 @@ export default function InsidesPage() {
                 </div>
                 <div className="animate-in fade-in slide-in-from-right-12 duration-700">
                     <Badge variant="outline" className="mb-4 text-primary border-primary">{featuredPost.category}</Badge>
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold">
+                    <h2 className="font-headline text-3xl md:text-4xl font-bold text-accent">
                         <Link href={`/insides#${featuredPost.slug}`} className="hover:text-primary transition-colors">{featuredPost.title}</Link>
                     </h2>
                     <div className="mt-4 flex items-center space-x-6 text-sm text-muted-foreground">
