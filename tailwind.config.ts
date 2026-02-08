@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -111,7 +112,17 @@ export default {
         'icon-bounce': {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
-        }
+        },
+        'neon-pulse-line': {
+          '0%, 100%': {
+              boxShadow: '0 0 2px hsl(var(--primary)), 0 0 5px hsl(var(--primary)), 0 0 8px hsl(var(--primary))',
+              opacity: '0.8',
+          },
+          '50%': {
+              boxShadow: '0 0 5px hsl(var(--primary)), 0 0 10px hsl(var(--primary)), 0 0 15px hsl(var(--primary))',
+              opacity: '1',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -120,6 +131,7 @@ export default {
         'spin-slow-reverse': 'spin-slow-reverse 25s linear infinite',
         'pulse-primary': 'pulse-primary 2s infinite',
         'icon-bounce': 'icon-bounce 0.6s ease',
+        'neon-pulse-line': 'neon-pulse-line 2.5s ease-in-out infinite',
       },
     },
   },
