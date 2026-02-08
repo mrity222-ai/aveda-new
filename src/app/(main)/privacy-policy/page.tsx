@@ -5,7 +5,7 @@ export default function PrivacyPolicyPage() {
     {
       title: 'Introduction',
       content: [
-        'Welcome to Aveda Digital ("we," "our," or "us"). We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or use our services.',
+        'Welcome to Aveda Technologies ("we," "our," or "us"). We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or use our services.',
       ],
     },
     {
@@ -108,11 +108,11 @@ export default function PrivacyPolicyPage() {
               </p>
               <div className="mt-4 text-center">
                 <a
-                  href="mailto:info@avedadigital.com"
+                  href="mailto:info@avedatechnologies.com"
                   className="inline-flex items-center gap-2 font-semibold text-primary transition-colors hover:text-primary/80"
                 >
                   <Mail className="h-5 w-5" />
-                  info@avedadigital.com
+                  info@avedatechnologies.com
                 </a>
               </div>
             </div>

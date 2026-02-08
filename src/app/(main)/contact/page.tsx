@@ -13,8 +13,8 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'info@avedadigital.com',
-      href: 'mailto:info@avedadigital.com',
+      value: 'info@avedatechnologies.com',
+      href: 'mailto:info@avedatechnologies.com',
     },
     {
       icon: Phone,
@@ -103,7 +103,7 @@ export default function ContactPage() {
                         </div>
                         <div className="space-y-8 lg:col-span-2">
                             <h2 className="font-headline text-3xl font-semibold text-accent">Contact Info</h2>
-                            <p className='text-muted-foreground'>Aveda Digital</p>
+                            <p className='text-muted-foreground'>Aveda Technologies</p>
                             {contactDetails.map((detail) => (
                             <div key={detail.title} className="flex items-start space-x-4">
                                 <div className="flex-shrink-0 group">

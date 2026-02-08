@@ -5,7 +5,7 @@ export default function TermsAndConditionsPage() {
     {
       title: 'Introduction',
       content: [
-        'These Terms & Conditions (“Terms”) govern your use of the website operated by Aveda Digital (“we”, “us”, “our”). By accessing or using our website, you agree to be bound by these Terms. If you do not agree, please do not use our website.',
+        'These Terms & Conditions (“Terms”) govern your use of the website operated by Aveda Technologies (“we”, “us”, “our”). By accessing or using our website, you agree to be bound by these Terms. If you do not agree, please do not use our website.',
       ],
     },
     {
@@ -17,7 +17,7 @@ export default function TermsAndConditionsPage() {
     {
       title: '2. Intellectual Property',
       content: [
-        'All content on this website, including text, graphics, logos, icons, images, and software, is the property of Aveda Digital or its licensors and is protected by applicable intellectual property laws. You may not copy, reproduce, or distribute any content without prior written permission.',
+        'All content on this website, including text, graphics, logos, icons, images, and software, is the property of Aveda Technologies or its licensors and is protected by applicable intellectual property laws. You may not copy, reproduce, or distribute any content without prior written permission.',
       ],
     },
     {
@@ -29,13 +29,13 @@ export default function TermsAndConditionsPage() {
     {
       title: '4. Services',
       content: [
-        'All services provided by Aveda Digital are subject to availability and may be modified or discontinued at any time without notice. Specific terms related to services may be communicated separately through agreements or proposals.',
+        'All services provided by Aveda Technologies are subject to availability and may be modified or discontinued at any time without notice. Specific terms related to services may be communicated separately through agreements or proposals.',
       ],
     },
     {
       title: '5. Limitation of Liability',
       content: [
-        'To the fullest extent permitted by law, Aveda Digital shall not be liable for any direct, indirect, incidental, consequential, or special damages arising out of or in connection with your use of the website or services.',
+        'To the fullest extent permitted by law, Aveda Technologies shall not be liable for any direct, indirect, incidental, consequential, or special damages arising out of or in connection with your use of the website or services.',
       ],
     },
     {
@@ -115,11 +115,11 @@ export default function TermsAndConditionsPage() {
               </p>
               <div className="mt-4 text-center">
                 <a
-                  href="mailto:info@avedadigital.com"
+                  href="mailto:info@avedatechnologies.com"
                   className="inline-flex items-center gap-2 font-semibold text-primary transition-colors hover:text-primary/80"
                 >
                   <Mail className="h-5 w-5" />
-                  info@avedadigital.com
+                  info@avedatechnologies.com
                 </a>
               </div>
             </div>

@@ -17,7 +17,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: 'Aveda Digital - IT Services & Digital Solutions',
+  title: 'Aveda Technologies - IT Services & Digital Solutions',
   description: 'Transforming Ideas Into Powerful Digital Experiences',
 };
 

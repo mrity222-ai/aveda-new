@@ -45,7 +45,7 @@ const prompt = ai.definePrompt({
   name: 'generateContactMessagePrompt',
   input: {schema: GenerateContactMessageInputSchema},
   output: {schema: GenerateContactMessageOutputSchema},
-  prompt: `You are an AI assistant helping users compose a contact message to Aveda Digital.
+  prompt: `You are an AI assistant helping users compose a contact message to Aveda Technologies.
 
   The user is interested in the following service: {{{serviceRequired}}}.
   The user's name is: {{{name}}}.
@@ -53,7 +53,7 @@ const prompt = ai.definePrompt({
   The user's phone number is: {{{phone}}}.
   The user's message is: {{{message}}}.
 
-  Generate a concise and professional contact message that clearly communicates the user's interest in the specified service and encourages Aveda Digital to respond.
+  Generate a concise and professional contact message that clearly communicates the user's interest in the specified service and encourages Aveda Technologies to respond.
 `,
 });
 

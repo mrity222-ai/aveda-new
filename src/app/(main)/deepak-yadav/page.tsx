@@ -67,7 +67,7 @@ export default function DeepakYadavPage() {
             Meet Our Founder
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
-            The growth visionary driving innovation at Aveda Digital.
+            The growth visionary driving innovation at Aveda Technologies.
           </p>
         </div>
       </section>

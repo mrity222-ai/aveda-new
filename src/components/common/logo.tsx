@@ -36,7 +36,7 @@ export function Logo({
         />
       </svg>
       <span className="font-headline text-xl font-semibold tracking-tight text-accent">
-        Aveda Digital
+        Aveda Technologies
       </span>
     </div>
   );

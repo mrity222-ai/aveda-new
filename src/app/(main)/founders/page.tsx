@@ -134,7 +134,7 @@ export default function FoundersPage() {
             Meet Our Founder
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
-            The visionary behind the innovation at Aveda Digital.
+            The visionary behind the innovation at Aveda Technologies.
           </p>
         </div>
       </section>
