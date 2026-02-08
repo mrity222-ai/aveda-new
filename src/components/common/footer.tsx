@@ -154,7 +154,7 @@ export default function Footer() {
             <div className="flex gap-4">
                 <Link href="/privacy-policy" className="transition-colors hover:text-foreground">Privacy Policy</Link>
                 <Separator orientation='vertical' className='h-5' />
-                <Link href="#" className="transition-colors hover:text-foreground">Terms & Conditions</Link>
+                <Link href="/terms-and-conditions" className="transition-colors hover:text-foreground">Terms & Conditions</Link>
             </div>
             <p>
                 &copy; {new Date().getFullYear()} Aveda Digital. All Rights Reserved.
