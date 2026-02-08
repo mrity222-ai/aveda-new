@@ -152,7 +152,7 @@ export default function Footer() {
       <div className='border-t'>
         <div className="container flex flex-col items-center justify-between gap-4 py-6 text-sm text-muted-foreground md:flex-row">
             <div className="flex gap-4">
-                <Link href="#" className="transition-colors hover:text-foreground">Privacy Policy</Link>
+                <Link href="/privacy-policy" className="transition-colors hover:text-foreground">Privacy Policy</Link>
                 <Separator orientation='vertical' className='h-5' />
                 <Link href="#" className="transition-colors hover:text-foreground">Terms & Conditions</Link>
             </div>
