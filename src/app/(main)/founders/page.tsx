@@ -47,21 +47,13 @@ export default function FoundersPage() {
       designation: 'Co-Founder & Technology Consultant',
       imageId: 'leader-vinod',
       bio: "Vinod Kumar brings deep expertise in technology consulting and system architecture. He plays a key role in shaping long-term technology roadmaps and guiding innovation across products. His approach combines strategic thinking with practical execution to deliver sustainable and high-performance digital solutions."
-    },
-    {
-      name: 'Deepak Yadav',
-      designation: 'Co-Founder & Innovation & Growth Lead',
-      imageId: 'leader-deepak',
-      bio: "Deepak Yadav drives business growth and innovation strategies. He focuses on market expansion, partnerships, and scaling operations. With a strong understanding of business dynamics, he ensures that ideas are transformed into impactful and profitable ventures."
     }
   ];
 
   const raj = founders[0];
   const vinod = founders[1];
-  const deepak = founders[2];
   const rajImage = PlaceHolderImages.find(p => p.id === raj.imageId);
   const vinodImage = PlaceHolderImages.find(p => p.id === vinod.imageId);
-  const deepakImage = PlaceHolderImages.find(p => p.id === deepak.imageId);
 
   return (
     <div className="bg-background text-foreground">
@@ -171,31 +163,6 @@ export default function FoundersPage() {
             </div>
           </div>
 
-          {/* Deepak Yadav */}
-          <div>
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-                <div className="md:col-span-1">
-                    {deepakImage && (
-                      <div className="relative aspect-square rounded-full overflow-hidden border-4 border-primary/20 shadow-lg soft-shadow">
-                        <Image
-                          src={deepakImage.imageUrl}
-                          alt={deepak.name}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={deepakImage.imageHint}
-                        />
-                      </div>
-                    )}
-                  </div>
-                  <div className="md:col-span-2">
-                    <h2 className="font-headline text-3xl font-bold text-accent">{deepak.name}</h2>
-                    <p className="mt-2 font-semibold text-primary">{deepak.designation}</p>
-                    <Separator className="my-4" />
-                    <p className="text-muted-foreground text-lg">{deepak.bio}</p>
-                  </div>
-            </div>
-          </div>
-
         </div>
       </section>
 
@@ -216,5 +183,3 @@ export default function FoundersPage() {
     </div>
   );
 }
-
-    
