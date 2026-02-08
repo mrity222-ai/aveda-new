@@ -190,16 +190,16 @@ export default function SeoOptimizationPage() {
             {/* Why Local SEO Matters Section */}
             <section className="bg-secondary py-20 md:py-28 relative">
                 <div className="container relative z-10 text-center">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-4 text-foreground">Why Local SEO Matters</h2>
+                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-4 text-accent">Why Local SEO Matters</h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto mb-12">AI-powered marketing plans designed for growth, visibility, and influence.</p>
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {whyLocalSeo.map((value) => (
-                        <div key={value.title} className="group rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:-translate-y-1">
+                        <div key={value.title} className="group rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 shadow-lg hover:shadow-xl hover:-translate-y-1">
                             <div className="relative flex flex-col items-center text-center">
                                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/30">
                                     <value.icon className="h-8 w-8 transition-transform duration-300 group-hover:animate-pulse" />
                                 </div>
-                                <h3 className="mt-6 font-headline text-xl font-semibold text-foreground">{value.title}</h3>
+                                <h3 className="mt-6 font-headline text-xl font-semibold text-accent">{value.title}</h3>
                                 <p className="mt-2 text-muted-foreground">{value.description}</p>
                             </div>
                         </div>
@@ -225,33 +225,33 @@ export default function SeoOptimizationPage() {
                         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
                     </div>
                     <div className="mt-8 md:mt-0 animate-in fade-in slide-in-from-right-12 duration-700">
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-foreground">What is GEO Tagging?</h2>
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-accent">What is GEO Tagging?</h2>
                         <p className="mt-4 text-lg text-muted-foreground">GEO tagging embeds precise location data into your website's content, images, and posts. This tells search engines exactly where you are and what areas you serve, giving you a powerful advantage in local search results.</p>
                         
                         <div className="mt-8 grid gap-4">
-                            <div className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 hover:shadow-lg">
+                            <div className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 shadow-lg">
                                 <div className="relative flex items-center gap-4">
                                     <MapPin className="h-6 w-6 text-primary flex-shrink-0"/>
                                     <div>
-                                        <h3 className="font-semibold text-foreground">Location Tagging</h3>
+                                        <h3 className="font-semibold text-accent">Location Tagging</h3>
                                         <p className="text-sm text-muted-foreground">For images, pages, and posts.</p>
                                     </div>
                                 </div>
                             </div>
-                             <div className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 hover:shadow-lg">
+                             <div className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 shadow-lg">
                                 <div className="relative flex items-center gap-4">
                                     <Crosshair className="h-6 w-6 text-primary flex-shrink-0"/>
                                     <div>
-                                        <h3 className="font-semibold text-foreground">City-wise Targeting</h3>
+                                        <h3 className="font-semibold text-accent">City-wise Targeting</h3>
                                         <p className="text-sm text-muted-foreground">Precision keyword targeting.</p>
                                     </div>
                                 </div>
                             </div>
-                             <div className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 hover:shadow-lg">
+                             <div className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 shadow-lg">
                                 <div className="relative flex items-center gap-4">
                                     <Rocket className="h-6 w-6 text-primary flex-shrink-0"/>
                                     <div>
-                                        <h3 className="font-semibold text-foreground">Hyper-local Boost</h3>
+                                        <h3 className="font-semibold text-accent">Hyper-local Boost</h3>
                                         <p className="text-sm text-muted-foreground">A visibility boost for your business.</p>
                                     </div>
                                 </div>
@@ -264,16 +264,16 @@ export default function SeoOptimizationPage() {
              {/* Our Local SEO Services Section */}
             <section className="bg-secondary py-20 md:py-28 relative">
                 <div className="container relative z-10 text-center">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-foreground">Our Local SEO Services</h2>
+                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-accent">Our Local SEO Services</h2>
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                         {services.map((service) => (
-                        <div key={service.title} className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:-translate-y-2">
+                        <div key={service.title} className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all duration-300 hover:border-primary/40 shadow-xl hover:-translate-y-2">
                             <div className="relative z-10 flex h-full flex-col items-center text-center">
                                 <div className="flex-grow">
                                     <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/30">
                                         <service.icon className="h-8 w-8" />
                                     </div>
-                                    <h3 className="mt-6 font-headline text-xl font-semibold text-foreground">{service.title}</h3>
+                                    <h3 className="mt-6 font-headline text-xl font-semibold text-accent">{service.title}</h3>
                                 </div>
                                 <div className="mt-4">
                                     <Link href="#" className="text-sm font-medium text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -288,32 +288,32 @@ export default function SeoOptimizationPage() {
             </section>
 
              {/* Roadmap Section */}
-            <section id="roadmap" className="bg-black text-white py-20 md:py-28 relative overflow-hidden">
+            <section id="roadmap" className="bg-background py-20 md:py-28 relative">
                 <div className="container relative z-10">
                     <div className="text-center mb-24">
                         <h2 className="font-headline text-3xl font-bold md:text-4xl text-primary">Our 5-Month Local SEO Roadmap</h2>
-                        <p className="mt-4 text-gray-400 max-w-2xl mx-auto">A clear path to dominating local search results, from foundational audits to long-term growth and ranking.</p>
+                        <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">A clear path to dominating local search results, from foundational audits to long-term growth and ranking.</p>
                     </div>
                     <div className="relative">
-                        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/30 animate-neon-pulse-line -translate-x-1/2"></div>
+                        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 -translate-x-1/2"></div>
                         {roadmapSteps.map((step, index) => (
                             <div key={step.phase} className={cn("relative mb-16 flex items-center w-full", index % 2 === 0 ? "justify-start" : "justify-end")}>
                                 <div className={cn("w-1/2", index % 2 === 0 ? "pr-12" : "pl-12")}>
                                     <div className={cn(
-                                        "group relative overflow-hidden p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md shadow-lg", 
+                                        "group relative overflow-hidden p-6 rounded-2xl border bg-card shadow-lg", 
                                         "transition-all duration-300 hover:shadow-primary/20 hover:border-primary/50"
                                     )}>
-                                        <div className={cn("absolute top-0 font-headline text-8xl font-bold text-primary/20 -translate-y-4 transition-transform duration-300 group-hover:scale-110 group-hover:text-primary/40", index % 2 === 0 ? "right-0 translate-x-4" : "left-0 -translate-x-4")}>
+                                        <div className={cn("absolute top-0 font-headline text-8xl font-bold text-primary/10 -translate-y-4 transition-transform duration-300 group-hover:scale-110 group-hover:text-primary/20", index % 2 === 0 ? "right-0 translate-x-4" : "left-0 -translate-x-4")}>
                                             0{index + 1}
                                         </div>
                                         <div className="relative">
                                             <p className="font-headline text-primary">{step.phase}</p>
-                                            <h3 className="mt-2 font-headline text-xl font-semibold text-white">{step.focus}</h3>
-                                            <p className="mt-2 text-gray-400">{step.deliverable}</p>
+                                            <h3 className="mt-2 font-headline text-xl font-semibold text-accent">{step.focus}</h3>
+                                            <p className="mt-2 text-muted-foreground">{step.deliverable}</p>
                                         </div>
                                     </div>
                                 </div>
-                                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-black p-2 rounded-full border-2 border-primary/50">
+                                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-background p-2 rounded-full border-2 border-primary/50">
                                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
                                         <step.icon className="h-7 w-7" />
                                     </div>
@@ -323,19 +323,19 @@ export default function SeoOptimizationPage() {
                     </div>
 
                     <div className="mt-20 text-center">
-                        <h3 className="font-headline text-2xl font-bold text-white">Live Results Counter</h3>
+                        <h3 className="font-headline text-2xl font-bold text-accent">Live Results Counter</h3>
                         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
-                            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md">
+                            <div className="rounded-2xl border bg-card p-6 soft-shadow">
                                 <p className="font-headline text-5xl font-bold text-primary">
                                     <AnimatedNumber value={12450} />+
                                 </p>
-                                <p className="mt-2 text-gray-400">Total Local Leads Generated</p>
+                                <p className="mt-2 text-muted-foreground">Total Local Leads Generated</p>
                             </div>
-                            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md">
+                            <div className="rounded-2xl border bg-card p-6 soft-shadow">
                                 <p className="font-headline text-5xl font-bold text-primary">
                                     <AnimatedNumber value={500} />+
                                 </p>
-                                <p className="mt-2 text-gray-400">Google Maps Rankings Secured</p>
+                                <p className="mt-2 text-muted-foreground">Google Maps Rankings Secured</p>
                             </div>
                         </div>
                     </div>
@@ -345,7 +345,7 @@ export default function SeoOptimizationPage() {
             {/* Futuristic Dashboard Section */}
             <section className="bg-secondary py-20 md:py-28 relative">
                 <div className="container relative z-10 text-center">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-4 text-foreground">Your Command Center for Local SEO</h2>
+                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-4 text-accent">Your Command Center for Local SEO</h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto mb-12">
                         Visualize your local dominance with our real-time dashboard, tracking every pin, keyword, and conversion.
                     </p>
