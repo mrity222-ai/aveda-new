@@ -94,7 +94,7 @@ export default function FoundersPage() {
         },
         {
           specialization: 'Computer Science',
-          degree: 'B.Tech Graduate',
+          degree: 'B.Tech (Pursuing 3rd Year)',
           institution: 'AKTU',
           icon: GraduationCap,
         },
