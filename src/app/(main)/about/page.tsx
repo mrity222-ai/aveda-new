@@ -245,9 +245,9 @@ export default function AboutPage() {
                 const leaderOrder = [1,0,2];
                 const isHighlighted = leader.name === 'Vinod Kumar';
                 return (
-                    <div key={leader.name} className={cn("group relative overflow-hidden rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/20 soft-shadow hover:-translate-y-2", `md:order-${leaderOrder[index]}`)}>
+                    <div key={leader.name} className={cn("group relative overflow-hidden rounded-3xl border bg-card p-6 transition-all duration-300 hover:border-primary/20 soft-shadow hover:-translate-y-2", `md:order-${leaderOrder[index]}`)}>
                     {image && (
-                        <div className="relative aspect-square overflow-hidden rounded-lg">
+                        <div className="relative aspect-square overflow-hidden rounded-2xl">
                         <Image
                             src={image.imageUrl}
                             alt={leader.name}
