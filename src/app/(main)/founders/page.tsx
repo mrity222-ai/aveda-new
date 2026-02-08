@@ -100,7 +100,7 @@ export default function FoundersPage() {
         },
         {
           specialization: 'AI Innovation',
-          degree: 'Advanced Exposure',
+          degree: 'E-Summit 2025',
           institution: 'IIT Kanpur',
           icon: BrainCircuit,
         },
