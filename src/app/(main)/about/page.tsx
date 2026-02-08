@@ -219,13 +219,15 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership Section */}
-      <section className="bg-background py-20 md:py-28">
+      <section className="bg-background py-20 md:py-28 relative overflow-hidden">
+        <div className="absolute top-0 left-0 -z-10 h-64 w-64 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-50 blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 -z-10 h-64 w-64 bg-gradient-to-tl from-accent/10 via-transparent to-transparent opacity-50 blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
         <div className="container text-center">
-          <h2 className="font-headline text-3xl font-bold uppercase text-accent md:text-4xl">
+          <h2 className="font-headline text-3xl font-bold uppercase text-foreground md:text-4xl">
             Meet Our Team of Innovators
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            A Global Team of Innovators driving our success.
+            A global team building future-ready technology solutions.
           </p>
           <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
             {leadership.map((leader, index) => {
@@ -247,7 +249,7 @@ export default function AboutPage() {
                   )}
                   <div className="mt-4 text-center">
                     <h3 className={cn(
-                        "font-headline text-2xl font-bold text-accent transition-colors duration-300",
+                        "font-headline text-2xl font-bold text-foreground transition-colors duration-300",
                         isHighlighted ? "text-primary" : "group-hover:text-primary"
                     )}>
                         {leader.name}
