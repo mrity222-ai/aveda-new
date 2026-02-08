@@ -30,7 +30,7 @@ export default function AboutUs() {
               </h2>
             </div>
             <p className="text-lg text-muted-foreground">
-              Aveda Technologies is a team of skilled engineers and digital experts delivering enterprise-grade IT solutions. From startups to large organizations, we build scalable systems across multiple industries, driving innovation through technology and AI-powered solutions.
+              Aveda Digital is a team of skilled engineers and digital experts delivering enterprise-grade IT solutions. From startups to large organizations, we build scalable systems across multiple industries, driving innovation through technology and AI-powered solutions.
             </p>
             <div className="flex flex-wrap items-center gap-4">
                <div className="flex items-center gap-3 rounded-full border bg-card px-4 py-2 transition-all hover:border-accent hover:shadow-lg hover:shadow-accent/10">

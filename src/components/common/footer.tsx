@@ -112,11 +112,11 @@ export default function Footer() {
             </h3>
             <div className="mt-4 space-y-4">
               <a
-                href="mailto:Info.avedatechnoologies@gmail.com"
+                href="mailto:info@avedadigital.com"
                 className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Mail className="h-4 w-4 text-primary" />
-                <span>Info.avedatechnoologies@gmail.com</span>
+                <span>info@avedadigital.com</span>
               </a>
               <a
                 href="tel:+919012887697"
@@ -157,7 +157,7 @@ export default function Footer() {
                 <Link href="#" className="transition-colors hover:text-foreground">Terms & Conditions</Link>
             </div>
             <p>
-                &copy; {new Date().getFullYear()} Aveda Technologies. All Rights Reserved.
+                &copy; {new Date().getFullYear()} Aveda Digital. All Rights Reserved.
             </p>
         </div>
       </div>

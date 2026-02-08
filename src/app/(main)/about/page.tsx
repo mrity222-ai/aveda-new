@@ -87,13 +87,13 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-background py-20 md:py-32">
         <div className="container relative z-10 text-center">
           <p className="font-headline text-sm uppercase tracking-widest text-primary">
-            About Aveda Technologies
+            About Aveda Digital
           </p>
           <h1 className="mt-4 font-headline text-4xl font-bold tracking-tight md:text-6xl">
             Building Intelligent Digital & Political Systems with AI
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
-            Aveda Technologies helps businesses, leaders, and organizations grow through AI-driven technology, marketing, and political intelligence.
+            Aveda Digital helps businesses, leaders, and organizations grow through AI-driven technology, marketing, and political intelligence.
           </p>
         </div>
       </section>
@@ -154,7 +154,7 @@ export default function AboutPage() {
                 </h2>
               </div>
               <p className="text-lg text-muted-foreground">
-                Aveda Technologies is an AI-first digital company delivering advanced web, mobile, marketing, automation, and political campaigning solutions. We combine technology, data, and strategy to create measurable digital impact.
+                Aveda Digital is an AI-first digital company delivering advanced web, mobile, marketing, automation, and political campaigning solutions. We combine technology, data, and strategy to create measurable digital impact.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="rounded-xl border bg-card p-6">
