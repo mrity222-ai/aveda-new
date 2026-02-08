@@ -229,8 +229,20 @@ export default function ServicesPage() {
         </section>
 
        {/* Final CTA */}
-      <section className="border-t border-border bg-background py-20">
-        <div className="container text-center">
+      <section className="relative overflow-hidden border-t border-border bg-background py-20">
+        <div className="absolute inset-0 z-0 opacity-10">
+            {heroBgImage && (
+              <Image
+                src={heroBgImage.imageUrl}
+                alt="Ready to Grow with AI-Powered Digital Solutions? background"
+                fill
+                className="object-cover"
+                data-ai-hint={heroBgImage.imageHint}
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
+        </div>
+        <div className="container relative z-10 text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
             Ready to Grow with AI-Powered Digital Solutions?
           </h2>

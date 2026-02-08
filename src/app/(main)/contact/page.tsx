@@ -150,8 +150,20 @@ export default function ContactPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="border-t bg-card py-20">
-            <div className="container text-center">
+        <section className="relative overflow-hidden border-t bg-card py-20">
+            <div className="absolute inset-0 z-0 opacity-10">
+                {heroBgImage && (
+                    <Image
+                        src={heroBgImage.imageUrl}
+                        alt="Your Vision. Our Technology. background"
+                        fill
+                        className="object-cover"
+                        data-ai-hint={heroBgImage.imageHint}
+                    />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent"></div>
+            </div>
+            <div className="container relative z-10 text-center">
                 <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
                     Your Vision. Our Technology.
                 </h2>

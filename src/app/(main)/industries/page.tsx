@@ -119,8 +119,20 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      <section className="border-t bg-secondary py-20 animate-in fade-in duration-700">
-        <div className="container text-center">
+      <section className="relative overflow-hidden border-t bg-secondary py-20 animate-in fade-in duration-700">
+        <div className="absolute inset-0 z-0 opacity-10">
+            {heroBgImage && (
+                <Image
+                src={heroBgImage.imageUrl}
+                alt="Your Industry. Our AI Expertise. background"
+                fill
+                className="object-cover"
+                data-ai-hint={heroBgImage.imageHint}
+                />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/10 to-transparent" />
+        </div>
+        <div className="container relative z-10 text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
             Your Industry. Our AI Expertise.
           </h2>
