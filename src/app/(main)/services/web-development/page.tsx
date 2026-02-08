@@ -29,6 +29,7 @@ import {
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { portfolioProjects } from '@/lib/data';
 
 
 const WhatsAppIcon = () => (
@@ -51,6 +52,7 @@ const WhatsAppIcon = () => (
 export default function WebDevelopmentPage() {
     const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
     const detailImage = PlaceHolderImages.find((img) => img.id === 'service-web-dev-detail');
+    const webProjects = portfolioProjects.filter(p => ['corporate-website', 'ed-tech-portal', 'project-management-saas'].includes(p.slug));
 
     const whyThisWorks = [
         {
@@ -172,6 +174,40 @@ export default function WebDevelopmentPage() {
                                 <p className="mt-2 text-muted-foreground">{value.description}</p>
                             </div>
                         </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="bg-background py-20 md:py-28">
+                <div className="container">
+                     <div className="text-center mb-12">
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Web Showcase</h2>
+                        <p className="mt-4 text-lg text-muted-foreground">Explore some of the web experiences we've crafted.</p>
+                    </div>
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+                        {webProjects.map((project) => (
+                            <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
+                                <div className="relative h-[450px] overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl">
+                                    <Image
+                                        src={project.image.imageUrl}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover transition-all duration-500 group-hover:scale-105"
+                                        data-ai-hint={project.image.imageHint}
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                                    <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                                        <h3 className="font-headline text-2xl font-bold drop-shadow-sm">{project.title}</h3>
+                                        <div className="mt-2 flex flex-wrap gap-2">
+                                            {project.tags.map(tag => (
+                                                <Badge key={tag} variant="outline" className="w-fit border-white/20 bg-black/20 text-white backdrop-blur-md">{tag}</Badge>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
