@@ -266,7 +266,7 @@ export default function AboutPage() {
                             {leader.name}
                         </h3>
                         <p className="mt-1 text-muted-foreground">{leader.designation}</p>
-                        <Link href="#" className="mt-4 inline-flex items-center text-sm font-semibold text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <Link href="/founders" className="mt-4 inline-flex items-center text-sm font-semibold text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                             View Bio <MoveRight className="ml-2 h-4 w-4" />
                         </Link>
                     </div>
