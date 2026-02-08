@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -106,9 +105,9 @@ export default function DeepakYadavPage() {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     {deepak.education.map((edu, index) => (
-                        <Card key={index} className="border bg-card p-6 soft-shadow">
+                        <Card key={index} className="border bg-card p-6 soft-shadow rounded-2xl">
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
                                     <edu.icon className="h-6 w-6" />
                                 </div>
                                 <h4 className="font-headline text-xl font-bold text-accent">{edu.category}</h4>
