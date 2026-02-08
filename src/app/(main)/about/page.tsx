@@ -253,7 +253,7 @@ export default function AboutPage() {
                 {leadership.map((leader, index) => {
                 const image = PlaceHolderImages.find(p => p.id === leader.imageId);
                 return (
-                    <div key={leader.name} className="group relative overflow-hidden rounded-3xl border bg-card p-6 transition-all duration-300 hover:border-primary/20 soft-shadow hover:-translate-y-2">
+                    <div key={leader.name} className="group relative overflow-hidden rounded-3xl border bg-card p-6 transition-all duration-300 hover:border-primary/20 hover:-translate-y-2">
                     {image && (
                         <div className="relative aspect-square overflow-hidden rounded-2xl">
                         <Image

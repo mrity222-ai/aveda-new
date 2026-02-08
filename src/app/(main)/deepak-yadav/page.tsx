@@ -92,7 +92,7 @@ export default function DeepakYadavPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
                 <div className="md:col-span-1">
                     {deepakImage && (
-                    <div className="relative aspect-square rounded-2xl overflow-hidden border-4 border-primary/20 shadow-lg soft-shadow">
+                    <div className="relative aspect-square rounded-2xl overflow-hidden border-4 border-primary/20">
                         <Image
                         src={deepakImage.imageUrl}
                         alt={deepak.name}
