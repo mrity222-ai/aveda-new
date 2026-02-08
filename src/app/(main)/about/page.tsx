@@ -1,6 +1,7 @@
 
 import Image from 'next/image';
-import { BrainCircuit, Target, TrendingUp, Users, Twitter, Linkedin } from 'lucide-react';
+import Link from 'next/link';
+import { BrainCircuit, Target, TrendingUp, Users, Twitter, Linkedin, MoveRight } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
@@ -269,6 +270,9 @@ export default function AboutPage() {
                         <a href={leader.socials.twitter} className="text-muted-foreground hover:text-primary"><Twitter className="h-5 w-5" /></a>
                         <a href={leader.socials.linkedin} className="text-muted-foreground hover:text-primary"><Linkedin className="h-5 w-5" /></a>
                         </div>
+                        <Link href="#" className="mt-6 inline-flex items-center text-sm font-semibold text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            View Bio <MoveRight className="ml-2 h-4 w-4" />
+                        </Link>
                     </div>
                     </div>
                 )
