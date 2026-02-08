@@ -55,12 +55,14 @@ export default function AboutPage() {
       name: 'Raj Mani Yadav',
       designation: 'Co-Founder & CEO',
       imageId: 'leader-raj',
+      bioLink: '/founders',
       socials: { twitter: '#', linkedin: '#' }
     },
     {
       name: 'Deepak Yadav',
       designation: 'Co-Founder & Innovation & Growth Lead',
       imageId: 'leader-deepak',
+      bioLink: '/deepak-yadav',
       socials: { twitter: '#', linkedin: '#' }
     }
   ];
@@ -258,7 +260,7 @@ export default function AboutPage() {
                             {leader.name}
                         </h3>
                         <p className="mt-1 text-muted-foreground">{leader.designation}</p>
-                        <Link href="/founders" className="mt-4 inline-flex items-center text-sm font-semibold text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <Link href={leader.bioLink} className="mt-4 inline-flex items-center text-sm font-semibold text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                             View Bio <MoveRight className="ml-2 h-4 w-4" />
                         </Link>
                     </div>
