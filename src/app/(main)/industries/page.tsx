@@ -12,6 +12,8 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const industries = [
   {
@@ -62,10 +64,24 @@ const industries = [
 ];
 
 export default function IndustriesPage() {
+  const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
   return (
     <div className="bg-background text-foreground">
-      <section className="py-20 md:py-28">
-        <div className="container">
+      <section className="relative overflow-hidden py-20 md:py-28">
+        <div className="absolute inset-0 z-0 opacity-10">
+            {heroBgImage && (
+                <Image
+                src={heroBgImage.imageUrl}
+                alt="Industries background"
+                fill
+                className="object-cover"
+                priority
+                data-ai-hint={heroBgImage.imageHint}
+                />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
+        </div>
+        <div className="container relative z-10">
           <div className="mx-auto mb-16 max-w-3xl text-center">
             <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-5xl animate-in fade-in slide-in-from-bottom-8 duration-700">
               Industries We Empower With AI

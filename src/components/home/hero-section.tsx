@@ -8,6 +8,19 @@ export default function HeroSection() {
   const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
   return (
     <section className="relative w-full overflow-hidden bg-background py-20 md:py-32">
+      <div className="absolute inset-0 z-0 opacity-10">
+        {heroBgImage && (
+          <Image
+            src={heroBgImage.imageUrl}
+            alt="Hero background"
+            fill
+            className="object-cover"
+            priority
+            data-ai-hint={heroBgImage.imageHint}
+          />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
+      </div>
       <div className="container relative z-10">
         <div className="mx-auto max-w-4xl text-center">
           <div className="animate-in fade-in slide-in-from-bottom-10 duration-700">

@@ -61,6 +61,19 @@ export default function ContactPage() {
     <div className="bg-background text-foreground">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-background py-20 md:py-32">
+            <div className="absolute inset-0 z-0 opacity-10">
+                {heroBgImage && (
+                    <Image
+                        src={heroBgImage.imageUrl}
+                        alt="Background"
+                        fill
+                        className="object-cover"
+                        data-ai-hint={heroBgImage.imageHint}
+                        priority
+                    />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent"></div>
+            </div>
             <div className="container relative z-10 text-center">
                 <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl">
                     Let’s Build Something Powerful Together
