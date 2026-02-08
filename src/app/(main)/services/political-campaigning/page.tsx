@@ -144,7 +144,7 @@ export default function PoliticalCampaigningPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
                 </div>
                 <div className="container relative z-10 text-center">
-                    <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
+                    <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl">
                         Political Campaigning with AI
                     </h1>
                     <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
@@ -164,7 +164,7 @@ export default function PoliticalCampaigningPage() {
             {/* How AI Wins Elections Section */}
             <section className="py-20 md:py-28 bg-secondary">
                 <div className="container text-center">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12">How AI Wins Elections</h2>
+                    <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl mb-12">How AI Wins Elections</h2>
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {howAiWins.map((item) => (
                         <div key={item.title} className="group rounded-lg border bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:-translate-y-2">
@@ -173,7 +173,7 @@ export default function PoliticalCampaigningPage() {
                                     <item.icon className="h-8 w-8" />
                                 </div>
                             </div>
-                            <h3 className="mt-6 font-headline text-xl font-semibold">{item.title}</h3>
+                            <h3 className="mt-6 font-headline text-xl font-semibold text-accent">{item.title}</h3>
                             <p className="mt-2 text-muted-foreground">{item.description}</p>
                         </div>
                         ))}
@@ -216,7 +216,7 @@ export default function PoliticalCampaigningPage() {
             <section className="bg-secondary py-20 md:py-28 relative overflow-hidden">
                 <div className="container relative z-10">
                     <div className="text-center mb-16">
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-foreground">
+                        <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">
                             Political Command Center
                         </h2>
                         <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
@@ -280,7 +280,7 @@ export default function PoliticalCampaigningPage() {
              {/* Process Section */}
             <section className="py-20 md:py-28 bg-background">
                 <div className="container">
-                    <h2 className="text-center font-headline text-3xl font-bold md:text-4xl mb-16">Our Campaign Process</h2>
+                    <h2 className="text-center font-headline text-3xl font-bold text-accent md:text-4xl mb-16">Our Campaign Process</h2>
                     <div className="relative">
                         <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2"></div>
                         {processSteps.map((step, index) => (
@@ -288,7 +288,7 @@ export default function PoliticalCampaigningPage() {
                                 <div className={cn("w-1/2", index % 2 === 0 ? "pr-8" : "pl-8")}>
                                 <div className={cn("p-6 rounded-lg border bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/10", index % 2 === 0 ? "text-left" : "text-right")}>
                                         <Badge variant='outline' className={cn("mb-2", index % 2 !== 0 && 'ml-auto block w-fit' )}>Step {index + 1}</Badge>
-                                        <h3 className="font-headline text-xl font-semibold">{step.title}</h3>
+                                        <h3 className="font-headline text-xl font-semibold text-accent">{step.title}</h3>
                                         <p className="mt-2 text-muted-foreground">{step.description}</p>
                                     </div>
                                 </div>
@@ -307,7 +307,7 @@ export default function PoliticalCampaigningPage() {
             <section className="bg-secondary py-20 md:py-28 relative overflow-hidden">
                 <div className="container relative z-10">
                     <div className="text-center mb-16">
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-foreground">Why Aveda For Your Campaign?</h2>
+                        <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">Why Aveda For Your Campaign?</h2>
                         <div className="mt-4 w-24 h-1 bg-primary mx-auto" />
                         <p className="mt-6 max-w-3xl mx-auto text-muted-foreground">
                             We're more than a service provider; we're your technology partner committed to delivering a decisive electoral advantage.
@@ -322,7 +322,7 @@ export default function PoliticalCampaigningPage() {
                                         <feature.icon className="h-6 w-6" />
                                     </div>
                                     <div>
-                                        <h3 className="font-headline text-lg font-semibold text-foreground">{feature.title}</h3>
+                                        <h3 className="font-headline text-lg font-semibold text-accent">{feature.title}</h3>
                                         <p className="mt-1 text-sm text-muted-foreground">{feature.description}</p>
                                     </div>
                                 </div>
@@ -334,7 +334,7 @@ export default function PoliticalCampaigningPage() {
                         <div className="max-w-2xl mx-auto rounded-lg border bg-card p-6 flex items-start gap-4">
                           <ShieldCheck className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                           <div>
-                            <h3 className="font-semibold">Compliance First</h3>
+                            <h3 className="font-semibold text-accent">Compliance First</h3>
                             <p className="text-sm text-muted-foreground">All our methodologies are compliant with platform policies (Google/Meta) and Election Commission guidelines. Data privacy is our priority.</p>
                           </div>
                         </div>
@@ -343,9 +343,21 @@ export default function PoliticalCampaigningPage() {
             </section>
 
              {/* Final CTA */}
-            <section className="border-t border-border bg-card py-20">
-                <div className="container text-center">
-                    <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
+            <section className="relative overflow-hidden border-t bg-card py-20">
+                <div className="absolute inset-0 z-0 opacity-10">
+                    {heroImage && (
+                        <Image
+                            src={heroImage.imageUrl}
+                            alt="Ready to Launch a Winning Campaign background"
+                            fill
+                            className="object-cover"
+                            data-ai-hint={heroImage.imageHint}
+                        />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent"></div>
+                </div>
+                <div className="container relative z-10 text-center">
+                    <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
                         Ready to Launch a Winning Campaign?
                     </h2>
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
