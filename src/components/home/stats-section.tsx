@@ -21,11 +21,11 @@ const Hexagon = ({
   delay: string;
 }) => (
   <div
-    className="group relative flex h-[115.47px] w-[100px] animate-in items-center justify-center zoom-in-90 fade-in transition-all duration-300 hover:z-10 hover:scale-110"
+    className="group relative flex h-[115.47px] w-[100px] animate-in items-center justify-center zoom-in-90 fade-in transition-all duration-300 hover:z-10 hover:scale-110 hover:-translate-y-2"
     style={{ animationDelay: delay }}
   >
     <div
-      className="absolute inset-0 border bg-card/80 shadow-sm backdrop-blur-md transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-lg"
+      className="absolute inset-0 border bg-card/80 shadow-md backdrop-blur-md transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-xl group-hover:shadow-primary/20"
       style={{
         clipPath:
           'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
