@@ -323,6 +323,24 @@
       "description": "Professional corporate portrait of Deepak Yadav",
       "imageUrl": "https://images.unsplash.com/photo-1672825523661-80df832c6a1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYWxlJTIwY29ycG9yYXRlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcwNTMzMDkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "male corporate portrait"
+    },
+    {
+      "id": "video-thumb-1",
+      "description": "A video about AI in modern business",
+      "imageUrl": "https://images.unsplash.com/photo-1706466614967-f4f14a3d9d08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxBSSUyMGJ1c2luZXNzfGVufDB8fHx8MTc3MDU2OTgzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI business"
+    },
+    {
+      "id": "video-thumb-2",
+      "description": "A video showcasing digital marketing success",
+      "imageUrl": "https://images.unsplash.com/photo-1621256326941-98d9e045e2ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYXJrZXRpbmclMjBzdWNjZXNzfGVufDB8fHx8MTc3MDU2OTgzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "marketing success"
+    },
+    {
+      "id": "video-thumb-3",
+      "description": "A video on political campaign intelligence",
+      "imageUrl": "https://images.unsplash.com/photo-1604948501466-4e9c339b9c24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBpbnRlbGxpZ2VuY2V8ZW58MHx8fHwxNzcwNTY5ODM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "political intelligence"
     }
   ]
 }
