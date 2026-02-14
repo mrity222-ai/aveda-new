@@ -61,23 +61,25 @@ export default function AiAutomationPage() {
     const [isYearly, setIsYearly] = React.useState(false);
 
     const processSteps = [
-        { icon: Search, title: "Strategy &amp; Audit", description: "We analyze your current systems and identify automation opportunities." },
+        { icon: Search, title: "Strategy & Audit", description: "We analyze your current systems and identify automation opportunities." },
         { icon: BrainCircuit, title: "AI Blueprint Creation", description: "We design a customized AI growth roadmap tailored to your business." },
-        { icon: Code, title: "System Development &amp; Integration", description: "We build, integrate, and test your automation workflows." },
-        { icon: Rocket, title: "Launch &amp; Optimization", description: "We monitor performance and continuously optimize for maximum ROI." },
+        { icon: Code, title: "System Development & Integration", description: "We build, integrate, and test your automation workflows." },
+        { icon: Rocket, title: "Launch & Optimization", description: "We monitor performance and continuously optimize for maximum ROI." },
     ];
+
+    const iconClassName = "h-10 w-10 text-foreground/80 transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]";
     
     const techStack = [
         { icon: PythonIcon, name: 'Python' },
         { icon: OpenAIIcon, name: 'OpenAI' },
-        { icon: Cpu, name: 'Genkit' },
-        { icon: Sparkles, name: 'LangChain' },
+        { icon: () => <Cpu className={iconClassName} />, name: 'Genkit' },
+        { icon: () => <Sparkles className={iconClassName} />, name: 'LangChain' },
         { icon: TensorFlowIcon, name: 'TensorFlow' },
-        { icon: Cloud, name: 'Google Cloud' },
-        { icon: Database, name: 'Firebase' },
-        { icon: Zap, name: 'Zapier' },
-        { icon: Layers, name: 'Make.com' },
-        { icon: Container, name: 'Docker' },
+        { icon: () => <Cloud className={iconClassName} />, name: 'Google Cloud' },
+        { icon: () => <Database className={iconClassName} />, name: 'Firebase' },
+        { icon: () => <Zap className={iconClassName} />, name: 'Zapier' },
+        { icon: () => <Layers className={iconClassName} />, name: 'Make.com' },
+        { icon: () => <Container className={iconClassName} />, name: 'Docker' },
     ];
 
     const benefits = [
@@ -393,15 +395,22 @@ export default function AiAutomationPage() {
             </section>
             
             {/* Tech Stack Section */}
-            <section className="bg-background py-20 md:py-28 relative">
+            <section className="bg-background py-20 md:py-28 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/nn.svg')] bg-center opacity-[0.03] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]"></div>
+
                 <div className="container text-center relative z-10">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-accent">Our Technology Stack</h2>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
-                        {techStack.map((tech) => (
-                        <div key={tech.name} className="group relative rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:-translate-y-1 soft-shadow">
-                            <div className="relative flex flex-col items-center justify-center gap-4">
-                                <tech.icon />
-                                <p className="font-semibold text-sm text-center uppercase tracking-wider text-foreground">{tech.name}</p>
+                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-24 text-accent">Our Technology Stack</h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+                        {techStack.map((tech, index) => (
+                        <div key={tech.name} 
+                             className="group animate-in fade-in zoom-in-95 duration-500"
+                             style={{ animationDelay: `${index * 100}ms` }}
+                        >
+                            <div className="relative rounded-2xl border border-border/20 bg-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:bg-primary/5 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 grayscale hover:grayscale-0">
+                                <div className="relative flex flex-col items-center justify-center gap-4">
+                                    <tech.icon />
+                                    <p className="font-semibold text-sm text-center uppercase tracking-wider text-muted-foreground group-hover:text-foreground transition-colors">{tech.name}</p>
+                                </div>
                             </div>
                         </div>
                         ))}
@@ -410,7 +419,7 @@ export default function AiAutomationPage() {
             </section>
 
             {/* Results Section */}
-            <section className="bg-background py-20 md:py-28 relative">
+            <section className="bg-secondary py-20 md:py-28 relative">
                 <div className="absolute inset-0 bg-[url('/nn.svg')] bg-center opacity-5 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
                 <div className="container relative z-10">
                     <div className="mx-auto max-w-3xl text-center mb-16">
