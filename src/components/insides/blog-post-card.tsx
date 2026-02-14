@@ -112,7 +112,7 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
                 {isLoading ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Generating...
+                    <span className="animate-pulse-glow">AI is thinking...</span>
                   </>
                 ) : (
                   <>

@@ -74,7 +74,7 @@ export default function UiUxDesignPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
                 </div>
                 <div className="container relative z-10 text-center">
-                    <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
+                    <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl animate-blur-in">
                         Intuitive UI/UX for Exceptional User Experiences
                     </h1>
                     <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">

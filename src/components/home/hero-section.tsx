@@ -21,7 +21,7 @@ export default function HeroSection() {
       {/* Content */}
       <div className="container relative z-10">
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl">
+          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl animate-blur-in">
             Driving Business Growth with{' '}
             <span className="text-primary">
               Intelligent IT Solutions

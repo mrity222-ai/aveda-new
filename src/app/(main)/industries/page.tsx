@@ -83,7 +83,7 @@ export default function IndustriesPage() {
         </div>
         <div className="container relative z-10">
           <div className="mx-auto mb-16 max-w-3xl text-center">
-            <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-5xl animate-in fade-in slide-in-from-bottom-8 duration-700">
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-5xl animate-blur-in">
               Industries We Empower With AI
             </h1>
             <p className="mt-4 text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-10 duration-700 delay-100">

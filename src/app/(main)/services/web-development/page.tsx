@@ -136,7 +136,7 @@ export default function WebDevelopmentPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
                 </div>
                 <div className="container relative z-10 text-center">
-                    <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
+                    <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl animate-blur-in">
                         High-Performance Websites That Scale With Your Business
                     </h1>
                     <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">

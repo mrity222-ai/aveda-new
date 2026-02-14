@@ -91,7 +91,7 @@ export default function TermsAndConditionsPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent" />
         </div>
         <div className="container relative z-10 text-center">
-          <h1 className="font-headline text-4xl font-bold text-gray-900 md:text-5xl">
+          <h1 className="font-headline text-4xl font-bold text-gray-900 md:text-5xl animate-blur-in">
             Terms & Conditions
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">

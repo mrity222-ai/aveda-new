@@ -63,7 +63,7 @@ export default function DeepakYadavPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-transparent"></div>
         </div>
         <div className="container relative z-10 text-center">
-          <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl">
+          <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl animate-blur-in">
             Meet Our Founder
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">

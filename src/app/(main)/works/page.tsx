@@ -23,7 +23,7 @@ export default function WorksPage() {
       </div>
       <div className="container relative z-10 py-20 md:py-28">
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl">
+          <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl animate-blur-in">
             Our Work
           </h1>
           <p className="mt-6 text-lg text-muted-foreground">

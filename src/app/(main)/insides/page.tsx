@@ -57,7 +57,7 @@ export default function InsidesPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-transparent"></div>
         </div>
         <div className="container relative z-10 text-center">
-          <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl animate-in fade-in slide-in-from-bottom-8 duration-700">
+          <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl animate-blur-in">
             AI-Driven Insights That Shape Decisions
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-10 duration-700 delay-100">

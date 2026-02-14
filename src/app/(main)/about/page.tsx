@@ -89,7 +89,7 @@ export default function AboutPage() {
           <p className="font-headline text-sm uppercase tracking-widest text-primary animate-in fade-in slide-in-from-bottom-4 duration-1000">
             About Aveda Technologies
           </p>
-          <h1 className="mt-4 font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
+          <h1 className="mt-4 font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl animate-blur-in">
             Building Intelligent Digital & Political Systems with AI
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-12 duration-1000">
