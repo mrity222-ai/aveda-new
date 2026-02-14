@@ -67,36 +67,6 @@ export default function AboutPage() {
     }
   ];
 
-  const Hexagon = ({
-    name,
-    imageUrl,
-    delay,
-  }: {
-    name: string;
-    imageUrl: string;
-    delay: string;
-  }) => (
-    <div
-      className="group relative flex h-[115.47px] w-[100px] animate-in items-center justify-center zoom-in-90 fade-in transition-all duration-300 hover:z-10 hover:scale-110 hover:-translate-y-2"
-    >
-      <div
-        className="absolute inset-0 border bg-card/80 shadow-md backdrop-blur-sm transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-xl group-hover:shadow-primary/20"
-        style={{
-          clipPath:
-            'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-        }}
-      />
-      <div className="relative h-8 w-16">
-        <Image
-          src={imageUrl}
-          alt={`${name} logo`}
-          fill
-          className="object-contain"
-        />
-      </div>
-    </div>
-  );
-
 
   return (
     <div className="bg-background text-foreground">
@@ -141,34 +111,18 @@ export default function AboutPage() {
             We collaborate with global technology leaders to build secure, scalable, and cutting-edge solutions.
           </p>
 
-          <div className="mt-16 flex h-full min-h-[500px] items-center justify-center sm:min-h-[600px]">
-  <div
-    className="
-      flex origin-center flex-col items-center
-      gap-y-[calc(-115.47px/4)]
-      scale-75
-      sm:scale-90
-      md:scale-100
-      lg:scale-110
-      xl:scale-125
-    "
-  >
-              {/* Row 1 */}
-              <div className="flex gap-x-1">
-                <Hexagon name={partners[0].name} imageUrl={partners[0].imageUrl} delay="300ms" />
-                <Hexagon name={partners[1].name} imageUrl={partners[1].imageUrl} delay="400ms" />
-              </div>
-              {/* Row 2 */}
-              <div className="flex gap-x-1">
-                <Hexagon name={partners[2].name} imageUrl={partners[2].imageUrl} delay="500ms" />
-                <Hexagon name={partners[3].name} imageUrl={partners[3].imageUrl} delay="600ms" />
-                <Hexagon name={partners[4].name} imageUrl={partners[4].imageUrl} delay="700ms" />
-              </div>
-              {/* Row 3 */}
-              <div className="flex gap-x-1">
-                <Hexagon name={partners[5].name} imageUrl={partners[5].imageUrl} delay="800ms" />
-                <Hexagon name={partners[6].name} imageUrl={partners[6].imageUrl} delay="900ms" />
-              </div>
+          <div className="mt-16 max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 items-center gap-0">
+              {partners.map((partner) => (
+                <div key={partner.name} className="relative h-28 w-full p-6 grayscale transition-all duration-300 hover:grayscale-0">
+                  <Image
+                    src={partner.imageUrl}
+                    alt={`${partner.name} logo`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
