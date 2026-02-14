@@ -341,6 +341,24 @@
       "description": "A video on political campaign intelligence",
       "imageUrl": "https://images.unsplash.com/photo-1604948501466-4e9c339b9c24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBpbnRlbGxpZ2VuY2V8ZW58MHx8fHwxNzcwNTY5ODM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "political intelligence"
+    },
+    {
+      "id": "political-visual-1",
+      "description": "Digital War Room",
+      "imageUrl": "https://images.unsplash.com/photo-1560264280-9243f79e2948?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwb2xpdGljYWwlMjB3YXJyb29tfGVufDB8fHx8MTc3NDY0MzE1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "political warroom"
+    },
+    {
+      "id": "political-visual-2",
+      "description": "Voter Analytics",
+      "imageUrl": "https://images.unsplash.com/photo-1642427749670-f20e2e76f8c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2b3RlciUyMGFuYWx5dGljc3xlbnwwfHx8fDE3NzQ2NDMxNTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "voter analytics"
+    },
+    {
+      "id": "political-visual-3",
+      "description": "Campaign Outreach",
+      "imageUrl": "https://images.unsplash.com/photo-1541872322800-8d2a3e336a53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb2xpdGljYWwlMjByYWxseXxlbnwwfHx8fDE3NzQ2NDMxNTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "political rally"
     }
   ]
 }

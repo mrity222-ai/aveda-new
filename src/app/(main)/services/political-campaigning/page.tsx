@@ -177,6 +177,40 @@ export default function PoliticalCampaigningPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Visualizing Victory Section */}
+            <section className="bg-background py-20 md:py-28">
+                <div className="container">
+                    <div className="text-center mb-16">
+                        <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">Visualizing Victory</h2>
+                        <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+                            From the war room to the campaign trail, our data-driven approach in action.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {['political-visual-1', 'political-visual-2', 'political-visual-3'].map((imageId) => {
+                            const image = PlaceHolderImages.find((img) => img.id === imageId);
+                            if (!image) return null;
+                            return (
+                                <div key={image.id} className="group relative h-96 overflow-hidden rounded-2xl border bg-card shadow-lg transition-all duration-500 hover:shadow-primary/20 hover:scale-105">
+                                    <Image
+                                        src={image.imageUrl}
+                                        alt={image.description}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                        data-ai-hint={image.imageHint}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                     <div className="absolute bottom-0 p-6">
+                                        <Badge variant="outline" className="w-fit border-white/20 bg-black/10 text-white backdrop-blur-md">{image.description}</Badge>
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+            </section>
             
             {/* Our AI-Powered Political Services Section */}
             <section className="bg-secondary py-20 md:py-28 relative overflow-hidden">
