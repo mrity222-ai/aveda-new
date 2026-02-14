@@ -94,9 +94,9 @@ export default function AiAutomationPage() {
             icon: Rocket,
             color: 'green',
             description: 'Perfect for small businesses beginning their automation journey.',
-            price: { monthly: '4,999', yearly: '49,999' },
+            price: { monthly: 'Custom', yearly: '' },
             features: ['Core AI Chatbot', 'Basic CRM Automation', '3 Workflow Setups', 'Monthly Report'],
-            cta: 'Get Started',
+            cta: 'Contact Sales',
             variant: 'outline',
         },
         {
