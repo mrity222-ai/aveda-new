@@ -8,7 +8,7 @@ export default function AiAutomationPreview() {
     {
       icon: BrainCircuit,
       title: 'CRM & Lead Automation',
-      description: 'Automatically capture, organize, and nurture leads with intelligent workflows that never miss an opportunity.',
+      description: '',
     },
     {
       icon: Bot,
