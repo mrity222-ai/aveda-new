@@ -24,34 +24,13 @@ import { Logo } from './logo';
 
 export default function Header() {
   const pathname = usePathname();
-  const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
-  const [hasMounted, setHasMounted] = useState(false);
-
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!hasMounted) return;
-
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    handleScroll(); // Check on mount
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [hasMounted]);
 
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 w-full transition-all duration-300 animate-in fade-in slide-in-from-top-4',
-        isScrolled
-          ? 'border-b bg-background/80 backdrop-blur-sm'
-          : 'border-b border-transparent'
+        'sticky top-0 z-50 w-full transition-all duration-300 animate-in fade-in slide-in-from-top-4 border-b border-transparent'
       )}
       onMouseLeave={() => setServicesMenuOpen(false)}
     >
