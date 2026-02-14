@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -24,17 +23,18 @@ import {
   Search,
   Scale,
   Cpu,
+  XCircle,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
 const PythonIcon = () => (
-    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-foreground/80 transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]"><title>Python</title><path fill="currentColor" d="M16.225 10.358c-1.124-1.21-2.932-1.116-4.251.028-.85.737-1.396 1.8-1.485 2.933H12.9c.08-.627.4-1.18.81-1.59.56-.56 1.348-.797 2.144-.585.8.21 1.427.764 1.744 1.51.318.748.214 1.58-.29 2.216-.505.637-1.25.99-2.074 1.02h-1.33v-2.04h-.99v5.1h2.296c1.396 0 2.674-.682 3.42-1.84.747-1.157.747-2.61 0-3.766zm-7.23-2.63c-1.397 0-2.675-.682-3.42-1.841-.748-1.156-.748-2.61 0-3.766C6.322.905 7.6.222 8.997.222c1.124 1.21 2.932 1.116 4.25-.028.851-.737 1.397-1.8 1.486-2.933H12.3c-.08.627-.4 1.18-.81 1.59-.56.56-1.348-.797-2.144-.585-.8-.21-1.427-.764-1.744-1.51C7.284.974 7.18.143 7.685-.494c.504-.636 1.25-.99 2.074-1.019h1.33v2.04h.99v-5.1H9.782c-1.396 0-2.674.682-3.42 1.84-.747 1.157-.747-2.61 0 3.767z"/></svg>
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-foreground/80 transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]"><title>Python</title><path fill="currentColor" d="M16.225 10.358c-1.124-1.21-2.932-1.116-4.251.028-.85.737-1.396 1.8-1.485 2.933H12.9c.08-.627.4-1.18.81-1.59.56-.56 1.348-.797 2.144-.585.8.21 1.427.764 1.744 1.51.318.748.214 1.58-.29 2.216-.505.637-1.25.99-2.074 1.02h-1.33v-2.04h-.99v5.1h2.296c1.396 0 2.674-.682 3.42-1.84.747-1.157.747-2.61 0-3.766zm-7.23-2.63c-1.397 0-2.675-.682-3.42-1.841-.748-1.156-.748-2.61 0-3.766C6.322.905 7.6.222 8.997.222c1.124 1.21 2.932 1.116 4.25-.028.851-.737 1.397-1.8 1.486-2.933H12.3c-.08.627-.4 1.18-.81-1.59-.56-.56-1.348-.797-2.144-.585-.8-.21-1.427-.764-1.744-1.51C7.284.974 7.18.143 7.685-.494c.504-.636 1.25-.99 2.074-1.019h1.33v2.04h.99v-5.1H9.782c-1.396 0-2.674.682-3.42 1.84-.747 1.157-.747-2.61 0 3.767z"/></svg>
 )
 
 const OpenAIIcon = () => (
-    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-foreground/80 transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]"><title>OpenAI</title><path fill="currentColor" d="M20.219 19.82a8.743 8.743 0 0 1-13.402-4.966c.275-2.623 1.043-4.996 2.19-6.938 1.04-1.76 2.45-3.235 4.103-4.328A8.743 8.743 0 0 1 18.068 8.5a8.742 8.742 0 0 1-2.992 10.912c.55.337 1.08.723 1.586 1.151.08.067.14.15.19.24.16.29.07.66-.23.82-.29.16-.66.07-.82-.23a4.37 4.37 0 0 1-2.02-2.135c-.15-.29-.42-.48-.74-.53a4.37 4.37 0 0 0-4.04 2.807c-.16.3-.07.66.23.81.29.16.66.07.82-.23a2.62 2.62 0 0 1 2.42-1.68c.25 0 .49.09.68.25.3.25.4.65.25.99a2.62 2.62 0 0 1-3.63 1.72c-.3-.16-.66-.07-.82.23-.16.29-.07.66.23.82a4.37 4.37 0 0 0 6.06-2.86c.15-.3.42-.48.74-.53a4.37 4.37 0 0 1 4.04-2.808c.3-.05.58.11.69.39.16.29.07.66-.23.81-.3-.16-.66-.07.82-.23a2.62 2.62 0 0 0-2.43 1.68c.09-.18.09.38-.03-.56.2.62.77 1.03 1.41 1.03.2 0 .4-.04.59-.12.3-.16.66-.07-.82.23.15.3.06.66-.24.82zM12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zM3.78 19.82A8.743 8.743 0 0 1 17.182 4.966c-.275 2.623-1.043 4.996-2.19 6.938-1.04 1.76-2.45 3.235-4.103 4.328a8.743 8.743 0 0 1-5.952 4.912c-.55-.337-1.08-.723-1.586-1.151a.523.523 0 0 1-.19-.24c-.16-.29-.07-.66.23-.82.29-.16.66-.07.82.23a4.37 4.37 0 0 1 2.02 2.135c.15.29.42.48.74.53a4.37 4.37 0 0 0 4.04-2.807c.16-.3.07-.66-.23-.81-.29-.16-.66-.07-.82.23a2.62 2.62 0 0 1-2.42 1.68c-.25 0-.49-.09-.68-.25a.874.874 0 0 1-.25-.99 2.62 2.62 0 0 1 3.63-1.72c.3.16.66.07.82-.23.16-.29.07-.66-.23-.82a4.37 4.37 0 0 0-6.06 2.86c-.15.3-.42.48-.74-.53a4.37 4.37 0 0 1-4.04 2.808c-.3.05-.58.11-.69-.39-.16-.29-.07-.66.23-.81.3-.16.66-.07.82.23a2.62 2.62 0 0 0 2.43-1.68c.09-.18.09.38.03-.56a1.75 1.75 0 0 0-1.41-1.03c-.2 0-.4.04-.59.12-.3.16-.66-.07-.82-.23-.15-.3-.06.66.24-.82z"/></svg>
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-foreground/80 transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]"><title>OpenAI</title><path fill="currentColor" d="M20.219 19.82a8.743 8.743 0 0 1-13.402-4.966c.275-2.623 1.043-4.996 2.19-6.938 1.04-1.76 2.45-3.235 4.103-4.328A8.743 8.743 0 0 1 18.068 8.5a8.742 8.742 0 0 1-2.992 10.912c.55.337 1.08.723 1.586 1.151.08.067.14.15.19.24.16.29.07.66-.23.82-.29.16-.66.07-.82-.23a4.37 4.37 0 0 1-2.02-2.135c-.15-.29-.42-.48-.74-.53a4.37 4.37 0 0 0-4.04 2.807c-.16.3-.07.66.23.81.29.16.66.07.82-.23a2.62 2.62 0 0 1 2.42-1.68c.25 0 .49.09.68.25.3.25.4.65.25.99a2.62 2.62 0 0 1-3.63 1.72c-.3-.16-.66-.07-.82.23-.16.29-.07.66.23.82a4.37 4.37 0 0 0 6.06-2.86c.15-.3.42-.48.74-.53a4.37 4.37 0 0 1 4.04-2.808c.3-.05.58.11.69.39.16.29.07.66-.23.81-.3-.16-.66-.07.82-.23a2.62 2.62 0 0 0-2.43 1.68c.09-.18.09.38-.03-.56.2.62.77 1.03 1.41 1.03.2 0 .4-.04.59-.12.3-.16.66-.07-.82.23.15.3.06.66-.24.82zM12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zM3.78 19.82A8.743 8.743 0 0 1 17.182 4.966c-.275 2.623-1.043 4.996-2.19 6.938-1.04 1.76-2.45 3.235-4.103 4.328a8.743 8.743 0 0 1-5.952 4.912c-.55-.337-1.08-.723-1.586-1.151a.523.523 0 0 1-.19-.24c-.16-.29-.07-.66.23-.82.29-.16.66-.07.82.23a4.37 4.37 0 0 1 2.02 2.135c.15.29.42.48.74.53a4.37 4.37 0 0 0 4.04-2.807c.16-.3.07-.66-.23-.81-.29-.16-.66-.07-.82.23a2.62 2.62 0 0 1-2.42 1.68c-.25 0-.49-.09-.68-.25a.874.874 0 0 1-.25-.99 2.62 2.62 0 0 1 3.63-1.72c.3.16.66.07.82-.23.16-.29.07-.66-.23-.82a4.37 4.37 0 0 0-6.06 2.86c-.15.3-.42-.48-.74-.53a4.37 4.37 0 0 1-4.04 2.808c-.3.05-.58.11-.69-.39-.16-.29-.07-.66.23-.81.3-.16.66-.07.82.23a2.62 2.62 0 0 0 2.43-1.68c.09-.18.09.38.03-.56a1.75 1.75 0 0 0-1.41-1.03c-.2 0-.4.04-.59.12-.3.16-.66-.07-.82-.23-.15-.3-.06.66.24-.82z"/></svg>
 )
 
 const TensorFlowIcon = () => (
@@ -44,29 +44,6 @@ const TensorFlowIcon = () => (
 
 export default function AiAutomationPage() {
     const heroImage = PlaceHolderImages.find((img) => img.id === 'service-ai');
-
-    const coreServices = [
-        {
-            icon: Zap,
-            title: 'Workflow Automation',
-            description: 'Automate repetitive tasks and connect your apps using tools like Zapier and Make.',
-        },
-        {
-            icon: Bot,
-            title: 'Generative AI Solutions',
-            description: 'Deploy intelligent, 24/7 AI assistants and content generation pipelines.',
-        },
-        {
-            icon: FileText,
-            title: 'Intelligent Data Processing',
-            description: 'Automatically process documents, extract key information, and eliminate manual data entry.',
-        },
-        {
-            icon: BrainCircuit,
-            title: 'Custom AI Models',
-            description: 'Build and train bespoke AI models tailored to your unique business challenges.',
-        },
-    ];
 
     const processSteps = [
         { icon: Search, title: "Discover & Strategize", description: "We audit your current workflows to identify the most impactful automation opportunities." },
@@ -130,23 +107,38 @@ export default function AiAutomationPage() {
                 </div>
             </section>
 
-            {/* Core Services Bento Grid */}
+            {/* Is Your Business Stuck Section */}
             <section className="bg-background py-20 md:py-28">
-                <div className="container text-center">
-                    <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12 text-accent">Core Automation Services</h2>
-                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                        {coreServices.map((item) => (
-                        <div key={item.title} className="group rounded-xl border bg-card p-8 text-center transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:-translate-y-2 soft-shadow">
-                            <div className="flex justify-center">
-                                <div className="relative flex h-20 w-20 items-center justify-center rounded-full">
-                                    <div className="absolute inset-0 rounded-full bg-primary/10 blur-lg transition-all duration-300 group-hover:blur-xl"></div>
-                                    <item.icon className="relative h-10 w-10 text-primary drop-shadow-[0_0_8px_hsl(var(--primary)/0.8)]" />
-                                </div>
-                            </div>
-                            <h3 className="mt-6 font-headline text-xl font-semibold text-foreground">{item.title}</h3>
-                            <p className="mt-2 text-muted-foreground">{item.description}</p>
+                <div className="container">
+                    <div className="mx-auto max-w-3xl text-center">
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl text-accent">Is Your Business Stuck in Manual Chaos?</h2>
+                    </div>
+                    <div className="mx-auto mt-12 max-w-4xl rounded-2xl border-2 border-dashed border-destructive/30 bg-card p-8 soft-shadow md:p-12">
+                        <ul className="grid grid-cols-1 gap-x-8 gap-y-6 text-lg sm:grid-cols-2">
+                            <li className="flex items-start gap-4">
+                                <XCircle className="mt-1 h-6 w-6 flex-shrink-0 text-destructive" />
+                                <span>Leads are coming in but follow-ups are inconsistent</span>
+                            </li>
+                            <li className="flex items-start gap-4">
+                                <XCircle className="mt-1 h-6 w-6 flex-shrink-0 text-destructive" />
+                                <span>Your team is overwhelmed with repetitive tasks</span>
+                            </li>
+                            <li className="flex items-start gap-4">
+                                <XCircle className="mt-1 h-6 w-6 flex-shrink-0 text-destructive" />
+                                <span>Sales processes are slow and unstructured</span>
+                            </li>
+                            <li className="flex items-start gap-4">
+                                <XCircle className="mt-1 h-6 w-6 flex-shrink-0 text-destructive" />
+                                <span>Content creation consumes too much time</span>
+                            </li>
+                            <li className="col-span-1 sm:col-span-2 flex items-start gap-4 justify-center">
+                                <XCircle className="mt-1 h-6 w-6 flex-shrink-0 text-destructive" />
+                                <span>You lack data-driven decision-making</span>
+                            </li>
+                        </ul>
+                        <div className="mt-10 border-t border-dashed border-border pt-8 text-center">
+                            <p className="text-xl font-semibold text-accent">If this sounds familiar, your business doesn’t need more staff. <br className="hidden sm:block" /> It needs <span className="text-primary">intelligent automation.</span></p>
                         </div>
-                        ))}
                     </div>
                 </div>
             </section>
