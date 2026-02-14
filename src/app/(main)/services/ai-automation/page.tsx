@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -407,7 +408,7 @@ export default function AiAutomationPage() {
                     {heroImage && (
                         <Image
                             src={heroImage.imageUrl}
-                            alt="Ready to Build Your AI Growth Engine? background"
+                            alt="Ready to Transform Your Business with AI? background"
                             fill
                             className="object-cover"
                             data-ai-hint={heroImage.imageHint}
@@ -417,20 +418,15 @@ export default function AiAutomationPage() {
                 </div>
                 <div className="container relative z-10 text-center">
                     <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
-                        Ready to Build Your AI Growth Engine?
+                        Ready to Transform Your Business with AI?
                     </h2>
                      <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-                        Let's discuss how AI can transform your business. Our initial audit and strategy call are completely free.
+                        Stop relying on manual processes. Start building an intelligent, automated growth engine.
                     </p>
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
                         <Button asChild size="lg">
-                            <Link href="/contact?service=AI+Audit">
-                                Get Your Free AI Audit <MoveRight className="ml-2 h-5 w-5" />
-                            </Link>
-                        </Button>
-                        <Button asChild size="lg" variant="outline">
                            <Link href="/contact?service=AI+Strategy+Call">
-                                Book Strategy Call
+                                Book Your Free AI Strategy Call Today <MoveRight className="ml-2 h-5 w-5" />
                             </Link>
                         </Button>
                     </div>
