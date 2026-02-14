@@ -6,6 +6,7 @@ import PortfolioPreview from '@/components/home/why-choose-us';
 import CtaSection from '@/components/home/cta-section';
 import InsightsSection from '@/components/home/insights-section';
 import TestimonialsSection from '@/components/home/testimonials-section';
+import VideoSection from '@/components/home/video-section';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <HeroSection />
       <ServicesPreview />
       <AboutUs />
+      <VideoSection />
       <PortfolioPreview />
       <StatsSection />
       <InsightsSection />

@@ -33,13 +33,13 @@ export default function AboutPage() {
   ];
 
   const partners = [
-    { name: 'Hostinger', imageUrl: 'https://picsum.photos/seed/hostinger/120/40' },
-    { name: 'Google Cloud', imageUrl: 'https://picsum.photos/seed/gcloud/120/40' },
-    { name: 'AWS', imageUrl: 'https://picsum.photos/seed/awslogo/120/40' },
-    { name: 'Figma', imageUrl: 'https://picsum.photos/seed/figma/120/40' },
-    { name: 'Next.js', imageUrl: 'https://picsum.photos/seed/nextjslogo/120/40' },
-    { name: 'GoDaddy', imageUrl: 'https://picsum.photos/seed/godaddy/120/40' },
-    { name: 'Vercel', imageUrl: 'https://picsum.photos/seed/vercel/120/40' },
+    { name: 'Hostinger', imageUrl: '/par/1.png' },
+    { name: 'Google Cloud', imageUrl: '/par/2.png' },
+    { name: 'AWS', imageUrl: '/par/3.png' },
+    { name: 'Figma', imageUrl: '/par/4.png' },
+    { name: 'Next.js', imageUrl: '/par/5.jpg' },
+    { name: 'GoDaddy', imageUrl: '/par/6.png' },
+    { name: 'Vercel', imageUrl: '/par/7.png' },
   ];
 
   const recognitions = [
@@ -102,7 +102,7 @@ export default function AboutPage() {
     <div className="bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-background py-20 md:py-32">
-        <div className="absolute inset-0 z-0 opacity-10">
+        <div className="absolute inset-0 z-0 opacity-30">
           {heroBgImage && (
             <Image
               src={heroBgImage.imageUrl}
@@ -141,8 +141,18 @@ export default function AboutPage() {
             We collaborate with global technology leaders to build secure, scalable, and cutting-edge solutions.
           </p>
 
-          <div className="mt-16 flex h-full min-h-[300px] items-center justify-center sm:min-h-[350px]">
-            <div className="flex origin-center flex-col items-center gap-y-[calc(-115.47px/4)] scale-75 sm:scale-90 md:scale-100">
+          <div className="mt-16 flex h-full min-h-[500px] items-center justify-center sm:min-h-[600px]">
+  <div
+    className="
+      flex origin-center flex-col items-center
+      gap-y-[calc(-115.47px/4)]
+      scale-75
+      sm:scale-90
+      md:scale-100
+      lg:scale-110
+      xl:scale-125
+    "
+  >
               {/* Row 1 */}
               <div className="flex gap-x-1">
                 <Hexagon name={partners[0].name} imageUrl={partners[0].imageUrl} delay="300ms" />

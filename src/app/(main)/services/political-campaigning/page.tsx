@@ -240,7 +240,7 @@ export default function PoliticalCampaigningPage() {
                         </div>
                         
                         {/* Center Image */}
-                        <div className="md:col-span-6 relative h-[400px] w-full md:h-[600px]">
+                        <div className="md:col-span-6 relative h-[300px] w-full md:h-[400px]">
                             {dashboardImage && (
                                 <Image
                                     src={dashboardImage.imageUrl}

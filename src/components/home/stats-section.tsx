@@ -2,13 +2,13 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 
 const clients = [
-  { name: 'Microsoft', imageUrl: 'https://picsum.photos/seed/microsoft/120/40' },
-  { name: 'Airbnb', imageUrl: 'https://picsum.photos/seed/airbnb/120/40' },
-  { name: 'Stripe', imageUrl: 'https://picsum.photos/seed/stripe/120/40' },
-  { name: 'InnovateX', imageUrl: 'https://picsum.photos/seed/innovatex/120/40' },
-  { name: 'QuantumLeap', imageUrl: 'https://picsum.photos/seed/quantumleap/120/40' },
-  { name: 'Stellar', imageUrl: 'https://picsum.photos/seed/stellar/120/40' },
-  { name: 'Apex', imageUrl: 'https://picsum.photos/seed/apex/120/40' },
+  { name: 'Microsoft', imageUrl: '/cli/vp.jpg' },
+  { name: 'Airbnb', imageUrl: '/cli/ma.jpg' },
+  { name: 'Stripe', imageUrl: '/cli/ro.jpg' },
+  { name: 'InnovateX', imageUrl: '/cli/sa.png' },
+  { name: 'QuantumLeap', imageUrl: '/cli/ga.jpg' },
+  { name: 'Stellar', imageUrl: '/cli/vp.jpg' },
+  { name: 'Apex', imageUrl: '/cli/da.jpg' },
 ];
 
 const Hexagon = ({

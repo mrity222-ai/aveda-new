@@ -3,7 +3,7 @@
     {
       "id": "hero-background",
       "description": "Abstract digital network background",
-      "imageUrl": "https://images.unsplash.com/photo-1617228679684-890412dc57a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGlnaXRhbCUyMG5ldHdvcmt8ZW58MHx8fHwxNzcwMjczNDQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/img/v.jpg",
       "imageHint": "digital network"
     },
     {
@@ -15,19 +15,19 @@
     {
       "id": "blog-tech-trends",
       "description": "An abstract image representing technology trends.",
-      "imageUrl": "https://images.unsplash.com/photo-1759576981262-95fd51a994a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0ZWNoJTIwdHJlbmRzfGVufDB8fHx8MTc3MDI3NTM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/ins/a.jpg",
       "imageHint": "tech trends"
     },
     {
       "id": "blog-ai-business",
       "description": "An image of a robot and a human shaking hands.",
-      "imageUrl": "https://images.unsplash.com/photo-1696253914523-488f5f97b090?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhaSUyMGFic3RyYWN0JTIwZGFya3xlbnwwfHx8fDE3NzAyNzYwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/ins/b.jpg",
       "imageHint": "ai business"
     },
     {
       "id": "blog-marketing-strategies",
       "description": "A chessboard with pieces, symbolizing strategy.",
-      "imageUrl": "https://images.unsplash.com/photo-1590102425728-aa39769512ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYXJrZXRpbmclMjBzdHJhdGVneXxlbnwwfHx8fDE3NzAyNzUzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/ins/c.jpg",
       "imageHint": "marketing strategy"
     },
     {
@@ -45,13 +45,13 @@
     {
       "id": "blog-brain-city",
       "description": "A glowing red 3D brain-city hybrid illustration",
-      "imageUrl": "https://images.unsplash.com/photo-1683522689353-39589b9d3637?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxicmFpbiUyMGNpdHklMjByZWR8ZW58MHx8fHwxNzcwMjczNDQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/ins/a.jpg",
       "imageHint": "brain city"
     },
     {
       "id": "service-web-dev",
       "description": "A dark-themed image of a developer coding.",
-      "imageUrl": "https://images.unsplash.com/photo-1550439062-609e1531270e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkZXZlbG9wZXIlMjBjb2RlJTIwZGFya3xlbnwwfHx8fDE3NzAyNzYwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/ser/1.png",
       "imageHint": "developer code"
     },
     {
@@ -63,7 +63,7 @@
     {
       "id": "service-app-dev",
       "description": "A dark-themed image showing a mobile app interface.",
-      "imageUrl": "https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkYXJrJTIwdGhlbWV8ZW58MHx8fHwxNzcwMjc2MDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/ser/2.png",
       "imageHint": "mobile app"
     },
     {
@@ -93,13 +93,13 @@
     {
       "id": "service-political",
       "description": "A dark-themed image of a political data map.",
-      "imageUrl": "https://images.unsplash.com/photo-1639737496154-7729f2c0df3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb2xpdGljYWwlMjBkYXRhJTIwbWFwJTIwZGFya3xlbnwwfHx8fDE3NzAyNzYwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/ins/d.jpg",
       "imageHint": "political data"
     },
     {
       "id": "cert-iso",
       "description": "ISO 27001 Certified Badge",
-      "imageUrl": "https://images.unsplash.com/photo-1632154936605-956abf0221fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxJU08lMjBiYWRnZXxlbnwwfHx8fDE3NzA0MTYwMDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/ca/2.png",
       "imageHint": "ISO badge"
     },
     {
@@ -177,121 +177,121 @@
     {
       "id": "service-political-dashboard",
       "description": "A sophisticated AI dashboard showing voter analytics, sentiment graphs, and heatmaps.",
-      "imageUrl": "https://images.unsplash.com/photo-1642427749670-f20e2e76f8c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzc0NDk0MDU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/pan.png",
       "imageHint": "analytics dashboard"
     },
     {
       "id": "cert-msme",
       "description": "MSME Registered logo",
-      "imageUrl": "https://picsum.photos/seed/msme/120/120",
+      "imageUrl": "/ca/1.png",
       "imageHint": "msme logo"
     },
     {
       "id": "cert-startup-india",
       "description": "Startup India logo",
-      "imageUrl": "https://images.unsplash.com/photo-1657302155485-790b74d0b5d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdGFydHVwJTIwaW5kaWElMjBsb2dvfGVufDB8fHx8MTc3MDQxNjAwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/ca/3.png",
       "imageHint": "startup india logo"
     },
     {
       "id": "cert-made-in-india",
       "description": "Made in India logo",
-      "imageUrl": "https://picsum.photos/seed/made-in-india/120/120",
+      "imageUrl": "/ca/4.jpg",
       "imageHint": "made in india logo"
     },
     {
       "id": "cert-digital-india",
       "description": "Digital India logo",
-      "imageUrl": "https://images.unsplash.com/photo-1603812188201-1e6e13ad6cbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwaW5kaWElMjBsb2dvfGVufDB8fHx8MTc3MDQxNjAwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/ca/6.png",
       "imageHint": "digital india logo"
     },
     {
       "id": "p-ada-chikankari",
       "description": "A luxury white dress on a mannequin with a red glow.",
-      "imageUrl": "https://images.unsplash.com/photo-1694349327531-eff421067771?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjB3aGl0ZSUyMGRyZXNzfGVufDB8fHx8MTc3NDY0MjY2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/docter.png",
       "imageHint": "luxury white dress"
     },
     {
       "id": "p-ai-sales-crm",
       "description": "A dark dashboard with glowing red sales charts.",
-      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e28f81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncmFwaHMlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzc0NjQyNjk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/saas.png",
       "imageHint": "glowing red charts"
     },
     {
       "id": "p-rozana",
       "description": "A bustling rural Indian marketplace.",
-      "imageUrl": "https://images.unsplash.com/photo-1598449172314-9b83f8905307?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxydXJhbCUyMGluZGlhbiUyMG1hcmtldHxlbnwwfHx8fDE3NzQ2NDI3NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/food.png",
       "imageHint": "rural indian market"
     },
     {
       "id": "p-yalla-drive",
       "description": "A scenic mountain road at sunset.",
-      "imageUrl": "https://images.unsplash.com/photo-1502690822646-11883a45a0b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzY2VuaWMlMjBtb3VudGFpbiUyMHJvYWR8ZW58MHx8fHwxNzc0NjQyNzgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/school.png",
       "imageHint": "scenic mountain road"
     },
     {
       "id": "p-gramik-connect",
       "description": "A digital POS overlay on a green agricultural field.",
-      "imageUrl": "https://images.unsplash.com/photo-1560493676-04071c5f467b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhZ3JpY3VsdHVyYWwlMjBmaWVsZHxlbnwwfHx8fDE3NzQ2NDI4MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/yoga1.png",
       "imageHint": "digital POS agriculture"
     },
     {
       "id": "p-b2b-seo",
       "description": "A 300% growth chart in neon red.",
-      "imageUrl": "https://images.unsplash.com/photo-1634933221443-7b6623d38392?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm93dGglMjBjaGFydCUyMHJlZHxlbnwwfHx8fDE3NzQ2NDI4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/websit.png",
       "imageHint": "300% growth chart"
     },
     {
       "id": "p-health-tech",
       "description": "A glowing red shield icon with digital nodes.",
-      "imageUrl": "https://images.unsplash.com/photo-1618641974913-b547565b93c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZWQlMjBzaGllbGQlMjBpY29ufGVufDB8fHx8MTc3NDY0Mjg2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/h2.png",
       "imageHint": "glowing red shield"
     },
     {
       "id": "p-political-dashboard",
       "description": "A political data dashboard with red highlights.",
-      "imageUrl": "https://images.unsplash.com/photo-1642427749670-f20e2e76f8c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2xpdGljYWwlMjBkYXRhJTIwZGFzaGJvYXJkJTIwcmVkfGVufDB8fHx8MTc3NDY0Mjg5Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/poli.png",
       "imageHint": "political data dashboard"
     },
     {
       "id": "p-ed-tech",
       "description": "An online learning platform UI.",
-      "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c64c1bae548?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvbmxpbmUlMjBsZWFybmluZyUyMHBsYXRmb3JtfGVufDB8fHx8MTc3NDY0MjkxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/ed.png",
       "imageHint": "online learning platform"
     },
     {
       "id": "p-corporate-website",
       "description": "A modern corporate finance website.",
-      "imageUrl": "https://images.unsplash.com/photo-1665686310934-8b13f740c0d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmaW5hbmNlJTIwd2Vic2l0ZXxlbnwwfHx8fDE3NzQ2NDI5NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/ca.png",
       "imageHint": "modern finance website"
     },
     {
       "id": "p-yoga-app",
       "description": "A serene yoga pose.",
-      "imageUrl": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHlzenJlbmUlMjB5b2dhfGVufDB8fHx8MTc3NDY0Mjk3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/yoga.png",
       "imageHint": "serene yoga"
     },
     {
       "id": "p-enterprise-erp",
       "description": "A bespoke ERP system to streamline operations for a large manufacturing client.",
-      "imageUrl": "https://images.unsplash.com/photo-1633519881881-c1a673038677?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWN0b3J5JTIwYXV0b21hdGlvbiUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzQ2NDMwNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/erp.png",
       "imageHint": "factory automation dashboard"
     },
     {
       "id": "p-ai-chatbot",
       "description": "A futuristic chat interface.",
-      "imageUrl": "https://images.unsplash.com/photo-1555949963-ff980e6703ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwY2hhdCUyMGludGVyZmFjZXxlbnwwfHx8fDE3NzQ2NDMwNzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/ai.png",
       "imageHint": "futuristic chat interface"
     },
     {
       "id": "p-pm-saas",
       "description": "A project management dashboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1611095790444-1dfa35e37b52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9qZWN0JTIwbWFuYWdlbWVudCUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzQ2NDMwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/sa.png",
       "imageHint": "project management dashboard"
     },
     {
       "id": "p-cloud-migration",
       "description": "An abstract visualization of cloud data.",
-      "imageUrl": "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGNsb3VkJTIwZGF0YXxlbnwwfHx8fDE3NzQ2NDMxMjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pot/cloud.png",
       "imageHint": "abstract cloud data"
     },
     {
@@ -309,7 +309,7 @@
     {
       "id": "leader-raj",
       "description": "Professional corporate portrait of Raj Mani Yadav",
-      "imageUrl": "https://images.unsplash.com/photo-1641260774125-04d527b376a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYWxlJTIwY29ycG9yYXRlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcwNTMzMDkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/img/raj.jpg",
       "imageHint": "male corporate portrait"
     },
     {
@@ -321,7 +321,7 @@
     {
       "id": "leader-deepak",
       "description": "Professional corporate portrait of Deepak Yadav",
-      "imageUrl": "https://images.unsplash.com/photo-1672825523661-80df832c6a1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYWxlJTIwY29ycG9yYXRlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcwNTMzMDkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/img/deep.jpg",
       "imageHint": "male corporate portrait"
     },
     {

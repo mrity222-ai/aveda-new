@@ -149,15 +149,15 @@ export const stats = [
 export const portfolioProjects = [
   {
     slug: 'ada-chikankari',
-    title: 'ADA Chikankari',
+    title: 'Helth Care',
     description: 'Luxury e-commerce platform for a premium ethnic wear brand.',
-    tags: ['E-commerce'],
+    tags: ['HelthTech'],
     category: 'Web/App',
     image: findImage('p-ada-chikankari'),
   },
   {
     slug: 'ai-sales-crm',
-    title: 'AI Sales CRM',
+    title: 'AI ERP',
     description: 'AI-driven lead scoring and sales forecasting to boost team productivity.',
     tags: ['SaaS'],
     category: 'AI Tools',
@@ -165,7 +165,7 @@ export const portfolioProjects = [
   },
   {
     slug: 'rozana',
-    title: 'Rozana',
+    title: 'FOOD APP',
     description: 'A mobile-first platform connecting rural consumers with local retailers.',
     tags: ['Food Delivery'],
     category: 'Web/App',
@@ -173,18 +173,18 @@ export const portfolioProjects = [
   },
   {
     slug: 'yalla-drive',
-    title: 'Yalla Drive',
+    title: 'School Website',
     description: 'A travel and car rental booking app designed for the UAE market.',
     tags: ['Travel App'],
-    category: 'Web/App',
+    category: 'WebSsite',
     image: findImage('p-yalla-drive'),
   },
   {
     slug: 'gramik-connect',
-    title: 'Gramik Connect',
+    title: 'yoga app',
     description: 'A digital POS and inventory management system for agricultural suppliers.',
-    tags: ['Agri-Tech'],
-    category: 'AI Tools',
+    tags: ['healthcare'],
+    category: 'GYM Tools',
     image: findImage('p-gramik-connect'),
   },
   {
