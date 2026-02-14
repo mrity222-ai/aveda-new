@@ -25,6 +25,7 @@ import {
   Cpu,
   XCircle,
   TrendingUp,
+  Clock,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
@@ -72,6 +73,15 @@ export default function AiAutomationPage() {
         { icon: Zap, name: 'Zapier' },
         { icon: Layers, name: 'Make.com' },
         { icon: Container, name: 'Docker' },
+    ];
+
+    const benefits = [
+        { icon: Clock, title: 'Save 30–70% Operational Time' },
+        { icon: TrendingUp, title: 'Increase Lead Conversion Rates' },
+        { icon: ShieldCheck, title: 'Reduce Human Errors' },
+        { icon: Zap, title: '24/7 Automated Operations' },
+        { icon: BrainCircuit, title: 'Data-Driven Decision Making' },
+        { icon: Scale, title: 'Scalable Systems for Growth' },
     ];
     
     return (
@@ -314,21 +324,31 @@ export default function AiAutomationPage() {
             </section>
 
             {/* Why Businesses Choose Aveda Technologies Section */}
-            <section className="bg-secondary py-20 md:py-28">
-                <div className="container">
+            <section className="bg-background py-20 md:py-28 relative">
+                <div className="absolute inset-0 bg-[url('/nn.svg')] bg-center opacity-5 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+                <div className="container relative z-10">
                     <div className="mx-auto max-w-4xl text-center">
                         <h2 className="font-headline text-3xl font-bold md:text-4xl text-accent">Why Businesses Choose Aveda Technologies</h2>
-                        <p className="mt-4 text-lg text-muted-foreground">We don’t just install tools. We build intelligent business infrastructure.</p>
                     </div>
-                    <div className="mx-auto mt-16 max-w-5xl">
-                        <div className="grid grid-cols-1 gap-x-8 gap-y-6 rounded-2xl border bg-card p-8 soft-shadow md:p-12 sm:grid-cols-2">
-                            <div className="flex items-start gap-4"><CheckCircle className="mt-1 h-6 w-6 flex-shrink-0 text-primary" /><span>Save 30–70% Operational Time</span></div>
-                            <div className="flex items-start gap-4"><CheckCircle className="mt-1 h-6 w-6 flex-shrink-0 text-primary" /><span>Increase Lead Conversion Rates</span></div>
-                            <div className="flex items-start gap-4"><CheckCircle className="mt-1 h-6 w-6 flex-shrink-0 text-primary" /><span>Reduce Human Errors</span></div>
-                            <div className="flex items-start gap-4"><CheckCircle className="mt-1 h-6 w-6 flex-shrink-0 text-primary" /><span>24/7 Automated Business Operations</span></div>
-                            <div className="flex items-start gap-4"><CheckCircle className="mt-1 h-6 w-6 flex-shrink-0 text-primary" /><span>Data-Driven Decision Making</span></div>
-                            <div className="flex items-start gap-4"><CheckCircle className="mt-1 h-6 w-6 flex-shrink-0 text-primary" /><span>Scalable Systems Built for Growth</span></div>
-                        </div>
+                    <div className="mx-auto mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl">
+                        {benefits.map((item, index) => (
+                            <div
+                                key={item.title}
+                                className="group rounded-2xl border bg-card/60 p-6 shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20 hover:-translate-y-2"
+                            >
+                                <div className="flex items-start gap-4">
+                                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary shadow-[0_0_15px_hsl(var(--primary)/0.2)] transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-[0_0_25px_hsl(var(--primary)/0.4)]">
+                                        <item.icon className="h-6 w-6" />
+                                    </div>
+                                    <h3 className="font-headline text-lg font-semibold text-accent leading-tight pt-1">{item.title}</h3>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="mt-16 text-center">
+                        <p className="text-xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                            We don’t just install tools. We build intelligent business infrastructure.
+                        </p>
                     </div>
                 </div>
             </section>
