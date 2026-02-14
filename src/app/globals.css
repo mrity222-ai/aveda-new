@@ -9,7 +9,7 @@
 
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 0%; /* Black for text and buttons */
+    --foreground: 0 0% 0%;
 
     --card: 0 0% 100%;
     --card-foreground: 0 0% 0%;
@@ -17,7 +17,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 0%;
 
-    --primary: 0 84% 60%; /* Crimson Red for accents/highlights */
+    --primary: 173 80% 25%; /* Deep Teal for accents/highlights */
     --primary-foreground: 0 0% 100%;
     
     --secondary: 0 0% 98%; /* Light Gray for section backgrounds */
@@ -26,7 +26,7 @@
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
     
-    --accent: 173 80% 25%; /* Deep Teal for headings */
+    --accent: 0 84% 60%; /* Crimson Red for headings */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -35,9 +35,9 @@
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
     
-    --ring: 0 84% 60%;
+    --ring: 173 80% 25%;
 
-    --chart-1: 0 72% 51%;
+    --chart-1: 0 84% 60%;
     --chart-2: 173 80% 25%;
     --chart-3: 0 70% 70%;
     --chart-4: 173 70% 40%;
