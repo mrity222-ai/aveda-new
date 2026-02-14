@@ -90,9 +90,9 @@ export default function DeepakYadavPage() {
           {/* Deepak Yadav */}
           <div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
-                <div className="md:col-span-1">
+                <div className="md:col-span-1 flex justify-center">
                     {deepakImage && (
-                    <div className="relative aspect-square rounded-2xl overflow-hidden border-4 border-primary/20">
+                    <div className="relative aspect-square w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20">
                         <Image
                         src={deepakImage.imageUrl}
                         alt={deepak.name}
