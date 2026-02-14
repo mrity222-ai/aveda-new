@@ -25,6 +25,7 @@ import {
   Signal,
   Award,
   ShieldCheck,
+  Zap,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
@@ -241,6 +242,47 @@ export default function PoliticalCampaigningPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Digital War Room Section */}
+            <section className="bg-background py-20 md:py-28">
+                <div className="container">
+                    <div className="text-center mb-16">
+                        <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">The Digital War Room Advantage</h2>
+                        <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+                            Our command center for real-time political intelligence and rapid response.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="group rounded-lg border bg-card p-6 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 soft-shadow">
+                            <div className="flex justify-center">
+                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5">
+                                    <Signal className="h-8 w-8" />
+                                </div>
+                            </div>
+                            <h3 className="mt-6 font-headline text-xl font-semibold text-accent">Real-Time Monitoring</h3>
+                            <p className="mt-2 text-muted-foreground">Track social media trends, news cycles, and opponent activities as they happen.</p>
+                        </div>
+                        <div className="group rounded-lg border bg-card p-6 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 soft-shadow">
+                            <div className="flex justify-center">
+                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5">
+                                    <Zap className="h-8 w-8" />
+                                </div>
+                            </div>
+                            <h3 className="mt-6 font-headline text-xl font-semibold text-accent">Rapid Response Unit</h3>
+                            <p className="mt-2 text-muted-foreground">Instantly counter misinformation and amplify positive narratives with a dedicated team.</p>
+                        </div>
+                        <div className="group rounded-lg border bg-card p-6 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 soft-shadow">
+                            <div className="flex justify-center">
+                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5">
+                                    <BrainCircuit className="h-8 w-8" />
+                                </div>
+                            </div>
+                            <h3 className="mt-6 font-headline text-xl font-semibold text-accent">Actionable Intelligence</h3>
+                            <p className="mt-2 text-muted-foreground">Convert raw data into clear, actionable insights for strategic campaign decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
              {/* Process Section */}
              <section id="process" className="bg-background py-20 md:py-28 relative overflow-hidden">
@@ -356,5 +398,7 @@ export default function PoliticalCampaigningPage() {
         </div>
     );
 }
+
+    
 
     
