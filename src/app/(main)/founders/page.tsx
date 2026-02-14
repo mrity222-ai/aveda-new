@@ -144,16 +144,16 @@ export default function FoundersPage() {
         <div className="container space-y-24">
           
           {/* Raj Mani Yadav */}
-          <div>
+          <div className="group">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
                 <div className="md:col-span-1 flex justify-center">
                     {rajImage && (
-                    <div className="relative aspect-square w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20">
+                    <div className="relative aspect-square w-64 h-64">
                         <Image
                         src={rajImage.imageUrl}
                         alt={raj.name}
                         fill
-                        className="object-cover"
+                        className="rounded-full object-cover grayscale shadow-lg ring-4 ring-background transition-all duration-500 group-hover:grayscale-0 group-hover:ring-primary"
                         data-ai-hint={rajImage.imageHint}
                         />
                     </div>

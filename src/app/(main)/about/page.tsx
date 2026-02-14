@@ -225,7 +225,7 @@ export default function AboutPage() {
                                 alt={leader.name}
                                 width={192}
                                 height={192}
-                                className="rounded-full object-cover grayscale shadow-[0_15px_30px_-10px_rgba(0,0,0,0.25)] transition-all duration-500 group-hover:grayscale-0 group-hover:shadow-[0_25px_40px_-15px_rgba(0,0,0,0.3)]"
+                                className="rounded-full object-cover grayscale shadow-[0_15px_30px_-10px_rgba(0,0,0,0.25)] ring-4 ring-background transition-all duration-500 group-hover:grayscale-0 group-hover:shadow-[0_25px_40px_-15px_rgba(0,0,0,0.3)] group-hover:ring-primary"
                                 data-ai-hint={image.imageHint}
                             />
                         </div>
