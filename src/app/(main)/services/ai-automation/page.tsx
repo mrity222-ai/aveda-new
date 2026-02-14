@@ -104,10 +104,10 @@ export default function AiAutomationPage() {
             icon: TrendingUp,
             color: 'blue',
             description: 'For scaling businesses ready to streamline marketing and sales.',
-            price: { monthly: '9,999', yearly: '99,999' },
+            price: { monthly: 'Custom', yearly: '' },
             features: ['Everything in Starter, plus:', 'Advanced CRM Automation', 'AI Content Engine', 'Marketing &amp; Sales Funnels', 'Dedicated Support'],
-            cta: 'Choose Growth',
-            variant: 'default',
+            cta: 'Contact Sales',
+            variant: 'outline',
             popular: true,
         },
         {
