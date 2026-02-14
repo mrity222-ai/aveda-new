@@ -193,7 +193,7 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership Section */}
-      <section className="bg-background py-20 md:py-28 relative overflow-hidden">
+      <section className="bg-secondary py-20 md:py-28 relative overflow-hidden">
         <div className="absolute top-0 left-0 -z-10 h-64 w-64 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-50 blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 -z-10 h-64 w-64 bg-gradient-to-tl from-accent/10 via-transparent to-transparent opacity-50 blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
         <div className="container">
@@ -213,23 +213,24 @@ export default function AboutPage() {
                 </div>
             </div>
           
-            <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-                {leadership.map((leader, index) => {
+            <div className="grid md:grid-cols-2 gap-y-16 gap-x-12 max-w-4xl mx-auto">
+                {leadership.map((leader) => {
                 const image = PlaceHolderImages.find(p => p.id === leader.imageId);
                 return (
-                    <div key={leader.name} className="group relative text-center flex flex-col items-center rounded-3xl border bg-card p-6 transition-all duration-300 hover:border-primary/20 hover:-translate-y-2">
+                    <div key={leader.name} className="group flex flex-col items-center text-center">
                     {image && (
-                        <div className="relative aspect-square w-48 h-48 overflow-hidden rounded-full">
-                        <Image
-                            src={image.imageUrl}
-                            alt={leader.name}
-                            fill
-                            className="object-cover transition-transform duration-500 group-hover:scale-110"
-                            data-ai-hint={image.imageHint}
-                        />
+                        <div className="relative w-48 h-48">
+                            <Image
+                                src={image.imageUrl}
+                                alt={leader.name}
+                                width={192}
+                                height={192}
+                                className="rounded-full object-cover grayscale shadow-[0_15px_30px_-10px_rgba(0,0,0,0.25)] transition-all duration-500 group-hover:grayscale-0 group-hover:shadow-[0_25px_40px_-15px_rgba(0,0,0,0.3)]"
+                                data-ai-hint={image.imageHint}
+                            />
                         </div>
                     )}
-                    <div className="mt-4 text-center">
+                    <div className="mt-6">
                         <h3 className={cn(
                             "font-headline text-2xl font-bold text-foreground transition-colors duration-300",
                             "group-hover:text-primary"
@@ -249,7 +250,7 @@ export default function AboutPage() {
       </section>
 
       {/* Trust & Recognition Section */}
-      <section className="relative overflow-hidden bg-secondary py-20 md:py-28">
+      <section className="relative overflow-hidden bg-background py-20 md:py-28">
         <div className="container relative z-10 text-center">
             <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary">
                 Our Credentials
