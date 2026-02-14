@@ -26,6 +26,7 @@ import {
   XCircle,
   TrendingUp,
   Clock,
+  Infinity,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
@@ -409,31 +410,34 @@ export default function AiAutomationPage() {
             </section>
 
             {/* Results Section */}
-            <section className="bg-secondary py-20 md:py-28">
-                <div className="container">
+            <section className="bg-background py-20 md:py-28 relative">
+                <div className="absolute inset-0 bg-[url('/nn.svg')] bg-center opacity-5 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
+                <div className="container relative z-10">
                     <div className="mx-auto max-w-3xl text-center mb-16">
                         <h2 className="font-headline text-3xl font-bold md:text-4xl text-accent">Real Business Impact</h2>
                         <p className="mt-4 text-lg text-muted-foreground">After implementing our AI systems, businesses have achieved:</p>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="rounded-2xl border bg-card p-6 text-center soft-shadow">
-                            <h3 className="font-headline text-5xl font-bold text-primary">2X</h3>
-                            <p className="mt-2 text-muted-foreground">Faster Lead Response</p>
+                        <div className="group aspect-square flex flex-col justify-center items-center rounded-full border border-green-500/30 bg-card/50 p-6 text-center shadow-lg shadow-green-500/10 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/20">
+                            <h3 className="font-headline text-5xl font-bold text-green-500">2X</h3>
+                            <p className="mt-2 font-medium text-accent">Faster Lead Response</p>
                         </div>
-                        <div className="rounded-2xl border bg-card p-6 text-center soft-shadow">
-                            <h3 className="font-headline text-5xl font-bold text-primary">40%</h3>
-                            <p className="mt-2 text-muted-foreground">Increase in Sales Conversion</p>
+                        <div className="group aspect-square flex flex-col justify-center items-center rounded-full border border-blue-500/30 bg-card/50 p-6 text-center shadow-lg shadow-blue-500/10 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20">
+                            <h3 className="font-headline text-5xl font-bold text-blue-500">40%</h3>
+                            <p className="mt-2 font-medium text-accent">Increase in Sales Conversion</p>
                         </div>
-                        <div className="rounded-2xl border bg-card p-6 text-center soft-shadow">
-                            <h3 className="font-headline text-5xl font-bold text-primary">50%</h3>
-                            <p className="mt-2 text-muted-foreground">Reduction in Manual Workload</p>
+                        <div className="group aspect-square flex flex-col justify-center items-center rounded-full border border-orange-500/30 bg-card/50 p-6 text-center shadow-lg shadow-orange-500/10 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/20">
+                            <h3 className="font-headline text-5xl font-bold text-orange-500">50%</h3>
+                            <p className="mt-2 font-medium text-accent">Reduction in Manual Workload</p>
                         </div>
-                        <div className="rounded-2xl border bg-card p-6 text-center soft-shadow">
-                            <h3 className="font-headline text-5xl font-bold text-primary">100%</h3>
-                            <p className="mt-2 text-muted-foreground">Automated Follow-ups</p>
+                        <div className="group aspect-square flex flex-col justify-center items-center rounded-full border border-purple-500/30 bg-card/50 p-6 text-center shadow-lg shadow-purple-500/10 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20">
+                            <Infinity className="h-12 w-12 text-purple-500" />
+                            <p className="mt-2 font-medium text-accent">Automated Follow-ups</p>
                         </div>
                     </div>
-                    <p className="mt-12 text-center text-xl font-semibold text-accent">Your growth should be systematic — not accidental.</p>
+                    <p className="mt-16 text-center text-xl font-semibold bg-gradient-to-r from-yellow-400 to-teal-400 bg-clip-text text-transparent">
+                        Your growth should be systematic — not accidental.
+                    </p>
                 </div>
             </section>
 
