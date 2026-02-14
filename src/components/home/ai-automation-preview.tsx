@@ -18,7 +18,7 @@ export default function AiAutomationPreview() {
     {
       icon: TrendingUp,
       title: 'Sales Funnel Automation',
-      description: 'Build structured sales pipelines that guide prospects from inquiry to conversion automatically.',
+      description: '',
     },
     {
       icon: Calendar,
