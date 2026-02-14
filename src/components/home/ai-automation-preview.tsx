@@ -13,7 +13,7 @@ export default function AiAutomationPreview() {
     {
       icon: Bot,
       title: 'WhatsApp & Chatbot Automation',
-      description: 'Instant responses, automated follow-ups, and 24/7 customer engagement powered by AI.',
+      description: '',
     },
     {
       icon: TrendingUp,
