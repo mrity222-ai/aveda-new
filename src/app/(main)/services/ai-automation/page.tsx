@@ -54,11 +54,10 @@ export default function AiAutomationPage() {
     const heroImage = PlaceHolderImages.find((img) => img.id === 'service-ai');
 
     const processSteps = [
-        { icon: Search, title: "Discover & Strategize", description: "We audit your current workflows to identify the most impactful automation opportunities." },
-        { icon: BrainCircuit, title: "Design & Architect", description: "We design a custom AI and automation strategy tailored to your specific business needs." },
-        { icon: Code, title: "Build & Integrate", description: "Our engineers build the solution and seamlessly integrate it with your existing systems." },
-        { icon: ShieldCheck, title: "Test & Deploy", description: "Rigorous testing ensures a flawless and secure deployment into your live environment." },
-        { icon: Scale, title: "Optimize & Scale", description: "We provide ongoing support and optimization to ensure your automation solution scales with your growth." },
+        { icon: Search, title: "Strategy & Audit", description: "We analyze your current systems and identify automation opportunities." },
+        { icon: BrainCircuit, title: "AI Blueprint Creation", description: "We design a customized AI growth roadmap tailored to your business." },
+        { icon: Code, title: "System Development & Integration", description: "We build, integrate, and test your automation workflows." },
+        { icon: Rocket, title: "Launch & Optimization", description: "We monitor performance and continuously optimize for maximum ROI." },
     ];
     
     const techStack = [
@@ -237,7 +236,7 @@ export default function AiAutomationPage() {
             {/* Process Section */}
             <section className="bg-background py-20 md:py-28 relative">
                 <div className="container relative z-10">
-                    <h2 className="text-center font-headline text-3xl font-bold md:text-4xl mb-24 text-accent">Our AI Implementation Process</h2>
+                    <h2 className="text-center font-headline text-3xl font-bold md:text-4xl mb-24 text-accent">Our 4-Step AI Implementation Framework</h2>
                     <div className="relative">
                         <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 -translate-x-1/2"></div>
                         {processSteps.map((step, index) => (
@@ -248,10 +247,10 @@ export default function AiAutomationPage() {
                                     index % 2 === 0 ? "text-left" : "text-right"
                                 )}>
                                     <div className={cn("absolute top-0 font-headline text-8xl font-bold text-primary/10 -translate-y-4 transition-transform duration-300 group-hover:scale-110", index % 2 === 0 ? "right-0 translate-x-4" : "left-0 -translate-x-4")}>
-                                        0{index + 1}
+                                        {index + 1}
                                     </div>
                                     <div className="relative">
-                                        <h3 className="font-headline text-xl font-semibold text-accent">{step.title}</h3>
+                                        <h3 className="font-headline text-xl font-semibold text-accent">Step {index + 1} – {step.title}</h3>
                                         <p className="mt-2 text-muted-foreground">{step.description}</p>
                                     </div>
                                     </div>
