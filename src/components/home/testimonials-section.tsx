@@ -20,9 +20,9 @@ const testimonials = [
       rating: 5,
   },
   {
-      quote: "The website they developed is not only beautiful but also incredibly fast. Our conversion rates have doubled since the launch.",
-      name: 'Rohan Mehta',
-      company: 'Founder, E-commerce Brand',
+      quote: "Aveda Technologies transformed our online presence completely. Their digital marketing and SEO strategies helped Singh Travels rank higher on Google, increase website traffic, and generate quality leads consistently. Our bookings have significantly improved, and the ROI from their marketing campaigns exceeded our expectations.",
+      name: 'Founder',
+      company: 'Singh Travels',
       avatarId: 'testimonial-3',
       rating: 5,
   }
