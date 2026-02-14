@@ -29,9 +29,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg text-white/90">
-            We build, implement, and manage cutting-edge technology solutions that
-            empower your business to innovate and{' '}
-            <span className="font-semibold text-primary">succeed</span>.
+            Aveda Technologies transforms businesses with intelligent AI solutions, scalable web systems, and smart digital strategies designed for sustainable growth.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
