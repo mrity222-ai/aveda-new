@@ -124,6 +124,13 @@ export default function AiAutomationPage() {
             variant: 'outline',
         },
     ];
+
+    const automationVisuals = [
+        { imageId: 'p-ai-sales-crm', description: 'AI-Powered Sales Dashboard' },
+        { imageId: 'p-political-dashboard', description: 'Political Intelligence Platform' },
+        { imageId: 'p-ai-chatbot', description: 'Futuristic AI Chatbot Interface' },
+        { imageId: 'futuristic-seo-dashboard', description: 'Advanced SEO Analytics' },
+    ];
     
     return (
         <div className="bg-background text-foreground">
@@ -235,6 +242,40 @@ export default function AiAutomationPage() {
                     <div className="mt-16 border-t-2 border-dashed border-destructive/20 pt-12 text-center max-w-3xl mx-auto">
                         <p className="text-2xl font-headline font-semibold text-accent">If this sounds familiar, your business doesn’t need more staff.</p>
                         <p className="mt-2 text-3xl font-headline font-bold text-primary drop-shadow-[0_0_10px_hsl(var(--primary)/0.5)]">It needs intelligent automation.</p>
+                    </div>
+                </div>
+            </section>
+
+             {/* Visualizing Intelligent Automation Section */}
+             <section className="bg-background py-20 md:py-28">
+                <div className="container">
+                    <div className="text-center mb-16">
+                        <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">Visualizing Intelligent Automation</h2>
+                        <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+                            A glimpse into the powerful, custom solutions we build to automate and scale your business.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {automationVisuals.map((visual) => {
+                            const image = PlaceHolderImages.find((img) => img.id === visual.imageId);
+                            if (!image) return null;
+                            return (
+                                <div key={image.id} className="group relative h-80 overflow-hidden rounded-2xl border bg-card shadow-lg transition-all duration-500 hover:shadow-primary/20 hover:scale-105">
+                                    <Image
+                                        src={image.imageUrl}
+                                        alt={visual.description}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        data-ai-hint={image.imageHint}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                    <div className="absolute bottom-0 p-6">
+                                        <Badge variant="outline" className="w-fit border-white/20 bg-black/10 text-white backdrop-blur-md">{visual.description}</Badge>
+                                    </div>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </section>
@@ -406,7 +447,7 @@ export default function AiAutomationPage() {
                              className="group animate-in fade-in zoom-in-95 duration-500"
                              style={{ animationDelay: `${index * 100}ms` }}
                         >
-                            <div className="relative rounded-2xl border border-border/20 bg-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:bg-primary/5 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 grayscale hover:grayscale-0">
+                            <div className="relative rounded-2xl border border-border/20 bg-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:bg-primary/5 hover:shadow-2xl hover:shadow-primary/10 grayscale hover:grayscale-0">
                                 <div className="relative flex flex-col items-center justify-center gap-4">
                                     <tech.icon />
                                     <p className="font-semibold text-sm text-center uppercase tracking-wider text-muted-foreground group-hover:text-foreground transition-colors">{tech.name}</p>
