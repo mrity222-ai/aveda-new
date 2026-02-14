@@ -23,7 +23,7 @@ export default function AiAutomationPreview() {
     {
       icon: Calendar,
       title: 'Appointment & Payment Automation',
-      description: 'Auto booking confirmations, reminders, invoice generation, and payment follow-ups — fully automated.',
+      description: '',
     },
   ];
 
