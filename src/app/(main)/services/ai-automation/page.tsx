@@ -126,10 +126,10 @@ export default function AiAutomationPage() {
     ];
 
     const automationVisuals = [
-        { imageId: 'p-ai-sales-crm', description: 'AI-Powered Sales Dashboard' },
-        { imageId: 'p-political-dashboard', description: 'Political Intelligence Platform' },
-        { imageId: 'p-ai-chatbot', description: 'Futuristic AI Chatbot Interface' },
-        { imageId: 'futuristic-seo-dashboard', description: 'Advanced SEO Analytics' },
+        { imageId: 'ai-sales-crm-new', description: 'AI-Powered Sales Dashboard' },
+        { imageId: 'political-dashboard-new', description: 'Political Intelligence Platform' },
+        { imageId: 'ai-chatbot-new', description: 'Futuristic AI Chatbot Interface' },
+        { imageId: 'futuristic-dashboard-new', description: 'Advanced SEO Analytics' },
     ];
     
     return (
