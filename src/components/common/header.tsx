@@ -49,7 +49,9 @@ export default function Header() {
     <header
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300 animate-in fade-in slide-in-from-top-4',
-        'border-b bg-background/80 backdrop-blur-sm'
+        isScrolled
+          ? 'border-b bg-background/80 backdrop-blur-sm'
+          : 'border-b border-transparent'
       )}
       onMouseLeave={() => setServicesMenuOpen(false)}
     >
