@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -130,10 +131,10 @@ export default function FoundersPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-transparent"></div>
         </div>
         <div className="container relative z-10 text-center">
-          <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl">
+          <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl animate-in fade-in slide-in-from-bottom-8 duration-700">
             Meet Our Founder
           </h1>
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-12 duration-700">
             The visionary behind the innovation at Aveda Technologies.
           </p>
         </div>
@@ -144,7 +145,7 @@ export default function FoundersPage() {
         <div className="container space-y-24">
           
           {/* Raj Mani Yadav */}
-          <div className="group">
+          <div className="group animate-in fade-in duration-700">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
                 <div className="md:col-span-1 flex justify-center">
                     {rajImage && (
@@ -183,15 +184,17 @@ export default function FoundersPage() {
 
             {/* Education Section for Raj */}
             <div className="pt-20">
-                <h3 className="text-center font-headline text-2xl font-bold text-accent md:text-3xl mb-16">
+                <h3 className="text-center font-headline text-2xl font-bold text-accent md:text-3xl mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
                     Education & Credentials
                 </h3>
                 <div className="relative max-w-3xl mx-auto">
                     <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2"></div>
                     {raj.education.map((edu, index) => (
-                        <div key={edu.institution} className={cn("relative mb-12 flex items-center w-full", index % 2 === 0 ? "justify-start" : "justify-end")}>
+                        <div key={edu.institution} 
+                             className={cn("relative mb-12 flex items-center w-full animate-in fade-in slide-in-from-bottom-12 duration-700", index % 2 === 0 ? "justify-start" : "justify-end")}
+                             style={{ animationDelay: `${index * 150}ms` }}>
                             <div className={cn("w-1/2", index % 2 === 0 ? "pr-8" : "pl-8")}>
-                                <div className={cn("relative rounded-lg border bg-card p-6 soft-shadow", index % 2 === 0 ? 'text-left' : 'text-right')}>
+                                <div className={cn("relative rounded-lg border bg-card p-6 soft-shadow transition-all duration-300 hover:border-primary", index % 2 === 0 ? 'text-left' : 'text-right')}>
                                     <p className="font-semibold text-primary">{edu.specialization}</p>
                                     <h4 className="font-headline text-xl font-bold text-accent">{edu.degree}</h4>
                                     <p className="text-muted-foreground">{edu.institution}</p>
@@ -215,7 +218,7 @@ export default function FoundersPage() {
       <section className="bg-background py-20 md:py-28 relative overflow-hidden">
         <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10 opacity-50"></div>
         <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-accent/10 rounded-full blur-3xl -z-10 opacity-50"></div>
-        <div className="container text-center">
+        <div className="container text-center animate-in fade-in duration-700">
             <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl mb-8">Our Mission</h2>
             <Card className="max-w-4xl mx-auto p-8 border-primary/20 bg-card/60 backdrop-blur-sm soft-shadow">
               <CardContent className="p-0">
@@ -231,14 +234,14 @@ export default function FoundersPage() {
       {/* Gallery Section */}
       <section className="bg-accent py-20 md:py-28">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
             <h2 className="font-headline text-3xl font-bold text-accent-foreground md:text-4xl">Our Vision in Action</h2>
             <p className="mt-4 max-w-2xl mx-auto text-accent-foreground/80">
               A gallery of our work, research, and team moments that drive our mission forward.
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <div className="flex flex-wrap justify-center gap-3 mb-12 animate-in fade-in duration-700">
             {galleryCategories.map((category) => (
                 <Button
                     key={category}
@@ -253,7 +256,7 @@ export default function FoundersPage() {
           
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
             {filteredItems.map((item) => (
-              <div key={item.id} className="group relative overflow-hidden rounded-2xl border-2 border-transparent hover:border-primary transition-all duration-300 break-inside-avoid soft-shadow">
+              <div key={item.id} className="group relative overflow-hidden rounded-2xl border-2 border-transparent hover:border-primary transition-all duration-300 break-inside-avoid soft-shadow animate-in fade-in zoom-in-95 duration-500">
                 <Image
                   src={item.image.imageUrl}
                   alt={item.title}

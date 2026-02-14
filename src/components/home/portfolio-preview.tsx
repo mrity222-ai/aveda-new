@@ -11,8 +11,8 @@ export default function AboutUs() {
         <div className="grid items-center gap-16 md:grid-cols-2">
           {/* Left Visual Section */}
           <div className="relative flex h-96 items-center justify-center animate-in fade-in zoom-in-90 duration-700 md:h-[450px]">
-            <div className="absolute h-80 w-80 rounded-full border-2 border-dashed border-primary/30 animate-spin-slow" />
-            <div className="absolute h-60 w-60 rounded-full border-2 border-dashed border-accent/30 animate-spin-slow-reverse" />
+            <div className="absolute h-80 w-80 rounded-full border-2 border-dashed border-primary/30 animate-pulse-slow" />
+            <div className="absolute h-60 w-60 rounded-full border-2 border-dashed border-accent/30 animate-pulse-slow-reverse" />
             <BrainCircuit className="relative h-48 w-48 text-primary opacity-80" />
             <div className="absolute bottom-4 left-4">
               <Badge variant="outline" className="border-accent/50 bg-card/50 text-accent backdrop-blur-sm">

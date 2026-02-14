@@ -86,13 +86,13 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent"></div>
         </div>
         <div className="container relative z-10 text-center">
-          <p className="font-headline text-sm uppercase tracking-widest text-primary">
+          <p className="font-headline text-sm uppercase tracking-widest text-primary animate-in fade-in slide-in-from-bottom-4 duration-1000">
             About Aveda Technologies
           </p>
-          <h1 className="mt-4 font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl">
+          <h1 className="mt-4 font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
             Building Intelligent Digital & Political Systems with AI
           </h1>
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-12 duration-1000">
             Aveda Technologies helps businesses, leaders, and organizations grow through AI-driven technology, marketing, and political intelligence.
           </p>
         </div>
@@ -101,13 +101,13 @@ export default function AboutPage() {
       {/* Our Technology Partners Section */}
       <section className="relative overflow-hidden bg-background py-20 md:py-28">
         <div className="container relative z-10 text-center">
-          <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary">
+          <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary animate-in fade-in">
             Our Technology Partners
           </Badge>
-          <h2 className="mt-4 font-headline text-4xl font-bold tracking-tight text-accent md:text-5xl">
+          <h2 className="mt-4 font-headline text-4xl font-bold tracking-tight text-accent md:text-5xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             Innovating with the World’s Best
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground animate-in fade-in slide-in-from-bottom-8 duration-700">
             We collaborate with global technology leaders to build secure, scalable, and cutting-edge solutions.
           </p>
 
@@ -133,14 +133,14 @@ export default function AboutPage() {
         <div className="container">
           <div className="grid items-center gap-16 md:grid-cols-2">
             {/* Left Visual */}
-            <div className="relative flex h-96 items-center justify-center md:h-[450px]">
+            <div className="relative flex h-96 items-center justify-center md:h-[450px] animate-in fade-in zoom-in-90 duration-700">
               <div className="absolute h-80 w-80 rounded-full border-2 border-dashed border-primary/30 animate-spin-slow" />
               <div className="absolute h-60 w-60 rounded-full border-2 border-dashed border-accent/30 animate-spin-slow-reverse" />
               <BrainCircuit className="relative h-48 w-48 text-primary" />
             </div>
 
             {/* Right Content */}
-            <div className="space-y-8">
+            <div className="space-y-8 animate-in fade-in slide-in-from-right-12 duration-700">
               <div>
                 <p className="mb-2 font-semibold text-primary">Who We Are</p>
                 <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
@@ -168,15 +168,17 @@ export default function AboutPage() {
       {/* What Makes Us Different Section */}
       <section className="relative overflow-hidden bg-background py-20 md:py-28">
         <div className="container relative z-10 text-center">
-            <p className="font-headline text-sm uppercase tracking-widest text-primary">
+            <p className="font-headline text-sm uppercase tracking-widest text-primary animate-in fade-in">
                 What Makes Us Different
             </p>
-            <h2 className="mx-auto mt-4 max-w-3xl font-headline text-3xl font-bold text-accent md:text-4xl">
+            <h2 className="mx-auto mt-4 max-w-3xl font-headline text-3xl font-bold text-accent md:text-4xl animate-in fade-in slide-in-from-bottom-4 duration-700">
                 Our core principles ensure we deliver unparalleled value and innovation.
             </h2>
             <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
-                {values.map((value) => (
-                    <div key={value.title} className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow">
+                {values.map((value, index) => (
+                    <div key={value.title} 
+                         className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow animate-in fade-in slide-in-from-bottom-12 duration-700"
+                         style={{ animationDelay: `${index * 150}ms` }}>
                         <div className="relative">
                             <div className="flex justify-center">
                                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
@@ -197,7 +199,7 @@ export default function AboutPage() {
         <div className="absolute top-0 left-0 -z-10 h-64 w-64 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-50 blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 -z-10 h-64 w-64 bg-gradient-to-tl from-accent/10 via-transparent to-transparent opacity-50 blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
         <div className="container">
-            <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
+            <div className="grid md:grid-cols-2 gap-16 items-center mb-20 animate-in fade-in duration-700">
                 <div className="text-left">
                     <h2 className="font-headline text-4xl font-bold uppercase text-foreground md:text-5xl">
                         Meet Our Team of Innovators
@@ -214,10 +216,12 @@ export default function AboutPage() {
             </div>
           
             <div className="grid md:grid-cols-2 gap-y-16 gap-x-12 max-w-4xl mx-auto">
-                {leadership.map((leader) => {
+                {leadership.map((leader, index) => {
                 const image = PlaceHolderImages.find(p => p.id === leader.imageId);
                 return (
-                    <div key={leader.name} className="group flex flex-col items-center text-center">
+                    <div key={leader.name} 
+                         className="group flex flex-col items-center text-center animate-in fade-in slide-in-from-bottom-12 duration-700"
+                         style={{ animationDelay: `${index * 150}ms` }}>
                     {image && (
                         <div className="relative w-48 h-48">
                             <Image
@@ -252,17 +256,19 @@ export default function AboutPage() {
       {/* Trust & Recognition Section */}
       <section className="relative overflow-hidden bg-background py-20 md:py-28">
         <div className="container relative z-10 text-center">
-            <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary">
+            <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary animate-in fade-in">
                 Our Credentials
             </Badge>
-          <h2 className="mt-4 font-headline text-3xl font-bold text-accent md:text-4xl">Nationally Recognized. Globally Trusted.</h2>
+          <h2 className="mt-4 font-headline text-3xl font-bold text-accent md:text-4xl animate-in fade-in slide-in-from-bottom-4 duration-700">Nationally Recognized. Globally Trusted.</h2>
           
           <div className="mt-16">
             <div className="flex w-full snap-x justify-start gap-8 overflow-x-auto pb-4 md:justify-center md:flex-wrap md:overflow-visible md:pb-0">
-              {recognitions.map((rec) => {
+              {recognitions.map((rec, index) => {
                 const image = PlaceHolderImages.find(p => p.id === rec.imageId);
                 return (
-                  <div key={rec.name} className="group w-40 flex-shrink-0 snap-center flex flex-col items-center justify-center gap-4 text-center">
+                  <div key={rec.name} 
+                       className="group w-40 flex-shrink-0 snap-center flex flex-col items-center justify-center gap-4 text-center animate-in fade-in slide-in-from-bottom-12 duration-700"
+                       style={{ animationDelay: `${index * 150}ms` }}>
                     <div className="relative flex h-28 w-28 items-center justify-center rounded-2xl border bg-card p-4 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-primary/50 soft-shadow">
                       {image && (
                          <div className="relative h-12 w-12">

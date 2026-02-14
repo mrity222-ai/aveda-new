@@ -39,7 +39,7 @@ export default function AiAutomationPreview() {
       <div className="container">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 animate-in fade-in slide-in-from-left-12 duration-700">
             <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
               Smart AI Automation That Works 24/7
             </h2>
@@ -65,10 +65,12 @@ export default function AiAutomationPreview() {
           </div>
           
           {/* Right Grid */}
-          <div className="space-y-8">
+          <div className="space-y-8 animate-in fade-in slide-in-from-right-12 duration-700">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-              {features.map((feature) => (
-                <div key={feature.title} className="group rounded-2xl border bg-card p-6 soft-shadow transition-all duration-300 hover:border-primary hover:-translate-y-1">
+              {features.map((feature, index) => (
+                <div key={feature.title} 
+                     className="group rounded-2xl border bg-card p-6 soft-shadow transition-all duration-300 hover:border-primary hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-16 duration-700"
+                     style={{ animationDelay: `${index * 150}ms` }}>
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110">
                     <feature.icon className="h-6 w-6" />
                   </div>

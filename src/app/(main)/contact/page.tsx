@@ -75,13 +75,13 @@ export default function ContactPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent"></div>
             </div>
             <div className="container relative z-10 text-center">
-                <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl">
+                <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl animate-in fade-in slide-in-from-bottom-8 duration-700">
                     Let’s Build Something Powerful Together
                 </h1>
-                <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
+                <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-12 duration-700">
                     AI-driven digital solutions for brands, businesses, and political campaigns.
                 </p>
-                <div className="mt-8 flex flex-wrap justify-center gap-4">
+                <div className="mt-8 flex flex-wrap justify-center gap-4 animate-in fade-in slide-in-from-bottom-16 duration-700">
                     <Button asChild size="lg">
                     <Link href="#contact-form">Get Started</Link>
                     </Button>
@@ -95,7 +95,7 @@ export default function ContactPage() {
         {/* Form and Details Section */}
         <section id="contact-form" className="relative overflow-hidden bg-secondary py-20 md:py-28">
             <div className="container relative z-10">
-                <div className="mx-auto max-w-5xl rounded-2xl border bg-card p-8 soft-shadow md:p-12">
+                <div className="mx-auto max-w-5xl rounded-2xl border bg-card p-8 soft-shadow md:p-12 animate-in fade-in zoom-in-95 duration-700">
                     <div className="grid gap-16 lg:grid-cols-5">
                         <div className="lg:col-span-3">
                             <h2 className="mb-8 text-center font-headline text-3xl font-semibold text-accent lg:text-left">Send Us a Message</h2>
@@ -132,10 +132,12 @@ export default function ContactPage() {
         {/* Why Contact Us Section */}
         <section className="relative overflow-hidden bg-background py-20 md:py-28">
             <div className="container text-center">
-                <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl">Why Contact Us?</h2>
+                <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl animate-in fade-in slide-in-from-bottom-8 duration-700">Why Contact Us?</h2>
                 <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                    {whyContactUs.map((value) => (
-                    <div key={value.title} className="group rounded-lg p-6 text-center transition-all duration-300 hover:-translate-y-2">
+                    {whyContactUs.map((value, index) => (
+                    <div key={value.title} 
+                         className="group rounded-lg p-6 text-center transition-all duration-300 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-12 duration-700"
+                         style={{ animationDelay: `${index * 150}ms` }}>
                         <div className="flex justify-center">
                             <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 ring-8 ring-primary/5 transition-all duration-300 group-hover:ring-primary/10">
                                 <value.icon className="h-10 w-10 text-primary transition-transform duration-300 group-hover:scale-110" />
@@ -163,7 +165,7 @@ export default function ContactPage() {
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent"></div>
             </div>
-            <div className="container relative z-10 text-center">
+            <div className="container relative z-10 text-center animate-in fade-in duration-700">
                 <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
                     Your Vision. Our Technology.
                 </h2>
