@@ -43,7 +43,7 @@ const PythonIcon = () => (
 )
 
 const OpenAIIcon = () => (
-    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-foreground/80 transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]"><title>OpenAI</title><path fill="currentColor" d="M20.219 19.82a8.743 8.743 0 0 1-13.402-4.966c.275-2.623 1.043-4.996 2.19-6.938 1.04-1.76 2.45-3.235 4.103-4.328A8.743 8.743 0 0 1 18.068 8.5a8.742 8.742 0 0 1-2.992 10.912c.55.337 1.08.723 1.586 1.151.08.067.14.15.19.24.16.29.07.66-.23.82-.29.16-.66.07-.82-.23a4.37 4.37 0 0 1-2.02-2.135c-.15-.29-.42-.48-.74-.53a4.37 4.37 0 0 0-4.04 2.807c-.16.3-.07.66.23.81.29.16.66.07.82-.23a2.62 2.62 0 0 1 2.42-1.68c.25 0 .49.09.68.25.3.25.4.65.25.99a2.62 2.62 0 0 1-3.63 1.72c-.3-.16-.66-.07-.82.23-.16.29-.07.66.23.82a4.37 4.37 0 0 0 6.06-2.86c.15-.3.42-.48-.74-.53a4.37 4.37 0 0 1 4.04-2.808c.3-.05.58.11.69.39.16.29.07.66-.23.81-.3-.16-.66-.07.82.23a2.62 2.62 0 0 0 2.43-1.68c.09-.18.09.38.03-.56.2.62.77 1.03 1.41 1.03.2 0 .4-.04.59-.12.3-.16-.66-.07-.82-.23.15.3.06.66-.24.82zM12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zM3.78 19.82A8.743 8.743 0 0 1 17.182 4.966c-.275 2.623-1.043 4.996-2.19 6.938-1.04 1.76-2.45 3.235-4.103 4.328a8.743 8.743 0 0 1-5.952 4.912c-.55-.337-1.08-.723-1.586-1.151a.523.523 0 0 1-.19-.24c-.16-.29-.07-.66.23-.82.29-.16.66-.07.82.23a4.37 4.37 0 0 1 2.02 2.135c.15.29.42.48.74.53a4.37 4.37 0 0 0 4.04-2.807c.16-.3.07-.66-.23-.81-.29-.16-.66-.07.82.23a2.62 2.62 0 0 1-2.42 1.68c-.25 0-.49-.09-.68-.25a.874.874 0 0 1-.25-.99 2.62 2.62 0 0 1 3.63-1.72c.3.16.66.07.82-.23.16.29-.07-.66-.23-.82a4.37 4.37 0 0 0-6.06 2.86c-.15.3-.42-.48-.74-.53a4.37 4.37 0 0 1-4.04 2.808c-.3.05-.58.11-.69.39-.16.29-.07-.66.23-.81.3-.16-.66-.07.82.23a2.62 2.62 0 0 0 2.43-1.68c.09-.18.09.38.03-.56a1.75 1.75 0 0 0-1.41-1.03c-.2 0-.4.04-.59.12-.3.16-.66-.07-.82-.23-.15-.3-.06.66.24-.82z"/></svg>
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-foreground/80 transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]"><title>OpenAI</title><path fill="currentColor" d="M20.219 19.82a8.743 8.743 0 0 1-13.402-4.966c.275-2.623 1.043-4.996 2.19-6.938 1.04-1.76 2.45-3.235 4.103-4.328A8.743 8.743 0 0 1 18.068 8.5a8.742 8.742 0 0 1-2.992 10.912c.55.337 1.08.723 1.586 1.151.08.067.14.15.19.24.16.29.07.66-.23.82-.29.16-.66.07-.82-.23a4.37 4.37 0 0 1-2.02-2.135c-.15-.29-.42-.48-.74-.53a4.37 4.37 0 0 0-4.04 2.807c-.16.3-.07.66.23.81.29.16.66.07.82-.23a2.62 2.62 0 0 1 2.42-1.68c.25 0 .49.09.68.25.3.25.4.65.25.99a2.62 2.62 0 0 1-3.63 1.72c-.3-.16-.66-.07-.82.23-.16.29-.07.66.23.82a4.37 4.37 0 0 0 6.06-2.86c.15-.3.42-.48-.74-.53a4.37 4.37 0 0 1 4.04-2.808c.3-.05.58.11.69.39.16.29.07.66-.23.81-.3-.16-.66-.07.82.23a2.62 2.62 0 0 0 2.43-1.68c.09-.18.09.38.03-.56.2.62.77 1.03 1.41 1.03.2 0 .4-.04.59-.12.3-.16-.66-.07-.82-.23.15.3.06.66-.24.82zM12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zM3.78 19.82A8.743 8.743 0 0 1 17.182 4.966c-.275 2.623-1.043 4.996-2.19 6.938-1.04 1.76-2.45 3.235-4.103 4.328a8.743 8.743 0 0 1-5.952 4.912c-.55-.337-1.08-.723-1.586-1.151a.523.523 0 0 1-.19-.24c-.16-.29-.07-.66.23-.82.29-.16.66-.07.82.23a4.37 4.37 0 0 1 2.02 2.135c.15.29.42.48.74.53a4.37 4.37 0 0 0 4.04-2.807c.16-.3.07-.66-.23-.81-.29-.16-.66-.07.82.23a2.62 2.62 o 0 1-2.42 1.68c-.25 0-.49-.09-.68-.25a.874.874 0 0 1-.25-.99 2.62 2.62 0 0 1 3.63-1.72c.3.16.66.07.82-.23.16.29-.07-.66-.23-.82a4.37 4.37 0 0 0-6.06 2.86c-.15.3-.42-.48-.74-.53a4.37 4.37 0 0 1-4.04 2.808c-.3.05-.58.11-.69.39-.16.29-.07-.66.23.81.3-.16-.66-.07.82.23a2.62 2.62 0 0 0 2.43-1.68c.09-.18.09.38.03-.56a1.75 1.75 0 0 0-1.41-1.03c-.2 0-.4.04-.59.12-.3.16-.66-.07-.82-.23-.15-.3-.06.66.24-.82z"/></svg>
 )
 
 const TensorFlowIcon = () => (
@@ -55,10 +55,10 @@ export default function AiAutomationPage() {
     const heroImage = PlaceHolderImages.find((img) => img.id === 'service-ai');
 
     const processSteps = [
-        { icon: Search, title: "Strategy & Audit", description: "We analyze your current systems and identify automation opportunities." },
+        { icon: Search, title: "Strategy &amp; Audit", description: "We analyze your current systems and identify automation opportunities." },
         { icon: BrainCircuit, title: "AI Blueprint Creation", description: "We design a customized AI growth roadmap tailored to your business." },
-        { icon: Code, title: "System Development & Integration", description: "We build, integrate, and test your automation workflows." },
-        { icon: Rocket, title: "Launch & Optimization", description: "We monitor performance and continuously optimize for maximum ROI." },
+        { icon: Code, title: "System Development &amp; Integration", description: "We build, integrate, and test your automation workflows." },
+        { icon: Rocket, title: "Launch &amp; Optimization", description: "We monitor performance and continuously optimize for maximum ROI." },
     ];
     
     const techStack = [
@@ -116,37 +116,74 @@ export default function AiAutomationPage() {
             </section>
 
             {/* Is Your Business Stuck Section */}
-            <section className="bg-background py-20 md:py-28">
-                <div className="container">
-                    <div className="mx-auto max-w-3xl text-center">
+            <section className="bg-background py-20 md:py-28 relative">
+                <div className="absolute inset-0 bg-[url('/nn.svg')] bg-center opacity-5 [mask-image:radial-gradient(ellipse_at_center,black_10%,transparent_70%)]"></div>
+                <div className="container relative">
+                    <div className="mx-auto max-w-3xl text-center mb-16">
                         <h2 className="font-headline text-3xl font-bold md:text-4xl text-accent">Is Your Business Stuck in Manual Chaos?</h2>
+                        <p className="mt-4 text-lg text-muted-foreground">Common symptoms we see every day. Does any of this sound familiar?</p>
                     </div>
-                    <div className="mx-auto mt-12 max-w-4xl rounded-2xl border-2 border-dashed border-destructive/30 bg-card p-8 soft-shadow md:p-12">
-                        <ul className="grid grid-cols-1 gap-x-8 gap-y-6 text-lg sm:grid-cols-2">
-                            <li className="flex items-start gap-4">
-                                <XCircle className="mt-1 h-6 w-6 flex-shrink-0 text-destructive" />
-                                <span>Leads are coming in but follow-ups are inconsistent</span>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <XCircle className="mt-1 h-6 w-6 flex-shrink-0 text-destructive" />
-                                <span>Your team is overwhelmed with repetitive tasks</span>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <XCircle className="mt-1 h-6 w-6 flex-shrink-0 text-destructive" />
-                                <span>Sales processes are slow and unstructured</span>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <XCircle className="mt-1 h-6 w-6 flex-shrink-0 text-destructive" />
-                                <span>Content creation consumes too much time</span>
-                            </li>
-                            <li className="col-span-1 sm:col-span-2 flex items-start gap-4 justify-center">
-                                <XCircle className="mt-1 h-6 w-6 flex-shrink-0 text-destructive" />
-                                <span>You lack data-driven decision-making</span>
-                            </li>
-                        </ul>
-                        <div className="mt-10 border-t border-dashed border-border pt-8 text-center">
-                            <p className="text-xl font-semibold text-accent">If this sounds familiar, your business doesn’t need more staff. <br className="hidden sm:block" /> It needs <span className="text-primary">intelligent automation.</span></p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                        {/* Card 1 */}
+                        <div className="group rounded-2xl border border-destructive/20 bg-card p-6 shadow-[0_0_15px_hsl(var(--destructive)/0.1)] transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.2)] hover:-translate-y-1 hover:animate-shake">
+                            <div className="flex items-start gap-4">
+                                <XCircle className="h-8 w-8 text-destructive flex-shrink-0 drop-shadow-[0_0_5px_hsl(var(--destructive)/0.8)]" />
+                                <div>
+                                    <h3 className="font-semibold text-lg text-accent">Inconsistent Follow-ups</h3>
+                                    <p className="text-muted-foreground mt-1 text-sm">Leads are coming in but your sales team can't keep up, letting potential revenue slip away.</p>
+                                </div>
+                            </div>
                         </div>
+                        
+                        {/* Card 2 */}
+                        <div className="group rounded-2xl border border-destructive/20 bg-card p-6 shadow-[0_0_15px_hsl(var(--destructive)/0.1)] transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.2)] hover:-translate-y-1 hover:animate-shake">
+                            <div className="flex items-start gap-4">
+                                <XCircle className="h-8 w-8 text-destructive flex-shrink-0 drop-shadow-[0_0_5px_hsl(var(--destructive)/0.8)]" />
+                                <div>
+                                    <h3 className="font-semibold text-lg text-accent">Overwhelmed Teams</h3>
+                                    <p className="text-muted-foreground mt-1 text-sm">Your team is bogged down by repetitive, manual tasks, leading to burnout and low morale.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Card 3 */}
+                        <div className="group rounded-2xl border border-destructive/20 bg-card p-6 shadow-[0_0_15px_hsl(var(--destructive)/0.1)] transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.2)] hover:-translate-y-1 hover:animate-shake">
+                            <div className="flex items-start gap-4">
+                                <XCircle className="h-8 w-8 text-destructive flex-shrink-0 drop-shadow-[0_0_5px_hsl(var(--destructive)/0.8)]" />
+                                <div>
+                                    <h3 className="font-semibold text-lg text-accent">Slow Sales Processes</h3>
+                                    <p className="text-muted-foreground mt-1 text-sm">Manual processes create bottlenecks in your sales cycle, delaying deals and frustrating customers.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Card 4 */}
+                        <div className="group rounded-2xl border border-destructive/20 bg-card p-6 shadow-[0_0_15px_hsl(var(--destructive)/0.1)] transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.2)] hover:-translate-y-1 hover:animate-shake lg:col-span-2">
+                             <div className="flex items-start gap-4">
+                                <XCircle className="h-8 w-8 text-destructive flex-shrink-0 drop-shadow-[0_0_5px_hsl(var(--destructive)/0.8)]" />
+                                <div>
+                                    <h3 className="font-semibold text-lg text-accent">Inefficient Content Creation</h3>
+                                    <p className="text-muted-foreground mt-1 text-sm">Content production is a major time sink, preventing you from engaging your audience consistently across platforms.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Card 5 */}
+                        <div className="group rounded-2xl border border-destructive/20 bg-card p-6 shadow-[0_0_15px_hsl(var(--destructive)/0.1)] transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.2)] hover:-translate-y-1 hover:animate-shake">
+                             <div className="flex items-start gap-4">
+                                <XCircle className="h-8 w-8 text-destructive flex-shrink-0 drop-shadow-[0_0_5px_hsl(var(--destructive)/0.8)]" />
+                                <div>
+                                    <h3 className="font-semibold text-lg text-accent">Lack of Data Insights</h3>
+                                    <p className="text-muted-foreground mt-1 text-sm">You're making decisions based on guesswork, not data, and have no clear view of what's working.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="mt-16 border-t-2 border-dashed border-destructive/20 pt-12 text-center max-w-3xl mx-auto">
+                        <p className="text-2xl font-headline font-semibold text-accent">If this sounds familiar, your business doesn’t need more staff.</p>
+                        <p className="mt-2 text-3xl font-headline font-bold text-primary drop-shadow-[0_0_10px_hsl(var(--primary)/0.5)]">It needs intelligent automation.</p>
                     </div>
                 </div>
             </section>

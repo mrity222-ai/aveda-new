@@ -126,7 +126,12 @@ export default {
         'scroll-left': {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
-        }
+        },
+        'shake': {
+            '0%, 100%': { transform: 'translateX(0)' },
+            '10%, 30%, 50%, 70%, 90%': { transform: 'translateX(-2px)' },
+            '20%, 40%, 60%, 80%': { transform: 'translateX(2px)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -137,6 +142,7 @@ export default {
         'icon-bounce': 'icon-bounce 0.6s ease',
         'neon-pulse-line': 'neon-pulse-line 2.5s ease-in-out infinite',
         'scroll-left': 'scroll-left 40s linear infinite',
+        'shake': 'shake 0.5s ease-in-out',
       },
     },
   },
