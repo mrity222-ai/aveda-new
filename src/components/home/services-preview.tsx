@@ -1,4 +1,3 @@
-
 'use client';
 
 import { cn } from '@/lib/utils';
@@ -8,21 +7,25 @@ import { Button } from '@/components/ui/button';
 
 const servicesData = [
   {
+    slug: 'web-development',
     icon: Code2,
     title: 'Web Development',
     description: 'We build high-performance, secure, and scalable websites that drive business growth and deliver seamless digital experiences.',
   },
   {
+    slug: 'app-development',
     icon: Smartphone,
     title: 'App Development',
     description: 'From concept to launch, we create engaging and intuitive mobile applications for iOS and Android with modern architecture.',
   },
   {
+    slug: 'ui-ux-design',
     icon: PenTool,
     title: 'UI/UX Design',
     description: 'Our design process is centered around users. We craft beautiful, functional, and user-friendly interfaces that convert.',
   },
   {
+    slug: 'digital-marketing',
     icon: LineChart,
     title: 'Digital & Performance Marketing',
     description: 'We run data-driven marketing campaigns designed to increase visibility, engagement, and measurable ROI.',
@@ -62,7 +65,16 @@ export default function ServicesPreview() {
                 <p className="mt-4 flex-grow text-sm text-foreground/80">
                   {service.description}
                 </p>
-                <div className="mt-6 w-full border-t border-border" />
+                <div className="mt-6 pt-4 border-t border-border space-y-2">
+                  <Button asChild size="sm" variant="outline" className="w-full">
+                    <Link href={`/services/${service.slug}`}>
+                      View More
+                    </Link>
+                  </Button>
+                  <Button asChild size="sm" className="w-full">
+                    <Link href="/contact">Get In Touch</Link>
+                  </Button>
+                </div>
               </div>
             </div>
           ))}
