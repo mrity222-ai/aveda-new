@@ -110,7 +110,7 @@ export default function AiAutomationPage() {
             price: { monthly: 'Custom', yearly: '' },
             features: ['Everything in Starter, plus:', 'Advanced CRM Automation', 'AI Content Engine', 'Marketing &amp; Sales Funnels', 'Dedicated Support'],
             cta: 'Contact Sales',
-            variant: 'outline',
+            variant: 'default',
             popular: true,
         },
         {
@@ -121,7 +121,7 @@ export default function AiAutomationPage() {
             price: { monthly: 'Custom', yearly: '' },
             features: ['Everything in Growth, plus:', 'Full Automation Architecture', 'Custom AI Dashboards', 'Predictive Analytics', 'Enterprise Security'],
             cta: 'Contact Sales',
-            variant: 'outline',
+            variant: 'default',
         },
     ];
 
@@ -554,9 +554,9 @@ export default function AiAutomationPage() {
                                 </CardContent>
                                 <CardFooter className="p-6">
                                     <Button asChild className={cn("w-full",
-                                        plan.color === 'green' && 'border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white',
-                                        plan.color === 'blue' && 'bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-600/30',
-                                        plan.color === 'red' && 'bg-rose-600 hover:bg-rose-700'
+                                        plan.color === 'green' && 'border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white active:bg-emerald-600',
+                                        plan.color === 'blue' && 'bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-600/30 active:bg-blue-800',
+                                        plan.color === 'red' && 'bg-rose-600 hover:bg-rose-700 active:bg-rose-800'
                                     )} variant={plan.variant}>
                                         <Link href={`/contact?service=${encodeURIComponent(plan.name)}`}>{plan.cta}</Link>
                                     </Button>
