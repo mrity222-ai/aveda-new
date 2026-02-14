@@ -123,6 +123,10 @@ export default {
               opacity: '1',
           },
         },
+        'scroll-left': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -132,6 +136,7 @@ export default {
         'pulse-primary': 'pulse-primary 2s infinite',
         'icon-bounce': 'icon-bounce 0.6s ease',
         'neon-pulse-line': 'neon-pulse-line 2.5s ease-in-out infinite',
+        'scroll-left': 'scroll-left 40s linear infinite',
       },
     },
   },

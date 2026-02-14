@@ -111,15 +111,15 @@ export default function AboutPage() {
             We collaborate with global technology leaders to build secure, scalable, and cutting-edge solutions.
           </p>
 
-          <div className="mt-16 max-w-5xl mx-auto">
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 items-center gap-0">
-              {partners.map((partner) => (
-                <div key={partner.name} className="relative h-28 w-full p-6 grayscale transition-all duration-300 hover:grayscale-0">
+          <div className="mt-16 w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+            <div className="flex w-max animate-scroll-left hover:[animation-play-state:paused]">
+              {[...partners, ...partners].map((partner, index) => (
+                <div key={`${partner.name}-${index}`} className="relative h-20 w-48 shrink-0">
                   <Image
                     src={partner.imageUrl}
                     alt={`${partner.name} logo`}
                     fill
-                    className="object-contain"
+                    className="object-contain p-4 grayscale transition-all duration-300 hover:grayscale-0"
                   />
                 </div>
               ))}
