@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -44,7 +43,7 @@ const PythonIcon = () => (
 )
 
 const OpenAIIcon = () => (
-    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-foreground/80 transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]"><title>OpenAI</title><path fill="currentColor" d="M20.219 19.82a8.743 8.743 0 0 1-13.402-4.966c.275-2.623 1.043-4.996 2.19-6.938 1.04-1.76 2.45-3.235 4.103-4.328A8.743 8.743 0 0 1 18.068 8.5a8.742 8.742 0 0 1-2.992 10.912c.55.337 1.08.723 1.586 1.151.08.067.14.15.19.24.16.29.07.66-.23.82-.29.16-.66.07-.82-.23a4.37 4.37 0 0 1-2.02-2.135c-.15-.29-.42-.48-.74-.53a4.37 4.37 0 0 0-4.04 2.807c-.16.3-.07.66.23.81.29.16.66.07.82-.23a2.62 2.62 0 0 1 2.42-1.68c.25 0 .49.09.68.25.3.25.4.65.25.99a2.62 2.62 0 0 1-3.63 1.72c-.3-.16-.66-.07-.82.23-.16.29-.07.66.23.82a4.37 4.37 0 0 0 6.06-2.86c.15-.3.42-.48-.74-.53a4.37 4.37 0 0 1 4.04-2.808c.3-.05.58.11.69.39.16.29.07.66-.23.81-.3-.16-.66-.07.82.23a2.62 2.62 0 0 0 2.43-1.68c.09-.18.09.38.03-.56.2.62.77 1.03 1.41 1.03.2 0 .4-.04.59-.12.3-.16-.66-.07-.82-.23.15.3.06.66-.24.82zM12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zM3.78 19.82A8.743 8.743 0 0 1 17.182 4.966c-.275 2.623-1.043 4.996-2.19 6.938-1.04 1.76-2.45 3.235-4.103 4.328a8.743 8.743 0 0 1-5.952 4.912c-.55-.337-1.08-.723-1.586-1.151a.523.523 0 0 1-.19-.24c-.16-.29-.07-.66.23-.82.29-.16.66-.07.82.23a4.37 4.37 0 0 1 2.02 2.135c.15.29.42.48.74.53a4.37 4.37 0 0 0 4.04-2.807c.16-.3.07-.66-.23-.81-.29-.16-.66-.07.82.23a2.62 2.62 0 0 1-2.42 1.68c-.25 0-.49-.09-.68-.25a.874.874 0 0 1-.25-.99 2.62 2.62 0 0 1 3.63-1.72c.3.16.66.07.82-.23.16-.29-.07-.66-.23-.82a4.37 4.37 0 0 0-6.06 2.86c-.15.3-.42-.48-.74-.53a4.37 4.37 0 0 1-4.04 2.808c-.3.05-.58.11-.69.39-.16-.29-.07-.66.23-.81.3-.16-.66-.07.82.23a2.62 2.62 0 0 0 2.43-1.68c.09-.18.09.38.03-.56a1.75 1.75 0 0 0-1.41-1.03c-.2 0-.4.04-.59.12-.3.16-.66-.07-.82-.23-.15-.3-.06.66.24-.82z"/></svg>
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-foreground/80 transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]"><title>OpenAI</title><path fill="currentColor" d="M20.219 19.82a8.743 8.743 0 0 1-13.402-4.966c.275-2.623 1.043-4.996 2.19-6.938 1.04-1.76 2.45-3.235 4.103-4.328A8.743 8.743 0 0 1 18.068 8.5a8.742 8.742 0 0 1-2.992 10.912c.55.337 1.08.723 1.586 1.151.08.067.14.15.19.24.16.29.07.66-.23.82-.29.16-.66.07-.82-.23a4.37 4.37 0 0 1-2.02-2.135c-.15-.29-.42-.48-.74-.53a4.37 4.37 0 0 0-4.04 2.807c-.16.3-.07.66.23.81.29.16.66.07.82-.23a2.62 2.62 0 0 1 2.42-1.68c.25 0 .49.09.68.25.3.25.4.65.25.99a2.62 2.62 0 0 1-3.63 1.72c-.3-.16-.66-.07-.82.23-.16.29-.07.66.23.82a4.37 4.37 0 0 0 6.06-2.86c.15-.3.42-.48-.74-.53a4.37 4.37 0 0 1 4.04-2.808c.3-.05.58.11.69.39.16.29.07.66-.23.81-.3-.16-.66-.07.82.23a2.62 2.62 0 0 0 2.43-1.68c.09-.18.09.38.03-.56.2.62.77 1.03 1.41 1.03.2 0 .4-.04.59-.12.3-.16-.66-.07-.82-.23.15.3.06.66-.24.82zM12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zM3.78 19.82A8.743 8.743 0 0 1 17.182 4.966c-.275 2.623-1.043 4.996-2.19 6.938-1.04 1.76-2.45 3.235-4.103 4.328a8.743 8.743 0 0 1-5.952 4.912c-.55-.337-1.08-.723-1.586-1.151a.523.523 0 0 1-.19-.24c-.16-.29-.07-.66.23-.82.29-.16.66-.07.82.23a4.37 4.37 0 0 1 2.02 2.135c.15.29.42.48.74.53a4.37 4.37 0 0 0 4.04-2.807c.16-.3.07-.66-.23-.81-.29-.16-.66-.07.82.23a2.62 2.62 0 0 1-2.42 1.68c-.25 0-.49-.09-.68-.25a.874.874 0 0 1-.25-.99 2.62 2.62 0 0 1 3.63-1.72c.3.16.66.07.82-.23.16.29-.07-.66-.23-.82a4.37 4.37 0 0 0-6.06 2.86c-.15.3-.42-.48-.74-.53a4.37 4.37 0 0 1-4.04 2.808c-.3.05-.58.11-.69.39-.16.29-.07-.66.23-.81.3-.16-.66-.07.82.23a2.62 2.62 0 0 0 2.43-1.68c.09-.18.09.38.03-.56a1.75 1.75 0 0 0-1.41-1.03c-.2 0-.4.04-.59.12-.3.16-.66-.07-.82-.23-.15-.3-.06.66.24-.82z"/></svg>
 )
 
 const TensorFlowIcon = () => (
@@ -154,6 +153,7 @@ export default function AiAutomationPage() {
 
             {/* We Build AI Systems Section */}
             <section className="bg-background py-20 md:py-28 relative">
+                <div className="absolute inset-0 bg-[url('/nn.svg')] bg-center opacity-5 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)]"></div>
                 <div className="container relative z-10">
                     <div className="mx-auto max-w-4xl text-center">
                         <h2 className="font-headline text-3xl font-bold md:text-4xl text-accent">We Build AI Systems That Work 24/7 So You Don’t Have To</h2>
@@ -161,76 +161,84 @@ export default function AiAutomationPage() {
                     </div>
                     <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
                         {/* AI Automation Services Card */}
-                        <Card className="flex flex-col h-full border-2 border-[#10B981] shadow-lg shadow-[#10B981]/10">
-                            <CardHeader>
-                                <div className="flex items-center gap-4">
-                                    <Zap className="h-8 w-8 text-[#10B981]"/>
-                                    <CardTitle>AI Automation Services</CardTitle>
-                                </div>
-                                <CardDescription>We streamline your operations using intelligent workflows:</CardDescription>
-                            </CardHeader>
-                            <CardContent className="flex-grow">
-                                <ul className="space-y-3 text-sm text-muted-foreground">
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#10B981] mt-0.5 flex-shrink-0" /><span>CRM Automation</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#10B981] mt-0.5 flex-shrink-0" /><span>WhatsApp &amp; Chatbot Automation</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#10B981] mt-0.5 flex-shrink-0" /><span>Email &amp; Lead Nurturing Automation</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#10B981] mt-0.5 flex-shrink-0" /><span>Sales Funnel Systems</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#10B981] mt-0.5 flex-shrink-0" /><span>Appointment Booking Systems</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#10B981] mt-0.5 flex-shrink-0" /><span>Invoice &amp; Payment Automation</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#10B981] mt-0.5 flex-shrink-0" /><span>Customer Support AI Bots</span></li>
-                                </ul>
-                            </CardContent>
-                            <CardFooter className="bg-[#10B981]/10 p-4 mt-auto text-sm">
-                                <p><span className="font-bold text-[#10B981]">Result:</span> Faster response times, improved conversions, lower operational cost.</p>
-                            </CardFooter>
-                        </Card>
+                        <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                          <Card className="flex flex-col h-full border-2 border-[#10B981] shadow-lg shadow-[#10B981]/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#10B981]/20">
+                              <CardHeader>
+                                  <div className="flex items-center gap-4">
+                                      <Zap className="h-8 w-8 text-[#10B981]"/>
+                                      <CardTitle>AI Automation Services</CardTitle>
+                                  </div>
+                                  <CardDescription>We streamline your operations using intelligent workflows:</CardDescription>
+                              </CardHeader>
+                              <CardContent className="flex-grow">
+                                  <ul className="space-y-3 text-sm text-muted-foreground">
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#10B981] mt-0.5 flex-shrink-0" /><span>CRM Automation</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#10B981] mt-0.5 flex-shrink-0" /><span>WhatsApp &amp; Chatbot Automation</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#10B981] mt-0.5 flex-shrink-0" /><span>Email &amp; Lead Nurturing Automation</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#10B981] mt-0.5 flex-shrink-0" /><span>Sales Funnel Systems</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#10B981] mt-0.5 flex-shrink-0" /><span>Appointment Booking Systems</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#10B981] mt-0.5 flex-shrink-0" /><span>Invoice &amp; Payment Automation</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#10B981] mt-0.5 flex-shrink-0" /><span>Customer Support AI Bots</span></li>
+                                  </ul>
+                              </CardContent>
+                              <CardFooter className="bg-[#10B981]/10 p-4 mt-auto text-sm">
+                                  <p><span className="font-bold text-[#10B981]">Result:</span> Faster response times, improved conversions, lower operational cost.</p>
+                              </CardFooter>
+                          </Card>
+                        </div>
+
                         {/* Generative AI Services Card */}
-                        <Card className="flex flex-col h-full border-2 border-[#3B82F6] shadow-2xl shadow-[#3B82F6]/20 transform lg:scale-105">
-                            <CardHeader>
-                                <div className="flex items-center gap-4">
-                                    <Sparkles className="h-8 w-8 text-[#3B82F6]"/>
-                                    <CardTitle>Generative AI Services</CardTitle>
-                                </div>
-                                <CardDescription>We help you create high-impact content at scale:</CardDescription>
-                            </CardHeader>
-                            <CardContent className="flex-grow">
-                                <ul className="space-y-3 text-sm text-muted-foreground">
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#3B82F6] mt-0.5 flex-shrink-0" /><span>Website Copy &amp; Landing Pages</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#3B82F6] mt-0.5 flex-shrink-0" /><span>SEO Blogs</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#3B82F6] mt-0.5 flex-shrink-0" /><span>High-Converting Ad Copy</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#3B82F6] mt-0.5 flex-shrink-0" /><span>Social Media Content Systems</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#3B82F6] mt-0.5 flex-shrink-0" /><span>AI Image &amp; Banner Design</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#3B82F6] mt-0.5 flex-shrink-0" /><span>Video Scripts &amp; Reels Hooks</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#3B82F6] mt-0.5 flex-shrink-0" /><span>Email Marketing Sequences</span></li>
-                                </ul>
-                            </CardContent>
-                            <CardFooter className="bg-[#3B82F6]/10 p-4 mt-auto text-sm">
-                                <p><span className="font-bold text-[#3B82F6]">Result:</span> Stronger branding, consistent marketing, higher engagement.</p>
-                            </CardFooter>
-                        </Card>
+                         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 delay-150">
+                          <Card className="flex flex-col h-full border-2 border-[#3B82F6] shadow-2xl shadow-[#3B82F6]/20 transform lg:scale-105 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#3B82F6]/30">
+                              <CardHeader>
+                                  <div className="flex items-center gap-4">
+                                      <Sparkles className="h-8 w-8 text-[#3B82F6]"/>
+                                      <CardTitle>Generative AI Services</CardTitle>
+                                  </div>
+                                  <CardDescription>We help you create high-impact content at scale:</CardDescription>
+                              </CardHeader>
+                              <CardContent className="flex-grow">
+                                  <ul className="space-y-3 text-sm text-muted-foreground">
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#3B82F6] mt-0.5 flex-shrink-0" /><span>Website Copy &amp; Landing Pages</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#3B82F6] mt-0.5 flex-shrink-0" /><span>SEO Blogs</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#3B82F6] mt-0.5 flex-shrink-0" /><span>High-Converting Ad Copy</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#3B82F6] mt-0.5 flex-shrink-0" /><span>Social Media Content Systems</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#3B82F6] mt-0.5 flex-shrink-0" /><span>AI Image &amp; Banner Design</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#3B82F6] mt-0.5 flex-shrink-0" /><span>Video Scripts &amp; Reels Hooks</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#3B82F6] mt-0.5 flex-shrink-0" /><span>Email Marketing Sequences</span></li>
+                                  </ul>
+                              </CardContent>
+                              <CardFooter className="bg-[#3B82F6]/10 p-4 mt-auto text-sm">
+                                  <p><span className="font-bold text-[#3B82F6]">Result:</span> Stronger branding, consistent marketing, higher engagement.</p>
+                              </CardFooter>
+                          </Card>
+                        </div>
+
                         {/* AI Growth Solutions (Premium) Card */}
-                        <Card className="flex flex-col h-full border-2 border-[#F43F5E] shadow-lg shadow-[#F43F5E]/10">
-                            <CardHeader>
-                                <div className="flex items-center gap-4">
-                                    <Rocket className="h-8 w-8 text-[#F43F5E]"/>
-                                    <CardTitle>AI Growth Solutions (Premium)</CardTitle>
-                                </div>
-                                <CardDescription>For businesses ready to dominate their industry:</CardDescription>
-                            </CardHeader>
-                            <CardContent className="flex-grow">
-                                <ul className="space-y-3 text-sm text-muted-foreground">
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#F43F5E] mt-0.5 flex-shrink-0" /><span>Full Business Automation Ecosystem</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#F43F5E] mt-0.5 flex-shrink-0" /><span>AI Analytics Dashboard</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#F43F5E] mt-0.5 flex-shrink-0" /><span>AI Marketing Engine</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#F43F5E] mt-0.5 flex-shrink-0" /><span>Custom AI Chatbots</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#F43F5E] mt-0.5 flex-shrink-0" /><span>Industry-Specific AI Setup</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#F43F5E] mt-0.5 flex-shrink-0" /><span>AI Sales Prediction &amp; Lead Scoring</span></li>
-                                </ul>
-                            </CardContent>
-                            <CardFooter className="bg-[#F43F5E]/10 p-4 mt-auto text-sm">
-                                <p><span className="font-bold text-[#F43F5E]">Result:</span> Predictable growth powered by real-time data intelligence.</p>
-                            </CardFooter>
-                        </Card>
+                        <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 delay-300">
+                          <Card className="flex flex-col h-full border-2 border-[#F43F5E] shadow-lg shadow-[#F43F5E]/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#F43F5E]/20">
+                              <CardHeader>
+                                  <div className="flex items-center gap-4">
+                                      <Rocket className="h-8 w-8 text-[#F43F5E]"/>
+                                      <CardTitle>AI Growth Solutions (Premium)</CardTitle>
+                                  </div>
+                                  <CardDescription>For businesses ready to dominate their industry:</CardDescription>
+                              </CardHeader>
+                              <CardContent className="flex-grow">
+                                  <ul className="space-y-3 text-sm text-muted-foreground">
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#F43F5E] mt-0.5 flex-shrink-0" /><span>Full Business Automation Ecosystem</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#F43F5E] mt-0.5 flex-shrink-0" /><span>AI Analytics Dashboard</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#F43F5E] mt-0.5 flex-shrink-0" /><span>AI Marketing Engine</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#F43F5E] mt-0.5 flex-shrink-0" /><span>Custom AI Chatbots</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#F43F5E] mt-0.5 flex-shrink-0" /><span>Industry-Specific AI Setup</span></li>
+                                      <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#F43F5E] mt-0.5 flex-shrink-0" /><span>AI Sales Prediction &amp; Lead Scoring</span></li>
+                                  </ul>
+                              </CardContent>
+                              <CardFooter className="bg-[#F43F5E]/10 p-4 mt-auto text-sm">
+                                  <p><span className="font-bold text-[#F43F5E]">Result:</span> Predictable growth powered by real-time data intelligence.</p>
+                              </CardFooter>
+                          </Card>
+                        </div>
                     </div>
                 </div>
             </section>
