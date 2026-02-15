@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-background py-20 md:py-32">
+    <section className="relative flex h-screen w-full items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
@@ -16,6 +16,7 @@ export default function HeroSection() {
           className="h-full w-full object-cover"
           src="/vio/bg.mp4"
         />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       {/* Content */}
