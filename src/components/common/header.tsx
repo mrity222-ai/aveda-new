@@ -27,17 +27,17 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true); // This will run only on the client
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
 
-    // Set the initial scroll state on mount and add the event listener.
-    // This ensures the client-side state matches the browser's scroll position
-    // after the initial render, preventing a hydration mismatch.
-    handleScroll();
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Set initial scroll state on mount
     
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -45,7 +45,9 @@ export default function Header() {
   }, []);
 
   const isHomePage = pathname === '/';
-  const isTransparent = isHomePage && !scrolled;
+  
+  // isTransparent is only true on the client, after mount, on the homepage, and when not scrolled.
+  const isTransparent = mounted && isHomePage && !scrolled;
 
   return (
     <header
