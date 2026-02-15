@@ -76,7 +76,7 @@ export default function TermsAndConditionsPage() {
   return (
     <div className="bg-white text-gray-800">
       {/* Header Section */}
-      <section className="relative overflow-hidden bg-white py-20 md:py-28">
+      <section className="relative flex h-screen items-center justify-center overflow-hidden bg-white">
         <div className="absolute inset-0 z-0 opacity-10">
             {heroBgImage && (
               <Image

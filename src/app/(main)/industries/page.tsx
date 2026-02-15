@@ -67,7 +67,7 @@ export default function IndustriesPage() {
   const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
   return (
     <div className="bg-background text-foreground">
-      <section className="relative overflow-hidden py-20 md:py-28">
+      <section className="relative flex h-screen items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10">
             {heroBgImage && (
                 <Image

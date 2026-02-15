@@ -71,7 +71,7 @@ export default function AboutPage() {
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-background py-20 md:py-32">
+      <section className="relative flex h-screen items-center justify-center overflow-hidden bg-background">
         <div className="absolute inset-0 z-0 opacity-30">
           {heroBgImage && (
             <Image
