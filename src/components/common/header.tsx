@@ -33,7 +33,12 @@ export default function Header() {
       setScrolled(window.scrollY > 10);
     };
 
+    // Set the initial scroll state on mount and add the event listener.
+    // This ensures the client-side state matches the browser's scroll position
+    // after the initial render, preventing a hydration mismatch.
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -48,7 +53,7 @@ export default function Header() {
         'fixed top-0 z-50 w-full transition-all duration-300',
         isTransparent
           ? 'border-transparent'
-          : 'border-b border-border/20 bg-background/0 shadow-sm backdrop-blur-md'
+          : 'border-b border-border/20 bg-background/95 shadow-sm backdrop-blur-md'
       )}
       onMouseLeave={() => setServicesMenuOpen(false)}
     >
