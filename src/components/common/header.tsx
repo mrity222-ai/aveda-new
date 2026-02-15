@@ -48,7 +48,7 @@ export default function Header() {
         'fixed top-0 z-50 w-full transition-all duration-300',
         isTransparent
           ? 'border-transparent'
-          : 'border-b border-border/20 shadow-sm backdrop-blur-md'
+          : 'border-b border-border/20 bg-background/80 shadow-sm backdrop-blur-md'
       )}
       onMouseLeave={() => setServicesMenuOpen(false)}
     >
