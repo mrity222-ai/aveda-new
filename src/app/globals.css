@@ -17,7 +17,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 0%;
 
-    --primary: 0 84% 60%; /* Crimson Red for accents/buttons */
+    --primary: 352 78% 51%; /* Deep Red: #E5203A */
     --primary-foreground: 0 0% 100%;
     
     --secondary: 0 0% 98%; /* Light Gray for section backgrounds */
@@ -29,19 +29,19 @@
     --accent: 173 80% 25%; /* Deep Teal for headings */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 355 88% 61%; /* Bright Crimson: #F24455 */
     --destructive-foreground: 0 0% 100%;
     
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
     
-    --ring: 0 84% 60%;
+    --ring: 352 78% 51%;
 
-    --chart-1: 173 80% 25%;
-    --chart-2: 0 84% 60%;
-    --chart-3: 173 70% 40%;
-    --chart-4: 0 70% 70%;
-    --chart-5: 350 78% 60%;
+    --chart-1: 173 80% 25%;   /* Deep Teal */
+    --chart-2: 352 78% 51%;   /* Deep Red */
+    --chart-3: 173 70% 40%;   /* Softer Teal */
+    --chart-4: 355 88% 61%;   /* Bright Crimson */
+    --chart-5: 350 82% 70%;   /* Soft Pink/Rose */
     
     --radius: 0.75rem;
   }
