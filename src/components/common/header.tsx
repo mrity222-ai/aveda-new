@@ -26,17 +26,35 @@ export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const isHomePage = pathname === '/';
+  const isTransparent = isHomePage && !scrolled;
 
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 w-full transition-all duration-300 animate-in fade-in slide-in-from-top-4 border-b border-transparent'
+        'sticky top-0 z-50 w-full transition-all duration-300',
+        isTransparent
+          ? 'border-transparent'
+          : 'border-b border-border/20 bg-background/80 shadow-sm backdrop-blur-md'
       )}
       onMouseLeave={() => setServicesMenuOpen(false)}
     >
       <div className="container relative flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <Logo />
+          <Logo className={cn(isTransparent ? '[&>span]:text-white' : '')} />
         </Link>
         <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 text-sm font-medium md:flex">
           {navLinks.map((link) =>
@@ -45,10 +63,12 @@ export default function Header() {
                 <button className="flex items-center gap-1 outline-none">
                   <span
                     className={cn(
-                      'transition-colors hover:text-primary',
-                      pathname.startsWith(link.href) || servicesMenuOpen
-                        ? 'text-primary'
-                        : 'text-muted-foreground'
+                      'transition-colors',
+                      isTransparent
+                        ? 'text-white/80 hover:text-white'
+                        : 'text-muted-foreground hover:text-primary',
+                      (pathname.startsWith(link.href) || servicesMenuOpen) &&
+                        (isTransparent ? 'text-white' : 'text-primary')
                     )}
                   >
                     {link.label}
@@ -56,9 +76,9 @@ export default function Header() {
                   <ChevronDown
                     className={cn(
                       'h-4 w-4 transition-transform duration-200',
-                      pathname.startsWith(link.href) || servicesMenuOpen
-                        ? 'text-primary'
-                        : 'text-muted-foreground',
+                      isTransparent ? 'text-white/80' : 'text-muted-foreground',
+                      (pathname.startsWith(link.href) || servicesMenuOpen) &&
+                        (isTransparent ? 'text-white' : 'text-primary'),
                       servicesMenuOpen && 'rotate-180'
                     )}
                   />
@@ -69,10 +89,12 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'transition-colors hover:text-primary',
-                  pathname === link.href
-                    ? 'text-foreground'
-                    : 'text-muted-foreground'
+                  'transition-colors',
+                  isTransparent
+                    ? 'text-white/80 hover:text-white'
+                    : 'text-muted-foreground hover:text-primary',
+                  pathname === link.href &&
+                    (isTransparent ? 'text-white font-semibold' : 'text-foreground font-semibold')
                 )}
               >
                 {link.label}
@@ -82,14 +104,14 @@ export default function Header() {
         </nav>
         <div className="flex items-center justify-end space-x-4">
           <div className="hidden md:block">
-            <Button asChild>
+            <Button asChild variant={isTransparent ? 'outline' : 'default'}>
               <Link href="/contact">Get Started</Link>
             </Button>
           </div>
           <div className="md:hidden">
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" className={cn(isTransparent ? 'text-white hover:bg-white/10 hover:text-white' : '')}>
                   <Menu className="h-5 w-5" />
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
