@@ -1,4 +1,3 @@
-
 'use client';
 
 import * as React from 'react';
@@ -10,6 +9,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 
@@ -173,54 +174,58 @@ export default function TestimonialsSection() {
                         Real feedback from partners we've helped succeed.
                     </p>
                 </div>
-                <Carousel
-                    plugins={[plugin.current]}
-                    className="w-full"
-                    onMouseEnter={plugin.current.stop}
-                    onMouseLeave={plugin.current.reset}
-                    opts={{
-                        align: "start",
-                        loop: true,
-                    }}
-                >
-                    <CarouselContent>
-                        {testimonials.map((testimonial, index) => {
-                            const image = PlaceHolderImages.find((img) => img.id === testimonial.avatarId);
-                            return (
-                                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                                    <div className="p-1 h-full">
-                                        <Card className="bg-card border transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow h-full flex flex-col">
-                                            <CardContent className="pt-6 flex-grow flex flex-col">
-                                                <div className="flex items-center gap-1">
-                                                    {[...Array(testimonial.rating)].map((_, i) => (
-                                                        <Star key={i} className="h-5 w-5 fill-accent text-accent" />
-                                                    ))}
-                                                </div>
-                                                <p className="mt-4 text-muted-foreground flex-grow">"{testimonial.quote}"</p>
-                                                <div className="mt-6 flex items-center gap-4">
-                                                    {image && (
-                                                        <Image 
-                                                            src={image.imageUrl} 
-                                                            alt={testimonial.name} 
-                                                            width={48} 
-                                                            height={48} 
-                                                            className="rounded-full" 
-                                                            data-ai-hint={image.imageHint}
-                                                        />
-                                                    )}
-                                                    <div>
-                                                        <p className="font-semibold">{testimonial.name}</p>
-                                                        <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                <div className="relative md:px-12">
+                    <Carousel
+                        plugins={[plugin.current]}
+                        className="w-full"
+                        onMouseEnter={plugin.current.stop}
+                        onMouseLeave={plugin.current.reset}
+                        opts={{
+                            align: "start",
+                            loop: true,
+                        }}
+                    >
+                        <CarouselContent>
+                            {testimonials.map((testimonial, index) => {
+                                const image = PlaceHolderImages.find((img) => img.id === testimonial.avatarId);
+                                return (
+                                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                                        <div className="p-1 h-full">
+                                            <Card className="bg-card border transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow h-full flex flex-col">
+                                                <CardContent className="pt-6 flex-grow flex flex-col">
+                                                    <div className="flex items-center gap-1">
+                                                        {[...Array(testimonial.rating)].map((_, i) => (
+                                                            <Star key={i} className="h-5 w-5 fill-accent text-accent" />
+                                                        ))}
                                                     </div>
-                                                </div>
-                                            </CardContent>
-                                        </Card>
-                                    </div>
-                                </CarouselItem>
-                            )
-                        })}
-                    </CarouselContent>
-                </Carousel>
+                                                    <p className="mt-4 text-muted-foreground flex-grow">"{testimonial.quote}"</p>
+                                                    <div className="mt-6 flex items-center gap-4">
+                                                        {image && (
+                                                            <Image 
+                                                                src={image.imageUrl} 
+                                                                alt={testimonial.name} 
+                                                                width={48} 
+                                                                height={48} 
+                                                                className="rounded-full" 
+                                                                data-ai-hint={image.imageHint}
+                                                            />
+                                                        )}
+                                                        <div>
+                                                            <p className="font-semibold">{testimonial.name}</p>
+                                                            <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                                                        </div>
+                                                    </div>
+                                                </CardContent>
+                                            </Card>
+                                        </div>
+                                    </CarouselItem>
+                                )
+                            })}
+                        </CarouselContent>
+                        <CarouselPrevious className="hidden md:flex" />
+                        <CarouselNext className="hidden md:flex" />
+                    </Carousel>
+                </div>
             </div>
         </section>
     );
