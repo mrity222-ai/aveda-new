@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { services, footerLinks } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import {
-  Twitter,
+  Instagram,
   Linkedin,
   Facebook,
   Mail,
@@ -40,8 +40,8 @@ export default function Footer() {
                 asChild
               >
                 <Link href="#">
-                  <Twitter className="h-5 w-5" />
-                  <span className="sr-only">Twitter</span>
+                  <Instagram className="h-5 w-5" />
+                  <span className="sr-only">Instagram</span>
                 </Link>
               </Button>
               <Button
