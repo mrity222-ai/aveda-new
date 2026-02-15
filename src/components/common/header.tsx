@@ -45,7 +45,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 w-full transition-all duration-300',
+        'fixed top-0 z-50 w-full transition-all duration-300',
         isTransparent
           ? 'border-transparent'
           : 'border-b border-border/20 shadow-sm backdrop-blur-md'
