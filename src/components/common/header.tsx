@@ -81,9 +81,11 @@ export default function Header() {
           )}
         </nav>
         <div className="flex items-center justify-end space-x-4">
-          <Button asChild>
-            <Link href="/contact">Get Started</Link>
-          </Button>
+          <div className="hidden md:block">
+            <Button asChild>
+              <Link href="/contact">Get Started</Link>
+            </Button>
+          </div>
           <div className="md:hidden">
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
@@ -92,11 +94,11 @@ export default function Header() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] flex flex-col">
                 <SheetHeader>
                   <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
                 </SheetHeader>
-                <nav className="flex flex-col space-y-2 pt-8">
+                <nav className="flex flex-col space-y-2 pt-8 flex-grow">
                   <Link
                     href="/"
                     onClick={() => setOpen(false)}
@@ -153,6 +155,11 @@ export default function Header() {
                     )
                   )}
                 </nav>
+                <div className="mt-auto pt-6">
+                    <Button asChild className="w-full">
+                        <Link href="/contact" onClick={() => setOpen(false)}>Get Started</Link>
+                    </Button>
+                </div>
               </SheetContent>
             </Sheet>
           </div>
