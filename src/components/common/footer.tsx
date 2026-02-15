@@ -22,21 +22,21 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="border-t bg-secondary">
+    <footer className="bg-accent text-accent-foreground">
       <div className="container py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Column 1: Brand */}
           <div className="space-y-6">
-            <Logo />
-            <p className="text-sm text-muted-foreground">
+            <Logo className="[&>span]:text-accent-foreground" />
+            <p className="text-sm text-accent-foreground/80">
               Delivering innovative IT solutions and digital services to drive business growth.
             </p>
             <div className="flex space-x-2">
               <Button
-                variant="outline"
+                variant="ghost"
                 size="icon"
-                className="text-muted-foreground transition-all duration-300 hover:border-accent hover:text-accent"
+                className="border border-accent-foreground/20 text-accent-foreground/80 transition-all duration-300 hover:border-accent-foreground hover:bg-accent-foreground/10 hover:text-accent-foreground"
                 asChild
               >
                 <Link href="#">
@@ -45,9 +45,9 @@ export default function Footer() {
                 </Link>
               </Button>
               <Button
-                variant="outline"
+                variant="ghost"
                 size="icon"
-                className="text-muted-foreground transition-all duration-300 hover:border-accent hover:text-accent"
+                className="border border-accent-foreground/20 text-accent-foreground/80 transition-all duration-300 hover:border-accent-foreground hover:bg-accent-foreground/10 hover:text-accent-foreground"
                 asChild
               >
                 <Link href="#">
@@ -56,9 +56,9 @@ export default function Footer() {
                 </Link>
               </Button>
               <Button
-                variant="outline"
+                variant="ghost"
                 size="icon"
-                className="text-muted-foreground transition-all duration-300 hover:border-accent hover:text-accent"
+                className="border border-accent-foreground/20 text-accent-foreground/80 transition-all duration-300 hover:border-accent-foreground hover:bg-accent-foreground/10 hover:text-accent-foreground"
                 asChild
               >
                 <Link href="#">
@@ -71,13 +71,13 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h3 className="font-headline text-lg font-semibold text-accent">Quick Links</h3>
+            <h3 className="font-headline text-lg font-semibold text-accent-foreground">Quick Links</h3>
             <ul className="mt-4 space-y-3">
               {footerLinks.quick.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="group relative inline-block text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    className="group relative inline-block text-sm text-accent-foreground/80 transition-colors hover:text-accent-foreground"
                   >
                     {link.label}
                     <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -89,13 +89,13 @@ export default function Footer() {
 
           {/* Column 3: Services */}
           <div>
-            <h3 className="font-headline text-lg font-semibold text-accent">Our Services</h3>
+            <h3 className="font-headline text-lg font-semibold text-accent-foreground">Our Services</h3>
             <ul className="mt-4 space-y-3">
               {services.map((service) => (
                 <li key={service.slug}>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="group relative inline-block text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    className="group relative inline-block text-sm text-accent-foreground/80 transition-colors hover:text-accent-foreground"
                   >
                     {service.title}
                     <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -107,20 +107,20 @@ export default function Footer() {
 
           {/* Column 4: Get in Touch */}
           <div>
-            <h3 className="font-headline text-lg font-semibold text-accent">
+            <h3 className="font-headline text-lg font-semibold text-accent-foreground">
               Get in Touch
             </h3>
             <div className="mt-4 space-y-4">
               <a
                 href="mailto:info@avedatechnologies.com"
-                className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="flex items-center gap-3 text-sm text-accent-foreground/80 transition-colors hover:text-accent-foreground"
               >
                 <Mail className="h-4 w-4 text-primary" />
                 <span>info@avedatechnologies.com</span>
               </a>
               <a
                 href="tel:+919012887697"
-                className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="flex items-center gap-3 text-sm text-accent-foreground/80 transition-colors hover:text-accent-foreground"
               >
                 <Phone className="h-4 w-4 text-primary" />
                 <span>+91 9012887697</span>
@@ -136,11 +136,11 @@ export default function Footer() {
 
         {/* Recognition Badges */}
         <div className="mt-16 text-center">
-            <h4 className="mb-6 font-headline text-sm uppercase tracking-widest text-muted-foreground">Officially Recognized</h4>
+            <h4 className="mb-6 font-headline text-sm uppercase tracking-widest text-accent-foreground/60">Officially Recognized</h4>
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
                 {recognitionBadges.map(badge => (
-                    <div key={badge.name} className="flex items-center gap-2 text-muted-foreground">
-                       <Award className="h-5 w-5 text-accent" />
+                    <div key={badge.name} className="flex items-center gap-2 text-accent-foreground/80">
+                       <Award className="h-5 w-5 text-accent-foreground" />
                        <span className='text-sm font-medium'>{badge.name}</span>
                     </div>
                 ))}
@@ -149,12 +149,12 @@ export default function Footer() {
 
       </div>
       {/* Bottom Bar */}
-      <div className='border-t'>
-        <div className="container flex flex-col items-center justify-between gap-4 py-6 text-sm text-muted-foreground md:flex-row">
+      <div className='border-t border-accent-foreground/20'>
+        <div className="container flex flex-col items-center justify-between gap-4 py-6 text-sm text-accent-foreground/80 md:flex-row">
             <div className="flex gap-4">
-                <Link href="/privacy-policy" className="transition-colors hover:text-foreground">Privacy Policy</Link>
-                <Separator orientation='vertical' className='h-5' />
-                <Link href="/terms-and-conditions" className="transition-colors hover:text-foreground">Terms & Conditions</Link>
+                <Link href="/privacy-policy" className="transition-colors hover:text-accent-foreground">Privacy Policy</Link>
+                <Separator orientation='vertical' className='h-5 bg-accent-foreground/20' />
+                <Link href="/terms-and-conditions" className="transition-colors hover:text-accent-foreground">Terms & Conditions</Link>
             </div>
             <p>
                 &copy; {new Date().getFullYear()} Aveda Technologies. All Rights Reserved.
