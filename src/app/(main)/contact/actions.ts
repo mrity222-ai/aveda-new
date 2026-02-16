@@ -19,6 +19,7 @@ type FormState = {
 export async function handleFormSubmission(
   values: z.infer<typeof formSchema>
 ): Promise<FormState> {
+
   const parsed = formSchema.safeParse(values);
 
   if (!parsed.success) {
@@ -28,23 +29,31 @@ export async function handleFormSubmission(
     };
   }
 
-  // Here you would typically send an email, save to a database, etc.
-  // For this example, we'll just simulate a successful submission.
-  console.log('Form submitted successfully:', parsed.data);
+  try {
+    await fetch("https://script.google.com/macros/s/AKfycbwh1xTqpS5eFxiT6KAKGg5GwhYTiOzePDnl-wiW3U5K8cobhVy0AR7QnWmn9Dp9m6yY/exec", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fullName: parsed.data.name,
+        email: parsed.data.email,
+        phone: parsed.data.phone || "",
+        company: parsed.data.company || "",
+        service: parsed.data.service,
+        message: parsed.data.message,
+      }),
+    });
 
-  // Simulate network delay
-  await new Promise(resolve => setTimeout(resolve, 1000));
+    return {
+      success: true,
+      message: 'Your message has been sent successfully!',
+    };
 
-  // You can also simulate an error
-  // if (parsed.data.name.toLowerCase() === 'error') {
-  //   return {
-  //     success: false,
-  //     message: 'This is a simulated error response.',
-  //   };
-  // }
-
-  return {
-    success: true,
-    message: 'Your message has been sent successfully!',
-  };
+  } catch (error) {
+    return {
+      success: false,
+      message: 'Failed to submit form. Please try again.',
+    };
+  }
 }

@@ -309,7 +309,7 @@
     {
       "id": "leader-raj",
       "description": "Professional corporate portrait of Raj Mani Yadav",
-      "imageUrl": "/img/raj.jpg",
+      "imageUrl": "/img/raj.png",
       "imageHint": "male corporate portrait"
     },
     {
@@ -321,7 +321,7 @@
     {
       "id": "leader-deepak",
       "description": "Professional corporate portrait of Deepak Yadav",
-      "imageUrl": "/img/deep.jpg",
+      "imageUrl": "/img/deep.png",
       "imageHint": "male corporate portrait"
     },
     {
