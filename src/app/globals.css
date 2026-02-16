@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 352 78% 51%; /* Deep Red: #E5203A */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 0 0% 98%; /* Light Gray for section backgrounds */
+    --secondary-foreground: 0 0% 0%;
+    
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    
+    --accent: 173 80% 25%; /* Deep Teal for headings */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 355 88% 61%; /* Bright Crimson: #F24455 */
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    
+    --ring: 352 78% 51%;
+
+    --chart-1: 173 80% 25%;   /* Deep Teal */
+    --chart-2: 352 78% 51%;   /* Deep Red */
+    --chart-3: 173 70% 40%;   /* Softer Teal */
+    --chart-4: 355 88% 61%;   /* Bright Crimson */
+    --chart-5: 350 82% 70%;   /* Soft Pink/Rose */
+    
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  input:hover, select:hover, textarea:hover {
+    @apply border-primary;
+    transition: border-color 0.3s ease-in-out;
+  }
+}
+
+@layer components {
+    .soft-shadow {
+        @apply shadow-[0_10px_30px_rgba(0,0,0,0.05)];
+    }
+}
