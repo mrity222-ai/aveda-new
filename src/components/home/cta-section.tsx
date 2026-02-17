@@ -1,27 +1,23 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function CtaSection() {
-  const heroBgImage = PlaceHolderImages.find(
-    (img) => img.id === 'hero-background'
-  );
-
   return (
-    <section className="relative overflow-hidden bg-secondary py-20 md:py-32">
-      {/* Transparent Background Image */}
-      <div className="absolute inset-0 z-0 opacity-100">
-        {heroBgImage && (
-          <Image
-            src={heroBgImage.imageUrl}
-            alt="Let’s Build the Future Together background"
-            fill
-            className="object-cover"
-            data-ai-hint={heroBgImage.imageHint}
-          />
-        )}
+    <section className="relative overflow-hidden py-20 md:py-32">
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="none"
+          poster="/vio/bg.jpg"
+          className="h-full w-full object-cover"
+          src="/vio/bg.mp4"
+        />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       {/* Content */}
