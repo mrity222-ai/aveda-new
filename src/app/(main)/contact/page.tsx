@@ -28,7 +28,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: 'Address',
-      value: '123 Tech Park, Bangalore, India',
+      value: 'Lucknow, Utter Pradesh India',
     },
   ];
 
