@@ -218,32 +218,42 @@ export default function AboutPage() {
                 const image = PlaceHolderImages.find(p => p.id === leader.imageId);
                 return (
                     <div key={leader.name}
-                        className="group rounded-2xl border bg-card p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow animate-in fade-in slide-in-from-bottom-12 duration-700"
+                        className="group rounded-2xl border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow animate-in fade-in slide-in-from-bottom-12 duration-700"
                         style={{ animationDelay: `${index * 150}ms` }}>
-                    {image && (
-                        <div className="relative w-48 h-48 mx-auto">
-                            <Image
-                                src={image.imageUrl}
-                                alt={leader.name}
-                                width={192}
-                                height={192}
-                                className="rounded-full object-cover grayscale shadow-[0_15px_30px_-10px_rgba(0,0,0,0.25)] ring-4 ring-background transition-all duration-500 group-hover:grayscale-0 group-hover:shadow-[0_25px_40px_-15px_rgba(0,0,0,0.3)] group-hover:ring-primary"
-                                data-ai-hint={image.imageHint}
-                            />
+                        <div className="flex items-center justify-between gap-8">
+                            <div className="text-left flex-grow">
+                                <h3 className={cn(
+                                    "font-headline text-2xl font-bold text-foreground transition-colors duration-300",
+                                    "group-hover:text-primary"
+                                )}>
+                                    {leader.name}
+                                </h3>
+                                <p className="mt-1 text-muted-foreground">{leader.designation}</p>
+                                <div className="mt-4 flex space-x-3">
+                                    <Link href={leader.socials.twitter} className="text-muted-foreground hover:text-primary">
+                                        <Twitter className="h-5 w-5" />
+                                    </Link>
+                                    <Link href={leader.socials.linkedin} className="text-muted-foreground hover:text-primary">
+                                        <Linkedin className="h-5 w-5" />
+                                    </Link>
+                                </div>
+                                <Link href={leader.bioLink} className="mt-4 inline-flex items-center text-sm font-semibold text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                    View Bio <MoveRight className="ml-2 h-4 w-4" />
+                                </Link>
+                            </div>
+                            {image && (
+                                <div className="relative w-32 h-32 flex-shrink-0">
+                                    <Image
+                                        src={image.imageUrl}
+                                        alt={leader.name}
+                                        width={128}
+                                        height={128}
+                                        className="rounded-full object-cover grayscale shadow-[0_15px_30px_-10px_rgba(0,0,0,0.25)] ring-4 ring-background transition-all duration-500 group-hover:grayscale-0 group-hover:shadow-[0_25px_40px_-15px_rgba(0,0,0,0.3)] group-hover:ring-primary"
+                                        data-ai-hint={image.imageHint}
+                                    />
+                                </div>
+                            )}
                         </div>
-                    )}
-                    <div className="mt-6">
-                        <h3 className={cn(
-                            "font-headline text-2xl font-bold text-foreground transition-colors duration-300",
-                            "group-hover:text-primary"
-                        )}>
-                            {leader.name}
-                        </h3>
-                        <p className="mt-1 text-muted-foreground">{leader.designation}</p>
-                        <Link href={leader.bioLink} className="mt-4 inline-flex items-center text-sm font-semibold text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                            View Bio <MoveRight className="ml-2 h-4 w-4" />
-                        </Link>
-                    </div>
                     </div>
                 )
                 })}
