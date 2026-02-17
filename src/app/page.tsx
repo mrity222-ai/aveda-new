@@ -1,5 +1,4 @@
 import HeroSection from '@/components/home/hero-section';
-import StatsSection from '@/components/home/stats-section';
 import ServicesPreview from '@/components/home/services-preview';
 import AboutUs from '@/components/home/portfolio-preview';
 import PortfolioPreview from '@/components/home/why-choose-us';
@@ -18,7 +17,6 @@ export default function Home() {
       <AboutUs />
       <VideoSection />
       <PortfolioPreview />
-      <StatsSection />
       <InsightsSection />
       <TestimonialsSection />
       <CtaSection />
