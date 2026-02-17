@@ -217,11 +217,11 @@ export default function AboutPage() {
                 {leadership.map((leader, index) => {
                 const image = PlaceHolderImages.find(p => p.id === leader.imageId);
                 return (
-                    <div key={leader.name} 
-                         className="group flex flex-col items-center text-center animate-in fade-in slide-in-from-bottom-12 duration-700"
-                         style={{ animationDelay: `${index * 150}ms` }}>
+                    <div key={leader.name}
+                        className="group rounded-2xl border bg-card p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow animate-in fade-in slide-in-from-bottom-12 duration-700"
+                        style={{ animationDelay: `${index * 150}ms` }}>
                     {image && (
-                        <div className="relative w-48 h-48">
+                        <div className="relative w-48 h-48 mx-auto">
                             <Image
                                 src={image.imageUrl}
                                 alt={leader.name}
