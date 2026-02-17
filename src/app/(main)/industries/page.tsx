@@ -9,6 +9,7 @@ import {
   Landmark,
   Factory,
   MoveRight,
+  Heart,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -60,6 +61,11 @@ const industries = [
     icon: Factory,
     title: 'Manufacturing & MSMEs',
     description: 'Automation, analytics dashboards, and demand forecasting.',
+  },
+  {
+    icon: Heart,
+    title: 'Non-Profit & NGOs',
+    description: 'Digital fundraising, donor engagement, and impact analytics.',
   },
 ];
 
