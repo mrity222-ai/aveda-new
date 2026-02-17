@@ -68,25 +68,25 @@ export default function IndustriesPage() {
   return (
     <div className="bg-background text-foreground">
       <section className="relative flex h-screen items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-10">
-            {heroBgImage && (
-                <Image
-                src={heroBgImage.imageUrl}
-                alt="Industries background"
-                fill
-                className="object-cover"
-                priority
-                data-ai-hint={heroBgImage.imageHint}
-                />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="none"
+            poster="/vio/bg.jpg"
+            className="h-full w-full object-cover"
+            src="/vio/bg.mp4"
+          />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="container relative z-10">
           <div className="mx-auto mb-16 max-w-3xl text-center">
-            <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-5xl animate-blur-in">
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-5xl animate-blur-in">
               Industries We Empower With AI
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-10 duration-700 delay-100">
+            <p className="mt-4 text-lg text-white/90 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-100">
               Tailored AI-driven solutions for diverse sectors.
             </p>
             <div className="relative mx-auto mt-6 h-1 w-24 overflow-hidden rounded-full animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">

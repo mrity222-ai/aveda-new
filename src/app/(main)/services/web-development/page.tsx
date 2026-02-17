@@ -50,7 +50,6 @@ const WhatsAppIcon = () => (
   );
 
 export default function WebDevelopmentPage() {
-    const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
     const detailImage = PlaceHolderImages.find((img) => img.id === 'service-web-dev-detail');
     const webProjects = portfolioProjects.filter(p => ['corporate-website', 'ed-tech-portal', 'project-management-saas'].includes(p.slug));
 
@@ -121,25 +120,25 @@ export default function WebDevelopmentPage() {
     return (
         <div className="bg-background text-foreground">
             {/* Hero Section */}
-            <section className="relative flex h-screen items-center justify-center overflow-hidden bg-background">
-                <div className="absolute inset-0 z-0 opacity-10">
-                    {heroImage && (
-                        <Image
-                            src={heroImage.imageUrl}
-                            alt="Web Development background"
-                            fill
-                            className="object-cover"
-                            priority
-                            data-ai-hint={heroImage.imageHint}
-                        />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
+            <section className="relative flex h-screen items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="none"
+                        poster="/vio/bg.jpg"
+                        className="h-full w-full object-cover"
+                        src="/vio/bg.mp4"
+                    />
+                    <div className="absolute inset-0 bg-black/50" />
                 </div>
                 <div className="container relative z-10 text-center">
-                    <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl animate-blur-in">
+                    <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl animate-blur-in">
                         High-Performance Websites That Scale With Your Business
                     </h1>
-                    <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
+                    <p className="mx-auto mt-6 max-w-3xl text-lg text-white/90">
                         We build secure, scalable, and conversion-ready websites—from corporate portals to complex SaaS platforms.
                     </p>
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -351,13 +350,13 @@ export default function WebDevelopmentPage() {
              {/* Final CTA */}
             <section className="relative overflow-hidden border-t border-border bg-card py-20">
                 <div className="absolute inset-0 z-0 opacity-10">
-                    {heroImage && (
+                    {PlaceHolderImages.find((img) => img.id === 'hero-background') && (
                         <Image
-                            src={heroImage.imageUrl}
+                            src={PlaceHolderImages.find((img) => img.id === 'hero-background')!.imageUrl}
                             alt="Ready to Build a Website That Performs background"
                             fill
                             className="object-cover"
-                            data-ai-hint={heroImage.imageHint}
+                            data-ai-hint={PlaceHolderImages.find((img) => img.id === 'hero-background')!.imageHint}
                         />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent"></div>

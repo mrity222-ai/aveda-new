@@ -131,7 +131,6 @@ const includedFeatures = [
 
 export default function PricingPage() {
   const [hoveredPlan, setHoveredPlan] = useState<string | null>(null);
-  const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
 
   const whyAveda = [
     { title: 'AI-First Digital Agency', icon: BrainCircuit},
@@ -143,25 +142,25 @@ export default function PricingPage() {
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative flex h-screen items-center justify-center overflow-hidden bg-background">
-        <div className="absolute inset-0 z-0 opacity-10">
-          {heroBgImage && (
-            <Image
-              src={heroBgImage.imageUrl}
-              alt="Digital Marketing Pricing background"
-              fill
-              className="object-cover"
-              priority
-              data-ai-hint={heroBgImage.imageHint}
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent"></div>
+      <section className="relative flex h-screen items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="none"
+            poster="/vio/bg.jpg"
+            className="h-full w-full object-cover"
+            src="/vio/bg.mp4"
+          />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="container relative z-10 text-center">
-          <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl animate-blur-in">
+          <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl animate-blur-in">
             Choose a Digital Marketing Plan – Get Online Today
           </h1>
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-white/90">
             AI-powered marketing plans designed for growth, visibility, and influence.
           </p>
         </div>

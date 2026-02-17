@@ -47,7 +47,6 @@ const WhatsAppIcon = () => (
 );
 
 export default function AppDevelopmentPage() {
-    const heroImage = PlaceHolderImages.find((img) => img.id === 'service-app-dev-hero');
     const appProjects = portfolioProjects.filter(p => ['yalla-drive', 'rozana', 'yoga-app'].includes(p.slug)).slice(0, 3);
 
     const whatWeBuild = [
@@ -104,25 +103,25 @@ export default function AppDevelopmentPage() {
     return (
         <div className="bg-background text-foreground">
             {/* Hero Section */}
-            <section className="relative flex h-screen items-center justify-center overflow-hidden bg-background">
-                 <div className="absolute inset-0 z-0 opacity-10">
-                    {heroImage && (
-                        <Image
-                            src={heroImage.imageUrl}
-                            alt="High-Performance Mobile App Development background"
-                            fill
-                            className="object-cover"
-                            priority
-                            data-ai-hint={heroImage.imageHint}
-                        />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+            <section className="relative flex h-screen items-center justify-center overflow-hidden">
+                 <div className="absolute inset-0 z-0">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="none"
+                        poster="/vio/bg.jpg"
+                        className="h-full w-full object-cover"
+                        src="/vio/bg.mp4"
+                    />
+                    <div className="absolute inset-0 bg-black/50" />
                 </div>
                 <div className="container relative z-10 text-center">
-                    <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl text-foreground animate-blur-in">
+                    <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl text-white animate-blur-in">
                         High-Performance Mobile App Development
                     </h1>
-                    <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
+                    <p className="mx-auto mt-6 max-w-3xl text-lg text-white/90">
                         From idea to launch, we build secure, scalable, and engaging mobile apps for iOS and Android that drive real business growth.
                     </p>
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -283,13 +282,13 @@ export default function AppDevelopmentPage() {
              {/* Final CTA */}
             <section className="relative overflow-hidden border-t border-border bg-card py-20">
                 <div className="absolute inset-0 z-0 opacity-10">
-                    {heroImage && (
+                    {PlaceHolderImages.find((img) => img.id === 'service-app-dev-hero') && (
                         <Image
-                            src={heroImage.imageUrl}
+                            src={PlaceHolderImages.find((img) => img.id === 'service-app-dev-hero')!.imageUrl}
                             alt="Turn Your App Idea into Reality background"
                             fill
                             className="object-cover"
-                            data-ai-hint={heroImage.imageHint}
+                            data-ai-hint={PlaceHolderImages.find((img) => img.id === 'service-app-dev-hero')!.imageHint}
                         />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent"></div>

@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function TermsAndConditionsPage() {
-  const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
   const sections = [
     {
       title: 'Introduction',
@@ -76,25 +75,25 @@ export default function TermsAndConditionsPage() {
   return (
     <div className="bg-white text-gray-800">
       {/* Header Section */}
-      <section className="relative flex h-screen items-center justify-center overflow-hidden bg-white">
-        <div className="absolute inset-0 z-0 opacity-10">
-            {heroBgImage && (
-              <Image
-                src={heroBgImage.imageUrl}
-                alt="Background"
-                fill
-                className="object-cover"
-                priority
-                data-ai-hint={heroBgImage.imageHint}
-              />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent" />
+      <section className="relative flex h-screen items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="none"
+            poster="/vio/bg.jpg"
+            className="h-full w-full object-cover"
+            src="/vio/bg.mp4"
+          />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="container relative z-10 text-center">
-          <h1 className="font-headline text-4xl font-bold text-gray-900 md:text-5xl animate-blur-in">
+          <h1 className="font-headline text-4xl font-bold text-white md:text-5xl animate-blur-in">
             Terms & Conditions
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90">
             Last updated: August 01, 2024
           </p>
           <div className="mx-auto mt-8 h-px w-24 bg-gray-200" />

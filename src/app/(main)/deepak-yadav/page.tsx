@@ -41,7 +41,6 @@ export default function DeepakYadavPage() {
   };
 
   const deepakImage = PlaceHolderImages.find(p => p.id === deepak.imageId);
-  const heroBgImage = PlaceHolderImages.find(p => p.id === 'hero-background');
   const aboutUsImage = PlaceHolderImages.find(p => p.id === 'about-us-image');
   const missionBgImage = PlaceHolderImages.find(p => p.id === 'blog-brain-city');
 
@@ -49,24 +48,25 @@ export default function DeepakYadavPage() {
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative flex h-screen items-center justify-center overflow-hidden bg-secondary">
-        <div className="absolute inset-0 z-0 opacity-10">
-          {heroBgImage && (
-            <Image
-              src={heroBgImage.imageUrl}
-              alt="Background"
-              fill
-              className="object-cover"
-              data-ai-hint={heroBgImage.imageHint}
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-transparent"></div>
+      <section className="relative flex h-screen items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="none"
+            poster="/vio/bg.jpg"
+            className="h-full w-full object-cover"
+            src="/vio/bg.mp4"
+          />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="container relative z-10 text-center">
-          <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl animate-blur-in">
+          <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl animate-blur-in">
             Meet Our Founder
           </h1>
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-white/90">
             The growth visionary driving innovation at Aveda Technologies.
           </p>
         </div>

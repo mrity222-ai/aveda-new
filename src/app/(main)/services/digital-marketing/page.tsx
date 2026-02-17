@@ -35,7 +35,6 @@ const WhatsAppIcon = () => (
   );
 
 export default function DigitalMarketingPage() {
-    const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
     
     const includedServices = [
         { icon: Users, text: 'Social Media Marketing (Meta, Instagram)'},
@@ -55,25 +54,25 @@ export default function DigitalMarketingPage() {
     return (
         <div className="bg-background text-foreground">
             {/* Hero Section */}
-            <section className="relative flex h-screen items-center justify-center overflow-hidden bg-background">
-                <div className="absolute inset-0 z-0 opacity-10">
-                    {heroBgImage && (
-                        <Image
-                            src={heroBgImage.imageUrl}
-                            alt="Digital Marketing background"
-                            fill
-                            className="object-cover"
-                            priority
-                            data-ai-hint={heroBgImage.imageHint}
-                        />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent"></div>
+            <section className="relative flex h-screen items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="none"
+                    poster="/vio/bg.jpg"
+                    className="h-full w-full object-cover"
+                    src="/vio/bg.mp4"
+                  />
+                  <div className="absolute inset-0 bg-black/50" />
                 </div>
                 <div className="container relative z-10 text-center">
-                    <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl animate-blur-in">
+                    <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl animate-blur-in">
                         Grow Faster With AI-Driven Digital Marketing
                     </h1>
-                    <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
+                    <p className="mx-auto mt-6 max-w-3xl text-lg text-white/90">
                         Get leads, sales, and visibility starting at just ₹5,000/month.
                     </p>
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -205,13 +204,13 @@ export default function DigitalMarketingPage() {
              {/* Final CTA */}
              <section className="relative overflow-hidden bg-card border-t py-20 md:py-28">
                 <div className="absolute inset-0 z-0 opacity-10">
-                    {heroBgImage && (
+                    {PlaceHolderImages.find((img) => img.id === 'hero-background') && (
                         <Image
-                            src={heroBgImage.imageUrl}
+                            src={PlaceHolderImages.find((img) => img.id === 'hero-background')!.imageUrl}
                             alt="Ready to Grow With AI Marketing background"
                             fill
                             className="object-cover"
-                            data-ai-hint={heroBgImage.imageHint}
+                            data-ai-hint={PlaceHolderImages.find((img) => img.id === 'hero-background')!.imageHint}
                         />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent"></div>

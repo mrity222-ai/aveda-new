@@ -23,7 +23,6 @@ const categories = [
 
 export default function InsidesPage() {
   const [activeCategory, setActiveCategory] = useState('All');
-  const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
 
   const filteredPosts = useMemo(() => {
     if (activeCategory === 'All') {
@@ -42,25 +41,25 @@ export default function InsidesPage() {
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative flex h-screen items-center justify-center overflow-hidden bg-secondary">
-        <div className="absolute inset-0 z-0 opacity-10">
-          {heroBgImage && (
-            <Image
-              src={heroBgImage.imageUrl}
-              alt="Background"
-              fill
-              className="object-cover"
-              data-ai-hint={heroBgImage.imageHint}
-              priority
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-transparent"></div>
+      <section className="relative flex h-screen items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="none"
+            poster="/vio/bg.jpg"
+            className="h-full w-full object-cover"
+            src="/vio/bg.mp4"
+          />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="container relative z-10 text-center">
-          <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl animate-blur-in">
+          <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl animate-blur-in">
             AI-Driven Insights That Shape Decisions
           </h1>
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-10 duration-700 delay-100">
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-white/90 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-100">
             Data, strategy, and intelligence for business and political success.
           </p>
         </div>

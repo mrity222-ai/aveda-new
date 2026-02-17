@@ -7,8 +7,6 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function ContactPage() {
-  const heroBgImage = PlaceHolderImages.find((img) => img.id === 'hero-background');
-
   const contactDetails = [
     {
       icon: Mail,
@@ -60,25 +58,25 @@ export default function ContactPage() {
   return (
     <div className="bg-background text-foreground">
         {/* Hero Section */}
-        <section className="relative flex h-screen items-center justify-center overflow-hidden bg-background">
-            <div className="absolute inset-0 z-0 opacity-10">
-                {heroBgImage && (
-                    <Image
-                        src={heroBgImage.imageUrl}
-                        alt="Background"
-                        fill
-                        className="object-cover"
-                        data-ai-hint={heroBgImage.imageHint}
-                        priority
-                    />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent"></div>
+        <section className="relative flex h-screen items-center justify-center overflow-hidden">
+            <div className="absolute inset-0 z-0">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="none"
+                poster="/vio/bg.jpg"
+                className="h-full w-full object-cover"
+                src="/vio/bg.mp4"
+              />
+              <div className="absolute inset-0 bg-black/50" />
             </div>
             <div className="container relative z-10 text-center">
-                <h1 className="font-headline text-4xl font-bold tracking-tight text-accent md:text-6xl animate-blur-in">
+                <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl animate-blur-in">
                     Let’s Build Something Powerful Together
                 </h1>
-                <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-12 duration-700">
+                <p className="mx-auto mt-6 max-w-3xl text-lg text-white/90 animate-in fade-in slide-in-from-bottom-12 duration-700">
                     AI-driven digital solutions for brands, businesses, and political campaigns.
                 </p>
                 <div className="mt-8 flex flex-wrap justify-center gap-4 animate-in fade-in slide-in-from-bottom-16 duration-700">
@@ -154,13 +152,13 @@ export default function ContactPage() {
         {/* Final CTA */}
         <section className="relative overflow-hidden border-t bg-card py-20">
             <div className="absolute inset-0 z-0 opacity-10">
-                {heroBgImage && (
+                {PlaceHolderImages.find((img) => img.id === 'hero-background') && (
                     <Image
-                        src={heroBgImage.imageUrl}
+                        src={PlaceHolderImages.find((img) => img.id === 'hero-background')!.imageUrl}
                         alt="Your Vision. Our Technology. background"
                         fill
                         className="object-cover"
-                        data-ai-hint={heroBgImage.imageHint}
+                        data-ai-hint={PlaceHolderImages.find((img) => img.id === 'hero-background')!.imageHint}
                     />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent"></div>
