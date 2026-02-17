@@ -174,7 +174,7 @@ export default function TestimonialsSection() {
                         Real feedback from partners we've helped succeed.
                     </p>
                 </div>
-                <div className="relative md:px-12">
+                <div className="relative px-12">
                     <Carousel
                         plugins={[plugin.current]}
                         className="w-full"
@@ -222,8 +222,8 @@ export default function TestimonialsSection() {
                                 )
                             })}
                         </CarouselContent>
-                        <CarouselPrevious className="hidden md:flex" />
-                        <CarouselNext className="hidden md:flex" />
+                        <CarouselPrevious />
+                        <CarouselNext />
                     </Carousel>
                 </div>
             </div>
