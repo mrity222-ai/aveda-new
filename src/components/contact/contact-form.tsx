@@ -28,9 +28,9 @@ import { Loader2 } from 'lucide-react';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters.'),
-  company: z.string().optional(),
+  company: z.string().min(1, 'Company / Organization is required.'),
   email: z.string().email('Please enter a valid email address.'),
-  phone: z.string().optional(),
+  phone: z.string().min(10, 'Please enter a valid phone number.'),
   service: z.string().min(1, 'Please select a service.'),
   message: z.string().min(10, 'Message must be at least 10 characters.'),
 });
@@ -89,7 +89,7 @@ export function ContactForm() {
             name="company"
             render={({ field }) => (
                 <FormItem>
-                <FormLabel>Company / Organization (Optional)</FormLabel>
+                <FormLabel>Company / Organization</FormLabel>
                 <FormControl>
                     <Input placeholder="Your Company" {...field} />
                 </FormControl>
@@ -117,7 +117,7 @@ export function ContactForm() {
             name="phone"
             render={({ field }) => (
                 <FormItem>
-                <FormLabel>Phone Number (Optional)</FormLabel>
+                <FormLabel>Phone Number</FormLabel>
                 <FormControl>
                     <Input placeholder="+91 12345 67890" {...field} />
                 </FormControl>

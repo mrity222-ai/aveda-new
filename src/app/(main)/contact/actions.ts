@@ -3,12 +3,12 @@
 import { z } from 'zod';
 
 const formSchema = z.object({
-  name: z.string(),
+  name: z.string().min(2),
   email: z.string().email(),
-  phone: z.string().optional(),
-  company: z.string().optional(),
-  service: z.string(),
-  message: z.string(),
+  phone: z.string().min(10),
+  company: z.string().min(1),
+  service: z.string().min(1),
+  message: z.string().min(10),
 });
 
 type FormState = {
@@ -38,8 +38,8 @@ export async function handleFormSubmission(
       body: JSON.stringify({
         fullName: parsed.data.name,
         email: parsed.data.email,
-        phone: parsed.data.phone || "",
-        company: parsed.data.company || "",
+        phone: parsed.data.phone,
+        company: parsed.data.company,
         service: parsed.data.service,
         message: parsed.data.message,
       }),
