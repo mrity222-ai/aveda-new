@@ -4,7 +4,6 @@ import AboutUs from '@/components/home/portfolio-preview';
 import PortfolioPreview from '@/components/home/why-choose-us';
 import CtaSection from '@/components/home/cta-section';
 import InsightsSection from '@/components/home/insights-section';
-import TestimonialsSection from '@/components/home/testimonials-section';
 import VideoSection from '@/components/home/video-section';
 import AiAutomationPreview from '@/components/home/ai-automation-preview';
 
@@ -18,7 +17,6 @@ export default function Home() {
       <VideoSection />
       <PortfolioPreview />
       <InsightsSection />
-      <TestimonialsSection />
       <CtaSection />
     </>
   );
