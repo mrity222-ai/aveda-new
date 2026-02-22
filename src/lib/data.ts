@@ -37,6 +37,7 @@ export const navLinks = [
   { href: '/works', label: 'Works' },
   { href: '/insides', label: 'Insights' },
   { href: '/industries', label: 'Industries' },
+  { href: '/case-studies', label: 'Case Studies' },
 ];
 
 export const trustLogos = [
@@ -326,6 +327,7 @@ export const footerLinks = {
     { href: '/works', label: 'Works' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
+    { href: '/case-studies', label: 'Case Studies' },
   ],
   company: [
     { href: '/insides', label: 'Insights' },
