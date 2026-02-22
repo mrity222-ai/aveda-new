@@ -51,17 +51,15 @@ export default function AboutPage() {
   const leadership = [
     {
       name: 'Raj Mani Yadav',
-      designation: 'Founder | AI & Agritech Innovation Leader',
+      designation: 'AI & Agritech Innovation Leader',
       imageId: 'leader-raj',
       bioLink: '/founders',
-      socials: { twitter: '#', linkedin: '#' }
     },
     {
       name: 'Deepak Yadav',
       designation: 'Co-Founder & Innovation & Growth Lead',
       imageId: 'leader-deepak',
       bioLink: '/deepak-yadav',
-      socials: { twitter: '#', linkedin: '#' }
     }
   ];
 
