@@ -100,7 +100,7 @@ export default function AboutPage() {
           <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary animate-in fade-in">
             Our Technology Partners
           </Badge>
-          <h2 className="mt-4 font-headline text-4xl font-bold tracking-tight text-accent md:text-5xl animate-in fade-in slide-in-from-bottom-4 duration-700">
+          <h2 className="mt-4 font-headline text-4xl font-bold tracking-tight md:text-5xl animate-in fade-in slide-in-from-bottom-4 duration-700 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Innovating with the World’s Best
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground animate-in fade-in slide-in-from-bottom-8 duration-700">
@@ -139,7 +139,7 @@ export default function AboutPage() {
             <div className="space-y-8 animate-in fade-in slide-in-from-right-12 duration-700">
               <div>
                 <p className="mb-2 font-semibold text-primary">Who We Are</p>
-                <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
+                <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   Powering Your Vision with AI-First Innovation
                 </h2>
               </div>
@@ -167,7 +167,7 @@ export default function AboutPage() {
             <p className="font-headline text-sm uppercase tracking-widest text-primary animate-in fade-in">
                 What Makes Us Different
             </p>
-            <h2 className="mx-auto mt-4 max-w-3xl font-headline text-3xl font-bold text-accent md:text-4xl animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <h2 className="mx-auto mt-4 max-w-3xl font-headline text-3xl font-bold md:text-4xl animate-in fade-in slide-in-from-bottom-4 duration-700 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Our core principles ensure we deliver unparalleled value and innovation.
             </h2>
             <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
@@ -181,7 +181,7 @@ export default function AboutPage() {
                                 <value.icon className="h-8 w-8" />
                                 </div>
                             </div>
-                            <h3 className="mt-6 font-headline text-xl font-semibold text-accent">{value.title}</h3>
+                            <h3 className="mt-6 font-headline text-xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{value.title}</h3>
                             <p className="mt-2 text-muted-foreground">{value.description}</p>
                         </div>
                     </div>
@@ -211,7 +211,7 @@ export default function AboutPage() {
                 </div>
             </div>
           
-            <div className="grid md:grid-cols-2 gap-y-16 gap-x-12 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-1 gap-y-16 gap-x-12 max-w-4xl mx-auto">
                 {leadership.map((leader, index) => {
                 const image = PlaceHolderImages.find(p => p.id === leader.imageId);
                 return (
@@ -257,7 +257,7 @@ export default function AboutPage() {
             <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary animate-in fade-in">
                 Our Credentials
             </Badge>
-          <h2 className="mt-4 font-headline text-3xl font-bold text-accent md:text-4xl animate-in fade-in slide-in-from-bottom-4 duration-700">Nationally Recognized. Globally Trusted.</h2>
+          <h2 className="mt-4 font-headline text-3xl font-bold md:text-4xl animate-in fade-in slide-in-from-bottom-4 duration-700 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Nationally Recognized. Globally Trusted.</h2>
           
           <div className="mt-16">
             <div className="flex w-full snap-x justify-start gap-8 overflow-x-auto pb-4 md:justify-center md:flex-wrap md:overflow-visible md:pb-0">

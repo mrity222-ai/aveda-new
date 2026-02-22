@@ -167,7 +167,7 @@ export default function TestimonialsSection() {
             <div className="container">
                 <div className="text-center mb-16">
                     <p className="mb-2 font-semibold text-primary">Testimonials</p>
-                    <h2 className="text-3xl font-bold tracking-tight text-accent md:text-4xl">
+                    <h2 className="text-3xl font-bold tracking-tight md:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         What Our Clients Say
                     </h2>
                     <p className="mx-auto mt-4 max-w-2xl text-foreground/80">

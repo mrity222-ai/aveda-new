@@ -38,7 +38,7 @@ export default function ServicesPreview() {
       <div className="container relative z-10">
         <div className="mb-16 text-center animate-in fade-in slide-in-from-bottom-8 duration-700">
           <p className="mb-2 font-semibold text-primary">Our Services</p>
-          <h2 className="text-3xl font-bold tracking-tight text-accent md:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight md:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             A Complete Suite of Digital Solutions
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-foreground/80">
@@ -59,7 +59,7 @@ export default function ServicesPreview() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110">
                   <service.icon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-6 text-xl font-bold text-accent">
+                <h3 className="mt-6 text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   {service.title}
                 </h3>
                 <p className="mt-4 flex-grow text-sm text-foreground/80">

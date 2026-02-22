@@ -40,14 +40,14 @@ export default function AiAutomationPreview() {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24 items-center">
           {/* Left Content */}
           <div className="space-y-8 animate-in fade-in slide-in-from-left-12 duration-700">
-            <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
+            <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Smart AI Automation That Works 24/7
             </h2>
             <p className="text-lg text-muted-foreground">
               We design intelligent automation systems that eliminate manual work, improve efficiency, and increase revenue — without increasing your team size.
             </p>
             <div>
-              <h3 className="font-headline text-2xl font-bold tracking-tight text-accent md:text-3xl">
+              <h3 className="font-headline text-2xl font-bold tracking-tight md:text-3xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Ready to Put Your Business on Autopilot?
               </h3>
               <div className="mt-6 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
@@ -74,7 +74,7 @@ export default function AiAutomationPreview() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110">
                     <feature.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="mt-4 font-semibold text-accent">{feature.title}</h3>
+                  <h3 className="mt-4 font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{feature.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{feature.description}</p>
                 </div>
               ))}

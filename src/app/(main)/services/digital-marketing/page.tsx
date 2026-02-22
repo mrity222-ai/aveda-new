@@ -144,7 +144,7 @@ export default function DigitalMarketingPage() {
                   </div>
                   <div className="mt-8 md:mt-0">
                       <Badge variant="destructive" className="mb-4">Starting at ₹5,000 / month</Badge>
-                      <h2 className="font-headline text-3xl font-bold md:text-4xl">Digital &amp; Performance Marketing</h2>
+                      <h2 className="font-headline text-3xl font-bold md:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Digital &amp; Performance Marketing</h2>
                       <p className="mt-4 text-lg text-muted-foreground">We don't just run ads; we build AI-predictive models to forecast sales, use psychographic funnels to target user behavior, and provide real-time ROI dashboards. Our AI-powered campaigns generate leads, sales, and influence.</p>
                       
                       <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -170,7 +170,7 @@ export default function DigitalMarketingPage() {
             <section className="bg-secondary py-20 md:py-28">
                 <div className="container">
                     <div className="text-center mb-12">
-                        <h2 className="font-headline text-3xl font-bold md:text-4xl">Success Stories</h2>
+                        <h2 className="font-headline text-3xl font-bold md:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Success Stories</h2>
                         <p className="mt-4 text-lg text-muted-foreground">See how we've helped clients achieve their marketing goals.</p>
                     </div>
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -216,7 +216,7 @@ export default function DigitalMarketingPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent"></div>
                 </div>
                 <div className="container relative z-10 text-center">
-                    <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
+                    <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         Ready to Grow With AI Marketing?
                     </h2>
                     <div className="mt-8 flex flex-wrap justify-center gap-4">

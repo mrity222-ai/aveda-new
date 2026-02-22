@@ -26,7 +26,7 @@ export default function InsightsSection() {
           <Button asChild variant="outline" className="mb-4 rounded-full border-primary/50 bg-primary/10 text-primary hover:bg-primary/20 hover:text-primary">
             <Link href="/insides">Explore Insights</Link>
           </Button>
-          <h2 className="text-4xl font-bold tracking-tight text-accent md:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight md:text-5xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Knowledge to Power Your Digital Transformation
           </h2>
         </div>
@@ -49,7 +49,7 @@ export default function InsightsSection() {
                 </div>
               )}
               <div className="p-8">
-                <h3 className="text-3xl font-bold text-accent">
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   <Link href={`/insides#${featuredPost.slug}`} className="hover:text-primary transition-colors">{featuredPost.title}</Link>
                 </h3>
                 <div className="mt-4 flex items-center space-x-6 text-sm text-muted-foreground">
@@ -87,7 +87,7 @@ export default function InsightsSection() {
                 <div className="relative rounded-3xl border bg-card p-6 transition-all duration-300 soft-shadow hover:border-primary hover:-translate-y-1">
                   <div className="relative flex items-center justify-between">
                     <div>
-                      <h4 className="text-xl font-bold text-accent transition-colors group-hover:text-primary">
+                      <h4 className="text-xl font-bold transition-colors group-hover:text-primary bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         {post.title}
                       </h4>
                       <span className="mt-2 inline-block text-sm font-medium text-primary">Read Article →</span>

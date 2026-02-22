@@ -96,11 +96,11 @@ export default function ContactPage() {
                 <div className="mx-auto max-w-5xl rounded-2xl border bg-card p-8 soft-shadow md:p-12 animate-in fade-in zoom-in-95 duration-700">
                     <div className="grid gap-16 lg:grid-cols-5">
                         <div className="lg:col-span-3">
-                            <h2 className="mb-8 text-center font-headline text-3xl font-semibold text-accent lg:text-left">Send Us a Message</h2>
+                            <h2 className="mb-8 text-center font-headline text-3xl font-semibold lg:text-left bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Send Us a Message</h2>
                             <ContactForm />
                         </div>
                         <div className="space-y-8 lg:col-span-2">
-                            <h2 className="font-headline text-3xl font-semibold text-accent">Contact Info</h2>
+                            <h2 className="font-headline text-3xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Contact Info</h2>
                             <p className='text-muted-foreground'>Aveda Technologies</p>
                             {contactDetails.map((detail) => (
                             <div key={detail.title} className="flex items-start space-x-4">
@@ -110,7 +110,7 @@ export default function ContactPage() {
                                 </div>
                                 </div>
                                 <div>
-                                <h3 className="text-lg font-semibold text-accent">{detail.title}</h3>
+                                <h3 className="text-lg font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{detail.title}</h3>
                                 {detail.href ? (
                                     <a href={detail.href} className="text-muted-foreground hover:text-primary">
                                     {detail.value}
@@ -130,7 +130,7 @@ export default function ContactPage() {
         {/* Why Contact Us Section */}
         <section className="relative overflow-hidden bg-background py-20 md:py-28">
             <div className="container text-center">
-                <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl animate-in fade-in slide-in-from-bottom-8 duration-700">Why Contact Us?</h2>
+                <h2 className="font-headline text-3xl font-bold md:text-4xl animate-in fade-in slide-in-from-bottom-8 duration-700 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Why Contact Us?</h2>
                 <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                     {whyContactUs.map((value, index) => (
                     <div key={value.title} 
@@ -141,7 +141,7 @@ export default function ContactPage() {
                                 <value.icon className="h-10 w-10 text-primary transition-transform duration-300 group-hover:scale-110" />
                             </div>
                         </div>
-                        <h3 className="mt-6 font-headline text-xl font-semibold text-accent">{value.title}</h3>
+                        <h3 className="mt-6 font-headline text-xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{value.title}</h3>
                         <p className="mt-2 text-muted-foreground">{value.description}</p>
                     </div>
                     ))}
@@ -164,7 +164,7 @@ export default function ContactPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent"></div>
             </div>
             <div className="container relative z-10 text-center animate-in fade-in duration-700">
-                <h2 className="font-headline text-3xl font-bold tracking-tight text-accent md:text-4xl">
+                <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                     Your Vision. Our Technology.
                 </h2>
                 <Button asChild size="lg" className="mt-8">
