@@ -190,67 +190,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership Section */}
-      <section className="bg-secondary py-20 md:py-28 relative overflow-hidden">
-        <div className="absolute top-0 left-0 -z-10 h-64 w-64 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-50 blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 -z-10 h-64 w-64 bg-gradient-to-tl from-accent/10 via-transparent to-transparent opacity-50 blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
-        <div className="container">
-            <div className="grid md:grid-cols-2 gap-16 items-center mb-20 animate-in fade-in duration-700">
-                <div className="text-left">
-                    <h2 className="font-headline text-4xl font-bold uppercase text-foreground md:text-5xl">
-                        Meet Our Team of Innovators
-                    </h2>
-                    <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-                        A global team building future-ready technology solutions.
-                    </p>
-                </div>
-                <div className="relative hidden md:flex h-64 items-center justify-center">
-                    <div className="absolute h-80 w-80 rounded-full border-2 border-dashed border-primary/30 animate-spin-slow opacity-50" />
-                    <div className="absolute h-60 w-60 rounded-full border-2 border-dashed border-accent/30 animate-spin-slow-reverse opacity-50" />
-                    <Users className="relative h-32 w-32 text-accent opacity-30" />
-                </div>
-            </div>
-          
-            <div className="grid md:grid-cols-1 gap-y-16 gap-x-12 max-w-4xl mx-auto">
-                {leadership.map((leader, index) => {
-                const image = PlaceHolderImages.find(p => p.id === leader.imageId);
-                return (
-                    <div key={leader.name}
-                        className="group rounded-2xl border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow animate-in fade-in slide-in-from-bottom-12 duration-700"
-                        style={{ animationDelay: `${index * 150}ms` }}>
-                        <div className="flex items-center justify-between gap-8">
-                            <div className="text-left flex-grow">
-                                <h3 className={cn(
-                                    "font-headline text-2xl font-bold text-foreground transition-colors duration-300",
-                                    "group-hover:text-primary"
-                                )}>
-                                    {leader.name}
-                                </h3>
-                                <p className="mt-1 text-muted-foreground">{leader.designation}</p>
-                                <Link href={leader.bioLink} className="mt-4 inline-flex items-center text-sm font-semibold text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                                    View Bio <MoveRight className="ml-2 h-4 w-4" />
-                                </Link>
-                            </div>
-                            {image && (
-                                <div className="relative w-32 h-32 flex-shrink-0">
-                                    <Image
-                                        src={image.imageUrl}
-                                        alt={leader.name}
-                                        width={128}
-                                        height={128}
-                                        className="rounded-full object-cover grayscale shadow-[0_15px_30px_-10px_rgba(0,0,0,0.25)] ring-4 ring-background transition-all duration-500 group-hover:grayscale-0 group-hover:shadow-[0_25px_40px_-15px_rgba(0,0,0,0.3)] group-hover:ring-primary"
-                                        data-ai-hint={image.imageHint}
-                                    />
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                )
-                })}
-            </div>
-        </div>
-      </section>
-
       {/* Trust & Recognition Section */}
       <section className="relative overflow-hidden bg-background py-20 md:py-28">
         <div className="container relative z-10 text-center">
