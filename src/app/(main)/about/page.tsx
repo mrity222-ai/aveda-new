@@ -59,7 +59,7 @@ export default function AboutPage() {
     },
     {
       name: 'Deepak Yadav',
-      designation: 'Co-Founder & Innovation & Growth Lead',
+      designation: 'Innovation & Growth Lead',
       imageId: 'leader-deepak',
       bioLink: '/deepak-yadav',
     }
