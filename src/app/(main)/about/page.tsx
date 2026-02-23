@@ -5,6 +5,8 @@ import { BrainCircuit, Target, TrendingUp, Users, Twitter, Linkedin, MoveRight }
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function AboutPage() {
   const values = [
@@ -190,6 +192,51 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Meet Our Team Section */}
+      <section className="bg-secondary py-20 md:py-28">
+        <div className="container">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Meet Our Team of Innovators
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              A global team building future-ready technology solutions.
+            </p>
+          </div>
+          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
+            {leadership.map((leader) => {
+              const image = PlaceHolderImages.find((p) => p.id === leader.imageId);
+              return (
+                <Card key={leader.name} className="group overflow-hidden text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 soft-shadow">
+                    <CardContent className="p-6">
+                        {image && (
+                        <div className="relative mx-auto mb-6 h-40 w-40">
+                            <Image
+                            src={image.imageUrl}
+                            alt={leader.name}
+                            fill
+                            className="rounded-full object-cover shadow-lg transition-all duration-300 group-hover:shadow-primary/30 group-hover:scale-105"
+                            data-ai-hint={image.imageHint}
+                            />
+                        </div>
+                        )}
+                        <h3 className="font-headline text-2xl font-bold text-accent">
+                            {leader.name}
+                        </h3>
+                        <p className="mt-1 text-muted-foreground">{leader.designation}</p>
+                        <Button asChild variant="link" className="mt-4 text-primary">
+                        <Link href={leader.bioLink}>
+                            View Bio <MoveRight className="ml-2 h-4 w-4" />
+                        </Link>
+                        </Button>
+                    </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Trust & Recognition Section */}
       <section className="relative overflow-hidden bg-background py-20 md:py-28">
         <div className="container relative z-10 text-center">
@@ -231,3 +278,5 @@ export default function AboutPage() {
     </div>
   );
 }
+
+    
