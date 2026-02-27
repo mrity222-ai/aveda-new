@@ -26,6 +26,9 @@ import {
   Award,
   ShieldCheck,
   Zap,
+  Globe,
+  Mic,
+  PenSquare,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
@@ -133,6 +136,14 @@ export default function PoliticalCampaigningPage() {
         title: 'Proven Track Record of Success',
         description: 'We have a history of delivering measurable results in high-stakes political campaigns.'
       }
+    ];
+
+    const prServices = [
+      { icon: Megaphone, title: 'Strategic Messaging', description: 'Crafting high-impact narratives that resonate with the electorate.' },
+      { icon: Shield, title: 'Crisis Neutralization', description: 'Rapid response protocols to protect your reputation in real-time.' },
+      { icon: Globe, title: 'Digital Dominance', description: 'Data-driven social media strategies to mobilize millions.' },
+      { icon: Mic, title: 'Media Diplomacy', description: 'Exclusive access to top-tier journalists and media houses.' },
+      { icon: PenSquare, title: 'Legacy Branding', description: 'Long-term positioning to establish you as a visionary leader.' },
     ];
 
     return (
@@ -330,6 +341,34 @@ export default function PoliticalCampaigningPage() {
                 </div>
             </section>
             
+            {/* New PR Section */}
+            <section className="bg-white py-20 md:py-28 text-gray-800">
+                <div className="container text-center">
+                    <h2 className="font-headline text-4xl font-bold text-[#052c5c]">Architecting Authority. Defining Legacies.</h2>
+                    <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-700">Strategic image management and political PR designed for elite leadership. We don’t just follow the news; we create the agenda.</p>
+
+                    <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                        {prServices.map(service => (
+                            <div key={service.title} className="rounded-lg border-2 border-[#4169E1] bg-white p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                                <service.icon className="h-10 w-10 text-[#FFD700] mx-auto" />
+                                <h3 className="mt-4 font-semibold text-[#052c5c]">{service.title}</h3>
+                                <p className="mt-2 text-sm text-gray-600">{service.description}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="mt-20 bg-[#052c5c] text-[#FFD700] py-4 px-8 rounded-lg max-w-5xl mx-auto">
+                        <p className="font-semibold tracking-wider text-center text-sm md:text-base">UNMATCHED DISCRETION | DATA-BACKED STRATEGY | 24/7 COMMAND CENTER</p>
+                    </div>
+
+                    <div className="mt-12">
+                        <Button asChild size="lg" className="bg-[#4169E1] text-white rounded-lg shadow-[0_4px_14px_0_rgba(65,105,225,0.39)] hover:bg-[#3151b3] hover:shadow-[0_6px_20px_0_rgba(65,105,225,0.23)]">
+                            <Link href="/contact?service=Political+PR">Secure Your Consultation &rarr;</Link>
+                        </Button>
+                    </div>
+                </div>
+            </section>
+
              {/* Process Section */}
              <section id="process" className="bg-background py-20 md:py-28 relative overflow-hidden">
                 <div className="container relative z-10">
