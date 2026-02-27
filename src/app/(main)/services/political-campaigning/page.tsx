@@ -342,28 +342,50 @@ export default function PoliticalCampaigningPage() {
             </section>
             
             {/* New PR Section */}
-            <section className="bg-white py-20 md:py-28 text-gray-800">
-                <div className="container text-center">
-                    <h2 className="font-headline text-4xl font-bold text-[#052c5c]">Architecting Authority. Defining Legacies.</h2>
-                    <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-700">Strategic image management and political PR designed for elite leadership. We don’t just follow the news; we create the agenda.</p>
+            <section className="relative overflow-hidden bg-slate-950 py-20 md:py-28 text-white">
+                {/* Background Orbs */}
+                <div className="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-96 h-96 bg-gradient-to-tr from-indigo-900/50 to-transparent rounded-full blur-3xl opacity-50 animate-pulse-slow"></div>
+                <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 w-96 h-96 bg-gradient-to-bl from-yellow-700/30 to-transparent rounded-full blur-3xl opacity-40 animate-pulse-slow-reverse"></div>
 
-                    <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-                        {prServices.map(service => (
-                            <div key={service.title} className="rounded-lg border-2 border-[#4169E1] bg-white p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                                <service.icon className="h-10 w-10 text-[#FFD700] mx-auto" />
-                                <h3 className="mt-4 font-semibold text-[#052c5c]">{service.title}</h3>
-                                <p className="mt-2 text-sm text-gray-600">{service.description}</p>
+                <div className="container relative z-10 text-center">
+                    {/* Headline */}
+                    <h2 className="font-headline text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-300 via-white to-yellow-400 bg-clip-text text-transparent">
+                        Architecting <span className="text-white">Authority</span>. Defining <span className="text-white">Legacies</span>.
+                    </h2>
+                    <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-300">
+                        Strategic image management and political PR designed for elite leadership. We don’t just follow the news; <span className="font-semibold text-gray-100">we create the agenda.</span>
+                    </p>
+
+                    {/* Service Cards */}
+                    <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                        {prServices.map((service, index) => (
+                            <div 
+                                key={service.title} 
+                                className="group relative rounded-2xl border border-white/10 bg-white/5 p-6 text-left shadow-lg backdrop-blur-md transition-all duration-300 hover:border-yellow-400/30 hover:bg-white/10 hover:shadow-2xl hover:shadow-yellow-400/10 hover:-translate-y-2"
+                                style={{ animationDelay: `${index * 100}ms` }}
+                            >
+                                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-yellow-400/10 text-yellow-300 ring-2 ring-yellow-400/20 transition-all duration-300 group-hover:bg-yellow-400 group-hover:text-gray-900 group-hover:shadow-[0_0_20px_theme(colors.yellow.400)] group-hover:ring-yellow-400/50">
+                                    <service.icon className="h-6 w-6" />
+                                </div>
+                                <h3 className="mt-6 font-semibold text-gray-100">{service.title}</h3>
+                                <p className="mt-2 text-sm text-gray-400">{service.description}</p>
                             </div>
                         ))}
                     </div>
 
-                    <div className="mt-20 bg-[#052c5c] text-[#FFD700] py-4 px-8 rounded-lg max-w-5xl mx-auto">
-                        <p className="font-semibold tracking-wider text-center text-sm md:text-base">UNMATCHED DISCRETION | DATA-BACKED STRATEGY | 24/7 COMMAND CENTER</p>
+                    {/* Trust Strip */}
+                    <div className="mt-24 max-w-5xl mx-auto rounded-full border border-indigo-500/20 bg-gradient-to-r from-indigo-900/30 via-slate-900/30 to-indigo-900/30 py-4 px-8 shadow-inner-lg backdrop-blur-sm">
+                        <p className="font-medium tracking-wider text-center text-sm text-gray-300 md:text-base">
+                            UNMATCHED DISCRETION <span className="text-indigo-400 mx-2">|</span> DATA-BACKED STRATEGY <span className="text-indigo-400 mx-2">|</span> 24/7 COMMAND CENTER
+                        </p>
                     </div>
 
-                    <div className="mt-12">
-                        <Button asChild size="lg" className="bg-[#4169E1] text-white rounded-lg shadow-[0_4px_14px_0_rgba(65,105,225,0.39)] hover:bg-[#3151b3] hover:shadow-[0_6px_20px_0_rgba(65,105,225,0.23)]">
-                            <Link href="/contact?service=Political+PR">Secure Your Consultation &rarr;</Link>
+                    {/* CTA Button */}
+                    <div className="mt-16">
+                        <Button asChild size="lg" className="rounded-lg bg-gradient-to-r from-yellow-400 to-amber-500 text-gray-900 font-bold shadow-[0_4px_20px_0_rgba(250,204,21,0.3)] transition-all duration-300 hover:shadow-[0_6px_30px_0_rgba(250,204,21,0.4)] hover:scale-105 active:scale-100">
+                            <Link href="/contact?service=Political+PR">
+                                Secure Your Consultation <MoveRight className="ml-2 h-5 w-5" />
+                            </Link>
                         </Button>
                     </div>
                 </div>
