@@ -1,10 +1,23 @@
-
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Clock, BrainCircuit, UserCheck, Briefcase, MoveRight, Globe } from 'lucide-react';
 import { ContactForm } from '@/components/contact/contact-form';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+export const metadata: Metadata = {
+  title: 'Contact Us',
+  description: 'Get in touch with Aveda Technologies to start your project. We offer AI-driven digital solutions for brands, businesses, and political campaigns.',
+  openGraph: {
+    title: 'Contact Us',
+    description: 'Get in touch with Aveda Technologies to start your project. We offer AI-driven digital solutions for brands, businesses, and political campaigns.',
+  },
+  twitter: {
+    title: 'Contact Us',
+    description: 'Get in touch with Aveda Technologies to start your project. We offer AI-driven digital solutions for brands, businesses, and political campaigns.',
+  }
+};
 
 export default function ContactPage() {
   const contactDetails = [

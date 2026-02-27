@@ -1,5 +1,4 @@
-
-
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -29,6 +28,19 @@ import { Badge } from '@/components/ui/badge';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { services } from '@/lib/data';
 import { cn } from '@/lib/utils';
+
+export const metadata: Metadata = {
+  title: 'Our Services',
+  description: 'Explore the end-to-end digital, AI, and political growth solutions offered by Aveda Technologies, from websites to AI marketing.',
+  openGraph: {
+    title: 'Our Services',
+    description: 'Explore the end-to-end digital, AI, and political growth solutions offered by Aveda Technologies, from websites to AI marketing.',
+  },
+  twitter: {
+    title: 'Our Services',
+    description: 'Explore the end-to-end digital, AI, and political growth solutions offered by Aveda Technologies, from websites to AI marketing.',
+  }
+};
 
 const WhatsAppIcon = () => (
     <svg

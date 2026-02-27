@@ -1,5 +1,6 @@
 'use client';
 
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Target, BrainCircuit, Sprout, Briefcase, TrendingUp, GraduationCap, Quote, Star } from 'lucide-react';
@@ -7,6 +8,19 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
+
+export const metadata: Metadata = {
+  title: 'Deepak Yadav - Founder, Innovation & Growth Leader',
+  description: 'Meet Deepak Yadav, the growth visionary and founder driving innovation, business strategy, and scalable digital ecosystems at Aveda Technologies.',
+  openGraph: {
+    title: 'Deepak Yadav - Founder, Innovation & Growth Leader',
+    description: 'Meet Deepak Yadav, the growth visionary and founder driving innovation, business strategy, and scalable digital ecosystems at Aveda Technologies.',
+  },
+  twitter: {
+    title: 'Deepak Yadav - Founder, Innovation & Growth Leader',
+    description: 'Meet Deepak Yadav, the growth visionary and founder driving innovation, business strategy, and scalable digital ecosystems at Aveda Technologies.',
+  }
+};
 
 export default function DeepakYadavPage() {
   
@@ -78,7 +92,7 @@ export default function DeepakYadavPage() {
           {aboutUsImage && (
             <Image
               src={aboutUsImage.imageUrl}
-              alt="Background"
+              alt="Abstract background image"
               fill
               className="object-cover"
               data-ai-hint={aboutUsImage.imageHint}
@@ -95,7 +109,7 @@ export default function DeepakYadavPage() {
                     <div className="relative aspect-square w-64 h-64">
                         <Image
                         src={deepakImage.imageUrl}
-                        alt={deepak.name}
+                        alt={`Portrait of ${deepak.name}`}
                         fill
                         className="rounded-full object-cover grayscale shadow-lg ring-4 ring-background transition-all duration-500 group-hover:grayscale-0 group-hover:ring-primary"
                         data-ai-hint={deepakImage.imageHint}
@@ -162,7 +176,7 @@ export default function DeepakYadavPage() {
             {missionBgImage && (
                 <Image
                     src={missionBgImage.imageUrl}
-                    alt="Background"
+                    alt="Abstract background image"
                     fill
                     className="object-cover"
                     data-ai-hint={missionBgImage.imageHint}

@@ -1,4 +1,4 @@
-
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -17,6 +17,19 @@ import {
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { portfolioProjects } from '@/lib/data';
+
+export const metadata: Metadata = {
+  title: 'Intuitive UI/UX Design Services',
+  description: 'We design beautiful, functional, and user-centric interfaces that drive engagement, increase conversions, and provide exceptional user experiences.',
+  openGraph: {
+    title: 'Intuitive UI/UX Design Services',
+    description: 'We design beautiful, functional, and user-centric interfaces that drive engagement, increase conversions, and provide exceptional user experiences.',
+  },
+  twitter: {
+    title: 'Intuitive UI/UX Design Services',
+    description: 'We design beautiful, functional, and user-centric interfaces that drive engagement, increase conversions, and provide exceptional user experiences.',
+  }
+};
 
 const WhatsAppIcon = () => (
     <svg

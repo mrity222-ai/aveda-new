@@ -1,8 +1,22 @@
+import type { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { MoveRight } from 'lucide-react';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Case Studies',
+  description: 'Explore real-world examples of how Aveda Technologies has helped businesses succeed with AI marketing, web development, and digital growth strategies.',
+  openGraph: {
+    title: 'Case Studies',
+    description: 'Explore real-world examples of how Aveda Technologies has helped businesses succeed with AI marketing, web development, and digital growth strategies.',
+  },
+  twitter: {
+    title: 'Case Studies',
+    description: 'Explore real-world examples of how Aveda Technologies has helped businesses succeed with AI marketing, web development, and digital growth strategies.',
+  }
+};
 
 const caseStudies = [
     { title: "How We Helped a Small Business in India Increase Leads by 300% Using AI Marketing", keyword: "AI Marketing for Small Businesses in India" },

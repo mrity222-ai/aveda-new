@@ -1,6 +1,7 @@
 
 'use client';
 
+import type { Metadata } from 'next';
 import * as React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -34,6 +35,18 @@ import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
+export const metadata: Metadata = {
+  title: 'Local SEO & GEO Tagging Services',
+  description: 'Get found first in your city. Rank higher on Google Maps and local search with our AI-powered Local SEO and GEO tagging strategies.',
+  openGraph: {
+    title: 'Local SEO & GEO Tagging Services',
+    description: 'Get found first in your city. Rank higher on Google Maps and local search with our AI-powered Local SEO and GEO tagging strategies.',
+  },
+  twitter: {
+    title: 'Local SEO & GEO Tagging Services',
+    description: 'Get found first in your city. Rank higher on Google Maps and local search with our AI-powered Local SEO and GEO tagging strategies.',
+  }
+};
 
 const WhatsAppIcon = () => (
     <svg

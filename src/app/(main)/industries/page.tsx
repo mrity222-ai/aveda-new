@@ -1,4 +1,4 @@
-
+import type { Metadata } from 'next';
 import {
   Factory,
   HeartPulse,
@@ -22,6 +22,19 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
+
+export const metadata: Metadata = {
+  title: 'Industries We Serve',
+  description: 'Aveda Technologies provides smart, scalable, and AI-driven solutions for various industries including manufacturing, healthcare, retail, finance, and education.',
+  openGraph: {
+    title: 'Industries We Serve',
+    description: 'Aveda Technologies provides smart, scalable, and AI-driven solutions for various industries including manufacturing, healthcare, retail, finance, and education.',
+  },
+  twitter: {
+    title: 'Industries We Serve',
+    description: 'Aveda Technologies provides smart, scalable, and AI-driven solutions for various industries including manufacturing, healthcare, retail, finance, and education.',
+  }
+};
 
 export default function IndustriesPage() {
   const whyChooseUs = [

@@ -1,6 +1,7 @@
 
 'use client';
 
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Target, Cog, BrainCircuit, Sprout, Quote, GraduationCap } from 'lucide-react';
@@ -10,6 +11,19 @@ import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
 import { useState, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
+
+export const metadata: Metadata = {
+  title: 'Raj Mani Yadav - Founder & AI Tech Strategist',
+  description: 'Meet Raj Mani Yadav, the founder and AI tech strategist behind Aveda Technologies, focusing on AI, agritech, and scalable digital systems.',
+  openGraph: {
+    title: 'Raj Mani Yadav - Founder & AI Tech Strategist',
+    description: 'Meet Raj Mani Yadav, the founder and AI tech strategist behind Aveda Technologies, focusing on AI, agritech, and scalable digital systems.',
+  },
+  twitter: {
+    title: 'Raj Mani Yadav - Founder & AI Tech Strategist',
+    description: 'Meet Raj Mani Yadav, the founder and AI tech strategist behind Aveda Technologies, focusing on AI, agritech, and scalable digital systems.',
+  }
+};
 
 const allGalleryItems = [
   {
@@ -151,7 +165,7 @@ export default function FoundersPage() {
                     <div className="relative aspect-square w-64 h-64">
                         <Image
                         src={rajImage.imageUrl}
-                        alt={raj.name}
+                        alt={`Portrait of ${raj.name}`}
                         fill
                         className="rounded-full object-cover grayscale shadow-lg ring-4 ring-background transition-all duration-500 group-hover:grayscale-0 group-hover:ring-primary"
                         data-ai-hint={rajImage.imageHint}

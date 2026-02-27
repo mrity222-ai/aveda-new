@@ -1,4 +1,4 @@
-
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BrainCircuit, Target, TrendingUp, Users, Twitter, Linkedin, MoveRight } from 'lucide-react';
@@ -7,6 +7,19 @@ import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about Aveda Technologies, an AI-first digital company powering businesses, leaders, and organizations with AI-driven technology, marketing, and political intelligence.',
+  openGraph: {
+    title: 'About Us',
+    description: 'Learn about Aveda Technologies, an AI-first digital company powering businesses, leaders, and organizations with AI-driven technology, marketing, and political intelligence.',
+  },
+  twitter: {
+    title: 'About Us',
+    description: 'Learn about Aveda Technologies, an AI-first digital company powering businesses, leaders, and organizations with AI-driven technology, marketing, and political intelligence.',
+  }
+};
 
 export default function AboutPage() {
   const values = [
@@ -213,7 +226,7 @@ export default function AboutPage() {
                         <div className="relative mx-auto mb-6 h-40 w-40">
                             <Image
                             src={image.imageUrl}
-                            alt={leader.name}
+                            alt={`Portrait of ${leader.name}, ${leader.designation}`}
                             fill
                             className="rounded-full object-cover shadow-lg transition-all duration-300 group-hover:shadow-primary/30 group-hover:scale-105"
                             data-ai-hint={image.imageHint}
@@ -258,7 +271,7 @@ export default function AboutPage() {
                          <div className="relative h-12 w-12">
                           <Image 
                             src={image.imageUrl} 
-                            alt={rec.name} 
+                            alt={`${rec.name} Recognition Logo`} 
                             fill
                             className="object-contain transition-all duration-300"
                             data-ai-hint={image.imageHint}

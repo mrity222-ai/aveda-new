@@ -1,6 +1,7 @@
 
 'use client';
 
+import type { Metadata } from 'next';
 import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -11,6 +12,18 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 
+export const metadata: Metadata = {
+  title: 'Digital Marketing Pricing Plans',
+  description: 'Choose from our affordable, AI-powered digital marketing plans designed for growth, visibility, and influence. Plans start from ₹2,999/month.',
+  openGraph: {
+    title: 'Digital Marketing Pricing Plans',
+    description: 'Choose from our affordable, AI-powered digital marketing plans designed for growth, visibility, and influence. Plans start from ₹2,999/month.',
+  },
+  twitter: {
+    title: 'Digital Marketing Pricing Plans',
+    description: 'Choose from our affordable, AI-powered digital marketing plans designed for growth, visibility, and influence. Plans start from ₹2,999/month.',
+  }
+};
 
 const WhatsAppIcon = () => (
     <svg

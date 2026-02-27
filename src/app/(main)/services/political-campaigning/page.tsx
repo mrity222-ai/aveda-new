@@ -1,6 +1,7 @@
 
 'use client';
 
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -30,6 +31,19 @@ import {
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+
+export const metadata: Metadata = {
+  title: 'Political Campaigning with AI',
+  description: 'Win elections with data-driven precision. Aveda Technologies uses AI for voter targeting, constituency analysis, and sentiment analysis to create winning campaigns.',
+  openGraph: {
+    title: 'Political Campaigning with AI',
+    description: 'Win elections with data-driven precision. Aveda Technologies uses AI for voter targeting, constituency analysis, and sentiment analysis to create winning campaigns.',
+  },
+  twitter: {
+    title: 'Political Campaigning with AI',
+    description: 'Win elections with data-driven precision. Aveda Technologies uses AI for voter targeting, constituency analysis, and sentiment analysis to create winning campaigns.',
+  }
+};
 
 const WhatsAppIcon = () => (
     <svg

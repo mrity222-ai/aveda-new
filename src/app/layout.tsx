@@ -19,8 +19,42 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: 'Aveda Technologies - IT Services & Digital Solutions',
-  description: 'Transforming Ideas Into Powerful Digital Experiences',
+  metadataBase: new URL('https://www.avedatechnologies.com'),
+  title: {
+    default: 'Aveda Technologies - AI-Powered IT Services & Digital Solutions',
+    template: '%s | Aveda Technologies',
+  },
+  description:
+    'Aveda Technologies transforms businesses with intelligent AI solutions, scalable web systems, and smart digital strategies designed for sustainable growth.',
+  keywords: [
+    'AI solutions',
+    'web development',
+    'digital marketing',
+    'political campaigning',
+    'Aveda Technologies',
+    'IT services Lucknow',
+  ],
+  openGraph: {
+    title: 'Aveda Technologies - AI-Powered IT Services & Digital Solutions',
+    description: 'Transforming Ideas Into Powerful Digital Experiences.',
+    url: 'https://www.avedatechnologies.com',
+    siteName: 'Aveda Technologies',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Aveda Technologies - AI-Powered IT Services & Digital Solutions',
+    description: 'Transforming Ideas Into Powerful Digital Experiences.',
+    images: ['/og-image.png'],
+  },
 };
 
 export default function RootLayout({

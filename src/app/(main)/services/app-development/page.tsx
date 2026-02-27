@@ -1,4 +1,4 @@
-
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -28,6 +28,19 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import { portfolioProjects } from '@/lib/data';
+
+export const metadata: Metadata = {
+  title: 'Mobile App Development Services',
+  description: 'From idea to launch, we build secure, scalable, and engaging mobile apps for iOS and Android that drive real business growth.',
+  openGraph: {
+    title: 'Mobile App Development Services',
+    description: 'From idea to launch, we build secure, scalable, and engaging mobile apps for iOS and Android that drive real business growth.',
+  },
+  twitter: {
+    title: 'Mobile App Development Services',
+    description: 'From idea to launch, we build secure, scalable, and engaging mobile apps for iOS and Android that drive real business growth.',
+  }
+};
 
 const WhatsAppIcon = () => (
     <svg

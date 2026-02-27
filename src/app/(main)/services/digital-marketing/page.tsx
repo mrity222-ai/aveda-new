@@ -1,6 +1,7 @@
 
 'use client';
 
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -16,6 +17,19 @@ import {
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { portfolioProjects } from '@/lib/data';
+
+export const metadata: Metadata = {
+  title: 'AI-Driven Digital & Performance Marketing',
+  description: 'Grow faster with our AI-driven digital marketing services, including performance ads, lead generation, and political campaigning, starting at just ₹5,000/month.',
+  openGraph: {
+    title: 'AI-Driven Digital & Performance Marketing',
+    description: 'Grow faster with our AI-driven digital marketing services, including performance ads, lead generation, and political campaigning, starting at just ₹5,000/month.',
+  },
+  twitter: {
+    title: 'AI-Driven Digital & Performance Marketing',
+    description: 'Grow faster with our AI-driven digital marketing services, including performance ads, lead generation, and political campaigning, starting at just ₹5,000/month.',
+  }
+};
 
 const WhatsAppIcon = () => (
     <svg

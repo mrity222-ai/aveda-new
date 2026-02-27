@@ -1,6 +1,20 @@
+import type { Metadata } from 'next';
 import { Mail } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description: 'Read the Privacy Policy for Aveda Technologies. We are committed to protecting your privacy and handling your personal information in a safe and responsible manner.',
+  openGraph: {
+    title: 'Privacy Policy',
+    description: 'Read the Privacy Policy for Aveda Technologies. We are committed to protecting your privacy and handling your personal information in a safe and responsible manner.',
+  },
+  twitter: {
+    title: 'Privacy Policy',
+    description: 'Read the Privacy Policy for Aveda Technologies. We are committed to protecting your privacy and handling your personal information in a safe and responsible manner.',
+  }
+};
 
 export default function PrivacyPolicyPage() {
   const sections = [

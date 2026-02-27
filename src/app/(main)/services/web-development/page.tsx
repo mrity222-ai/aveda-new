@@ -1,6 +1,7 @@
 
 'use client';
 
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -31,6 +32,18 @@ import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import { portfolioProjects } from '@/lib/data';
 
+export const metadata: Metadata = {
+  title: 'High-Performance Web Development Services',
+  description: 'We build secure, scalable, and conversion-ready websites—from corporate portals to complex SaaS platforms that scale with your business.',
+  openGraph: {
+    title: 'High-Performance Web Development Services',
+    description: 'We build secure, scalable, and conversion-ready websites—from corporate portals to complex SaaS platforms that scale with your business.',
+  },
+  twitter: {
+    title: 'High-Performance Web Development Services',
+    description: 'We build secure, scalable, and conversion-ready websites—from corporate portals to complex SaaS platforms that scale with your business.',
+  }
+};
 
 const WhatsAppIcon = () => (
     <svg

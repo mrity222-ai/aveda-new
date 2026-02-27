@@ -1,6 +1,20 @@
+import type { Metadata } from 'next';
 import { Mail } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+export const metadata: Metadata = {
+  title: 'Terms & Conditions',
+  description: 'Read the Terms and Conditions for using the Aveda Technologies website and services. Your use of our website constitutes your agreement to these terms.',
+  openGraph: {
+    title: 'Terms & Conditions',
+    description: 'Read the Terms and Conditions for using the Aveda Technologies website and services. Your use of our website constitutes your agreement to these terms.',
+  },
+  twitter: {
+    title: 'Terms & Conditions',
+    description: 'Read the Terms and Conditions for using the Aveda Technologies website and services. Your use of our website constitutes your agreement to these terms.',
+  }
+};
 
 export default function TermsAndConditionsPage() {
   const sections = [
