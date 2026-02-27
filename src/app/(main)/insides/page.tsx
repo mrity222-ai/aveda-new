@@ -1,7 +1,6 @@
 
 'use client';
 
-import type { Metadata } from 'next';
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -12,19 +11,6 @@ import { cn } from '@/lib/utils';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-
-export const metadata: Metadata = {
-  title: 'AI-Driven Insights & Tech Blog',
-  description: 'Explore data, strategy, and intelligence for business and political success from the experts at Aveda Technologies. Read our latest insights on AI, marketing, and tech trends.',
-  openGraph: {
-    title: 'AI-Driven Insights & Tech Blog',
-    description: 'Explore data, strategy, and intelligence for business and political success from the experts at Aveda Technologies. Read our latest insights on AI, marketing, and tech trends.',
-  },
-  twitter: {
-    title: 'AI-Driven Insights & Tech Blog',
-    description: 'Explore data, strategy, and intelligence for business and political success from the experts at Aveda Technologies. Read our latest insights on AI, marketing, and tech trends.',
-  }
-};
 
 const categories = [
   'All',

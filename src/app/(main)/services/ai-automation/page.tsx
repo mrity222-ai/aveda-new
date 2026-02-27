@@ -1,6 +1,6 @@
+
 'use client';
 
-import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -42,19 +42,6 @@ import {
 } from '@/components/ui/card';
 import React from 'react';
 import { Switch } from '@/components/ui/switch';
-
-export const metadata: Metadata = {
-  title: 'AI & Automation Services',
-  description: 'Turn your business into an AI-powered growth machine with our intelligent automation systems and generative AI solutions that reduce costs and accelerate growth.',
-  openGraph: {
-    title: 'AI & Automation Services',
-    description: 'Turn your business into an AI-powered growth machine with our intelligent automation systems and generative AI solutions that reduce costs and accelerate growth.',
-  },
-  twitter: {
-    title: 'AI & Automation Services',
-    description: 'Turn your business into an AI-powered growth machine with our intelligent automation systems and generative AI solutions that reduce costs and accelerate growth.',
-  }
-};
 
 const PythonIcon = () => (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-foreground/80 transition-all duration-300 group-hover:text-primary group-hover:drop-shadow-[0_0_10px_hsl(var(--primary)/0.8)]"><title>Python</title><path fill="currentColor" d="M16.225 10.358c-1.124-1.21-2.932-1.116-4.251.028-.85.737-1.396 1.8-1.485 2.933H12.9c.08-.627.4-1.18.81-1.59.56-.56 1.348-.797 2.144-.585.8.21 1.427.764 1.744 1.51.318.748.214 1.58-.29 2.216-.505.637-1.25.99-2.074 1.02h-1.33v-2.04h-.99v5.1h2.296c1.396 0 2.674-.682 3.42-1.84.747-1.157.747-2.61 0-3.766zm-7.23-2.63c-1.397 0-2.675-.682-3.42-1.841-.748-1.156-.748-2.61 0-3.766C6.322.905 7.6.222 8.997.222c1.124 1.21 2.932 1.116 4.25-.028.851-.737 1.397-1.8 1.486-2.933H12.3c-.08.627-.4 1.18-.81-1.59-.56-.56-1.348-.797-2.144-.585-.8-.21-1.427-.764-1.744-1.51C7.284.974 7.18.143 7.685-.494c.504-.636 1.25-.99 2.074-1.019h1.33v2.04h.99v-5.1H9.782c-1.396 0-2.674.682-3.42 1.84-.747 1.157-.747-2.61 0 3.767z"/></svg>
