@@ -2,7 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { ArrowRight, Code2, Smartphone, PenTool, LineChart } from 'lucide-react';
+import { ArrowRight, Code2, PenTool, LineChart, Cpu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const servicesData = [
@@ -13,10 +13,10 @@ const servicesData = [
     description: 'We build high-performance, secure, and scalable websites that drive business growth and deliver seamless digital experiences.',
   },
   {
-    slug: 'app-development',
-    icon: Smartphone,
-    title: 'App Development',
-    description: 'From concept to launch, we create engaging and intuitive mobile applications for iOS and Android with modern architecture.',
+    slug: 'ai-automation',
+    icon: Cpu,
+    title: 'AI Automation',
+    description: 'Leverage AI to automate processes, gain insights, and create smarter products that give you a competitive edge.',
   },
   {
     slug: 'ui-ux-design',
