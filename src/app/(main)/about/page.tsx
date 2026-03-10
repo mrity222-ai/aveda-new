@@ -93,12 +93,6 @@ export default function AboutPage() {
       bgColor: 'bg-muted',
     },
     {
-      name: 'Angel Mango',
-      role: 'Senior developer',
-      imageId: 'leader-vinod',
-      bgColor: 'bg-secondary',
-    },
-    {
       name: 'Deepak Yadav',
       role: 'Innovation & Growth Lead',
       imageId: 'leader-deepak',
@@ -290,7 +284,7 @@ export default function AboutPage() {
               We are a team of passionate innovators, strategists, and creators dedicated to building exceptional digital experiences. Our collective expertise drives our commitment to excellence and client success.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {teamMembers.map((member) => {
               const image = PlaceHolderImages.find((p) => p.id === member.imageId);
               return (
