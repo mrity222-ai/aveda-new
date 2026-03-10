@@ -78,6 +78,33 @@ export default function AboutPage() {
     }
   ];
 
+  const teamMembers = [
+    {
+      name: 'Kaiya Rhiel Madsen',
+      role: 'Senior developer',
+      imageId: 'testimonial-1',
+      bgColor: 'bg-primary/10',
+    },
+    {
+      name: 'Charlie Stanton',
+      role: 'Senior developer',
+      imageId: 'testimonial-2',
+      bgColor: 'bg-accent/10',
+    },
+    {
+      name: 'Makenna Kenter',
+      role: 'Senior developer',
+      imageId: 'testimonial-3',
+      bgColor: 'bg-muted',
+    },
+    {
+      name: 'Angel Mango',
+      role: 'Senior developer',
+      imageId: 'leader-vinod',
+      bgColor: 'bg-secondary',
+    },
+  ];
+
 
   return (
     <div className="bg-background text-foreground">
@@ -202,6 +229,45 @@ export default function AboutPage() {
                     </div>
                 ))}
             </div>
+        </div>
+      </section>
+      
+      {/* New Team Section */}
+      <section className="bg-secondary py-20 md:py-28">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-8 mb-16 items-center">
+            <div>
+              <p className="text-primary font-semibold mb-2">Meet Our Team:</p>
+              <h2 className="font-headline text-4xl font-bold tracking-tight text-accent">Bringing Passion and Expertise Together</h2>
+            </div>
+            <p className="text-muted-foreground text-lg">
+              We are a team of passionate innovators, strategists, and creators dedicated to building exceptional digital experiences. Our collective expertise drives our commitment to excellence and client success.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            {teamMembers.map((member) => {
+              const image = PlaceHolderImages.find((p) => p.id === member.imageId);
+              return (
+                <div key={member.name} className="flex flex-col items-center">
+                  <div className={`relative w-48 h-56 rounded-t-full overflow-hidden ${member.bgColor}`}>
+                    {image && (
+                      <Image
+                        src={image.imageUrl}
+                        alt={`Portrait of ${member.name}`}
+                        fill
+                        className="object-cover object-top"
+                        data-ai-hint={image.imageHint}
+                      />
+                    )}
+                  </div>
+                  <div className="mt-4">
+                    <h3 className="font-bold text-lg text-accent">{member.name}</h3>
+                    <p className="text-muted-foreground">{member.role}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
