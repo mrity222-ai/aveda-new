@@ -87,12 +87,6 @@ export default function AboutPage() {
       bgColor: 'bg-accent/10',
     },
     {
-      name: 'Makenna Kenter',
-      role: 'Senior developer',
-      imageId: 'testimonial-3',
-      bgColor: 'bg-muted',
-    },
-    {
       name: 'Deepak Yadav',
       role: 'Innovation & Growth Lead',
       imageId: 'leader-deepak',
@@ -284,7 +278,7 @@ export default function AboutPage() {
               We are a team of passionate innovators, strategists, and creators dedicated to building exceptional digital experiences. Our collective expertise drives our commitment to excellence and client success.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center max-w-5xl mx-auto">
             {teamMembers.map((member) => {
               const image = PlaceHolderImages.find((p) => p.id === member.imageId);
               return (
@@ -352,5 +346,3 @@ export default function AboutPage() {
     </div>
   );
 }
-
-    
