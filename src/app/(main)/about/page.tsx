@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -69,12 +70,6 @@ export default function AboutPage() {
       designation: 'AI & Agritech Innovation Leader',
       imageId: 'leader-raj',
       bioLink: '/founders',
-    },
-    {
-      name: 'Deepak Yadav',
-      designation: 'Innovation & Growth Lead',
-      imageId: 'leader-deepak',
-      bioLink: '/deepak-yadav',
     }
   ];
 
@@ -102,6 +97,12 @@ export default function AboutPage() {
       role: 'Senior developer',
       imageId: 'leader-vinod',
       bgColor: 'bg-secondary',
+    },
+    {
+      name: 'Deepak Yadav',
+      role: 'Innovation & Growth Lead',
+      imageId: 'leader-deepak',
+      bgColor: 'bg-accent/10',
     },
   ];
 
@@ -243,7 +244,7 @@ export default function AboutPage() {
               A global team building future-ready technology solutions.
             </p>
           </div>
-          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
+          <div className="mt-16 grid grid-cols-1 gap-8 max-w-md mx-auto">
             {leadership.map((leader) => {
               const image = PlaceHolderImages.find((p) => p.id === leader.imageId);
               return (
@@ -289,7 +290,7 @@ export default function AboutPage() {
               We are a team of passionate innovators, strategists, and creators dedicated to building exceptional digital experiences. Our collective expertise drives our commitment to excellence and client success.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 text-center">
             {teamMembers.map((member) => {
               const image = PlaceHolderImages.find((p) => p.id === member.imageId);
               return (
