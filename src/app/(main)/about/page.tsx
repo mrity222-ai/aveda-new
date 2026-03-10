@@ -76,7 +76,7 @@ export default function AboutPage() {
   const teamMembers = [
     {
       name: 'Priyanshu',
-      role: 'Senior developer',
+      role: 'Web Developer',
       imageId: 'testimonial-1',
       bgColor: 'bg-primary/10',
     },
@@ -138,7 +138,7 @@ export default function AboutPage() {
             We collaborate with global technology leaders to build secure, scalable, and cutting-edge solutions.
           </p>
 
-          <div className="mt-16 w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+          <div className="mt-16 w-full overflow-hidden [mask-image:_linear_gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
             <div className="flex w-max animate-scroll-left hover:[animation-play-state:paused]">
               {[...partners, ...partners].map((partner, index) => (
                 <div key={`${partner.name}-${index}`} className="relative h-20 w-48 shrink-0">
