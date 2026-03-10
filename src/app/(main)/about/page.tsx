@@ -82,7 +82,7 @@ export default function AboutPage() {
     },
     {
       name: 'Ajeet',
-      role: 'Senior developer',
+      role: 'Web Developer',
       imageId: 'testimonial-2',
       bgColor: 'bg-accent/10',
     },
