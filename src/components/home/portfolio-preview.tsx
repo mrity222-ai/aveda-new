@@ -26,7 +26,7 @@ export default function AboutUs() {
             <div>
               <p className="mb-2 font-semibold text-primary">About Us</p>
               <h2 className="text-3xl font-bold tracking-tight md:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Engineering Excellence Since 2024
+                Engineering Excellence
               </h2>
             </div>
             <p className="text-lg text-foreground/80">

@@ -108,7 +108,7 @@ export default function TermsAndConditionsPage() {
             Terms & Conditions
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90">
-            Last updated: August 01, 2024
+            Your use of our website constitutes your agreement to these terms.
           </p>
           <div className="mx-auto mt-8 h-px w-24 bg-gray-200" />
         </div>

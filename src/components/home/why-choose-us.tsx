@@ -19,7 +19,7 @@ export default function PortfolioPreview() {
             Showcasing Digital Excellence
           </h2>
           <p className="mt-4 text-lg text-foreground/80">
-            Projects since 2024
+            A showcase of our recent work.
           </p>
         </div>
 
