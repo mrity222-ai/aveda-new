@@ -75,7 +75,7 @@ export default function AboutPage() {
 
   const teamMembers = [
     {
-      name: 'Kaiya Rhiel Madsen',
+      name: 'Priyanshu',
       role: 'Senior developer',
       imageId: 'testimonial-1',
       bgColor: 'bg-primary/10',
