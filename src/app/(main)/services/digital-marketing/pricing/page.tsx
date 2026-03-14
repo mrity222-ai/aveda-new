@@ -49,7 +49,7 @@ const pricingPlans = [
       price: '₹5,999',
       period: '/ month',
       features: [
-        '6 Social Media Posts / month',
+        '12 Social Media Posts / month',
         '4 Performance Ad Campaigns',
         'Daily Campaign Monitoring',
         'AI-Based Targeting & Optimization',
