@@ -153,7 +153,7 @@ export default function FoundersPage() {
                         src={rajImage.imageUrl}
                         alt={`Portrait of ${raj.name}`}
                         fill
-                        className="rounded-full object-cover grayscale shadow-lg ring-4 ring-background transition-all duration-500 group-hover:grayscale-0 group-hover:ring-primary"
+                        className="rounded-full object-cover grayscale shadow-lg ring-4 ring-background transition-all duration-500 group-hover:grayscale-0 group-hover:ring-primary group-hover:scale-105"
                         data-ai-hint={rajImage.imageHint}
                         />
                     </div>
@@ -166,13 +166,13 @@ export default function FoundersPage() {
                     <p className="text-lg text-muted-foreground">{raj.bio}</p>
                     <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
                         {raj.expertise.map(item => (
-                            <div key={item.title} className="flex items-center gap-3 rounded-lg border bg-card p-3 soft-shadow">
+                            <div key={item.title} className="flex items-center gap-3 rounded-lg border bg-card p-3 soft-shadow transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                                 <item.icon className="h-6 w-6 text-primary" />
                                 <span className="text-sm font-semibold text-muted-foreground">{item.title}</span>
                             </div>
                         ))}
                     </div>
-                    <Card className="mt-8 bg-secondary border-primary/10">
+                    <Card className="mt-8 bg-secondary border-primary/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                         <CardContent className="p-6 flex items-start gap-4">
                             <Quote className="h-8 w-8 text-primary/50 flex-shrink-0 mt-1" />
                             <blockquote className="text-lg italic text-muted-foreground">"{raj.quote}"</blockquote>
@@ -193,7 +193,7 @@ export default function FoundersPage() {
                              className={cn("relative mb-12 flex items-center w-full animate-in fade-in slide-in-from-bottom-12 duration-700", index % 2 === 0 ? "justify-start" : "justify-end")}
                              style={{ animationDelay: `${index * 150}ms` }}>
                             <div className={cn("w-1/2", index % 2 === 0 ? "pr-8" : "pl-8")}>
-                                <div className={cn("relative rounded-lg border bg-card p-6 soft-shadow transition-all duration-300 hover:border-primary", index % 2 === 0 ? 'text-left' : 'text-right')}>
+                                <div className={cn("relative rounded-lg border bg-card p-6 soft-shadow transition-all duration-300 hover:border-primary hover:-translate-y-2 hover:shadow-xl", index % 2 === 0 ? 'text-left' : 'text-right')}>
                                     <p className="font-semibold text-primary">{edu.specialization}</p>
                                     <h4 className="font-headline text-xl font-bold text-accent">{edu.degree}</h4>
                                     <p className="text-muted-foreground">{edu.institution}</p>
@@ -255,7 +255,7 @@ export default function FoundersPage() {
           
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
             {filteredItems.map((item) => (
-              <div key={item.id} className="group relative overflow-hidden rounded-2xl border-2 border-transparent hover:border-primary transition-all duration-300 break-inside-avoid soft-shadow animate-in fade-in zoom-in-95 duration-500">
+              <div key={item.id} className="group relative overflow-hidden rounded-2xl border-2 border-transparent hover:border-primary transition-all duration-300 break-inside-avoid soft-shadow hover:-translate-y-2 hover:shadow-xl animate-in fade-in zoom-in-95 duration-500">
                 <Image
                   src={item.image.imageUrl}
                   alt={item.title}

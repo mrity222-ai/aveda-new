@@ -179,7 +179,7 @@ export default function AppDevelopmentPage() {
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                         {appProjects.map((project) => (
                             <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
-                                <div className="relative h-[450px] overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl">
+                                <div className="relative h-[450px] overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:-translate-y-2">
                                     <Image
                                         src={project.image.imageUrl}
                                         alt={project.title}
@@ -243,7 +243,7 @@ export default function AppDevelopmentPage() {
                     <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-foreground">Technologies We Use</h2>
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
                         {technologies.map((tech) => (
-                        <div key={tech.name} className="group relative rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:-translate-y-1">
+                        <div key={tech.name} className="group relative rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:-translate-y-2">
                             <div className="relative flex flex-col items-center justify-center gap-4">
                                 <tech.icon className="h-10 w-10 text-foreground/80 transition-all duration-300 group-hover:text-primary" />
                                 <p className="font-semibold text-sm text-center uppercase tracking-wider text-foreground">{tech.name}</p>
@@ -271,19 +271,19 @@ export default function AppDevelopmentPage() {
                     </div>
                     <div>
                         <div className="grid grid-cols-2 gap-4">
-                            <div className="rounded-lg bg-card p-6 text-center border border-border">
+                            <div className="rounded-lg bg-card p-6 text-center border border-border transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                                 <Zap className="mx-auto h-10 w-10 text-primary" />
                                 <h3 className="mt-4 font-semibold">Performance</h3>
                             </div>
-                            <div className="rounded-lg bg-card p-6 text-center border border-border">
+                            <div className="rounded-lg bg-card p-6 text-center border border-border transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                                 <ShieldCheck className="mx-auto h-10 w-10 text-primary" />
                                 <h3 className="mt-4 font-semibold">Security</h3>
                             </div>
-                             <div className="rounded-lg bg-card p-6 text-center border border-border">
+                             <div className="rounded-lg bg-card p-6 text-center border border-border transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                                 <Scaling className="mx-auto h-10 w-10 text-primary" />
                                 <h3 className="mt-4 font-semibold">Scalability</h3>
                             </div>
-                             <div className="rounded-lg bg-card p-6 text-center border border-border">
+                             <div className="rounded-lg bg-card p-6 text-center border border-border transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                                 <PenTool className="mx-auto h-10 w-10 text-primary" />
                                 <h3 className="mt-4 font-semibold">Great UX</h3>
                             </div>
@@ -317,7 +317,7 @@ export default function AppDevelopmentPage() {
                             </Link>
                         </Button>
                         <Button asChild size="lg" variant="outline">
-                            <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
+                            <a href="https://wa.me/919532758070" target="_blank" rel="noopener noreferrer">
                                 <WhatsAppIcon />
                                 WhatsApp Us
                             </a>

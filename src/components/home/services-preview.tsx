@@ -51,7 +51,7 @@ export default function ServicesPreview() {
             <div
               key={service.title}
               className={cn(
-                'group relative rounded-2xl border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow animate-in fade-in slide-in-from-bottom-12'
+                'group relative rounded-2xl border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow hover:shadow-xl animate-in fade-in slide-in-from-bottom-12'
               )}
               style={{ animationDelay: `${index * 150}ms` }}
             >

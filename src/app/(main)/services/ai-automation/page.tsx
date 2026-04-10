@@ -183,7 +183,7 @@ export default function AiAutomationPage() {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                         {/* Card 1 */}
-                        <div className="group rounded-2xl border border-destructive/20 bg-card p-6 shadow-[0_0_15px_hsl(var(--destructive)/0.1)] transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.2)] hover:-translate-y-1 hover:animate-shake">
+                        <div className="group rounded-2xl border border-destructive/20 bg-card p-6 shadow-[0_0_15px_hsl(var(--destructive)/0.1)] transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.2)] hover:-translate-y-2 hover:animate-shake">
                             <div className="flex items-start gap-4">
                                 <XCircle className="h-8 w-8 text-destructive flex-shrink-0 drop-shadow-[0_0_5px_hsl(var(--destructive)/0.8)]" />
                                 <div>
@@ -194,7 +194,7 @@ export default function AiAutomationPage() {
                         </div>
                         
                         {/* Card 2 */}
-                        <div className="group rounded-2xl border border-destructive/20 bg-card p-6 shadow-[0_0_15px_hsl(var(--destructive)/0.1)] transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.2)] hover:-translate-y-1 hover:animate-shake">
+                        <div className="group rounded-2xl border border-destructive/20 bg-card p-6 shadow-[0_0_15px_hsl(var(--destructive)/0.1)] transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.2)] hover:-translate-y-2 hover:animate-shake">
                             <div className="flex items-start gap-4">
                                 <XCircle className="h-8 w-8 text-destructive flex-shrink-0 drop-shadow-[0_0_5px_hsl(var(--destructive)/0.8)]" />
                                 <div>
@@ -205,7 +205,7 @@ export default function AiAutomationPage() {
                         </div>
 
                         {/* Card 3 */}
-                        <div className="group rounded-2xl border border-destructive/20 bg-card p-6 shadow-[0_0_15px_hsl(var(--destructive)/0.1)] transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.2)] hover:-translate-y-1 hover:animate-shake">
+                        <div className="group rounded-2xl border border-destructive/20 bg-card p-6 shadow-[0_0_15px_hsl(var(--destructive)/0.1)] transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.2)] hover:-translate-y-2 hover:animate-shake">
                             <div className="flex items-start gap-4">
                                 <XCircle className="h-8 w-8 text-destructive flex-shrink-0 drop-shadow-[0_0_5px_hsl(var(--destructive)/0.8)]" />
                                 <div>
@@ -216,7 +216,7 @@ export default function AiAutomationPage() {
                         </div>
 
                         {/* Card 4 */}
-                        <div className="group rounded-2xl border border-destructive/20 bg-card p-6 shadow-[0_0_15px_hsl(var(--destructive)/0.1)] transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.2)] hover:-translate-y-1 hover:animate-shake lg:col-span-2">
+                        <div className="group rounded-2xl border border-destructive/20 bg-card p-6 shadow-[0_0_15px_hsl(var(--destructive)/0.1)] transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.2)] hover:-translate-y-2 hover:animate-shake lg:col-span-2">
                              <div className="flex items-start gap-4">
                                 <XCircle className="h-8 w-8 text-destructive flex-shrink-0 drop-shadow-[0_0_5px_hsl(var(--destructive)/0.8)]" />
                                 <div>
@@ -227,7 +227,7 @@ export default function AiAutomationPage() {
                         </div>
 
                         {/* Card 5 */}
-                        <div className="group rounded-2xl border border-destructive/20 bg-card p-6 shadow-[0_0_15px_hsl(var(--destructive)/0.1)] transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.2)] hover:-translate-y-1 hover:animate-shake">
+                        <div className="group rounded-2xl border border-destructive/20 bg-card p-6 shadow-[0_0_15px_hsl(var(--destructive)/0.1)] transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--destructive)/0.2)] hover:-translate-y-2 hover:animate-shake">
                              <div className="flex items-start gap-4">
                                 <XCircle className="h-8 w-8 text-destructive flex-shrink-0 drop-shadow-[0_0_5px_hsl(var(--destructive)/0.8)]" />
                                 <div>
@@ -259,7 +259,7 @@ export default function AiAutomationPage() {
                             const image = PlaceHolderImages.find((img) => img.id === visual.imageId);
                             if (!image) return null;
                             return (
-                                <div key={image.id} className="group relative h-80 overflow-hidden rounded-2xl border bg-card shadow-lg transition-all duration-500 hover:shadow-primary/20 hover:scale-105">
+                                <div key={image.id} className="group relative h-80 overflow-hidden rounded-2xl border bg-card shadow-lg transition-all duration-500 hover:shadow-primary/20 hover:-translate-y-2">
                                     <Image
                                         src={image.imageUrl}
                                         alt={visual.description}
@@ -381,7 +381,7 @@ export default function AiAutomationPage() {
                             <div key={step.title} className={cn("relative mb-12 flex items-center w-full", index % 2 === 0 ? "justify-start" : "justify-end")}>
                                 <div className={cn("w-1/2", index % 2 === 0 ? "pr-8" : "pl-8")}>
                                 <div className={cn(
-                                    "group relative overflow-hidden p-6 rounded-lg border bg-card shadow-sm transition-all duration-300 hover:shadow-lg soft-shadow", 
+                                    "group relative overflow-hidden p-6 rounded-lg border bg-card shadow-sm transition-all duration-300 hover:shadow-lg soft-shadow hover:-translate-y-2", 
                                     index % 2 === 0 ? "text-left" : "text-right"
                                 )}>
                                     <div className={cn("absolute top-0 font-headline text-8xl font-bold text-primary/10 -translate-y-4 transition-transform duration-300 group-hover:scale-110", index % 2 === 0 ? "right-0 translate-x-4" : "left-0 -translate-x-4")}>
@@ -446,7 +446,7 @@ export default function AiAutomationPage() {
                              className="group animate-in fade-in zoom-in-95 duration-500"
                              style={{ animationDelay: `${index * 100}ms` }}
                         >
-                            <div className="relative rounded-2xl border border-border/20 bg-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:bg-primary/5 hover:shadow-2xl hover:shadow-primary/10 grayscale hover:grayscale-0">
+                            <div className="relative rounded-2xl border border-border/20 bg-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:bg-primary/5 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 grayscale hover:grayscale-0">
                                 <div className="relative flex flex-col items-center justify-center gap-4">
                                     <tech.icon />
                                     <p className="font-semibold text-sm text-center uppercase tracking-wider text-muted-foreground group-hover:text-foreground transition-colors">{tech.name}</p>
@@ -467,19 +467,19 @@ export default function AiAutomationPage() {
                         <p className="mt-4 text-lg text-muted-foreground">After implementing our AI systems, businesses have achieved:</p>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="group aspect-square flex flex-col justify-center items-center rounded-full border border-green-500/30 bg-card/50 p-6 text-center shadow-lg shadow-green-500/10 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/20">
+                        <div className="group aspect-square flex flex-col justify-center items-center rounded-full border border-green-500/30 bg-card/50 p-6 text-center shadow-lg shadow-green-500/10 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/20 hover:-translate-y-2">
                             <h3 className="font-headline text-5xl font-bold text-green-500">2X</h3>
                             <p className="mt-2 font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Faster Lead Response</p>
                         </div>
-                        <div className="group aspect-square flex flex-col justify-center items-center rounded-full border border-blue-500/30 bg-card/50 p-6 text-center shadow-lg shadow-blue-500/10 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20">
+                        <div className="group aspect-square flex flex-col justify-center items-center rounded-full border border-blue-500/30 bg-card/50 p-6 text-center shadow-lg shadow-blue-500/10 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2">
                             <h3 className="font-headline text-5xl font-bold text-blue-500">40%</h3>
                             <p className="mt-2 font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Increase in Sales Conversion</p>
                         </div>
-                        <div className="group aspect-square flex flex-col justify-center items-center rounded-full border border-orange-500/30 bg-card/50 p-6 text-center shadow-lg shadow-orange-500/10 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/20">
+                        <div className="group aspect-square flex flex-col justify-center items-center rounded-full border border-orange-500/30 bg-card/50 p-6 text-center shadow-lg shadow-orange-500/10 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/20 hover:-translate-y-2">
                             <h3 className="font-headline text-5xl font-bold text-orange-500">50%</h3>
                             <p className="mt-2 font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Reduction in Manual Workload</p>
                         </div>
-                        <div className="group aspect-square flex flex-col justify-center items-center rounded-full border border-purple-500/30 bg-card/50 p-6 text-center shadow-lg shadow-purple-500/10 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20">
+                        <div className="group aspect-square flex flex-col justify-center items-center rounded-full border border-purple-500/30 bg-card/50 p-6 text-center shadow-lg shadow-purple-500/10 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-2">
                             <Infinity className="h-12 w-12 text-purple-500" />
                             <p className="mt-2 font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Automated Follow-ups</p>
                         </div>
@@ -511,7 +511,7 @@ export default function AiAutomationPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center max-w-7xl mx-auto">
                         {pricingPlans.map((plan) => (
                             <Card key={plan.name} className={cn(
-                                "flex flex-col h-full rounded-2xl border-2 bg-card/50 backdrop-blur-sm transition-all duration-300",
+                                "flex flex-col h-full rounded-2xl border-2 bg-card/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2",
                                 plan.popular ? "lg:scale-105" : "lg:scale-95",
                                 plan.color === 'green' && "border-emerald-500/30 shadow-lg shadow-emerald-500/10 hover:shadow-emerald-500/20",
                                 plan.color === 'blue' && "border-blue-500/30 shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/30",

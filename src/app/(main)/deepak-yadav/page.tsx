@@ -110,7 +110,7 @@ export default function DeepakYadavPage() {
                         src={deepakImage.imageUrl}
                         alt={`Portrait of ${deepak.name}`}
                         fill
-                        className="rounded-full object-cover grayscale shadow-lg ring-4 ring-background transition-all duration-500 group-hover:grayscale-0 group-hover:ring-primary"
+                        className="rounded-full object-cover grayscale shadow-lg ring-4 ring-background transition-all duration-500 group-hover:grayscale-0 group-hover:ring-primary group-hover:scale-105"
                         data-ai-hint={deepakImage.imageHint}
                         />
                     </div>
@@ -123,13 +123,13 @@ export default function DeepakYadavPage() {
                     <p className="text-lg text-muted-foreground">{deepak.bio}</p>
                     <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
                         {deepak.focusAreas.map((item, index) => (
-                            <div key={item.title} className="flex items-center gap-3 rounded-lg border bg-card p-3 soft-shadow animate-in fade-in slide-in-from-bottom-8 duration-700" style={{ animationDelay: `${index * 150}ms` }}>
+                            <div key={item.title} className="flex items-center gap-3 rounded-lg border bg-card p-3 soft-shadow transition-all duration-300 hover:-translate-y-2 hover:shadow-xl animate-in fade-in slide-in-from-bottom-8 duration-700" style={{ animationDelay: `${index * 150}ms` }}>
                                 <item.icon className="h-6 w-6 text-primary" />
                                 <span className="text-sm font-semibold text-muted-foreground">{item.title}</span>
                             </div>
                         ))}
                     </div>
-                    <Card className="mt-8 bg-secondary border-primary/10 animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: '450ms' }}>
+                    <Card className="mt-8 bg-secondary border-primary/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: '450ms' }}>
                         <CardContent className="p-6 flex items-start gap-4">
                             <Quote className="h-8 w-8 text-primary/50 flex-shrink-0 mt-1" />
                             <blockquote className="text-lg italic text-muted-foreground">"{deepak.quote}"</blockquote>
@@ -145,7 +145,7 @@ export default function DeepakYadavPage() {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     {deepak.education.map((edu, index) => (
-                        <Card key={index} className="border bg-card p-6 soft-shadow rounded-3xl animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: `${index * 150}ms` }}>
+                        <Card key={index} className="border bg-card p-6 soft-shadow rounded-3xl transition-all duration-300 hover:-translate-y-2 hover:shadow-xl animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: `${index * 150}ms` }}>
                             <div className="flex items-center gap-4 mb-4">
                                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                                     <edu.icon className="h-8 w-8" />

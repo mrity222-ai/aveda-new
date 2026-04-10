@@ -34,7 +34,7 @@ export default function PortfolioPreview() {
               <div 
                 className={cn(
                   "relative overflow-hidden rounded-3xl border bg-card transition-all duration-300 soft-shadow hover:border-primary",
-                  "h-[400px] group-hover:scale-[1.02] hover:-translate-y-2"
+                  "h-[400px] hover:-translate-y-2 hover:shadow-xl"
                 )}
               >
                 <div className="relative h-full w-full rounded-3xl">
@@ -42,7 +42,7 @@ export default function PortfolioPreview() {
                     src={project.image.imageUrl}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-500"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     data-ai-hint={project.image.imageHint}
                   />

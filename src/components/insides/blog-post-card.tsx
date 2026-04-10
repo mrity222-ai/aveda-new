@@ -67,7 +67,7 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
   });
 
   return (
-    <Card className="group flex flex-col overflow-hidden rounded-lg border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 soft-shadow hover:border-primary">
+    <Card className="group flex flex-col overflow-hidden rounded-lg border bg-card shadow-sm transition-all duration-300 hover:-translate-y-2 soft-shadow hover:border-primary hover:shadow-xl">
       <CardHeader className="p-0">
         <div className="relative h-56 w-full overflow-hidden">
           <Image

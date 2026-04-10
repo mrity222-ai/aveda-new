@@ -203,7 +203,7 @@ export default function IndustriesPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {whyChooseUs.map((item, index) => (
                       <div key={item.title} 
-                           className="group rounded-2xl border bg-card p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 soft-shadow animate-in fade-in slide-in-from-bottom-12"
+                           className="group rounded-2xl border bg-card p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 soft-shadow hover:shadow-xl animate-in fade-in slide-in-from-bottom-12"
                            style={{ animationDelay: `${index * 150}ms` }}
                       >
                           <div className="flex justify-center">
@@ -228,7 +228,7 @@ export default function IndustriesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index) => (
                   <Card key={industry.title} className={cn(
-                      'group flex flex-col rounded-2xl border-2 bg-card/50 transition-all duration-300 soft-shadow animate-in fade-in slide-in-from-bottom-12',
+                      'group flex flex-col rounded-2xl border-2 bg-card/50 transition-all duration-300 soft-shadow hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-12',
                       industryColors[industry.color]
                   )}
                   style={{ animationDelay: `${index * 150}ms` }}

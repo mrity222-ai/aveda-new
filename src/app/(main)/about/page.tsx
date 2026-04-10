@@ -178,11 +178,11 @@ export default function AboutPage() {
                 Aveda Technologies is an AI-first digital company delivering advanced web, mobile, marketing, automation, and political campaigning solutions. We combine technology, data, and strategy to create measurable digital impact.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="rounded-xl border bg-card p-6 soft-shadow">
+                  <div className="rounded-xl border bg-card p-6 soft-shadow transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                       <h3 className="font-headline text-3xl font-bold text-primary">100+</h3>
                       <p className="mt-1 text-muted-foreground">Projects Delivered</p>
                   </div>
-                  <div className="rounded-xl border bg-card p-6 soft-shadow">
+                  <div className="rounded-xl border bg-card p-6 soft-shadow transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                       <h3 className="font-headline text-3xl font-bold text-primary">AI-Driven</h3>
                       <p className="mt-1 text-muted-foreground">Solutions</p>
                   </div>
@@ -204,7 +204,7 @@ export default function AboutPage() {
             <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
                 {values.map((value, index) => (
                     <div key={value.title} 
-                         className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow animate-in fade-in slide-in-from-bottom-12 duration-700"
+                         className="group relative overflow-hidden rounded-2xl border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:border-primary soft-shadow hover:shadow-xl animate-in fade-in slide-in-from-bottom-12 duration-700"
                          style={{ animationDelay: `${index * 150}ms` }}>
                         <div className="relative">
                             <div className="flex justify-center">
@@ -289,7 +289,7 @@ export default function AboutPage() {
                         src={image.imageUrl}
                         alt={`Portrait of ${member.name}`}
                         fill
-                        className="object-cover object-top"
+                        className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
                         data-ai-hint={image.imageHint}
                       />
                     )}
@@ -321,14 +321,14 @@ export default function AboutPage() {
                   <div key={rec.name} 
                        className="group w-40 flex-shrink-0 snap-center flex flex-col items-center justify-center gap-4 text-center animate-in fade-in slide-in-from-bottom-12 duration-700"
                        style={{ animationDelay: `${index * 150}ms` }}>
-                    <div className="relative flex h-28 w-28 items-center justify-center rounded-2xl border bg-card p-4 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-primary/50 soft-shadow">
+                    <div className="relative flex h-28 w-28 items-center justify-center rounded-2xl border bg-card p-4 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-primary/50 soft-shadow hover:shadow-xl">
                       {image && (
                          <div className="relative h-12 w-12">
                           <Image 
                             src={image.imageUrl} 
                             alt={`${rec.name} Recognition Logo`} 
                             fill
-                            className="object-contain transition-all duration-300"
+                            className="object-contain transition-all duration-300 group-hover:scale-110"
                             data-ai-hint={image.imageHint}
                             />
                          </div>

@@ -249,7 +249,7 @@ export default function PricingPage() {
           <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16">What’s Included With Every Plan</h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {includedFeatures.map((value) => (
-              <div key={value.title} className="group relative rounded-xl border bg-card p-8 text-left transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-lg">
+              <div key={value.title} className="group relative rounded-xl border bg-card p-8 text-left transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl">
                 <div className="relative">
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/30">
                         <value.icon className="h-6 w-6" />
@@ -275,7 +275,7 @@ export default function PricingPage() {
                 <p className="mt-6 text-muted-foreground">We're more than a service provider; we're your technology partner committed to delivering results with transparent pricing and an AI-first approach.</p>
                  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {whyAveda.map((item) => (
-                        <div key={item.title} className="group relative overflow-hidden rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:-translate-y-1">
+                        <div key={item.title} className="group relative overflow-hidden rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:-translate-y-2">
                           <div className="relative">
                             <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary ring-4 ring-primary/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/30">
                                 <item.icon className="h-6 w-6" />
@@ -290,7 +290,7 @@ export default function PricingPage() {
                  {testimonials.map((testimonial) => {
                      const image = PlaceHolderImages.find((img) => img.id === testimonial.avatarId);
                      return (
-                        <Card key={testimonial.name} className="relative overflow-hidden border bg-card shadow-sm">
+                        <Card key={testimonial.name} className="relative overflow-hidden border bg-card shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                           <div className="absolute top-4 left-4 text-7xl font-bold text-primary/10 opacity-50">“</div>
                             <CardContent className="pt-10">
                                 <p className="relative z-10 text-lg italic text-muted-foreground">"{testimonial.quote}"</p>
@@ -333,7 +333,7 @@ export default function PricingPage() {
                     </Link>
                 </Button>
                 <Button asChild size="lg" variant="ghost" className="text-primary hover:bg-transparent">
-                    <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/919532758070" target="_blank" rel="noopener noreferrer">
                         <WhatsAppIcon className="text-primary" />
                         WhatsApp Us
                     </a>

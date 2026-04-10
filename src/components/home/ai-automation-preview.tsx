@@ -69,7 +69,7 @@ export default function AiAutomationPreview() {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               {features.map((feature, index) => (
                 <div key={feature.title} 
-                     className="group rounded-2xl border bg-card p-6 soft-shadow transition-all duration-300 hover:border-primary hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-16 duration-700"
+                     className="group rounded-2xl border bg-card p-6 soft-shadow transition-all duration-300 hover:border-primary hover:-translate-y-2 hover:shadow-xl animate-in fade-in slide-in-from-bottom-16 duration-700"
                      style={{ animationDelay: `${index * 150}ms` }}>
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110">
                     <feature.icon className="h-6 w-6" />

@@ -77,7 +77,7 @@ export default function CaseStudiesPage() {
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="group flex flex-col justify-between overflow-hidden rounded-lg border bg-card shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 soft-shadow animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: `${index * 150}ms` }}>
+              <Card key={index} className="group flex flex-col justify-between overflow-hidden rounded-lg border bg-card shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 soft-shadow hover:shadow-xl animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: `${index * 150}ms` }}>
                 <CardContent className="p-6">
                   <h3 className="font-headline text-xl font-semibold text-accent transition-colors group-hover:text-primary">{study.title}</h3>
                   <Badge variant="outline" className="mt-4">{study.keyword}</Badge>
