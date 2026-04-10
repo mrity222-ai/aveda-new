@@ -117,7 +117,7 @@ export default function TermsAndConditionsPage() {
       {/* Content Section */}
       <section className="pb-20 md:pb-28">
         <div className="container">
-          <div className="mx-auto max-w-4xl rounded-2xl bg-white p-8 shadow-[0_10px_40px_rgba(0,0,0,0.06)] md:p-12">
+          <div className="mx-auto max-w-4xl rounded-2xl bg-white p-8 shadow-[0_10px_40px_rgba(0,0,0,0.06)] md:p-12 animate-in fade-in slide-in-from-bottom-12 duration-700">
             <div className="space-y-12">
               {sections.map((section) => (
                 <div key={section.title}>

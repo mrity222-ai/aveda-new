@@ -168,14 +168,14 @@ export default function ServicesPage() {
                 return (
                     <section key={service.slug} id={service.slug} className="scroll-mt-20">
                         <div className="grid items-center gap-16 md:grid-cols-2">
-                            <div className={cn("relative h-96 w-full md:h-[500px]", isReversed && 'md:order-last')}>
+                            <div className={cn("relative h-96 w-full md:h-[500px] animate-in fade-in duration-700", isReversed ? "md:order-last slide-in-from-right-12" : "slide-in-from-left-12")}>
                                 <div className="group relative h-full w-full">
                                     <div className="relative h-full overflow-hidden rounded-lg border bg-card p-2 shadow-sm transition-all duration-300 group-hover:shadow-xl">
                                         {image && <Image src={image.imageUrl} alt={image.description || service.title} fill className="rounded-md object-cover" sizes="(max-width: 768px) 100vw, 50vw" data-ai-hint={image.imageHint} />}
                                     </div>
                                 </div>
                             </div>
-                            <div className={cn(isReversed && 'md:order-first')}>
+                            <div className={cn("animate-in fade-in duration-700", isReversed ? "md:order-first slide-in-from-left-12" : "slide-in-from-right-12")}>
                                 {service.slug === 'digital-marketing' && <Badge variant="destructive" className="mb-4">Starting at ₹5,000 / month</Badge>}
                                 <h2 className="font-headline text-3xl font-bold">{service.title}</h2>
                                 <p className="mt-4 text-muted-foreground">{service.description}</p>
@@ -200,10 +200,12 @@ export default function ServicesPage() {
         {/* Industries We Serve Section */}
         <section className="scroll-mt-20 py-20 md:py-28 text-center bg-background">
             <div className="container">
-                <h2 className="font-headline text-3xl font-bold">Industries We Serve</h2>
+                <div className="animate-in fade-in slide-in-from-bottom-8 duration-700">
+                  <h2 className="font-headline text-3xl font-bold">Industries We Serve</h2>
+                </div>
                 <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
-                {industries.map((item) => (
-                    <div key={item.title} className="group flex flex-col items-center justify-center gap-4 text-center">
+                {industries.map((item, index) => (
+                    <div key={item.title} className="group flex flex-col items-center justify-center gap-4 text-center animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: `${index * 150}ms` }}>
                     <div className="flex h-20 w-20 items-center justify-center rounded-full bg-card text-accent ring-8 ring-card transition-all duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:text-accent-foreground group-hover:ring-accent/20">
                         <item.icon className="h-10 w-10" />
                     </div>
@@ -216,7 +218,7 @@ export default function ServicesPage() {
 
         {/* Technologies We Use Section */}
         <section className="relative scroll-mt-20 bg-secondary text-center pb-20 md:pb-28">
-            <div className="container relative z-10">
+            <div className="container relative z-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
                 <h2 className="font-headline text-3xl font-bold">Technologies We Use</h2>
                 <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">We leverage a modern, scalable, and secure technology stack to build robust digital solutions.</p>
 
@@ -225,8 +227,8 @@ export default function ServicesPage() {
                         <div key={category}>
                             <h3 className="font-headline text-2xl font-semibold tracking-tight">{category}</h3>
                             <div className="mt-8 grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 md:grid-cols-4 lg:flex lg:flex-wrap lg:justify-center lg:gap-8">
-                                {items.map((tech) => (
-                                    <div key={tech.name} className="group relative rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:bg-card hover:shadow-lg lg:w-48">
+                                {items.map((tech, index) => (
+                                    <div key={tech.name} className="group relative rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:bg-card hover:shadow-lg lg:w-48 animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: `${index * 100}ms` }}>
                                         <div className="relative flex flex-col items-center justify-center gap-4">
                                             <tech.icon className="h-10 w-10 text-muted-foreground transition-colors duration-300 group-hover:text-primary" />
                                             <p className="font-semibold text-sm text-center">{tech.name}</p>
@@ -254,7 +256,7 @@ export default function ServicesPage() {
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
         </div>
-        <div className="container relative z-10 text-center">
+        <div className="container relative z-10 text-center animate-in fade-in duration-700">
           <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl">
             Ready to Grow with AI-Powered Digital Solutions?
           </h2>

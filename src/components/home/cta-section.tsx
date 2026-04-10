@@ -21,7 +21,7 @@ export default function CtaSection() {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 text-center">
+      <div className="container relative z-10 text-center animate-in fade-in slide-in-from-bottom-8 duration-700">
         <h2 className="text-5xl font-bold tracking-tight text-white md:text-6xl">
           Let’s Build the Future Together
         </h2>

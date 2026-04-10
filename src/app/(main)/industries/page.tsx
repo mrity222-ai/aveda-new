@@ -197,7 +197,7 @@ export default function IndustriesPage() {
       {/* Why Choose Us Section */}
       <section className="bg-secondary py-20 md:py-28">
           <div className="container">
-              <div className="mx-auto max-w-xl text-center mb-16">
+              <div className="mx-auto max-w-xl text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
                   <h2 className="font-headline text-3xl font-bold md:text-4xl text-accent">Why Industries Choose Aveda?</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -222,7 +222,7 @@ export default function IndustriesPage() {
       {/* Industries We Serve Section */}
       <section className="bg-background py-20 md:py-28">
         <div className="container">
-          <div className="mx-auto max-w-2xl text-center mb-16">
+          <div className="mx-auto max-w-2xl text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
               <h2 className="font-headline text-3xl font-bold md:text-4xl text-accent">Industries We Serve</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -256,7 +256,7 @@ export default function IndustriesPage() {
                       </CardContent>
                   </Card>
               ))}
-              <div className="lg:col-span-3 flex items-center justify-center p-8 rounded-2xl border-2 border-dashed bg-secondary">
+              <div className="lg:col-span-3 flex items-center justify-center p-8 rounded-2xl border-2 border-dashed bg-secondary animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: `${industries.length * 150}ms` }}>
                   <p className="text-center font-semibold text-muted-foreground">And many more industries...</p>
               </div>
           </div>
@@ -266,7 +266,7 @@ export default function IndustriesPage() {
       {/* How We Work Section */}
       <section className="bg-secondary py-20 md:py-28">
           <div className="container">
-              <div className="mx-auto max-w-2xl text-center mb-16">
+              <div className="mx-auto max-w-2xl text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
                   <h2 className="font-headline text-3xl font-bold md:text-4xl text-accent">How We Work</h2>
               </div>
               <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

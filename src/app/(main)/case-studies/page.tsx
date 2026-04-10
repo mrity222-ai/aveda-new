@@ -71,9 +71,13 @@ export default function CaseStudiesPage() {
 
       <section className="py-20 md:py-28">
         <div className="container">
+          <div className="mx-auto max-w-2xl text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
+              <h2 className="font-headline text-3xl font-bold md:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Our Success Stories</h2>
+              <p className="mt-4 text-lg text-muted-foreground">Explore real-world examples of how we've helped businesses like yours succeed with our innovative solutions.</p>
+          </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {caseStudies.map((study, index) => (
-              <Card key={index} className="group flex flex-col justify-between overflow-hidden rounded-lg border bg-card shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 soft-shadow">
+              <Card key={index} className="group flex flex-col justify-between overflow-hidden rounded-lg border bg-card shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 soft-shadow animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: `${index * 150}ms` }}>
                 <CardContent className="p-6">
                   <h3 className="font-headline text-xl font-semibold text-accent transition-colors group-hover:text-primary">{study.title}</h3>
                   <Badge variant="outline" className="mt-4">{study.keyword}</Badge>

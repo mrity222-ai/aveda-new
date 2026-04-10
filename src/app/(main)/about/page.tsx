@@ -224,7 +224,7 @@ export default function AboutPage() {
       {/* Meet Our Team Section */}
       <section className="bg-secondary py-20 md:py-28">
         <div className="container">
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-2xl text-center animate-in fade-in slide-in-from-bottom-8 duration-700">
             <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Meet Our Team of Innovators
             </h2>
@@ -233,10 +233,10 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="mt-16 grid grid-cols-1 gap-8 max-w-md mx-auto">
-            {leadership.map((leader) => {
+            {leadership.map((leader, index) => {
               const image = PlaceHolderImages.find((p) => p.id === leader.imageId);
               return (
-                <Card key={leader.name} className="group overflow-hidden text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 soft-shadow">
+                <Card key={leader.name} className="group overflow-hidden text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 soft-shadow animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: `${index * 150}ms` }}>
                     <CardContent className="p-6">
                         {image && (
                         <div className="relative mx-auto mb-6 h-40 w-40">
@@ -270,19 +270,19 @@ export default function AboutPage() {
       <section className="bg-secondary py-20 md:py-28">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-8 mb-16 items-center">
-            <div>
+            <div className="animate-in fade-in slide-in-from-left-12 duration-700">
               <p className="text-primary font-semibold mb-2">Meet Our Team:</p>
               <h2 className="font-headline text-4xl font-bold tracking-tight text-accent">Bringing Passion and Expertise Together</h2>
             </div>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-lg animate-in fade-in slide-in-from-right-12 duration-700">
               We are a team of passionate innovators, strategists, and creators dedicated to building exceptional digital experiences. Our collective expertise drives our commitment to excellence and client success.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center max-w-5xl mx-auto">
-            {teamMembers.map((member) => {
+            {teamMembers.map((member, index) => {
               const image = PlaceHolderImages.find((p) => p.id === member.imageId);
               return (
-                <div key={member.name} className="flex flex-col items-center">
+                <div key={member.name} className="flex flex-col items-center animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: `${index * 150}ms` }}>
                   <div className={`relative w-48 h-56 rounded-t-full overflow-hidden ${member.bgColor}`}>
                     {image && (
                       <Image

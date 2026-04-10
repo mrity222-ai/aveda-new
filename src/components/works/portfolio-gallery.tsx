@@ -12,7 +12,8 @@ export default function PortfolioGallery() {
           <div
             key={project.slug}
             id={project.slug}
-            className="group relative h-96 overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10"
+            className="group relative h-96 overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12 duration-700"
+            style={{ animationDelay: `${index * 150}ms` }}
           >
             <Image
               src={project.image.imageUrl}

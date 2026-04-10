@@ -110,7 +110,7 @@ export default function InsidesPage() {
         </section>
 
         {/* Category Filters */}
-        <div className="mb-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 border-b">
+        <div className="mb-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 border-b animate-in fade-in duration-700">
           {categories.map(category => (
             <button
               key={category}
@@ -142,7 +142,7 @@ export default function InsidesPage() {
             ))}
           </div>
         ) : (
-           <div className="py-16 text-center text-muted-foreground">
+           <div className="py-16 text-center text-muted-foreground animate-in fade-in duration-700">
             <p className="text-lg font-semibold">Coming Soon</p>
             <p>No insights available for this category yet. Check back soon for updates.</p>
           </div>

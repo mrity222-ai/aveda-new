@@ -103,7 +103,7 @@ export default function DeepakYadavPage() {
           {/* Deepak Yadav */}
           <div className="group">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
-                <div className="md:col-span-1 flex justify-center">
+                <div className="md:col-span-1 flex justify-center animate-in fade-in slide-in-from-left-12 duration-700">
                     {deepakImage && (
                     <div className="relative aspect-square w-64 h-64">
                         <Image
@@ -116,20 +116,20 @@ export default function DeepakYadavPage() {
                     </div>
                     )}
                 </div>
-                <div className="md:col-span-2">
+                <div className="md:col-span-2 animate-in fade-in slide-in-from-right-12 duration-700">
                     <h2 className="font-headline text-3xl font-bold text-primary">{deepak.name}</h2>
                     <p className="mt-2 font-semibold text-accent">{deepak.designation}</p>
                     <Separator className="my-6" />
                     <p className="text-lg text-muted-foreground">{deepak.bio}</p>
                     <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        {deepak.focusAreas.map(item => (
-                            <div key={item.title} className="flex items-center gap-3 rounded-lg border bg-card p-3 soft-shadow">
+                        {deepak.focusAreas.map((item, index) => (
+                            <div key={item.title} className="flex items-center gap-3 rounded-lg border bg-card p-3 soft-shadow animate-in fade-in slide-in-from-bottom-8 duration-700" style={{ animationDelay: `${index * 150}ms` }}>
                                 <item.icon className="h-6 w-6 text-primary" />
                                 <span className="text-sm font-semibold text-muted-foreground">{item.title}</span>
                             </div>
                         ))}
                     </div>
-                    <Card className="mt-8 bg-secondary border-primary/10">
+                    <Card className="mt-8 bg-secondary border-primary/10 animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: '450ms' }}>
                         <CardContent className="p-6 flex items-start gap-4">
                             <Quote className="h-8 w-8 text-primary/50 flex-shrink-0 mt-1" />
                             <blockquote className="text-lg italic text-muted-foreground">"{deepak.quote}"</blockquote>
@@ -140,12 +140,12 @@ export default function DeepakYadavPage() {
 
             {/* Education Section for Deepak */}
             <div className="pt-20">
-                <h3 className="text-center font-headline text-2xl font-bold text-accent md:text-3xl mb-16">
+                <h3 className="text-center font-headline text-2xl font-bold text-accent md:text-3xl mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
                     Education & Credentials
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     {deepak.education.map((edu, index) => (
-                        <Card key={index} className="border bg-card p-6 soft-shadow rounded-3xl">
+                        <Card key={index} className="border bg-card p-6 soft-shadow rounded-3xl animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: `${index * 150}ms` }}>
                             <div className="flex items-center gap-4 mb-4">
                                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                                     <edu.icon className="h-8 w-8" />
@@ -186,15 +186,17 @@ export default function DeepakYadavPage() {
         <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10 opacity-50"></div>
         <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-accent/10 rounded-full blur-3xl -z-10 opacity-50"></div>
         <div className="container relative z-10 text-center">
-            <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl mb-8">Our Mission</h2>
-            <Card className="max-w-4xl mx-auto p-8 border-primary/20 bg-card/60 backdrop-blur-sm soft-shadow">
-              <CardContent className="p-0">
-                <Target className="h-12 w-12 text-primary mx-auto mb-6" />
-                <p className="text-2xl font-headline text-foreground">
-                  To drive India’s growth through Agritech, Robotics, and AI Automation by building intelligent logistics and scalable digital innovation ecosystems.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="animate-in fade-in slide-in-from-bottom-8 duration-700">
+              <h2 className="font-headline text-3xl font-bold text-accent md:text-4xl mb-8">Our Mission</h2>
+              <Card className="max-w-4xl mx-auto p-8 border-primary/20 bg-card/60 backdrop-blur-sm soft-shadow">
+                <CardContent className="p-0">
+                  <Target className="h-12 w-12 text-primary mx-auto mb-6" />
+                  <p className="text-2xl font-headline text-foreground">
+                    To drive India’s growth through Agritech, Robotics, and AI Automation by building intelligent logistics and scalable digital innovation ecosystems.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
         </div>
       </section>
     </div>
