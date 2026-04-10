@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -12,7 +13,7 @@ export default function PortfolioGallery() {
           <div
             key={project.slug}
             id={project.slug}
-            className="group relative h-96 overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 animate-in fade-in slide-in-from-bottom-12 duration-700"
+            className="group relative h-96 overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-12 duration-700"
             style={{ animationDelay: `${index * 150}ms` }}
           >
             <Image

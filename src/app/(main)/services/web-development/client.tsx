@@ -186,7 +186,7 @@ export default function WebDevelopmentClient() {
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                         {webProjects.map((project) => (
                             <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
-                                <div className="relative h-[450px] overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl">
+                                <div className="relative h-[450px] overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:-translate-y-2">
                                     <Image
                                         src={project.image.imageUrl}
                                         alt={project.title}
@@ -238,13 +238,13 @@ export default function WebDevelopmentClient() {
 
                     {/* Right Side (Visual Hero) */}
                     <div className="relative h-[500px] w-full md:h-[600px] animate-in fade-in zoom-in-90 duration-700">
-                        <div className="relative h-full w-full overflow-hidden rounded-lg border bg-card p-2 shadow-sm transition-all duration-300 group-hover:shadow-xl">
+                        <div className="group relative h-full w-full overflow-hidden rounded-lg border bg-card p-2 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                             {detailImage && (
                                 <Image
                                     src={detailImage.imageUrl}
                                     alt={detailImage.description}
                                     fill
-                                    className="rounded-md object-cover"
+                                    className="rounded-md object-cover transition-transform duration-500 group-hover:scale-105"
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                     data-ai-hint={detailImage.imageHint}
                                 />
@@ -264,7 +264,7 @@ export default function WebDevelopmentClient() {
                             <div key={step.title} className={cn("relative mb-12 flex items-center w-full", index % 2 === 0 ? "justify-start" : "justify-end")}>
                                 <div className={cn("w-1/2", index % 2 === 0 ? "pr-8" : "pl-8")}>
                                 <div className={cn(
-                                    "group relative overflow-hidden p-6 rounded-2xl border bg-card shadow-sm transition-all duration-300 hover:shadow-lg", 
+                                    "group relative overflow-hidden p-6 rounded-2xl border bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-2", 
                                     index % 2 === 0 ? "text-left" : "text-right"
                                 )}>
                                     <div className={cn("absolute top-0 font-headline text-8xl font-bold text-primary/10 -translate-y-4 transition-transform duration-300 group-hover:scale-110", index % 2 === 0 ? "right-0 translate-x-4" : "left-0 -translate-x-4")}>
@@ -293,7 +293,7 @@ export default function WebDevelopmentClient() {
                     <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-foreground">Technologies We Use</h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {technologies.map((tech) => (
-                        <div key={tech.name} className="group relative rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:-translate-y-1">
+                        <div key={tech.name} className="group relative rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:-translate-y-2">
                             <div className="relative flex flex-col items-center justify-center gap-4">
                                 <tech.icon className="h-10 w-10 text-foreground/80 transition-all duration-300 group-hover:text-primary" />
                                 <p className="font-semibold text-sm text-center uppercase tracking-wider text-foreground">{tech.name}</p>
@@ -313,7 +313,7 @@ export default function WebDevelopmentClient() {
                         <p className="mt-4 text-lg text-muted-foreground">Our web development services are perfect for organizations that need a powerful, reliable, and scalable online presence.</p>
                         <div className="mt-8 grid grid-cols-1 gap-6">
                             {whoIsThisFor.map((item) => (
-                                <div key={item.title} className="group relative rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-xl">
+                                <div key={item.title} className="group relative rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:-translate-y-2">
                                     <div className="relative flex items-start gap-6">
                                         <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/30">
                                             <item.icon className="h-8 w-8" />
@@ -333,7 +333,7 @@ export default function WebDevelopmentClient() {
                         <h2 className="font-headline text-3xl font-bold md:text-4xl text-center md:text-left text-foreground">Results & Impact</h2>
                         <div className="space-y-6">
                             {results.map((stat) => (
-                                <div key={stat.label} className="group relative rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-xl">
+                                <div key={stat.label} className="group relative rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:-translate-y-2">
                                     <div className="relative flex items-center justify-between gap-4">
                                         <p className="font-headline text-5xl font-bold text-primary">{stat.value}</p>
                                         <p className="text-right text-lg font-medium text-muted-foreground">{stat.label}</p>
@@ -371,7 +371,7 @@ export default function WebDevelopmentClient() {
                             </Link>
                         </Button>
                         <Button asChild size="lg" variant="outline">
-                            <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
+                            <a href="https://wa.me/919532758070" target="_blank" rel="noopener noreferrer">
                                 <WhatsAppIcon />
                                 WhatsApp Us
                             </a>

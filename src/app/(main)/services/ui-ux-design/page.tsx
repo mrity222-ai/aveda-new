@@ -115,7 +115,7 @@ export default function UiUxDesignPage() {
                       
                       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
                           {processSteps.map((step) => (
-                              <div key={step.title} className="group relative overflow-hidden rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/70 hover:shadow-xl hover:shadow-primary/10">
+                              <div key={step.title} className="group relative overflow-hidden rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/70 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-2">
                                 <div className="relative">
                                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110">
                                     <step.icon className="h-6 w-6" />
@@ -154,7 +154,7 @@ export default function UiUxDesignPage() {
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                         {uiuxProjects.map((project) => (
                             <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
-                                <div className="relative h-[450px] overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl">
+                                <div className="relative h-[450px] overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:-translate-y-2">
                                     <Image
                                         src={project.image.imageUrl}
                                         alt={project.title}
@@ -185,7 +185,7 @@ export default function UiUxDesignPage() {
                     <h2 className="font-headline text-3xl font-bold md:text-4xl mb-16 text-foreground">Tools We Use</h2>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {tools.map((tool) => (
-                        <div key={tool.name} className="group relative rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:-translate-y-1">
+                        <div key={tool.name} className="group relative rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:-translate-y-2">
                             <div className="relative flex flex-col items-center justify-center gap-4">
                                 <div className="flex h-20 w-20 items-center justify-center">
                                     <tool.icon className="h-10 w-10 text-foreground/80 transition-all duration-300 group-hover:text-primary" />
@@ -223,7 +223,7 @@ export default function UiUxDesignPage() {
                            </Link>
                        </Button>
                        <Button asChild size="lg" variant="outline">
-                           <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
+                           <a href="https://wa.me/919532758070" target="_blank" rel="noopener noreferrer">
                                <WhatsAppIcon />
                                WhatsApp Us
                            </a>

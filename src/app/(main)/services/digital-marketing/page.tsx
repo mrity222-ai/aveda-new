@@ -93,7 +93,7 @@ export default function DigitalMarketingPage() {
                             <Link href="/services/digital-marketing/pricing">View Pricing Plans</Link>
                         </Button>
                         <Button asChild size="lg" variant="outline">
-                            <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
+                            <a href="https://wa.me/919532758070" target="_blank" rel="noopener noreferrer">
                                 <WhatsAppIcon />
                                 WhatsApp Us
                             </a>
@@ -118,15 +118,15 @@ export default function DigitalMarketingPage() {
                         </p>
                         {/* Stats */}
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-                            <div className="rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg">
+                            <div className="rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:-translate-y-2">
                                 <h3 className="font-headline text-4xl font-bold text-primary">100K+</h3>
                                 <p className="mt-2 text-muted-foreground">Reach Generated</p>
                             </div>
-                            <div className="rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg">
+                            <div className="rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:-translate-y-2">
                                 <h3 className="font-headline text-4xl font-bold text-primary">200%</h3>
                                 <p className="mt-2 text-muted-foreground">Avg. ROI</p>
                             </div>
-                            <div className="rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg">
+                            <div className="rounded-xl border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:-translate-y-2">
                                 <h3 className="font-headline text-4xl font-bold text-primary">50+</h3>
                                 <p className="mt-2 text-muted-foreground">Happy Clients</p>
                             </div>
@@ -162,7 +162,7 @@ export default function DigitalMarketingPage() {
                       
                       <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
                           {includedServices.map((service) => (
-                              <div key={service.text} className="group relative rounded-lg border bg-card p-4 transition-all duration-300 hover:border-primary/40 hover:shadow-lg">
+                              <div key={service.text} className="group relative rounded-lg border bg-card p-4 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:-translate-y-2">
                                 <div className="flex items-center gap-4">
                                   <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                                     <service.icon className="h-5 w-5" />
@@ -189,7 +189,7 @@ export default function DigitalMarketingPage() {
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                         {marketingProjects.map((project) => (
                             <Link key={project.slug} href={`/works#${project.slug}`} className="group block">
-                                <div className="relative h-[450px] overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl">
+                                <div className="relative h-[450px] overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:-translate-y-2">
                                     <Image
                                         src={project.image.imageUrl}
                                         alt={project.title}
@@ -239,7 +239,7 @@ export default function DigitalMarketingPage() {
                             </Link>
                         </Button>
                         <Button asChild size="lg" variant="outline">
-                            <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
+                            <a href="https://wa.me/919532758070" target="_blank" rel="noopener noreferrer">
                                 <WhatsAppIcon />
                                 WhatsApp Us
                             </a>

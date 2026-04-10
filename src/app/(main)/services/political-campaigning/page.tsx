@@ -215,12 +215,12 @@ export default function PoliticalCampaigningPage() {
                             const image = PlaceHolderImages.find((img) => img.id === imageId);
                             if (!image) return null;
                             return (
-                                <div key={image.id} className="group relative h-96 overflow-hidden rounded-2xl border bg-card shadow-lg transition-all duration-500 hover:shadow-primary/20 hover:scale-105">
+                                <div key={image.id} className="group relative h-96 overflow-hidden rounded-2xl border bg-card shadow-lg transition-all duration-500 hover:shadow-primary/20 hover:-translate-y-2">
                                     <Image
                                         src={image.imageUrl}
                                         alt={image.description}
                                         fill
-                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                                         sizes="(max-width: 768px) 100vw, 33vw"
                                         data-ai-hint={image.imageHint}
                                     />
@@ -251,7 +251,7 @@ export default function PoliticalCampaigningPage() {
                         {/* Left Cards */}
                         <div className="md:col-span-3 space-y-8">
                             {ourServicesWithIcons.slice(0, 4).map((service) => (
-                                <div key={service.title} className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:-translate-y-1">
+                                <div key={service.title} className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:-translate-y-2">
                                     <div className="relative flex items-center gap-4">
                                         <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                                             <service.icon className="h-5 w-5" />
@@ -280,7 +280,7 @@ export default function PoliticalCampaigningPage() {
                         {/* Right Cards */}
                         <div className="md:col-span-3 space-y-8">
                             {ourServicesWithIcons.slice(4, 8).map((service) => (
-                                <div key={service.title} className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:-translate-y-1">
+                                <div key={service.title} className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:-translate-y-2">
                                     <div className="relative flex items-center gap-4">
                                         <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                                             <service.icon className="h-5 w-5" />
@@ -405,7 +405,7 @@ export default function PoliticalCampaigningPage() {
                                 <div className={cn("w-1/2", index % 2 === 0 ? "pr-12" : "pl-12")}>
                                     <div className={cn(
                                         "group relative overflow-hidden p-6 rounded-2xl border border-primary/20 bg-card/50 backdrop-blur-sm shadow-lg", 
-                                        "transition-all duration-300 hover:shadow-primary/20 hover:border-primary/50 hover:scale-105"
+                                        "transition-all duration-300 hover:shadow-primary/20 hover:border-primary/50 hover:-translate-y-2"
                                     )}>
                                         <div className={cn(
                                             "absolute top-0 font-headline text-8xl font-bold text-primary opacity-10 drop-shadow-[0_0_8px_hsl(var(--primary)/0.5)] -translate-y-4 transition-all duration-300 group-hover:scale-110 group-hover:opacity-20", 
@@ -494,7 +494,7 @@ export default function PoliticalCampaigningPage() {
                             </Link>
                         </Button>
                         <Button asChild size="lg" variant="outline">
-                            <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
+                            <a href="https://wa.me/919532758070" target="_blank" rel="noopener noreferrer">
                                 <WhatsAppIcon />
                                 WhatsApp Us
                             </a>

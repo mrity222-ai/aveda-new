@@ -154,7 +154,7 @@ export default function AppDevelopmentPage() {
                     <h2 className="font-headline text-3xl font-bold md:text-4xl mb-12 text-foreground">What We Build</h2>
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {whatWeBuild.map((item) => (
-                        <div key={item.title} className="group rounded-xl border bg-card p-8 text-center transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:-translate-y-2">
+                        <div key={item.title} className="group rounded-xl border bg-card p-8 text-center transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:-translate-y-2">
                             <div className="flex justify-center">
                                 <div className="relative flex h-20 w-20 items-center justify-center rounded-full">
                                     <div className="absolute inset-0 rounded-full bg-primary/10 blur-lg transition-all duration-300 group-hover:blur-xl"></div>
@@ -214,7 +214,7 @@ export default function AppDevelopmentPage() {
                             <div key={step.title} className={cn("relative mb-12 flex items-center w-full", index % 2 === 0 ? "justify-start" : "justify-end")}>
                                 <div className={cn("w-1/2", index % 2 === 0 ? "pr-8" : "pl-8")}>
                                 <div className={cn(
-                                    "group relative overflow-hidden p-6 rounded-lg border bg-card shadow-sm transition-all duration-300 hover:shadow-lg", 
+                                    "group relative overflow-hidden p-6 rounded-lg border bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-2", 
                                     index % 2 === 0 ? "text-left" : "text-right"
                                 )}>
                                     <div className={cn("absolute top-0 font-headline text-8xl font-bold text-primary/10 -translate-y-4 transition-transform duration-300 group-hover:scale-110", index % 2 === 0 ? "right-0 translate-x-4" : "left-0 -translate-x-4")}>

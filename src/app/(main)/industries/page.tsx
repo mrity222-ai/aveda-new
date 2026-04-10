@@ -272,11 +272,11 @@ export default function IndustriesPage() {
               <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2 hidden lg:block"></div>
                 {processSteps.map((step, index) => (
-                    <div key={step.title} className="relative flex flex-col items-center text-center animate-in fade-in slide-in-from-bottom-16 duration-500" style={{ animationDelay: `${index * 150}ms`}}>
+                    <div key={step.title} className="relative flex flex-col items-center text-center animate-in fade-in slide-in-from-bottom-16 duration-500 transition-all duration-300 hover:-translate-y-2" style={{ animationDelay: `${index * 150}ms`}}>
                         <div className="z-10 flex h-20 w-20 items-center justify-center rounded-full border-4 border-secondary bg-primary text-primary-foreground shadow-lg">
                             <step.icon className="h-10 w-10" />
                         </div>
-                         <div className="mt-[-2.5rem] pt-12 pb-6 px-6 rounded-2xl border bg-card w-full soft-shadow">
+                         <div className="mt-[-2.5rem] pt-12 pb-6 px-6 rounded-2xl border bg-card w-full soft-shadow hover:shadow-xl">
                              <p className="font-headline text-lg font-bold text-primary">Step {index+1}</p>
                             <h3 className="mt-2 font-headline text-xl font-semibold text-accent">{step.title}</h3>
                             <p className="mt-2 text-muted-foreground text-sm">{step.description}</p>

@@ -176,7 +176,7 @@ export default function SeoOptimizationPage() {
                             <Link href="/contact?service=SEO+Optimization">Get Free Local SEO Audit</Link>
                         </Button>
                         <Button asChild size="lg" variant="outline">
-                            <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
+                            <a href="https://wa.me/919532758070" target="_blank" rel="noopener noreferrer">
                                 <WhatsAppIcon />
                                 WhatsApp Us
                             </a>
@@ -192,7 +192,7 @@ export default function SeoOptimizationPage() {
                     <p className="text-muted-foreground max-w-2xl mx-auto mb-12">AI-powered marketing plans designed for growth, visibility, and influence.</p>
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {whyLocalSeo.map((value) => (
-                        <div key={value.title} className="group rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 shadow-lg hover:shadow-xl hover:-translate-y-1">
+                        <div key={value.title} className="group rounded-2xl border bg-card p-6 transition-all duration-300 hover:border-primary/40 shadow-lg hover:shadow-xl hover:-translate-y-2">
                             <div className="relative flex flex-col items-center text-center">
                                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary ring-8 ring-primary/5 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/30">
                                     <value.icon className="h-8 w-8 transition-transform duration-300 group-hover:animate-pulse" />
@@ -227,7 +227,7 @@ export default function SeoOptimizationPage() {
                         <p className="mt-4 text-lg text-muted-foreground">GEO tagging embeds precise location data into your website's content, images, and posts. This tells search engines exactly where you are and what areas you serve, giving you a powerful advantage in local search results.</p>
                         
                         <div className="mt-8 grid gap-4">
-                            <div className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 shadow-lg">
+                            <div className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 shadow-lg hover:shadow-xl hover:-translate-y-2">
                                 <div className="relative flex items-center gap-4">
                                     <MapPin className="h-6 w-6 text-primary flex-shrink-0"/>
                                     <div>
@@ -236,7 +236,7 @@ export default function SeoOptimizationPage() {
                                     </div>
                                 </div>
                             </div>
-                             <div className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 shadow-lg">
+                             <div className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 shadow-lg hover:shadow-xl hover:-translate-y-2">
                                 <div className="relative flex items-center gap-4">
                                     <Crosshair className="h-6 w-6 text-primary flex-shrink-0"/>
                                     <div>
@@ -245,7 +245,7 @@ export default function SeoOptimizationPage() {
                                     </div>
                                 </div>
                             </div>
-                             <div className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 shadow-lg">
+                             <div className="group relative rounded-xl border bg-card p-4 transition-all duration-300 hover:border-primary/40 shadow-lg hover:shadow-xl hover:-translate-y-2">
                                 <div className="relative flex items-center gap-4">
                                     <Rocket className="h-6 w-6 text-primary flex-shrink-0"/>
                                     <div>
@@ -299,7 +299,7 @@ export default function SeoOptimizationPage() {
                                 <div className={cn("w-1/2", index % 2 === 0 ? "pr-12" : "pl-12")}>
                                     <div className={cn(
                                         "group relative overflow-hidden p-6 rounded-2xl border bg-card shadow-lg", 
-                                        "transition-all duration-300 hover:shadow-primary/20 hover:border-primary/50"
+                                        "transition-all duration-300 hover:shadow-primary/20 hover:border-primary/50 hover:-translate-y-2"
                                     )}>
                                         <div className={cn("absolute top-0 font-headline text-8xl font-bold text-primary/10 -translate-y-4 transition-transform duration-300 group-hover:scale-110 group-hover:text-primary/20", index % 2 === 0 ? "right-0 translate-x-4" : "left-0 -translate-x-4")}>
                                             0{index + 1}
@@ -323,13 +323,13 @@ export default function SeoOptimizationPage() {
                     <div className="mt-20 text-center">
                         <h3 className="font-headline text-2xl font-bold text-accent">Live Results Counter</h3>
                         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
-                            <div className="rounded-2xl border bg-card p-6 soft-shadow">
+                            <div className="rounded-2xl border bg-card p-6 soft-shadow transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                                 <p className="font-headline text-5xl font-bold text-primary">
                                     <AnimatedNumber value={12450} />+
                                 </p>
                                 <p className="mt-2 text-muted-foreground">Total Local Leads Generated</p>
                             </div>
-                            <div className="rounded-2xl border bg-card p-6 soft-shadow">
+                            <div className="rounded-2xl border bg-card p-6 soft-shadow transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                                 <p className="font-headline text-5xl font-bold text-primary">
                                     <AnimatedNumber value={500} />+
                                 </p>
@@ -347,13 +347,13 @@ export default function SeoOptimizationPage() {
                     <p className="text-muted-foreground max-w-2xl mx-auto mb-12">
                         Visualize your local dominance with our real-time dashboard, tracking every pin, keyword, and conversion.
                     </p>
-                    <div className="relative aspect-video max-w-5xl mx-auto rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl shadow-primary/10 bg-card p-2">
+                    <div className="relative aspect-video max-w-5xl mx-auto rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl shadow-primary/10 bg-card p-2 group transition-all duration-300 hover:-translate-y-2 hover:shadow-primary/20">
                         {futuristicDashboardImage && (
                             <Image
                                 src={futuristicDashboardImage.imageUrl}
                                 alt={futuristicDashboardImage.description}
                                 fill
-                                className="object-cover rounded-lg"
+                                className="object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
                                 data-ai-hint={futuristicDashboardImage.imageHint}
                             />
                         )}
@@ -387,7 +387,7 @@ export default function SeoOptimizationPage() {
                             </Link>
                         </Button>
                         <Button asChild size="lg" variant="outline">
-                            <a href="https://wa.me/919012887697" target="_blank" rel="noopener noreferrer">
+                            <a href="https://wa.me/919532758070" target="_blank" rel="noopener noreferrer">
                                 <WhatsAppIcon />
                                 WhatsApp Us
                             </a>

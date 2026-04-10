@@ -129,8 +129,6 @@ const includedFeatures = [
   ]
 
 export default function PricingPage() {
-  const [hoveredPlan, setHoveredPlan] = useState<string | null>(null);
-
   const whyAveda = [
     { title: 'AI-First Digital Agency', icon: BrainCircuit},
     { title: 'Business + Political Expertise', icon: Briefcase},
@@ -172,20 +170,13 @@ export default function PricingPage() {
             {pricingPlans.map((plan) => (
               <div
                 key={plan.name}
-                onMouseEnter={() => setHoveredPlan(plan.name)}
-                onMouseLeave={() => setHoveredPlan(null)}
-                className={cn(
-                  'transition-all duration-300',
-                  hoveredPlan && hoveredPlan !== plan.name ? 'blur-sm scale-95' : '',
-                  hoveredPlan === plan.name ? 'lg:scale-105' : ''
-                )}
               >
                 <Card
                   key={plan.name}
                   className={cn(
-                    'relative flex h-full flex-col border bg-card transition-all duration-300',
+                    'relative flex h-full flex-col border bg-card transition-all duration-300 hover:shadow-xl hover:-translate-y-2',
                     plan.popular
-                      ? 'border-2 border-primary shadow-xl shadow-primary/10'
+                      ? 'border-2 border-primary shadow-xl shadow-primary/10 lg:scale-105'
                       : 'border-border'
                   )}
                 >

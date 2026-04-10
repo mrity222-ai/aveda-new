@@ -33,7 +33,7 @@ export default function AboutUs() {
               Aveda Technologies is a Lucknow-based IT startup delivering enterprise-grade AI solutions, web development, mobile applications, ERP systems, and digital marketing services across India. As a fast-growing IT company in Lucknow, we help startups, SMEs, and large enterprises build scalable digital systems powered by Artificial Intelligence and automation.
             </p>
             <div className="flex flex-wrap items-center gap-4">
-               <div className="flex items-center gap-3 rounded-full border bg-card px-4 py-2 transition-all hover:border-accent hover:shadow-lg hover:shadow-accent/10">
+               <div className="flex items-center gap-3 rounded-full border bg-card px-4 py-2 transition-all duration-300 hover:border-accent hover:shadow-lg hover:shadow-accent/10 hover:-translate-y-2">
                   <Globe className="h-6 w-6 text-accent" />
                   <span className="font-semibold">1+ Countries Served</span>
                </div>

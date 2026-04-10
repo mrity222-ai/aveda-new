@@ -81,7 +81,7 @@ export default function AiAutomationPreview() {
             </div>
             
             {/* Results Bar */}
-            <div className="rounded-2xl border bg-secondary/50 p-6 soft-shadow">
+            <div className="rounded-2xl border bg-secondary/50 p-6 soft-shadow transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
               <ul className="grid grid-cols-1 gap-4 text-sm sm:grid-cols-2">
                 {results.map((result) => (
                   <li key={result} className="flex items-center gap-2">

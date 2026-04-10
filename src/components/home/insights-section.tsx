@@ -34,7 +34,7 @@ export default function InsightsSection() {
         {/* Grid Layout */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Left Featured Card */}
-          <div className="group relative lg:col-span-2 rounded-3xl border bg-card p-1 transition-all duration-300 soft-shadow hover:border-primary animate-in fade-in slide-in-from-left-12 duration-700">
+          <div className="group relative lg:col-span-2 rounded-3xl border bg-card p-1 transition-all duration-300 soft-shadow hover:border-primary hover:shadow-xl hover:-translate-y-2 animate-in fade-in slide-in-from-left-12 duration-700">
             <div className="relative overflow-hidden rounded-[22px] bg-card">
               {featuredImage && (
                 <div className="relative h-80 w-full">
@@ -42,7 +42,7 @@ export default function InsightsSection() {
                     src={featuredImage.imageUrl}
                     alt={featuredImage.description}
                     fill
-                    className="object-cover transition-opacity duration-300 group-hover:opacity-80"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                     data-ai-hint={featuredImage.imageHint}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
@@ -84,7 +84,7 @@ export default function InsightsSection() {
           <div className="space-y-8 animate-in fade-in slide-in-from-right-12 duration-700">
             {otherPosts.map((post, index) => (
               <Link key={post.slug} href={`/insides#${post.slug}`} className="group block">
-                <div className="relative rounded-3xl border bg-card p-6 transition-all duration-300 soft-shadow hover:border-primary hover:-translate-y-1">
+                <div className="relative rounded-3xl border bg-card p-6 transition-all duration-300 soft-shadow hover:border-primary hover:-translate-y-2 hover:shadow-xl">
                   <div className="relative flex items-center justify-between">
                     <div>
                       <h4 className="text-xl font-bold transition-colors group-hover:text-primary bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">

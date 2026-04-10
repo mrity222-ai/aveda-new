@@ -244,7 +244,7 @@ export default function AboutPage() {
                             src={image.imageUrl}
                             alt={`Portrait of ${leader.name}, ${leader.designation}`}
                             fill
-                            className="rounded-full object-cover shadow-lg transition-all duration-300 group-hover:shadow-primary/30 group-hover:scale-105"
+                            className="rounded-full object-cover shadow-lg transition-all duration-500 group-hover:shadow-primary/30 group-hover:scale-105"
                             data-ai-hint={image.imageHint}
                             />
                         </div>
@@ -282,14 +282,14 @@ export default function AboutPage() {
             {teamMembers.map((member, index) => {
               const image = PlaceHolderImages.find((p) => p.id === member.imageId);
               return (
-                <div key={member.name} className="flex flex-col items-center animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: `${index * 150}ms` }}>
-                  <div className={`relative w-48 h-56 rounded-t-full overflow-hidden ${member.bgColor}`}>
+                <div key={member.name} className="group flex flex-col items-center animate-in fade-in slide-in-from-bottom-12 duration-700 transition-all hover:-translate-y-2" style={{ animationDelay: `${index * 150}ms` }}>
+                  <div className={`relative w-48 h-56 rounded-t-full overflow-hidden ${member.bgColor} shadow-lg group-hover:shadow-xl transition-all duration-300`}>
                     {image && (
                       <Image
                         src={image.imageUrl}
                         alt={`Portrait of ${member.name}`}
                         fill
-                        className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                         data-ai-hint={image.imageHint}
                       />
                     )}
