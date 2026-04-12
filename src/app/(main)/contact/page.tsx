@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Clock, BrainCircuit, UserCheck, Briefcase, MoveRight, Globe } from 'lucide-react';
@@ -30,8 +31,8 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+91 9012887697',
-      href: 'tel:+919012887697',
+      value: '+91 9532758070',
+      href: 'tel:+919532758070',
     },
     {
         icon: Clock,

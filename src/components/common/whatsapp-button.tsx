@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 
 const WhatsAppIcon = () => (
@@ -15,7 +16,7 @@ const WhatsAppIcon = () => (
 export function WhatsAppButton() {
     return (
         <Link 
-            href="https://wa.me/919012887697"
+            href="https://wa.me/919532758070"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat on WhatsApp"

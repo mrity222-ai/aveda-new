@@ -119,11 +119,11 @@ export default function Footer() {
                 <span>info@avedatechnologies.com</span>
               </a>
               <a
-                href="tel:+919012887697"
+                href="tel:+919532758070"
                 className="flex items-center gap-3 text-sm text-accent-foreground/80 transition-colors hover:text-accent-foreground"
               >
                 <Phone className="h-4 w-4 text-primary" />
-                <span>+91 9012887697</span>
+                <span>+91 9532758070</span>
               </a>
               <Button asChild className="mt-6 w-full" size="lg">
                 <Link href="/contact">
