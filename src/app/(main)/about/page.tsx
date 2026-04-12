@@ -75,9 +75,9 @@ export default function AboutPage() {
 
   const teamMembers = [
     {
-      name: 'Priyanshu',
-      role: 'Web Developer',
-      imageId: 'testimonial-1',
+      name: 'Saloni Yadav',
+      role: 'IT HEAD',
+      imageId: 'testimonial-3',
       bgColor: 'bg-primary/10',
     },
     {
