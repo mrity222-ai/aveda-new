@@ -97,9 +97,6 @@ export default function ContactPage() {
                     <Button asChild size="lg">
                     <Link href="#contact-form">Get Started</Link>
                     </Button>
-                    <Button asChild size="lg" variant="outline">
-                    <Link href="#">Book Free Consultation</Link>
-                    </Button>
                 </div>
             </div>
         </section>
