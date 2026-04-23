@@ -14,12 +14,12 @@ export default function PortfolioPreview() {
     <section className="relative overflow-hidden bg-secondary py-20 md:py-28">
       <div className="container relative z-10">
         <div className="mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
-          <p className="mb-2 font-semibold text-primary">Our Latest Work</p>
+          <p className="mb-2 font-semibold text-primary">Our Portfolio</p>
           <h2 className="text-4xl font-bold tracking-tight text-accent md:text-5xl">
             Showcasing Digital Excellence
           </h2>
           <p className="mt-4 text-lg text-foreground/80">
-            A showcase of our recent work.
+            A showcase of our recent projects.
           </p>
         </div>
 

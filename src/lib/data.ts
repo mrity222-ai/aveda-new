@@ -1,3 +1,4 @@
+
 import type { ImagePlaceholder } from './placeholder-images';
 import { PlaceHolderImages } from './placeholder-images';
 import {
@@ -34,7 +35,7 @@ export const navLinks = [
     isMegaMenu: true,
   },
   { href: '/about', label: 'About' },
-  { href: '/works', label: 'Works' },
+  { href: '/works', label: 'Portfolio' },
   { href: '/insides', label: 'Insights' },
   { href: '/industries', label: 'Industries' },
   { href: '/case-studies', label: 'Case Studies' },
@@ -324,7 +325,7 @@ export const footerLinks = {
   quick: [
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },
-    { href: '/works', label: 'Works' },
+    { href: '/works', label: 'Portfolio' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
     { href: '/case-studies', label: 'Case Studies' },

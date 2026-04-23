@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -97,7 +98,7 @@ export default function UiUxDesignPage() {
                             <Link href="/contact?service=UI%2FUX+Design">Get a Quote</Link>
                         </Button>
                         <Button asChild size="lg" variant="outline">
-                            <Link href="/works">View Our Work</Link>
+                            <Link href="/works">View Our Portfolio</Link>
                         </Button>
                     </div>
                 </div>

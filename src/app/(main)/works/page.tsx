@@ -1,17 +1,18 @@
+
 import type { Metadata } from 'next';
 import PortfolioGallery from '@/components/works/portfolio-gallery';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
-  title: 'Our Work',
+  title: 'Portfolio',
   description: 'Explore our portfolio to see the impact we have made for our clients across various industries with our web development, AI, and marketing solutions.',
   openGraph: {
-    title: 'Our Work',
+    title: 'Portfolio',
     description: 'Explore our portfolio to see the impact we have made for our clients across various industries with our web development, AI, and marketing solutions.',
   },
   twitter: {
-    title: 'Our Work',
+    title: 'Portfolio',
     description: 'Explore our portfolio to see the impact we have made for our clients across various industries with our web development, AI, and marketing solutions.',
   }
 };
@@ -35,7 +36,7 @@ export default function WorksPage() {
         </div>
         <div className="container relative z-10 text-center">
           <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-6xl animate-blur-in">
-            Our Work
+            Portfolio
           </h1>
           <p className="mt-6 text-lg text-white/90">
             We are proud of the solutions we've delivered. Explore our portfolio

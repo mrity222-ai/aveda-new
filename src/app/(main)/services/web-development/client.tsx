@@ -145,7 +145,7 @@ export default function WebDevelopmentClient() {
                             <Link href="/contact">Get Free Website Consultation</Link>
                         </Button>
                         <Button asChild size="lg" variant="outline">
-                            <Link href="/works">View Our Work</Link>
+                            <Link href="/works">View Our Portfolio</Link>
                         </Button>
                     </div>
                 </div>
