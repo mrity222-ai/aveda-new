@@ -22,7 +22,7 @@ export default function Footer() {
   ];
   
   const socialLinks = [
-    { name: 'Instagram', icon: Instagram, href: '#' },
+    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/avedatechnologies/' },
     { name: 'LinkedIn', icon: Linkedin, href: '#' },
     { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/Avedatechnologies.in/' },
   ];
