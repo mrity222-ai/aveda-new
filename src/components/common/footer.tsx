@@ -14,6 +14,17 @@ import {
 import { Logo } from './logo';
 import { Separator } from '@/components/ui/separator';
 
+const PinterestIcon = () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      className="h-5 w-5"
+      fill="currentColor"
+    >
+      <path d="M12.017 0C5.383 0 0 5.383 0 12.017c0 5.078 3.068 9.387 7.37 11.085.107-.4.187-1.016.187-1.016s-.42-.685-.42-1.702c0-1.612.937-2.79 2.071-2.79 1.001 0 1.488.756 1.488 1.671 0 1.025-.653 2.576-1.001 4.001-.29 1.187.576 2.096 1.702 2.096 2.071 0 3.654-2.223 3.654-5.342 0-2.79-1.99-4.796-4.99-4.796-3.29 0-5.242 2.44-5.242 4.796 0 1 .37 2.086.887 2.637a.36.36 0 0 1 .087.356c-.05.176-.176.712-.222.863-.075.25-.337.356-.534.222-1.125-.437-1.875-1.95-1.875-3.193 0-2.585 2.1-4.99 6.02-4.99 3.512 0 6.255 2.5 6.255 5.625 0 3.825-2.25 6.75-5.25 6.75-1.062 0-2.062-.562-2.437-1.218l-.813 3.063c-.25.938-.938 2.25-1.438 3.125C9.938 23.375 10.938 24 12.017 24c6.633 0 12.017-5.383 12.017-12.017S18.65 0 12.017 0z" />
+    </svg>
+);
+
 export default function Footer() {
   const recognitionBadges = [
     { name: 'MSME Registered' },
@@ -25,6 +36,7 @@ export default function Footer() {
     { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/avedatechnologies/' },
     { name: 'LinkedIn', icon: Linkedin, href: '#' },
     { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/Avedatechnologies.in/' },
+    { name: 'Pinterest', icon: PinterestIcon, href: '#' },
   ];
 
   return (
@@ -45,7 +57,7 @@ export default function Footer() {
                   href={social.href}
                   className="text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  <social.icon className="h-5 w-5" />
+                  <social.icon />
                   <span className="sr-only">{social.name}</span>
                 </Link>
               ))}
