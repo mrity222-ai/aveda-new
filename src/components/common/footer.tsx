@@ -36,7 +36,7 @@ export default function Footer() {
     { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/avedatechnologies/' },
     { name: 'LinkedIn', icon: Linkedin, href: '#' },
     { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/Avedatechnologies.in/' },
-    { name: 'Pinterest', icon: PinterestIcon, href: 'https://in.pinterest.com/avedatechnologies/' },
+    { name: 'Pinterest', icon: PinterestIcon, href: 'https://pin.it/1HWPI86h4' },
   ];
 
   return (
