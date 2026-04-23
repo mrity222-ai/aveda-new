@@ -55,6 +55,9 @@ export const metadata: Metadata = {
     description: 'Transforming Ideas Into Powerful Digital Experiences.',
     images: ['/og-image.png'],
   },
+  other: {
+    'p:domain_verify': '5343518b3ab132692d1d264829d0beb7',
+  },
 };
 
 export default function RootLayout({
