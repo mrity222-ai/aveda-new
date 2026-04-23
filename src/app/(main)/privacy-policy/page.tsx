@@ -144,6 +144,24 @@ export default function PrivacyPolicyPage() {
                   info@avedatechnologies.com
                 </a>
               </div>
+              <div className="mt-8 border-t pt-8">
+                <h4 className="text-center font-headline text-lg font-semibold text-gray-800 mb-4">
+                  Other Policies
+                </h4>
+                <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-600">
+                  <a href="/terms-and-conditions" className="hover:text-primary">Terms of Service</a>
+                  <a href="#" className="hover:text-primary">Cookie Policy</a>
+                  <a href="#" className="hover:text-primary">Disclaimer</a>
+                  <a href="#" className="hover:text-primary">Anti-Bribery Policy</a>
+                  <a href="#" className="hover:text-primary">POSH Policy</a>
+                  <a href="#" className="hover:text-primary">Whistleblower Policy</a>
+                  <a href="#" className="hover:text-primary">Code of Conduct</a>
+                  <a href="#" className="hover:text-primary">Equal Opportunity</a>
+                  <a href="#" className="hover:text-primary">Grievance Redressal</a>
+                  <a href="#" className="hover:text-primary">Data Protection</a>
+                  <a href="#" className="hover:text-primary">Cookie Settings</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
