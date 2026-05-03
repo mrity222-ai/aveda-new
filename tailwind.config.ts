@@ -1,4 +1,3 @@
-
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -155,7 +154,11 @@ export default {
         'pulse-glow': {
           '0%, 100%': { opacity: '1', textShadow: '0 0 5px hsl(var(--primary)/0.5)' },
           '50%': { opacity: '0.7', textShadow: '0 0 15px hsl(var(--primary)/0.8)' },
-        }
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -172,7 +175,8 @@ export default {
         'gradient-shimmer': 'gradient-shimmer 3s linear infinite',
         'word-reveal': 'word-reveal 0.5s ease-out forwards',
         'blur-in': 'blur-in 1s ease-out forwards',
-        'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
+        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite'
       },
     },
   },
