@@ -1,5 +1,6 @@
 'use client';
 
+import * as React from 'react';
 import { 
   Phone, 
   Bot, 
@@ -7,7 +8,6 @@ import {
   RefreshCw, 
   Globe, 
   Zap, 
-  CheckCircle2, 
   ArrowRight, 
   PlayCircle, 
   MessageSquare,
@@ -15,7 +15,6 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
 
 const features = [
   { icon: Phone, title: 'Smart AI Call Handling', description: 'Intelligently routes and manages every inbound and outbound call.' },
@@ -33,6 +32,18 @@ const stats = [
 ];
 
 export default function AiCallingAgents() {
+  const [waveValues, setWaveValues] = React.useState<{ height: string; duration: string }[]>([]);
+
+  React.useEffect(() => {
+    // Generate random values only on the client to avoid hydration mismatch
+    setWaveValues(
+      [1, 2, 3, 4, 5].map(() => ({
+        height: `${20 + Math.random() * 40}px`,
+        duration: `${0.5 + Math.random()}s`,
+      }))
+    );
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-slate-950 py-24 lg:py-32 text-white">
       {/* Background Decorative Elements */}
@@ -75,7 +86,7 @@ export default function AiCallingAgents() {
             </div>
 
             <div className="flex flex-wrap gap-4 items-center">
-              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8 animate-pulse-glow">
+              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8">
                 <Link href="/contact?service=AI+Calling+Agents">
                   Start Free Trial <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -141,13 +152,13 @@ export default function AiCallingAgents() {
 
               {/* Sound Wave Animation */}
               <div className="absolute top-1/2 -right-4 -translate-y-1/2 flex items-center gap-1.5 h-12">
-                {[1, 2, 3, 4, 5].map((i) => (
+                {waveValues.length > 0 && waveValues.map((wave, i) => (
                   <div 
                     key={i} 
                     className="w-1.5 bg-blue-400/60 rounded-full animate-bounce" 
                     style={{ 
-                      height: `${20 + Math.random() * 40}px`,
-                      animationDuration: `${0.5 + Math.random()}s`,
+                      height: wave.height,
+                      animationDuration: wave.duration,
                       animationDelay: `${i * 0.1}s`
                     }} 
                   />
@@ -155,7 +166,7 @@ export default function AiCallingAgents() {
               </div>
 
               {/* Floating Interaction Icons */}
-              <div className="absolute top-10 left-10 h-10 w-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center shadow-lg animate-bounce duration-3s">
+              <div className="absolute top-10 left-10 h-10 w-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center shadow-lg animate-bounce">
                 <MessageSquare className="h-5 w-5 text-purple-400" />
               </div>
             </div>
