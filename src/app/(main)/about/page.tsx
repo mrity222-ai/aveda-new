@@ -78,6 +78,12 @@ export default function AboutPage() {
       bioLink: '/founders',
     },
     {
+      name: 'Priyashu Yadav',
+      designation: 'Business Growth Specialist',
+      imageId: 'testimonial-3',
+      bioLink: '#',
+    },
+    {
       name: 'Saloni Yadav',
       designation: 'IT Head',
       imageId: 'testimonial-1',
@@ -229,7 +235,7 @@ export default function AboutPage() {
               A global team building future-ready technology solutions.
             </p>
           </div>
-          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {leadership.map((leader, index) => {
               const image = PlaceHolderImages.find((p) => p.id === leader.imageId);
               return (
@@ -308,3 +314,4 @@ export default function AboutPage() {
     </div>
   );
 }
+
