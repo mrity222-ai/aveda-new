@@ -66,10 +66,28 @@ export default function AboutPage() {
 
   const leadership = [
     {
+      name: 'Deepak Yadav',
+      designation: 'Founder | Innovation & Growth Leader',
+      imageId: 'leader-deepak',
+      bioLink: '/deepak-yadav',
+    },
+    {
       name: 'Raj Mani Yadav',
       designation: 'AI & Agritech Innovation Leader',
       imageId: 'leader-raj',
       bioLink: '/founders',
+    },
+    {
+      name: 'Saloni Yadav',
+      designation: 'IT Head',
+      imageId: 'testimonial-1',
+      bioLink: '#',
+    },
+    {
+      name: 'Ajeet',
+      designation: 'Lead Web Developer',
+      imageId: 'testimonial-2',
+      bioLink: '#',
     }
   ];
 
@@ -211,28 +229,32 @@ export default function AboutPage() {
               A global team building future-ready technology solutions.
             </p>
           </div>
-          <div className="mt-16 grid grid-cols-1 gap-8 max-w-md mx-auto">
+          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {leadership.map((leader, index) => {
               const image = PlaceHolderImages.find((p) => p.id === leader.imageId);
               return (
                 <Card key={leader.name} className="group overflow-hidden text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 soft-shadow animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: `${index * 150}ms` }}>
                     <CardContent className="p-6">
-                        {image && (
-                        <div className="relative mx-auto mb-6 h-40 w-40">
-                            <Image
-                            src={image.imageUrl}
-                            alt={`Portrait of ${leader.name}, ${leader.designation}`}
-                            fill
-                            className="rounded-full object-cover shadow-lg transition-all duration-500 group-hover:shadow-primary/30 group-hover:scale-105"
-                            data-ai-hint={image.imageHint}
-                            />
+                        <div className="relative mx-auto mb-6 h-32 w-32">
+                            {image ? (
+                                <Image
+                                src={image.imageUrl}
+                                alt={`Portrait of ${leader.name}, ${leader.designation}`}
+                                fill
+                                className="rounded-full object-cover shadow-lg transition-all duration-500 group-hover:shadow-primary/30 group-hover:scale-105"
+                                data-ai-hint={image.imageHint}
+                                />
+                            ) : (
+                                <div className="h-full w-full rounded-full bg-muted flex items-center justify-center">
+                                    <Users className="h-12 w-12 text-muted-foreground" />
+                                </div>
+                            )}
                         </div>
-                        )}
-                        <h3 className="font-headline text-2xl font-bold text-accent">
+                        <h3 className="font-headline text-xl font-bold text-accent">
                             {leader.name}
                         </h3>
-                        <p className="mt-1 text-muted-foreground">{leader.designation}</p>
-                        <Button asChild variant="link" className="mt-4 text-primary">
+                        <p className="mt-1 text-sm text-muted-foreground">{leader.designation}</p>
+                        <Button asChild variant="link" className="mt-4 text-primary p-0">
                         <Link href={leader.bioLink}>
                             View Bio <MoveRight className="ml-2 h-4 w-4" />
                         </Link>
