@@ -241,7 +241,7 @@ export default function AboutPage() {
                                 src={image.imageUrl}
                                 alt={`Portrait of ${leader.name}, ${leader.designation}`}
                                 fill
-                                className="rounded-full object-cover shadow-lg transition-all duration-500 group-hover:shadow-primary/30 group-hover:scale-105"
+                                className="rounded-full object-cover grayscale shadow-lg transition-all duration-500 group-hover:grayscale-0 group-hover:shadow-primary/30 group-hover:scale-105"
                                 data-ai-hint={image.imageHint}
                                 />
                             ) : (
