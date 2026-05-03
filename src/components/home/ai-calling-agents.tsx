@@ -39,6 +39,13 @@ const stats = [
 
 export default function AiCallingAgents() {
   const mascotImg = PlaceHolderImages.find(img => img.id === 'ai-calling-baby');
+  const [mounted, setMounted] = React.useState(false);
+  const [waveHeights, setWaveHeights] = React.useState<number[]>([]);
+
+  React.useEffect(() => {
+    setMounted(true);
+    setWaveHeights(Array.from({ length: 12 }, () => Math.random()));
+  }, []);
 
   return (
     <section className="relative overflow-hidden bg-slate-950 py-24 lg:py-32 text-white">
@@ -128,7 +135,11 @@ export default function AiCallingAgents() {
                     <div 
                       key={i} 
                       className="w-1 bg-blue-400/60 rounded-full animate-bounce" 
-                      style={{ height: `${20 + Math.random() * 80}%`, animationDelay: `${i * 0.1}s`, animationDuration: '1s' }} 
+                      style={{ 
+                        height: mounted ? `${20 + (waveHeights[i] || 0.5) * 80}%` : '50%', 
+                        animationDelay: `${i * 0.1}s`, 
+                        animationDuration: '1s' 
+                      }} 
                     />
                   ))}
                 </div>
