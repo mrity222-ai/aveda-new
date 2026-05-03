@@ -73,27 +73,6 @@ export default function AboutPage() {
     }
   ];
 
-  const teamMembers = [
-    {
-      name: 'Saloni Yadav',
-      role: 'IT HEAD',
-      imageId: 'testimonial-3',
-      bgColor: 'bg-primary/10',
-    },
-    {
-      name: 'Ajeet',
-      role: 'Web Developer',
-      imageId: 'testimonial-2',
-      bgColor: 'bg-accent/10',
-    },
-    {
-      name: 'Deepak Yadav',
-      role: 'Innovation & Growth Lead',
-      imageId: 'leader-deepak',
-      bgColor: 'bg-accent/10',
-    },
-  ];
-
 
   return (
     <div className="bg-background text-foreground">
@@ -266,45 +245,6 @@ export default function AboutPage() {
         </div>
       </section>
       
-      {/* New Team Section */}
-      <section className="bg-secondary py-20 md:py-28">
-        <div className="container">
-          <div className="grid md:grid-cols-2 gap-8 mb-16 items-center">
-            <div className="animate-in fade-in slide-in-from-left-12 duration-700">
-              <p className="text-primary font-semibold mb-2">Meet Our Team:</p>
-              <h2 className="font-headline text-4xl font-bold tracking-tight text-accent">Bringing Passion and Expertise Together</h2>
-            </div>
-            <p className="text-muted-foreground text-lg animate-in fade-in slide-in-from-right-12 duration-700">
-              We are a team of passionate innovators, strategists, and creators dedicated to building exceptional digital experiences. Our collective expertise drives our commitment to excellence and client success.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center max-w-5xl mx-auto">
-            {teamMembers.map((member, index) => {
-              const image = PlaceHolderImages.find((p) => p.id === member.imageId);
-              return (
-                <div key={member.name} className="group flex flex-col items-center animate-in fade-in slide-in-from-bottom-12 duration-700 transition-all hover:-translate-y-2" style={{ animationDelay: `${index * 150}ms` }}>
-                  <div className={`relative w-48 h-56 rounded-t-full overflow-hidden ${member.bgColor} shadow-lg group-hover:shadow-xl transition-all duration-300`}>
-                    {image && (
-                      <Image
-                        src={image.imageUrl}
-                        alt={`Portrait of ${member.name}`}
-                        fill
-                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                        data-ai-hint={image.imageHint}
-                      />
-                    )}
-                  </div>
-                  <div className="mt-4">
-                    <h3 className="font-bold text-lg text-accent">{member.name}</h3>
-                    <p className="text-muted-foreground">{member.role}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Trust & Recognition Section */}
       <section className="relative overflow-hidden bg-background py-20 md:py-28">
         <div className="container relative z-10 text-center">
