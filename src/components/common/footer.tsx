@@ -28,6 +28,7 @@ const PinterestIcon = () => (
 export default function Footer() {
   const recognitionBadges = [
     { name: 'MSME Registered' },
+    { name: 'UDYAM: UDYAM-UP-50-0151143' },
     { name: 'Startup India Recognized' },
     { name: 'Digital India Partner' },
   ];
