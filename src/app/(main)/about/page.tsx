@@ -76,7 +76,7 @@ export default function AboutPage() {
       bioLink: '#',
     },
     {
-      name: 'Saloni Yadav',
+      name: 'Saloni',
       designation: 'IT Head / Lead Developer',
       imageUrl: '/img/saloni.jpeg',
       bioLink: '#',
