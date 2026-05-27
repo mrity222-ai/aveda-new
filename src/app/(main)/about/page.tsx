@@ -64,7 +64,7 @@ export default function AboutPage() {
       bioLink: '/deepak-yadav',
     },
     {
-      name: 'RaJ Mani',
+      name: 'Raj Mani',
       designation: 'AI & DIGITAL Makreting specialist',
       imageId: 'leader-raj',
       bioLink: '/founders',
