@@ -75,7 +75,7 @@ export default function FoundersPage() {
   
   const founders = [
     {
-      name: 'Raj Mani Yadav',
+      name: 'RaJ Mani',
       designation: 'Founder & AI Tech Strategist',
       imageId: 'leader-raj',
       newDesignation: 'AI & DIGITAL Makreting specialist',
