@@ -78,7 +78,7 @@ export default function FoundersPage() {
       name: 'Raj Mani Yadav',
       designation: 'Founder & AI Tech Strategist',
       imageId: 'leader-raj',
-      newDesignation: 'AI & Agritech Innovation Leader',
+      newDesignation: 'AI & DIGITAL Makreting spclist',
       bio: "Raj Mani Yadav is a technology-driven entrepreneur with a strong focus on artificial intelligence and scalable digital systems. He leads the company’s product vision and technical strategy, ensuring innovative solutions that solve real-world problems. With a passion for emerging technologies, he is dedicated to building future-ready platforms that empower businesses and communities.",
       quote: "Technology is powerful when it reaches the ground level and changes lives.",
       expertise: [

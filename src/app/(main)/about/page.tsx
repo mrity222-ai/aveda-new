@@ -65,7 +65,7 @@ export default function AboutPage() {
     },
     {
       name: 'Raj Mani Yadav',
-      designation: 'AI & Agritech Innovation Leader',
+      designation: 'AI & DIGITAL Makreting spclist',
       imageId: 'leader-raj',
       bioLink: '/founders',
     },
