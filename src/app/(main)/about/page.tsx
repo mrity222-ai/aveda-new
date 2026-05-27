@@ -77,7 +77,7 @@ export default function AboutPage() {
     },
     {
       name: 'Saloni Yadav',
-      designation: 'IT Head',
+      designation: 'IT Head / Lead Developer',
       imageUrl: '/img/saloni.jpeg',
       bioLink: '#',
     },
