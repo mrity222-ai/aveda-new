@@ -78,7 +78,7 @@ export default function AboutPage() {
     {
       name: 'Saloni Yadav',
       designation: 'IT Head',
-      imageId: 'testimonial-1',
+      imageUrl: '/img/saloni.jpeg',
       bioLink: '#',
     },
     {
@@ -111,7 +111,7 @@ export default function AboutPage() {
             About Aveda Technologies
           </p>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-white md:text-7xl animate-blur-in leading-[1.1]">
-            Building <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Intelligent Digital</span> Systems with AI
+            Building <span className="bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent drop-shadow-primary-glow">Intelligent Digital</span> Systems with AI
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-white/80 animate-in fade-in slide-in-from-bottom-12 duration-1000">
             Aveda Technologies helps businesses, leaders, and organizations grow through AI-driven technology, marketing, and political intelligence.
@@ -125,7 +125,7 @@ export default function AboutPage() {
           <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary uppercase tracking-widest px-4 py-1">
             Our Technology Partners
           </Badge>
-          <h2 className="mt-6 text-3xl font-bold tracking-tight md:text-5xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <h2 className="mt-6 text-3xl font-bold tracking-tight md:text-5xl bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent">
             Innovating with the World’s Best
           </h2>
           <div className="mt-16 w-full overflow-hidden [mask-image:_linear_gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
@@ -186,7 +186,7 @@ export default function AboutPage() {
                 What Makes Us Different
             </p>
             <h2 className="mx-auto mt-6 max-w-3xl text-3xl font-bold md:text-5xl leading-tight">
-                Our core principles ensure we deliver <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">unparalleled value</span> and innovation.
+                Our core principles ensure we deliver <span className="bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent">unparalleled value</span> and innovation.
             </h2>
             <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2">
                 {values.map((value, index) => (
@@ -208,7 +208,7 @@ export default function AboutPage() {
       <section className="bg-secondary/30 py-24">
         <div className="container">
           <div className="mx-auto max-w-2xl text-center mb-20">
-            <h2 className="text-4xl font-bold tracking-tight md:text-5xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold tracking-tight md:text-5xl bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent">
               Meet Our Team of Innovators
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
