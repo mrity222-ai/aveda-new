@@ -9,15 +9,15 @@ import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Deepak Yadav - Founder, Innovation & Growth Leader',
-  description: 'Meet Deepak Yadav, the growth visionary and founder driving innovation, business strategy, and scalable digital ecosystems at Aveda Technologies.',
+  title: 'Deepak Yadav - AUTOMATION DEVELOPER',
+  description: 'Meet Deepak Yadav, the AUTOMATION DEVELOPER driving innovation, business strategy, and scalable digital ecosystems at Aveda Technologies.',
   openGraph: {
-    title: 'Deepak Yadav - Founder, Innovation & Growth Leader',
-    description: 'Meet Deepak Yadav, the growth visionary and founder driving innovation, business strategy, and scalable digital ecosystems at Aveda Technologies.',
+    title: 'Deepak Yadav - AUTOMATION DEVELOPER',
+    description: 'Meet Deepak Yadav, the AUTOMATION DEVELOPER driving innovation, business strategy, and scalable digital ecosystems at Aveda Technologies.',
   },
   twitter: {
-    title: 'Deepak Yadav - Founder, Innovation & Growth Leader',
-    description: 'Meet Deepak Yadav, the growth visionary and founder driving innovation, business strategy, and scalable digital ecosystems at Aveda Technologies.',
+    title: 'Deepak Yadav - AUTOMATION DEVELOPER',
+    description: 'Meet Deepak Yadav, the AUTOMATION DEVELOPER driving innovation, business strategy, and scalable digital ecosystems at Aveda Technologies.',
   }
 };
 
@@ -25,7 +25,7 @@ export default function DeepakYadavPage() {
   
   const deepak = {
     name: 'Deepak Yadav',
-    designation: 'Founder | Innovation & Growth Leader',
+    designation: 'AUTOMATION DEVELOPER',
     imageId: 'leader-deepak',
     bio: "Deepak Yadav is a growth-focused entrepreneur with a strong passion for innovation, business strategy, and scalable digital ecosystems. He plays a key role in shaping the company’s long-term vision, partnerships, and market expansion strategies, ensuring sustainable and impactful growth. With a deep interest in emerging technologies, agritech transformation, and AI-enabled systems, Deepak is committed to building solutions that bridge technology with real-world business and community needs across India.",
     quote: "True innovation is measured by the growth and impact it creates on the ground.",
@@ -80,7 +80,7 @@ export default function DeepakYadavPage() {
             Meet Our Founder
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-white/90">
-            The growth visionary driving innovation at Aveda Technologies.
+            The visionary driving innovation at Aveda Technologies.
           </p>
         </div>
       </section>

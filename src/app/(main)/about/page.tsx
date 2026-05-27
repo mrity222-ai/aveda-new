@@ -59,7 +59,7 @@ export default function AboutPage() {
   const leadership = [
     {
       name: 'Deepak Yadav',
-      designation: 'Founder | Innovation & Growth Leader',
+      designation: 'AUTOMATION DEVELOPER',
       imageId: 'leader-deepak',
       bioLink: '/deepak-yadav',
     },
