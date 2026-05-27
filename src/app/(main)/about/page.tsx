@@ -65,7 +65,7 @@ export default function AboutPage() {
     },
     {
       name: 'Raj Mani Yadav',
-      designation: 'AI & DIGITAL Makreting spclist',
+      designation: 'AI & DIGITAL Makreting specialist',
       imageId: 'leader-raj',
       bioLink: '/founders',
     },
