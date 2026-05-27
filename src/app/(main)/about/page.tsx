@@ -82,7 +82,7 @@ export default function AboutPage() {
       bioLink: '#',
     },
     {
-      name: 'Ajeet',
+      name: 'Ajeet Pal',
       designation: 'Lead Web Developer',
       imageUrl: '/img/ajeet.png',
       bioLink: '#',
