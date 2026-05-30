@@ -31,7 +31,7 @@ const WhatsAppIcon = () => (
 const pricingPlans = [
     {
       name: 'Basic Plan',
-      price: '₹2,999',
+      price: '₹3,999',
       period: '/ month',
       features: [
         '3 Social Media Posts / month',
