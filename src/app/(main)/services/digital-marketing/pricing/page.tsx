@@ -33,7 +33,7 @@ const pricingPlans = [
       price: '₹3,999',
       period: '/ month',
       features: [
-        '5 Social Media Posts / month',
+        '7 Social Media Posts / month',
         '1 Ad Campaigns',
         'Brand Awareness Strategy',
         'Basic AI Audience Targeting',
