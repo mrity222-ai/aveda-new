@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -34,8 +33,8 @@ const pricingPlans = [
       price: '₹3,999',
       period: '/ month',
       features: [
-        '3 Social Media Posts / month',
-        '2 Ad Campaigns',
+        '5 Social Media Posts / month',
+        '1 Ad Campaigns',
         'Brand Awareness Strategy',
         'Basic AI Audience Targeting',
         'Monthly Performance Report',
