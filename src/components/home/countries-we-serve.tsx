@@ -1,133 +1,167 @@
 'use client';
 
 import * as React from 'react';
-import { MapPin, Globe, CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Building2, Globe2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
 
 const countries = [
   {
     name: 'Canada',
     flag: '🇨🇦',
     cities: ['Toronto', 'Vancouver', 'Calgary', 'Ottawa', 'Montreal'],
-    services: ['AI Automation', 'CRM/ERP', 'Website Development'],
   },
   {
     name: 'Australia',
     flag: '🇦🇺',
     cities: ['Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide'],
-    services: ['Solar Websites', 'Construction CRM', 'AI Automation'],
   },
   {
     name: 'Netherlands',
     flag: '🇳🇱',
     cities: ['Amsterdam', 'Rotterdam', 'Utrecht', 'Eindhoven'],
-    services: ['SaaS Development', 'CRM Automation', 'AI Automation'],
   },
   {
     name: 'Sweden',
     flag: '🇸🇪',
     cities: ['Stockholm', 'Gothenburg', 'Malmö'],
-    services: ['AI Automation', 'Business Automation', 'Website Development'],
   },
   {
     name: 'Norway',
     flag: '🇳🇴',
     cities: ['Oslo', 'Bergen', 'Stavanger'],
-    services: ['CRM Development', 'AI Automation', 'Automation Consulting'],
   },
   {
     name: 'Switzerland',
     flag: '🇨🇭',
     cities: ['Zurich', 'Geneva', 'Basel', 'Lausanne'],
-    services: ['ERP', 'AI Automation', 'Business Process Automation'],
   },
 ];
 
 export default function CountriesWeServe() {
+  const [activeCountry, setActiveCountry] = React.useState(countries[0].name);
+
   return (
-    <section className="relative overflow-hidden bg-slate-950 py-24 lg:py-32 text-white">
-      {/* Premium Background Elements */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] opacity-50" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px] opacity-30" />
-        <div className="absolute inset-0 bg-[url('/nn.svg')] bg-center opacity-[0.03] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]" />
-      </div>
+    <section className="relative overflow-hidden bg-white py-20 lg:py-28 text-slate-900 border-y border-slate-100">
+      {/* Subtle Background Decoration */}
+      <div className="absolute inset-0 z-0 opacity-[0.02] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-repeat" />
+      
+      <div className="container relative z-10 px-4 md:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+          
+          {/* Left Column: Branding & Info */}
+          <div className="lg:col-span-5 animate-in fade-in slide-in-from-left-8 duration-1000">
+            <Badge variant="outline" className="mb-6 rounded-full border-blue-200 bg-blue-50 text-blue-600 px-4 py-1.5 text-xs font-bold uppercase tracking-wider">
+              OUR GLOBAL PRESENCE
+            </Badge>
+            
+            <h2 className="font-headline text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl mb-6 leading-[1.1]">
+              Countries We Serve <br /> 
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Globally</span>
+            </h2>
+            
+            <p className="text-lg text-slate-600 mb-10 max-w-xl leading-relaxed">
+              Aveda Technologies provides high-performance digital systems and AI automation to forward-thinking businesses across high-growth global markets.
+            </p>
 
-      <div className="container relative z-10">
-        <div className="mb-20 text-center animate-in fade-in slide-in-from-bottom-8 duration-1000">
-          <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-6">
-            <Sparkles className="h-3 w-3 mr-2 animate-pulse" />
-            Global Reach
-          </div>
-          <h2 className="font-headline text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl mb-6">
-            Countries We Serve <span className="bg-gradient-to-r from-primary via-white to-primary bg-clip-text text-transparent drop-shadow-primary-glow">Globally</span>
-          </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-lg text-slate-400 leading-relaxed">
-            Helping businesses across high-growth global markets with AI Automation, CRM/ERP, SaaS and Website Development solutions.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {countries.map((country, index) => (
-            <div
-              key={country.name}
-              className={cn(
-                'group relative flex flex-col rounded-[2.5rem] border border-white/10 bg-white/5 p-10 backdrop-blur-xl transition-all duration-500',
-                'hover:-translate-y-3 hover:border-primary/50 hover:bg-white/10 hover:shadow-[0_20px_80px_-15px_rgba(255,0,0,0.15)]',
-                'animate-in fade-in slide-in-from-bottom-12'
-              )}
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              {/* Card Glow Effect */}
-              <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-
-              <div className="relative z-10">
-                <div className="flex items-center gap-5 mb-8">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/5 text-4xl shadow-inner border border-white/10 group-hover:scale-110 group-hover:border-primary/30 transition-all duration-500">
-                    {country.flag}
-                  </div>
-                  <h3 className="text-3xl font-bold text-white group-hover:text-primary transition-colors">
-                    {country.name}
-                  </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+              <div className="flex flex-col gap-3 p-6 rounded-2xl border border-blue-100 bg-blue-50/30 transition-all hover:shadow-lg hover:shadow-blue-100/50 hover:bg-white group">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
+                  <Building2 className="h-6 w-6" />
                 </div>
-
-                <div className="mb-8">
-                  <p className="text-[10px] font-black uppercase tracking-[0.25em] text-primary/70 mb-4 flex items-center gap-2">
-                    <MapPin className="h-3 w-3" /> Strategic Hubs
-                  </p>
-                  <div className="flex flex-wrap gap-2.5">
-                    {country.cities.map((city) => (
-                      <span key={city} className="text-[12px] font-semibold px-3 py-1.5 bg-white/5 rounded-lg text-slate-300 border border-white/5 group-hover:bg-primary/10 group-hover:text-white group-hover:border-primary/20 transition-all duration-300">
-                        {city}
-                      </span>
-                    ))}
-                  </div>
+                <div>
+                  <h3 className="font-bold text-slate-900 text-sm">Head Office</h3>
+                  <p className="text-sm text-slate-500 font-medium">Lucknow, India</p>
                 </div>
-
-                <div className="space-y-4 pt-8 border-t border-white/10">
-                  <p className="text-[10px] font-black uppercase tracking-[0.25em] text-primary/70 mb-2">Core Expertise</p>
-                  {country.services.map((service) => (
-                    <div key={service} className="flex items-center gap-3 text-sm font-medium text-slate-400 group-hover:text-slate-200 transition-colors">
-                      <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                         <CheckCircle2 className="h-3 w-3 text-primary" />
-                      </div>
-                      <span>{service}</span>
-                    </div>
-                  ))}
+              </div>
+              <div className="flex flex-col gap-3 p-6 rounded-2xl border border-indigo-100 bg-indigo-50/30 transition-all hover:shadow-lg hover:shadow-indigo-100/50 hover:bg-white group">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-lg shadow-indigo-200 group-hover:scale-110 transition-transform">
+                  <Globe2 className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-slate-900 text-sm">International Coverage</h3>
+                  <p className="text-sm text-slate-500 font-medium">High-Paying Markets</p>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
 
-        <div className="mt-20 text-center animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-500">
-           <Button asChild size="lg" className="rounded-full px-10 h-14 text-base font-bold bg-primary hover:bg-primary/90 text-white shadow-[0_10px_40px_-10px_rgba(255,0,0,0.5)] transition-all hover:scale-105 active:scale-95">
-            <Link href="/contact?service=International+Project">
-              Start Global Project Discussion <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+            <Button asChild size="lg" className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 shadow-xl shadow-blue-100 transition-all hover:scale-105 active:scale-95">
+              <Link href="/contact?service=International+Project">
+                Start Global Project Discussion <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+
+          {/* Right Column: Interactive Market Grid */}
+          <div className="lg:col-span-7 animate-in fade-in slide-in-from-right-8 duration-1000 delay-200">
+            <div className="rounded-[2.5rem] border border-blue-100 bg-white p-6 shadow-2xl shadow-blue-100/30 lg:p-12 relative overflow-hidden">
+              {/* Decorative background glow */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-[100px] -z-10" />
+              
+              <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center justify-between border-b border-slate-50 pb-6">
+                <div className="flex items-center gap-3">
+                    <div className="h-2 w-2 rounded-full bg-blue-600 animate-pulse" />
+                    Global Markets
+                </div>
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Select a country to view hubs</span>
+              </h3>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {countries.map((country) => (
+                  <div key={country.name} className="relative">
+                    <button
+                      onClick={() => setActiveCountry(activeCountry === country.name ? '' : country.name)}
+                      className={cn(
+                        "w-full flex flex-col p-5 rounded-2xl border transition-all duration-300 text-left group relative overflow-hidden",
+                        activeCountry === country.name 
+                          ? "bg-blue-600 border-blue-600 text-white shadow-xl shadow-blue-200" 
+                          : "bg-slate-50/50 border-slate-100 text-slate-900 hover:border-blue-200 hover:bg-white hover:shadow-lg hover:shadow-blue-50"
+                      )}
+                    >
+                      <div className="relative z-10 flex items-center justify-between mb-3">
+                        <span className="text-3xl filter drop-shadow-sm group-hover:scale-110 transition-transform">{country.flag}</span>
+                        <div className={cn(
+                          "h-8 w-8 rounded-full flex items-center justify-center transition-all",
+                          activeCountry === country.name ? "bg-white text-blue-600 rotate-90" : "bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white"
+                        )}>
+                          <ArrowRight className="h-4 w-4" />
+                        </div>
+                      </div>
+                      
+                      <div className="relative z-10">
+                        <span className="font-bold text-lg tracking-tight">{country.name}</span>
+                        <p className={cn(
+                            "text-[10px] uppercase font-black tracking-widest mt-1 transition-opacity",
+                            activeCountry === country.name ? "text-blue-100" : "text-slate-400 opacity-60"
+                        )}>
+                            {activeCountry === country.name ? 'Active Strategic Hubs' : 'View Strategic Hubs'}
+                        </p>
+                      </div>
+                    </button>
+                    
+                    {/* Hubs/Cities revealed on select */}
+                    <div className={cn(
+                      "grid transition-all duration-300 ease-in-out overflow-hidden",
+                      activeCountry === country.name ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0 h-0"
+                    )}>
+                      <div className="min-h-0 bg-blue-50/50 rounded-2xl border border-blue-100 p-4">
+                        <div className="flex flex-wrap gap-2">
+                          {country.cities.map(city => (
+                            <span key={city} className="text-[10px] font-bold uppercase tracking-wider px-3 py-2 rounded-lg bg-white text-blue-600 border border-blue-100 shadow-sm">
+                              {city}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
