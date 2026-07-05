@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import { services, footerLinks } from '@/lib/data';
 import { Button } from '@/components/ui/button';
@@ -49,7 +48,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Logo />
             <p className="text-sm text-muted-foreground">
-              Delivering innovative IT solutions and digital services to drive business growth.
+              Aveda Technologies is a leading AI Automation and Software Development Company providing Custom Software, CRM ERP Solutions, and Digital Transformation services globally.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -67,25 +66,19 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">Quick Links</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">Our Locations</h3>
             <ul className="mt-4 space-y-3">
-              {footerLinks.quick.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="group relative text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {link.label}
-                    <span className="absolute bottom-0 left-0 h-px w-0 bg-foreground transition-all duration-300 group-hover:w-full"></span>
-                  </Link>
-                </li>
-              ))}
+              <li><Link href="/locations/canada" className="text-sm text-muted-foreground hover:text-primary">Software Development Canada</Link></li>
+              <li><Link href="/locations/australia" className="text-sm text-muted-foreground hover:text-primary">AI Automation Australia</Link></li>
+              <li><Link href="/locations/netherlands" className="text-sm text-muted-foreground hover:text-primary">SaaS Development Netherlands</Link></li>
+              <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">Software Company Lucknow</Link></li>
+              <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">Software Company Noida</Link></li>
             </ul>
           </div>
 
           {/* Column 3: Services */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">Our Services</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">Core Expertise</h3>
             <ul className="mt-4 space-y-3">
               {services.map((service) => (
                 <li key={service.slug}>
@@ -129,7 +122,7 @@ export default function Footer() {
             </div>
              <div className="mt-8">
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">
-                    Recognition
+                    Certifications
                 </h3>
                 <ul className="mt-4 space-y-3">
                     {recognitionBadges.map(badge => (
@@ -146,9 +139,10 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className='border-t'>
         <div className="container flex flex-col items-center justify-between gap-4 py-6 text-sm text-muted-foreground md:flex-row">
-            <p>
-                &copy; {new Date().getFullYear()} Aveda Technologies. All Rights Reserved.
-            </p>
+            <div className="flex flex-col gap-1">
+                <p>&copy; {new Date().getFullYear()} Aveda Technologies. Top Software Development Company in India & Global Markets.</p>
+                <p className="text-[10px]">Serving Lucknow, Noida, Delhi, Gurugram, Mumbai, Bangalore, Pune, Ahmedabad, Hyderabad, Chennai, Kolkata, and Jaipur.</p>
+            </div>
             <div className="flex gap-4">
                 <Link href="/privacy-policy" className="transition-colors hover:text-foreground">Privacy Policy</Link>
                 <Separator orientation='vertical' className='h-5' />

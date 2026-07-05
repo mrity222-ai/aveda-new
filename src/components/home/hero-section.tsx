@@ -31,7 +31,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg text-white/90">
-            Aveda Technologies transforms businesses with intelligent AI solutions, scalable web systems, and smart digital strategies designed for sustainable growth.
+            Aveda Technologies is a leading AI Automation Company and top Software Development Company. We deliver custom SaaS development, CRM ERP solutions, and scalable software engineering services to drive digital transformation globally.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -52,11 +52,11 @@ export default function HeroSection() {
             </div>
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-primary" />
-              <span>AI Powered Solutions</span>
+              <span>AI Powered Software Solutions</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-primary" />
-              <span>24/7 Technical Support</span>
+              <span>24/7 Technology Consulting</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-primary" />

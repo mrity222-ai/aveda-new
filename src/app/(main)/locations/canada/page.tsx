@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -33,11 +32,11 @@ import { ContactForm } from '@/components/contact/contact-form';
 import { portfolioProjects } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: 'AI Automation, CRM & Software Development Company in Canada | Aveda Technologies',
-  description: 'Aveda Technologies provides AI Automation, CRM Development, ERP Solutions, SaaS Development and Custom Software Services across Canada including Toronto, Vancouver, Calgary, Ottawa and Montreal.',
+  title: 'AI Automation & Software Development Company in Canada | Aveda Technologies',
+  description: 'Aveda Technologies is a leading AI Automation Company Canada and a top Software Development Company Canada. We provide Custom Software Development, SaaS solutions, and Business Automation services across Toronto, Vancouver, and Calgary.',
   openGraph: {
-    title: 'AI Automation & Software Development Company in Canada',
-    description: 'Aveda Technologies provides AI Automation, CRM Development, ERP Solutions, SaaS Development and Custom Software Services across Canada.',
+    title: 'Top AI Automation & Software Development Company in Canada',
+    description: 'Premier Software Engineering and AI Automation Services in Canada. Specialized in CRM ERP solutions and Digital Transformation for Canadian enterprises.',
   }
 };
 
@@ -48,14 +47,14 @@ export default function CanadaLocationPage() {
   const locations = ['Toronto', 'Vancouver', 'Calgary', 'Ottawa', 'Montreal'];
   
   const services = [
-    { icon: BrainCircuit, title: 'AI Automation', description: 'Intelligent AI workflows to automate repetitive business tasks.' },
-    { icon: Database, title: 'CRM Development', description: 'Custom CRM solutions to manage your Canadian customer base efficiently.' },
-    { icon: Building2, title: 'ERP Solutions', description: 'Enterprise Resource Planning systems for seamless operations.' },
-    { icon: Cloud, title: 'SaaS Development', description: 'Scalable cloud-based software solutions for global markets.' },
-    { icon: Code, title: 'Custom Software Development', description: 'Tailor-made software built to solve your unique business challenges.' },
-    { icon: LayoutGrid, title: 'Website Development', description: 'High-performance, responsive websites that represent your brand.' },
-    { icon: Rocket, title: 'Mobile App Development', description: 'Engaging iOS and Android apps for the modern Canadian consumer.' },
-    { icon: Zap, title: 'Business Process Automation', description: 'End-to-end automation of your core business processes.' },
+    { icon: BrainCircuit, title: 'AI Automation Services', description: 'Intelligent AI workflows and automated agents to streamline Canadian business operations.' },
+    { icon: Database, title: 'CRM Development Company', description: 'Custom CRM ERP solutions to manage your Canadian customer base efficiently.' },
+    { icon: Building2, title: 'ERP Development Company', description: 'Enterprise Resource Planning systems for seamless Canadian business integrations.' },
+    { icon: Cloud, title: 'SaaS Development Company', description: 'Scalable cloud-based SaaS solutions designed for the North American market.' },
+    { icon: Code, title: 'Custom Software Development', description: 'Tailor-made software engineering services built to solve unique business challenges.' },
+    { icon: LayoutGrid, title: 'Website Development Company', description: 'High-performance, SEO-optimized business websites for Canadian brands.' },
+    { icon: Rocket, title: 'Mobile App Development Company', description: 'Engaging iOS and Android apps for the modern mobile-first Canadian consumer.' },
+    { icon: Zap, title: 'Business Process Automation', description: 'End-to-end workflow automation of your core business processes and digital systems.' },
   ];
 
   const industries = [
@@ -69,25 +68,25 @@ export default function CanadaLocationPage() {
   ];
 
   const whyChooseUs = [
-    { icon: Users, title: 'Dedicated Development Team', description: 'Expert developers assigned exclusively to your Canada-based projects.' },
-    { icon: BrainCircuit, title: 'AI-First Approach', description: 'We integrate advanced AI into every software solution we build.' },
-    { icon: ShieldCheck, title: 'Enterprise Security', description: 'Rigorous security protocols to protect your sensitive business data.' },
-    { icon: Rocket, title: 'Agile Development', description: 'Fast, iterative development cycles for quick time-to-market.' },
-    { icon: Phone, title: 'Ongoing Support', description: '24/7 technical support and maintenance for Canadian businesses.' },
-    { icon: TrendingUp, title: 'Scalable Solutions', description: 'Software that grows with your business as you expand across Canada.' },
+    { icon: Users, title: 'Dedicated Software Engineering Team', description: 'Expert developers assigned exclusively to your Canada-based digital projects.' },
+    { icon: BrainCircuit, title: 'AI-First Development Approach', description: 'We integrate advanced AI agents into every software solution we build.' },
+    { icon: ShieldCheck, title: 'Enterprise Software Security', description: 'Rigorous security protocols to protect your sensitive Canadian business data.' },
+    { icon: Rocket, title: 'Agile Software Development', description: 'Fast, iterative development cycles for quick time-to-market in Canada.' },
+    { icon: Phone, title: 'Ongoing Technology Support', description: '24/7 technical support and maintenance for Canadian businesses and startups.' },
+    { icon: TrendingUp, title: 'Scalable Software Solutions', description: 'Future-proof software that grows with your business as you expand across Canada.' },
   ];
 
   const faqs = [
-    { q: "Do you have physical offices in Canada?", a: "While our primary development hubs are in India, we provide 24/7 dedicated support for our Canadian clients via secure digital collaboration tools and strategic hub points in major cities." },
-    { q: "How do you manage the time difference (EST/PST) with Canadian clients?", a: "We operate on an overlap schedule, ensuring our team is available during your peak business hours for seamless communication and agile updates." },
+    { q: "Do you have physical offices in Canada?", a: "While our primary development hubs are in India, we provide 24/7 dedicated support for our Canadian clients via secure digital collaboration tools and strategic hub points in major cities like Toronto and Vancouver." },
+    { q: "How do you manage the time difference with Canadian clients?", a: "We operate on an overlap schedule, ensuring our software development team is available during your peak business hours in EST and PST for seamless communication." },
     { q: "Is your software development compliant with PIPEDA?", a: "Yes, all our custom software and AI solutions for Canadian businesses are built with strict adherence to the Personal Information Protection and Electronic Documents Act (PIPEDA)." },
     { q: "What specific AI automation services do you offer in Canada?", a: "We specialize in CRM automation, AI calling agents, and business process automation tailored for the Canadian healthcare, real estate, and construction sectors." },
-    { q: "Can you help Canadian startups with MVP development?", a: "Absolutely. We offer rapid SaaS prototyping and MVP development for Canadian founders looking to scale quickly in the North American market." },
+    { q: "Can you help Canadian startups with SaaS MVP development?", a: "Absolutely. We offer rapid SaaS prototyping and MVP development for Canadian founders looking to scale quickly in the North American market." },
     { q: "Do you accept CAD for payments?", a: "Yes, we offer flexible billing options for Canadian businesses and accept payments in CAD for convenience." },
     { q: "How secure is the data handled by your AI systems?", a: "We implement enterprise-grade encryption and secure cloud architectures (AWS/Azure) to ensure your business data remains protected." },
-    { q: "Do you have experience with Canadian real estate tech?", a: "Yes, we have developed custom CRMs and automated lead generation systems specifically for real estate agencies across Toronto and Vancouver." },
+    { q: "Do you have experience with Canadian real estate technology?", a: "Yes, we have developed custom CRMs and automated lead generation systems specifically for real estate agencies across Toronto and Vancouver." },
     { q: "What is your typical turnaround time for a custom website in Canada?", a: "Depending on complexity, a custom, SEO-optimized business website usually takes between 3 to 6 weeks from strategy to launch." },
-    { q: "How can I get a project estimate for my Canada-based business?", a: "You can schedule a free strategy call or fill out our contact form to get a detailed project estimate within 24 hours." }
+    { q: "How can I get a project estimate for my Canada-based business?", a: "You can schedule a free technology consulting call or fill out our contact form to get a detailed project estimate within 24 hours." }
   ];
 
   const caseStudies = portfolioProjects.slice(0, 4);
@@ -111,13 +110,13 @@ export default function CanadaLocationPage() {
         </div>
         <div className="container relative z-10 text-center">
           <Badge variant="outline" className="mb-4 border-primary/50 bg-primary/10 text-primary uppercase tracking-widest px-4 py-1">
-            Now Serving Canada
+            Serving Canada with AI & Software
           </Badge>
           <h1 className="font-headline text-4xl font-bold tracking-tight text-white md:text-7xl animate-blur-in leading-[1.1]">
             Leading <span className="bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent drop-shadow-primary-glow">AI Automation</span> & Software Development Company in Canada
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-white/90 animate-in fade-in slide-in-from-bottom-12 duration-1000">
-            Helping Canadian businesses automate operations, increase productivity and scale with AI-powered software solutions.
+            Helping Canadian businesses in Toronto, Vancouver, and Calgary automate operations, increase productivity and scale with AI-powered software solutions.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4 animate-in fade-in slide-in-from-bottom-16 duration-1000">
             <Button asChild size="lg">
@@ -134,7 +133,7 @@ export default function CanadaLocationPage() {
       <section className="bg-secondary/30 py-16 border-b">
         <div className="container">
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-            <p className="text-sm font-bold uppercase tracking-[0.3em] text-muted-foreground w-full text-center md:w-auto">Our Strategic Hubs:</p>
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-muted-foreground w-full text-center md:w-auto">Our Canadian Strategic Hubs:</p>
             {locations.map((city) => (
               <div key={city} className="flex items-center gap-2 group">
                 <MapPin className="h-5 w-5 text-primary group-hover:animate-bounce" />
@@ -149,9 +148,9 @@ export default function CanadaLocationPage() {
       <section className="bg-background py-24">
         <div className="container">
           <div className="mx-auto max-w-2xl text-center mb-20">
-            <Badge variant="outline" className="mb-4">Tailored for Canada</Badge>
+            <Badge variant="outline" className="mb-4">End-to-End Software Engineering</Badge>
             <h2 className="text-4xl font-bold tracking-tight md:text-5xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              End-to-End Software & AI Solutions
+              Canada-Focused AI & Software Solutions
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
               We build high-performance, secure, and scalable digital systems designed for sustainable growth in the Canadian market.
@@ -177,7 +176,7 @@ export default function CanadaLocationPage() {
       <section className="bg-secondary py-24">
         <div className="container text-center">
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Industries We Serve</p>
-          <h2 className="mt-6 text-3xl font-bold md:text-5xl">Specialized Solutions for <span className="text-primary">Canadian Markets</span></h2>
+          <h2 className="mt-6 text-3xl font-bold md:text-5xl">Specialized Solutions for <span className="text-primary">Canadian Enterprises</span></h2>
           <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-7">
             {industries.map((item, index) => (
               <div key={item.title} className="group flex flex-col items-center gap-4 animate-in fade-in slide-in-from-bottom-12 duration-700" style={{ animationDelay: `${index * 100}ms` }}>
@@ -199,7 +198,7 @@ export default function CanadaLocationPage() {
               {serviceImg && (
                 <Image 
                   src={serviceImg.imageUrl} 
-                  alt="Aveda Technologies Team Canada" 
+                  alt="Aveda Technologies Software Development Team Canada" 
                   fill 
                   className="object-cover"
                   data-ai-hint="canadian tech team"
@@ -243,7 +242,7 @@ export default function CanadaLocationPage() {
             <h2 className="text-4xl font-bold tracking-tight md:text-5xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Recent Success Stories
             </h2>
-            <p className="mt-6 text-lg text-muted-foreground">Real-world examples of how we've helped businesses like yours succeed.</p>
+            <p className="mt-6 text-lg text-muted-foreground">See how our software engineering services have helped Canadian businesses succeed.</p>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {caseStudies.map((project, index) => (
@@ -273,7 +272,7 @@ export default function CanadaLocationPage() {
         <div className="container max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold md:text-5xl">Frequently Asked Questions</h2>
-            <p className="mt-4 text-muted-foreground">Everything you need to know about working with us in Canada.</p>
+            <p className="mt-4 text-muted-foreground">Everything you need to know about working with Aveda Technologies in Canada.</p>
           </div>
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
@@ -301,7 +300,7 @@ export default function CanadaLocationPage() {
               </div>
               <div className="space-y-8 lg:col-span-2">
                 <h2 className="font-headline text-3xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Canada Support</h2>
-                <p className='text-muted-foreground'>Aveda Technologies is your dedicated partner for Canadian digital transformation.</p>
+                <p className='text-muted-foreground'>Aveda Technologies is your dedicated partner for Canadian digital transformation and custom software engineering.</p>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -336,13 +335,22 @@ export default function CanadaLocationPage() {
             Ready to Automate Your Business in Canada?
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-            Take the first step towards intelligent automation and scalable digital growth today.
+            Take the first step towards intelligent business process automation and scalable software solutions today.
           </p>
           <Button asChild size="lg" className="mt-10 rounded-full px-10 h-14 text-lg">
             <Link href="#contact">
               Schedule Free Strategy Call <MoveRight className="ml-2 h-6 w-6" />
             </Link>
           </Button>
+        </div>
+      </section>
+      
+      {/* SEO Footer Section */}
+      <section className="bg-background py-12 border-t">
+        <div className="container text-center max-w-5xl">
+            <p className="text-xs text-muted-foreground leading-relaxed">
+                Aveda Technologies is a premier AI Automation Company in Canada and a top Software Development Company Canada. We provide specialized Custom Software Development, SaaS Development Company solutions, and Business Process Automation to help Canadian organizations in Toronto, Vancouver, and Calgary scale with AI-powered software solutions and digital transformation services.
+            </p>
         </div>
       </section>
     </div>

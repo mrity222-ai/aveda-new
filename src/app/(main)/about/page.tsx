@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,8 +9,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: 'Learn about Aveda Technologies, an AI-first digital company powering businesses, leaders, and organizations with AI-driven technology, marketing, and political intelligence.',
+  title: 'About Us | Leading AI Automation & Software Development Company',
+  description: 'Learn about Aveda Technologies, a premier Software Development Company and AI Automation provider. We deliver custom business applications, CRM ERP solutions, and digital transformation globally.',
 };
 
 export default function AboutPage() {
@@ -19,22 +18,22 @@ export default function AboutPage() {
     {
       icon: BrainCircuit,
       title: 'AI-First Approach',
-      description: 'We integrate AI into every solution to deliver intelligent, automated, and predictive results.',
+      description: 'We are a leading AI Automation Company integrating advanced AI agents and machine learning into every scalable software solution.',
     },
     {
       icon: Target,
       title: 'Data-Driven Strategies',
-      description: 'Our decisions are backed by data, ensuring precision, impact, and measurable outcomes.',
+      description: 'Our software engineering services are backed by data intelligence, ensuring precision and measurable ROI for digital transformation.',
     },
     {
       icon: TrendingUp,
       title: 'Performance & ROI Focused',
-      description: 'We are committed to delivering tangible returns and sustainable growth for all our clients.',
+      description: 'As a top SaaS Development Company, we focus on delivering tangible returns through automated workflows and custom business apps.',
     },
     {
       icon: Users,
-      title: 'Political & Business Intelligence',
-      description: 'We provide a unique blend of tech expertise and strategic insights for complex challenges.',
+      title: 'Global Technology Partner',
+      description: 'We provide a unique blend of technical expertise and strategic consulting for businesses in India, Canada, and Australia.',
     },
   ];
 
@@ -114,7 +113,7 @@ export default function AboutPage() {
             Building <span className="bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent drop-shadow-primary-glow">Intelligent Digital</span> Systems with AI
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-white/80 animate-in fade-in slide-in-from-bottom-12 duration-1000">
-            Aveda Technologies helps businesses, leaders, and organizations grow through AI-driven technology, marketing, and political intelligence.
+            Aveda Technologies is a premier Software Development Company and AI Automation provider helping businesses across India, Canada, and Australia scale through custom CRM ERP solutions and digital transformation.
           </p>
         </div>
       </section>
@@ -123,7 +122,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-background py-20">
         <div className="container relative z-10 text-center">
           <Badge variant="outline" className="border-primary/50 bg-primary/10 text-primary uppercase tracking-widest px-4 py-1">
-            Our Technology Partners
+            Global Technology Partners
           </Badge>
           <h2 className="mt-6 text-3xl font-bold tracking-tight md:text-5xl bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent">
             Innovating with the World’s Best
@@ -162,16 +161,16 @@ export default function AboutPage() {
                 </h2>
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Aveda Technologies is an AI-first digital company delivering advanced web, mobile, marketing, automation, and political campaigning solutions. We combine technology, data, and strategy to create measurable digital impact.
+                Aveda Technologies is a top-tier Software Development Company providing Custom Software Development, AI Automation Services, and Enterprise Software Solutions. We combine deep engineering expertise with AI to create measurable digital impact for businesses in Lucknow, Noida, and across the globe.
               </p>
               <div className="grid grid-cols-2 gap-6">
                   <div className="rounded-2xl border bg-card p-8 soft-shadow transition-all hover:-translate-y-1">
-                      <h3 className="text-4xl font-bold text-primary">100+</h3>
-                      <p className="mt-2 text-sm font-medium text-muted-foreground uppercase tracking-wider">Projects Delivered</p>
+                      <h3 className="text-4xl font-bold text-primary">50+</h3>
+                      <p className="mt-2 text-sm font-medium text-muted-foreground uppercase tracking-wider">Custom Business Applications</p>
                   </div>
                   <div className="rounded-2xl border bg-card p-8 soft-shadow transition-all hover:-translate-y-1">
                       <h3 className="text-4xl font-bold text-primary">AI</h3>
-                      <p className="mt-2 text-sm font-medium text-muted-foreground uppercase tracking-wider">Driven Solutions</p>
+                      <p className="mt-2 text-sm font-medium text-muted-foreground uppercase tracking-wider">Powered Growth Solutions</p>
                   </div>
               </div>
             </div>
@@ -183,10 +182,10 @@ export default function AboutPage() {
       <section className="bg-background py-24">
         <div className="container text-center">
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
-                What Makes Us Different
+                Our Core Expertise
             </p>
             <h2 className="mx-auto mt-6 max-w-3xl text-3xl font-bold md:text-5xl leading-tight">
-                Our core principles ensure we deliver <span className="bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent">unparalleled value</span> and innovation.
+                Your Trusted <span className="bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent">Digital Transformation</span> Partner for Scalable Software.
             </h2>
             <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2">
                 {values.map((value, index) => (
@@ -212,7 +211,7 @@ export default function AboutPage() {
               Meet Our Team of Innovators
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              A global team building future-ready technology solutions.
+              A global team of software engineers and AI specialists building future-ready technology solutions.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">

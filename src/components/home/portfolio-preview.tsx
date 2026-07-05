@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, BrainCircuit, Globe } from 'lucide-react';
@@ -16,7 +15,7 @@ export default function AboutUs() {
             <BrainCircuit className="relative h-48 w-48 text-primary opacity-80" />
             <div className="absolute bottom-4 left-4">
               <Badge variant="outline" className="border-accent/50 bg-card/50 text-accent backdrop-blur-sm">
-                Trusted By 10+ Clients
+                Trusted Global Technology Partner
               </Badge>
             </div>
           </div>
@@ -30,12 +29,12 @@ export default function AboutUs() {
               </h2>
             </div>
             <p className="text-lg text-foreground/80">
-              Aveda Technologies is a Lucknow-based IT startup delivering enterprise-grade AI solutions, web development, mobile applications, ERP systems, and digital marketing services across India. As a fast-growing IT company in Lucknow, we help startups, SMEs, and large enterprises build scalable digital systems powered by Artificial Intelligence and automation.
+              Aveda Technologies is a premier AI Automation Company and a top Software Development Company in Lucknow, providing enterprise-grade Custom Software Development, CRM ERP solutions, and Mobile App Development Company services across India and global markets. As a trusted Digital Transformation partner, we serve clients as a top Software Development Company in Noida, Delhi, Gurugram, and Bangalore, helping them scale with AI-driven business process automation.
             </p>
             <div className="flex flex-wrap items-center gap-4">
                <div className="flex items-center gap-3 rounded-full border bg-card px-4 py-2 transition-all duration-300 hover:border-accent hover:shadow-lg hover:shadow-accent/10 hover:-translate-y-2">
                   <Globe className="h-6 w-6 text-accent" />
-                  <span className="font-semibold">1+ Countries Served</span>
+                  <span className="font-semibold">Global AI & Software Solutions</span>
                </div>
               <Button asChild>
                 <Link href="/about">
