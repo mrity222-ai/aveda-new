@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -8,6 +7,7 @@ import Header from '@/components/common/header';
 import Footer from '@/components/common/footer';
 import { WhatsAppButton } from '@/components/common/whatsapp-button';
 import Script from 'next/script';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -78,6 +78,7 @@ export default function RootLayout({
         <Toaster />
         <WhatsAppButton />
         <Script src="//code.tidio.co/srzndt8h650rvaawicxeiy80rsj2myh9.js" async />
+        <SpeedInsights />
       </body>
     </html>
   );
