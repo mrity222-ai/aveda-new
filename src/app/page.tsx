@@ -8,6 +8,7 @@ import VideoSection from '@/components/home/video-section';
 import AiAutomationPreview from '@/components/home/ai-automation-preview';
 import AiCallingAgents from '@/components/home/ai-calling-agents';
 import WhatsAppAutomation from '@/components/home/whatsapp-automation';
+import CountriesWeServe from '@/components/home/countries-we-serve';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <AboutUs />
       <VideoSection />
       <PortfolioPreview />
+      <CountriesWeServe />
       <InsightsSection />
       <CtaSection />
     </>
