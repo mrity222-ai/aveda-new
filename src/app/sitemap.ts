@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/works',
     '/locations/canada',
     '/locations/australia',
+    '/locations/netherlands',
   ];
 
   return staticRoutes.map((route) => ({

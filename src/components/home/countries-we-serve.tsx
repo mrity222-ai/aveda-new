@@ -25,6 +25,7 @@ const countries = [
     name: 'Netherlands',
     flag: '🇳🇱',
     cities: ['Amsterdam', 'Rotterdam', 'Utrecht', 'Eindhoven'],
+    href: '/locations/netherlands'
   },
   {
     name: 'Sweden',
