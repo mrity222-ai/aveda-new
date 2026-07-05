@@ -1,3 +1,4 @@
+
 'use client';
 
 import * as React from 'react';
@@ -18,6 +19,7 @@ const countries = [
     name: 'Australia',
     flag: '🇦🇺',
     cities: ['Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide'],
+    href: '/locations/australia'
   },
   {
     name: 'Netherlands',

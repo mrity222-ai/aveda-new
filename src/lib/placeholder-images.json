@@ -401,6 +401,18 @@
       "description": "Tech office in Toronto with skyline view",
       "imageUrl": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxvZmZpY2UlMjB0b3JvbnRvfGVufDB8fHx8MTc3NDQ5NDA1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "office toronto"
+    },
+    {
+      "id": "australia-hero",
+      "description": "Modern Australian business team using AI technology",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-b413da4baf72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHRlYW0lMjBhdXN0cmFsaWF8ZW58MHx8fHwxNzc0NDk0MDU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business team australia"
+    },
+    {
+      "id": "australia-office",
+      "description": "Office in Sydney with harbor view",
+      "imageUrl": "https://images.unsplash.com/photo-1490604001847-b712b0c2f967?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzeWRuZXklMjBoYXJib3VyfGVufDB8fHx8MTc3NDQ5NDA1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sydney skyline"
     }
   ]
 }

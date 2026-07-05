@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/terms-and-conditions',
     '/works',
     '/locations/canada',
+    '/locations/australia',
   ];
 
   return staticRoutes.map((route) => ({
