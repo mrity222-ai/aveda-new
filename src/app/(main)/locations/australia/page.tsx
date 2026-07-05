@@ -25,7 +25,8 @@ import {
   Star,
   Globe2,
   FileCode,
-  Laptop
+  Laptop,
+  Briefcase
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
