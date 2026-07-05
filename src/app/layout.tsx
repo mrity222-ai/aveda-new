@@ -8,6 +8,7 @@ import Footer from '@/components/common/footer';
 import { WhatsAppButton } from '@/components/common/whatsapp-button';
 import Script from 'next/script';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -91,6 +92,7 @@ export default function RootLayout({
         <WhatsAppButton />
         <Script src="//code.tidio.co/srzndt8h650rvaawicxeiy80rsj2myh9.js" async />
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
