@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { Check } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -41,6 +42,30 @@ export default function HeroSection() {
             <Button asChild size="lg" variant="outline">
               <Link href="/contact">Contact Sales</Link>
             </Button>
+          </div>
+
+          {/* Trust Badges */}
+          <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] font-bold uppercase tracking-widest text-white/60 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500 md:text-xs">
+            <div className="flex items-center gap-2">
+              <Check className="h-4 w-4 text-primary" />
+              <span>50+ Projects Delivered</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Check className="h-4 w-4 text-primary" />
+              <span>AI Powered Solutions</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Check className="h-4 w-4 text-primary" />
+              <span>24/7 Technical Support</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Check className="h-4 w-4 text-primary" />
+              <span>Custom CRM & ERP Experts</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Check className="h-4 w-4 text-primary" />
+              <span>100% Business Automation Focus</span>
+            </div>
           </div>
         </div>
       </div>
