@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { ArrowRight, Building2, Globe2 } from 'lucide-react';
+import { ArrowRight, Building2, Globe2, MoveRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
@@ -12,6 +12,7 @@ const countries = [
     name: 'Canada',
     flag: '🇨🇦',
     cities: ['Toronto', 'Vancouver', 'Calgary', 'Ottawa', 'Montreal'],
+    href: '/locations/canada'
   },
   {
     name: 'Australia',
@@ -154,6 +155,13 @@ export default function CountriesWeServe() {
                             </span>
                           ))}
                         </div>
+                        {country.href && (
+                          <Button asChild variant="link" className="mt-4 p-0 h-auto text-blue-600 font-bold group/link">
+                            <Link href={country.href}>
+                              Visit {country.name} Office Page <MoveRight className="ml-2 h-4 w-4 transition-transform group-hover/link:translate-x-1" />
+                            </Link>
+                          </Button>
+                        )}
                       </div>
                     </div>
                   </div>

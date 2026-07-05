@@ -1,3 +1,4 @@
+
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -23,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/web-development',
     '/terms-and-conditions',
     '/works',
+    '/locations/canada',
   ];
 
   return staticRoutes.map((route) => ({

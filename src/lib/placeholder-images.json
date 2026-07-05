@@ -333,7 +333,7 @@
     {
       "id": "video-thumb-2",
       "description": "A video showcasing digital marketing success",
-      "imageUrl": "https://images.unsplash.com/photo-1621256326941-98d9e045e2ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYXJrZXRpbmclMjBzdWNjZXNzfGVufDB8fHx8MTc3MDU2OTgzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1621256326941-98d9e045e2ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXJrZXRpbmclMjBzdWNjZXNzfGVufDB8fHx8MTc3MDU2OTgzOXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "marketing success"
     },
     {
@@ -389,6 +389,18 @@
       "description": "Stylized Pixar-style cute baby with headset",
       "imageUrl": "https://images.unsplash.com/photo-1544126592-807daa2b565b?auto=format&fit=crop&q=80&w=1080",
       "imageHint": "cute baby with headset"
+    },
+    {
+      "id": "canada-hero",
+      "description": "Modern Canadian business team using AI dashboards",
+      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjBjYW5hZGF8ZW58MHx8fHwxNzc0NDk0MDU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business team canada"
+    },
+    {
+      "id": "canada-office",
+      "description": "Tech office in Toronto with skyline view",
+      "imageUrl": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxvZmZpY2UlMjB0b3JvbnRvfGVufDB8fHx8MTc3NDQ5NDA1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office toronto"
     }
   ]
 }
