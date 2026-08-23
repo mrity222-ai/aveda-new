@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  :root {
+    --background: 220 14% 96%; /* Modern Light Grey #f3f4f6 */
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 0 100% 50%; /* Vibrant Red */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 0 0% 97%; /* Very Light Gray */
+    --secondary-foreground: 0 0% 10%;
+    
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 45%;
+    
+    --accent: 210 20% 20%; /* Dark slate for high contrast */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    
+    --ring: 0 100% 50%;
+
+    --radius: 1rem;
+
+    --font-inter: var(--font-inter), sans-serif;
+    --font-soehne: 'Söhne', 'Soehne', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-soehne {
+    font-family: var(--font-soehne);
+  }
+  .font-inter {
+    font-family: var(--font-inter);
+  }
+  .headline-minimal {
+    font-family: var(--font-soehne);
+    font-weight: 300;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px; /* Mobile base */
+    line-height: 1.6;
+  }
+
+  @screen md {
+    body {
+      font-size: 16px; /* Desktop base */
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-headline {
+    font-family: var(--font-soehne), 'Söhne', 'Soehne', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+  }
+
+  /* Squarespace, Apple & Linear inspired large minimalist headlines (90-110px desktop) */
+  h1 { 
+    font-size: clamp(3rem, 8.5vw, 6.5rem); /* 48px to 104px */
+    font-weight: 300;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+  }
+  h2 { 
+    font-size: clamp(2.25rem, 5.5vw, 4.25rem); /* 36px to 68px */
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    line-height: 0.98;
+  }
+  h3 { 
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem); /* 24px to 40px */
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+
+  input:hover, select:hover, textarea:hover {
+    @apply border-primary;
+    transition: border-color 0.3s ease-in-out;
+  }
+}
+
+@layer components {
+    .soft-shadow {
+        @apply shadow-[0_20px_50px_rgba(0,0,0,0.05)];
+    }
+
+    .animate-marquee {
+        animation: marquee 25s linear infinite;
+    }
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ------------------ SCROLL REVEAL ANIMATIONS ------------------ */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.reveal-active,
+.reveal-active .scroll-reveal,
+[data-scroll-reveal].reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------------------ TEXT REVEAL & SLIDE-UP ANIMATIONS ON REFRESH & SCROLL ------------------ */
+@keyframes textSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-active h1,
+.reveal-active h2,
+.reveal-active h3 {
+  animation: textSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.reveal-active p {
+  animation: textSlideUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+/* Card & Grid Hover Lift Animations */
+.hover-lift {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+}
+
+/* ------------------ SCROLL-DRIVEN VIEW ROTATION ANIMATION ------------------ */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.box, .spin-view {
+  --super-ease-out: cubic-bezier(0.15, 0.75, 0.35, 1);
+  animation: spin var(--super-ease-out);
+  animation-timeline: view();
+}
+
+/* ------------------ SCROLL-DRIVEN VIEW SLIDE-IN ANIMATION ------------------ */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.shape, .slide-in-view {
+  animation: slideIn backwards;
+  animation-timeline: view();
+  animation-range: contain;
+}
