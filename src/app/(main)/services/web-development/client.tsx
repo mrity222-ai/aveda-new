@@ -420,16 +420,16 @@ export default function WebDevelopmentClient() {
       id: 'starter',
       name: 'Starter',
       badge: '🚀 Startup Ready',
-      monthlyPrice: '₹799',
-      yearlyPrice: '₹7,990',
-      yearlyMonthlyEquivalent: '₹666',
+      monthlyPrice: '₹1,499',
+      yearlyPrice: '₹17,988',
+      yearlyMonthlyEquivalent: '₹1,499',
       period: '/Month',
-      billingNote: billingCycle === 'yearly' ? 'Billed annually (2 Months Free)' : 'Billed monthly',
+      billingNote: billingCycle === 'yearly' ? 'Billed annually (₹17,988 / year)' : 'Billed monthly',
       description: 'Perfect for startups, freelancers, and small businesses.',
       isPopular: false,
       includesHeading: 'Includes:',
       features: [
-        '5 Pages Website',
+        '1 to 15 Pages Website',
         'Mobile Responsive',
         'Free SSL Certificate',
         'Free Cloud Hosting',
@@ -446,15 +446,15 @@ export default function WebDevelopmentClient() {
       name: 'Business',
       badge: '⭐ Most Popular',
       monthlyPrice: '₹2,999',
-      yearlyPrice: '₹29,990',
-      yearlyMonthlyEquivalent: '₹2,499',
+      yearlyPrice: '₹35,988',
+      yearlyMonthlyEquivalent: '₹2,999',
       period: '/Month',
-      billingNote: billingCycle === 'yearly' ? 'Billed annually (2 Months Free)' : 'Billed monthly',
+      billingNote: billingCycle === 'yearly' ? 'Billed annually (₹35,988 / year)' : 'Billed monthly',
       description: 'Best for growing businesses that need more features and lead generation.',
       isPopular: true,
       includesHeading: 'Includes Everything in Starter +',
       features: [
-        'Up to 20 Pages',
+        '1 to 50 Pages Website',
         'Admin Panel',
         'Blog Module',
         'Lead Management',
@@ -678,7 +678,7 @@ export default function WebDevelopmentClient() {
               </Link>
             </Button>
             <div className="rounded-full border border-red-200 bg-red-50 px-5 py-2.5 text-xs font-bold text-red-700">
-              Starts from ₹799/Month
+              Starts from ₹1,499/Month
             </div>
           </div>
         </div>
@@ -770,16 +770,13 @@ export default function WebDevelopmentClient() {
                 type="button"
                 onClick={() => setBillingCycle('yearly')}
                 className={cn(
-                  'relative rounded-full px-5 py-2 text-xs font-bold transition-all flex items-center gap-2',
+                  'rounded-full px-5 py-2 text-xs font-bold transition-all',
                   billingCycle === 'yearly'
                     ? 'bg-red-600 text-white shadow-md'
                     : 'text-slate-700 hover:text-slate-900'
                 )}
               >
-                <span>Yearly Billing</span>
-                <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-800">
-                  2 Months FREE 🎉
-                </span>
+                Yearly Billing
               </button>
             </div>
           </div>
@@ -830,7 +827,7 @@ export default function WebDevelopmentClient() {
                       {plan.id === 'enterprise'
                         ? plan.billingNote
                         : billingCycle === 'yearly'
-                        ? `${plan.yearlyPrice} / year (Pay 10 months, get 12 months!)`
+                        ? `${plan.yearlyPrice} / year`
                         : plan.billingNote}
                     </p>
                   </div>
