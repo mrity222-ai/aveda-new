@@ -64,6 +64,12 @@ export const metadata: Metadata = {
     description: 'Building the future of business with AI Automation, Custom CRM/ERP, and Scalable Software Solutions.',
     images: ['/og-image.png'],
   },
+  verification: {
+    google: [
+      'google6f6b160c946d3a95',
+      'P__s0Xjpuwgi8DmfiVQmDW2BJPL49GdcJe_CScAP--s',
+    ],
+  },
   other: {
     'p:domain_verify': '5343518b3ab132692d1d264829d0beb7',
     'google-adsense-account': 'ca-pub-5020716602157264',
